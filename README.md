@@ -10,58 +10,57 @@
 
 BALROG is a novel benchmark evaluating agentic LLM and VLM capabilities on long-horizon interactive tasks using reinforcement learning environments. Check out how current models fare on our [leaderboard](https://balrogai.com). You can read more about BALROG in our [paper](https://arxiv.org/abs/2411.13543).
 
-## Features
-
-- Comprehensive evaluation of agentic abilities
-- Support for both language and vision-language models
-- Integration with popular AI APIs and local deployment
-- Easy integration for custom agents, new environments and new models
-
 ## Installation
 
-We advise using conda for the installation
+We use uv for the installation
 
 ```bash
-conda create -n balrog python=3.10 -y
-conda activate balrog
-
-git clone https://github.com/balrog-ai/BALROG.git
-cd BALROG
-pip install -e .
+uv sync
+source .venv/bin/activate
 balrog-post-install
 ```
 
 On Mac make sure you have `wget` installed for the `balrog-post-install`
 
-## Docker
-
-We have provided some docker images. Please see the [relevant README](docker/README.md).
-
 ## ⚡️ Evaluate using vLLM locally
 
-We support running LLMs/VLMs locally using [vLLM](https://github.com/vllm-project/vllm). You can spin up a vLLM client and evaluate your agent on BALROG in the following way:
+Install Ollama:
 
 ```bash
-pip install vllm numpy==1.23
-vllm serve meta-llama/Llama-3.2-1B-Instruct --port 8080
+curl -fsSL https://ollama.com/install.sh | sh
+ollama --version
+ollama serve
+```
 
-python eval.py \
+Download and test Qwen interactively:
+
+```bash
+ollama pull qwen3:4b-instruct
+ollama run qwen3:4b-instruct
+# use /bye to quit
+```
+
+Run BALROG using Ollama's Qwen API:
+
+```bash
+uv run python eval.py \
+  envs.names=babyai \
+  eval.num_episodes.babyai=1 \
+  "tasks.babyai_tasks=[BabyAI-MixedTrainLocal-v0/goto]" \
+  eval.num_workers=1 \
+  eval.max_steps_per_episode=20 \
   agent.type=naive \
   agent.max_image_history=0 \
   agent.max_text_history=16 \
-  eval.num_workers=32 \
+  envs.env_kwargs.seed=2026 \
+  eval.output_dir=results/stage1_pilot \
+  client.generate_kwargs.temperature=0.7 \
+  client.generate_kwargs.max_tokens=256 \
   client.client_name=vllm \
-  client.model_id=meta-llama/Llama-3.2-1B-Instruct \
-  client.base_url=http://0.0.0.0:8080/v1
+  client.model_id=qwen3:4b-instruct \
+  client.base_url=http://localhost:11434/v1
 ```
 
-On Mac you might have to first export the following to suppress some fork() errors:
-
-```
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-```
-
-Check out [vLLM](https://github.com/vllm-project/vllm) for more options on how to serve your models fast and efficiently.
 
 ## 🛜 Evaluate using API
 
@@ -80,13 +79,20 @@ Or you can modify the `SECRETS` file, adding your api keys.
 You can then run the evaluation with:
 
 ```bash
-python eval.py \
+uv run python eval.py \
+  envs.names=babyai \
+  'tasks.babyai_tasks=["BabyAI-MixedTrainLocal-v0/goto"]' \
+  eval.num_episodes.babyai=1 \
+  eval.num_workers=1 \
+  eval.max_steps_per_episode=10 \
   agent.type=naive \
   agent.max_image_history=0 \
   agent.max_text_history=16 \
-  eval.num_workers=16 \
   client.client_name=openai \
-  client.model_id=gpt-4o-mini-2024-07-18
+  client.model_id=gpt-6.1-sol \
+  client.generate_kwargs.temperature=null \
+  client.generate_kwargs.max_tokens=512 \
+  +client.generate_kwargs.reasoning_effort=low
 ```
 
 ## Documentation

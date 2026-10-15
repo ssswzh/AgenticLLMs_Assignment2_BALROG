@@ -1,5 +1,81 @@
 [build-system]
-requires = ["setuptools>=58.0.0", "wheel"]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "balrog"
+version = "0.1.0"
+description = "Benchmark for Agentic LLM and VLM Reasoning On Games"
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "Davide Paglieri" },
+]
+keywords = ["reinforcement-learning", "ai", "nlp", "llm"]
+dependencies = [
+    "anthropic",
+    "baba @ git+https://github.com/nacloos/baba-is-ai.git",
+    "balrog-nle",
+    "crafter",
+    "google-genai",
+    "gym==0.23",
+    "hydra-core",
+    "minigrid @ git+https://github.com/BartekCupial/Minigrid.git",
+    "minihack @ git+https://github.com/balrog-ai/minihack.git",
+    "numpy<2",
+    "opencv-python-headless",
+    "openai",
+    "pytest",
+    "requests",
+    "scipy",
+    # BALROG and balrog-nle still import the legacy pkg_resources module.
+    "setuptools<81",
+    "tatsu==5.8.3",
+    # The BALROG TextWorld fork bundles a legacy Inform7 DMG that no longer
+    # mounts on current macOS releases. Use Linux/Docker for this benchmark.
+    "textworld @ git+https://github.com/balrog-ai/TextWorld.git ; sys_platform != 'darwin'",
+    "wandb",
+    "tqdm>=4.70.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "flake8",
+    "isort>=5.12",
+    "pre-commit",
+    "pytest<8.0",
+    "twine",
+]
+
+[project.scripts]
+balrog-post-install = "balrog.scripts.post_install:main"
+
+[project.urls]
+Homepage = "https://www.balrogai.com/"
+Repository = "https://github.com/balrog-ai/BALROG/"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["balrog*"]
+
+[tool.setuptools.package-data]
+balrog = [
+    "config/config.yaml",
+    "environments/nle/achievements.json",
+    "environments/nle/Hack-Regular.ttf",
+    "environments/nle/tiles.pkl",
+    "environments/nle/Tiles16x16.png",
+]
+
+[tool.uv]
+# balrog-nle 0.9.0 still uses CMake policies removed in CMake 4.
+build-constraint-dependencies = ["cmake<4"]
+
+[tool.uv.extra-build-dependencies]
+# balrog-nle does not declare CMake in its own build-system requirements.
+balrog-nle = ["cmake<4"]
 
 [tool.black]
 line-length = 120
