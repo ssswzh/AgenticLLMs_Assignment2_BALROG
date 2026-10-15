@@ -36,7 +36,7 @@ Three benchmarks are used here, and each with two subtypes: BabyAI (`goto`, `put
 - Two models use same tasks, episodes, seed, max tokens.
 - Use `eval.max_steps_per_episode=null` to use the default max steps for each environment, avoiding premature truncation. 
 - GPT uses `reasoning_effort=low`, Qwen has no corresponding parameters.
-- Set `client.generate_kwargs.temperature=0.0` for Qwen to avoid random actions, especially important under this 5 episode comparison.
+- Set `client.generate_kwargs.temperature=0.6` for Qwen as recommended for thinking mode (for complex logical reasoning, math, code).
 - Set `eval.num_workers` to a smaller value if OOM or slow response occurs.
 - Set `client.generate_kwargs.max_tokens=1024` for GPT to avoid truncation because it also include reasoning tokens. Same value for Qwen for fair comparison.
 - 11434 is the default port for Ollama's local service.
