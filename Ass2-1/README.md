@@ -57,7 +57,7 @@ uv run python eval.py \
     client.client_name=vllm \
     client.model_id=qwen3:4b-instruct \
     client.base_url=http://127.0.0.1:11434/v1 \
-    client.generate_kwargs.temperature=0.0 \
+    client.generate_kwargs.temperature=0.6 \
     client.generate_kwargs.max_tokens=1024 \
     client.timeout=300
 ```
@@ -149,7 +149,7 @@ docker run --rm \
     client.client_name=vllm \
     client.model_id=qwen3:4b-instruct \
     client.base_url=http://host.docker.internal:11434/v1 \
-    client.generate_kwargs.temperature=0.0 \
+    client.generate_kwargs.temperature=0.6 \
     client.generate_kwargs.max_tokens=1024 \
     client.timeout=300
 ```
@@ -157,4 +157,9 @@ docker run --rm \
 
 ## Summarize results
 
+Summarize benchmark results from JSON files:
+
+```bash
+uv run python Ass2-1/summarize_benchmark.py -d results/exercise1 -t naive -o Ass2-1/benchmark_summary.tsv
+```
 
