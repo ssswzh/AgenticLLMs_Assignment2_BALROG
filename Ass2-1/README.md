@@ -25,6 +25,13 @@ ollama pull qwen3:4b-instruct
 
 ## Run Experiments
 
+Before you run experiments, replace the following scripts in original repo:
+- `balrog/client.py` with `Ass2-1/client.py`
+- `balrog/evaluator.py` with `Ass2-1/evaluator.py`
+- `balrog/utils.py` with `Ass2-1/utils.py`
+- `docker/Dockerfile` with `Ass2-1/Dockerfile`
+- `pyproject.toml` with `Ass2-1/pyproject.toml`
+
 Three benchmarks are used here, and each with two subtypes: BabyAI (`goto`, `putnext`), TextWorld (`coin_collector`, `treasure_hunter`),  BabaIsAI (`goto_win`, `make_win`).
 - Two models use same tasks, episodes, seed, max tokens.
 - Use `eval.max_steps_per_episode=null` to use the default max steps for each environment, avoiding premature truncation. 
