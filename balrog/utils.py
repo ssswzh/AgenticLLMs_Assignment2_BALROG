@@ -170,6 +170,13 @@ def get_unique_seed(process_num=None, episode_idx=0):
     return seed
 
 
+def get_episode_seed(base_seed, env_name, task, episode_idx):
+    """Derive a stable, task-specific seed for an evaluation episode."""
+    seed_string = f"{base_seed}:{env_name}:{task}:{episode_idx}"
+    hashed = hashlib.sha256(seed_string.encode()).hexdigest()
+    return int(hashed[:8], 16)
+
+
 def load_secrets(file_path):
     """Load secrets from a file with key-value pairs.
 

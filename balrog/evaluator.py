@@ -17,7 +17,7 @@ from tqdm import tqdm
 from balrog.agents.few_shot import FewShotAgent
 from balrog.dataset import InContextDataset
 from balrog.environments import make_env
-from balrog.utils import get_unique_seed
+from balrog.utils import get_episode_seed, get_unique_seed
 
 logger = logging.getLogger(__name__)
 
@@ -257,9 +257,19 @@ class Evaluator:
         env = make_env(self.env_name, task, self.config)
         agent.reset()
 
-        seed = self.config.envs.env_kwargs.seed
-        if seed is None:
+        # set the seed for the episode based on the base seed and episode index
+        # so that each episode has a unique seed, but is reproducible given the same base seed
+        # then we can compare the results across different runs with the same base seed
+        base_seed = self.config.envs.env_kwargs.seed
+        if base_seed is None:
             seed = get_unique_seed(process_num=process_num, episode_idx=episode_idx)
+        else:
+            seed = get_episode_seed(
+                base_seed=base_seed,
+                env_name=self.env_name,
+                task=task,
+                episode_idx=episode_idx,
+            )
         random.seed(seed)
         np.random.seed(seed)
         obs, info = env.reset(seed=seed)
