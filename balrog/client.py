@@ -212,9 +212,12 @@ class OpenAIWrapper(LLMClientWrapper):
                 "messages": converted_messages,
                 "model": self.model_id,
                 # "max_tokens": self.client_kwargs.get("max_tokens", 1024),
-                # https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create
-                "max_completion_tokens": self.client_kwargs.get("max_tokens", 1024),
             }
+            if self.client_name.lower() == "openai":
+                # https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create
+                api_kwargs["max_completion_tokens"] = self.client_kwargs.get("max_tokens", 1024)
+            else:
+                api_kwargs["max_tokens"] = self.client_kwargs.get("max_tokens", 1024)
 
             # temperature = self.client_kwargs.get("temperature")
             # if temperature is not None:
