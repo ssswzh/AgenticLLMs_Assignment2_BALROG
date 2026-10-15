@@ -211,12 +211,31 @@ class OpenAIWrapper(LLMClientWrapper):
             api_kwargs = {
                 "messages": converted_messages,
                 "model": self.model_id,
-                "max_tokens": self.client_kwargs.get("max_tokens", 1024),
+                # "max_tokens": self.client_kwargs.get("max_tokens", 1024),
+                # https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create
+                "max_completion_tokens": self.client_kwargs.get("max_tokens", 1024),
             }
 
-            temperature = self.client_kwargs.get("temperature")
-            if temperature is not None:
-                api_kwargs["temperature"] = temperature
+            # temperature = self.client_kwargs.get("temperature")
+            # if temperature is not None:
+            #     api_kwargs["temperature"] = temperature
+            reasoning_effort = self.client_kwargs.get("reasoning_effort")
+            # https://developers.openai.com/api/docs/guides/deployment-checklist#set-up-reasoningeffort
+            if reasoning_effort not in ["low", "medium", "high", "xhigh", "max", None, "none"]:
+                logger.warning(
+                    "Ignoring invalid reasoning_effort=%r for OpenAI client; "
+                    "expected one of 'low', 'medium', 'high', 'none', or None.",
+                    reasoning_effort,
+                )
+                reasoning_effort = None
+            if reasoning_effort is not None:
+                api_kwargs["reasoning_effort"] = reasoning_effort
+
+            # when reasoning_effort is none, we set temperature from client_kwargs
+            if reasoning_effort in (None, "none"):
+                temperature = self.client_kwargs.get("temperature")
+                if temperature is not None:
+                    api_kwargs["temperature"] = temperature
 
             response = self.client.chat.completions.create(**api_kwargs)
 
