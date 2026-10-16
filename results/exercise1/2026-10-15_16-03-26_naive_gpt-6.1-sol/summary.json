@@ -1,0 +1,42 @@
+{
+    "average_progress": 82.5,
+    "standard_error": 5.673402858955107,
+    "environments": {
+        "babaisai": {
+            "progression_percentage": 70.0,
+            "standard_error": 10.246950765959596,
+            "episodes_played": 20
+        },
+        "babyai": {
+            "progression_percentage": 95.0,
+            "standard_error": 4.873397172404482,
+            "episodes_played": 20
+        }
+    },
+    "total_input_tokens": 1521028,
+    "total_output_tokens": 206772,
+    "client": {
+        "client_name": "openai",
+        "model_id": "gpt-6.1-sol",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": null,
+            "max_tokens": 1024,
+            "thinking_budget": null,
+            "reasoning_effort": "low"
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    },
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    }
+}

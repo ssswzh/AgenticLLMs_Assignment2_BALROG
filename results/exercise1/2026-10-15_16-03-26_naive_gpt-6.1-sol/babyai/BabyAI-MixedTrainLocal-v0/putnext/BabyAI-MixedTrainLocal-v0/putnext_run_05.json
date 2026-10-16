@@ -1,0 +1,44 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/putnext",
+    "action_frequency": {
+        "turn left": 6,
+        "go forward": 8,
+        "turn right": 1,
+        "pick up": 1,
+        "drop": 1
+    },
+    "input_tokens": 8612,
+    "output_tokens": 601,
+    "done": true,
+    "episode_return": 0.88046875,
+    "num_steps": 17,
+    "failed_candidates": [],
+    "mission": "put the yellow ball next to the grey ball",
+    "progression": 1.0,
+    "process_num": "ForkProcess-1",
+    "seed": 666028612,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "openai",
+        "model_id": "gpt-6.1-sol",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": null,
+            "max_tokens": 1024,
+            "thinking_budget": null,
+            "reasoning_effort": "low"
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

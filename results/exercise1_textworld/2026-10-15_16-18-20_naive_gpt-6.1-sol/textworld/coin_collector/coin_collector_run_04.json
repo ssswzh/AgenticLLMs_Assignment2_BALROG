@@ -1,0 +1,43 @@
+{
+    "task": "coin_collector",
+    "action_frequency": {
+        "go east": 16,
+        "go west": 15,
+        "go north": 6,
+        "go south": 14,
+        "take coin": 1
+    },
+    "input_tokens": 68322,
+    "output_tokens": 260,
+    "done": true,
+    "episode_return": 1.0,
+    "num_steps": 52,
+    "failed_candidates": [],
+    "progression": 1.0,
+    "process_num": null,
+    "seed": 466619751,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "openai",
+        "model_id": "gpt-6.1-sol",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": null,
+            "max_tokens": 1024,
+            "thinking_budget": null,
+            "reasoning_effort": "low"
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
