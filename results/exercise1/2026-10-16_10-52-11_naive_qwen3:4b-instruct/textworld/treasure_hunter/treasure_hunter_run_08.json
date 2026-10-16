@@ -1,0 +1,45 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "go north": 20,
+        "take key from floor": 5,
+        "goal": 4,
+        "look": 10,
+        "go south": 20,
+        "go east": 10,
+        "go west": 10,
+        "take key": 1
+    },
+    "input_tokens": 141587,
+    "output_tokens": 236,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-2",
+    "seed": 3519717265,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "qwen3:4b-instruct",
+        "base_url": "http://127.0.0.1:11434/v1",
+        "generate_kwargs": {
+            "temperature": 0.6,
+            "max_tokens": 1024,
+            "thinking_budget": null
+        },
+        "timeout": 300,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
