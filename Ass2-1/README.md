@@ -77,9 +77,9 @@ uv run python eval.py \
     'tasks.babyai_tasks=["BabyAI-MixedTrainLocal-v0/goto","BabyAI-MixedTrainLocal-v0/putnext"]' \
     'tasks.textworld_tasks=["coin_collector","treasure_hunter"]' \
     'tasks.babaisai_tasks=["env/goto_win","env/make_win"]' \
-    eval.num_episodes.babyai=5 \
-    eval.num_episodes.textworld=5 \
-    eval.num_episodes.babaisai=5 \
+    eval.num_episodes.babyai=10 \
+    eval.num_episodes.textworld=10 \
+    eval.num_episodes.babaisai=10 \
     eval.num_workers=4 \
     eval.max_steps_per_episode=null \
     eval.save_trajectories=True \
@@ -118,7 +118,7 @@ docker run --rm \
     python3 eval.py \
     envs.names=textworld \
     'tasks.textworld_tasks=["coin_collector","treasure_hunter"]' \
-    eval.num_episodes.textworld=5 \
+    eval.num_episodes.textworld=10 \
     eval.num_workers=1 \
     eval.max_steps_per_episode=null \
     eval.save_trajectories=True \
@@ -144,7 +144,7 @@ docker run --rm \
     python3 eval.py \
     envs.names=textworld \
     'tasks.textworld_tasks=["coin_collector","treasure_hunter"]' \
-    eval.num_episodes.textworld=5 \
+    eval.num_episodes.textworld=10 \
     eval.num_workers=1 \
     eval.max_steps_per_episode=null \
     eval.save_trajectories=True \
