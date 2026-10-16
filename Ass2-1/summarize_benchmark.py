@@ -7,7 +7,7 @@ from pathlib import Path
 
 MODELS = {
     "qwen3:4b-instruct": "Qwen3:4B-Instruct",
-    "gpt-6.1-sol": "GPT-6.1-SOL",
+    "gpt-6.1-sol": "GPT-6.1-Sol",
 }
 BENCHMARK_NAMES = {
     "babyai": "BabyAI",
@@ -72,7 +72,7 @@ def format_score(score):
     if standard_error is None:
         result = str(round(value, 2))
     else:
-        result = f"{round(value, 2)} \\pm {round(standard_error, 2)}"
+        result = f"{round(value, 2)}±{round(standard_error, 2)}"
     if average_steps is not None:
         result += f" ({round(average_steps, 2)})"
     return result
