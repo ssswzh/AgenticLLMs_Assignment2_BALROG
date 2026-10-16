@@ -36,17 +36,25 @@ class EvaluatorManager:
             config (omegaconf.DictConfig): Configuration object containing evaluation settings.
             original_cwd (str, optional): Original current working directory. Defaults to "".
             output_dir (str, optional): Directory to save evaluation outputs. Defaults to ".".
+        
+        This initialization sets up evaluators for each environment specified in the configuration, 
+        queues up tasks for evaluation, and prepares for either sequential or parallel execution based 
+        on the number of workers specified in the configuration.
+        No agent or env is created at this point.
         """
         self.config = config
         self.original_cwd = original_cwd
         self.output_dir = output_dir
 
+        # By default: babyai-babaisai-textworld-crafter-nle-minihack
         self.env_names = config.envs.names.split("-")
         self.env_evaluators = {}
         self.tasks = []
         for env_name in self.env_names:
+            # Create an Evaluator for each environment
             evaluator = Evaluator(env_name, config, original_cwd=original_cwd, output_dir=self.output_dir)
             self.env_evaluators[env_name] = evaluator
+            # Queue up tasks for each environment and episode index: (env_name, task, episode_idx)
             for task in evaluator.tasks:
                 for episode_idx in range(evaluator.num_episodes):
                     # Check if task has been completed
@@ -56,6 +64,7 @@ class EvaluatorManager:
                         task,
                         f"{task}_run_{episode_idx:02d}.json",
                     )
+                    # If the JSON file already exists, skip this task and episode index
                     if os.path.exists(json_filename):
                         logging.info(f"Skipping completed task: {env_name}, {task}, episode {episode_idx}")
                     else:
@@ -72,8 +81,11 @@ class EvaluatorManager:
             dict: Results of the evaluation aggregated by environment name.
         """
         if self.num_workers > 1:
+            # Multiple workers, each with one agent, in parallel
             results = self._run_parallel(agent_factory)
         else:
+            # One worker, one episode, one agent, one env at a time, sequentially
+            # Avoid agent state contamination between different episodes
             results = self._run_sequential(agent_factory)
         return results
 
@@ -87,10 +99,16 @@ class EvaluatorManager:
             dict: Results of the evaluation aggregated by environment name.
         """
         results = defaultdict(list)
-        total_episodes = len(self.tasks)
+        total_episodes = len(self.tasks) # tasks to run, excluding already completed tasks
         with tqdm(total=total_episodes, desc="Evaluating Episodes", position=0) as pbar:
             for env_name, task, episode_idx in self.tasks:
+                # Example format: 
+                # self.env_evaluators = {
+                #     "babyai": Evaluator(env_name="babyai", ...),
+                #     "textworld": Evaluator(env_name="textworld", ...),
+                # }
                 evaluator = self.env_evaluators[env_name]
+                # Create a new agent for each episode to ensure a fresh state
                 agent = agent_factory.create_agent()
                 episode_log = evaluator.run_episode(task, agent, position=1, episode_idx=episode_idx)
                 results[env_name].append(episode_log)
@@ -106,9 +124,13 @@ class EvaluatorManager:
         Returns:
             dict: Results of the evaluation aggregated by environment name.
         """
+        # task_queue: distribute tasks to workers
         task_queue = multiprocessing.Queue()
+        # results_queue: collect results from workers
         results_queue = multiprocessing.Queue()
 
+        # fork will copy the parent process's memory space
+        # child processes will inherit the parent's state, including the agent factory and environment evaluators
         ctx = multiprocessing.get_context("fork")
 
         # Initially fill the task queue with tasks up to the number of workers
@@ -121,6 +143,7 @@ class EvaluatorManager:
         # Assign unique positions for progress bars
         positions = list(range(self.num_workers))
 
+        # Create and start worker processes
         processes = []
         for idx in range(self.num_workers):
             position = positions[idx]
@@ -131,6 +154,7 @@ class EvaluatorManager:
             processes.append(p)
             p.start()
 
+        # Initialize counters
         results = defaultdict(list)
         tasks_completed = 0
         tasks_queued = self.num_workers
@@ -139,6 +163,7 @@ class EvaluatorManager:
 
         while tasks_completed < total_tasks:
             result = results_queue.get()
+            # task ends no matter success or failure, failed tasks will be added to task list when using resume_from
             if "error" in result:
                 logging.error(f"Error in task {result['task']} processed by {result['process_num']}: {result['error']}")
                 logging.error(f"Traceback:\n{result['traceback']}")
@@ -155,7 +180,7 @@ class EvaluatorManager:
                 task_queue.put(self.tasks[tasks_queued])
                 tasks_queued += 1
 
-        # Signal workers to stop
+        # Signal all workers to stop when all tasks are done (tasks_completed == total_tasks)
         for _ in range(self.num_workers):
             task_queue.put(None)
 
@@ -177,13 +202,18 @@ class EvaluatorManager:
             agent_factory (AgentFactory): Factory object to create agents.
             position (int): Position index for the progress bar.
         """
+        # Make sure different workers have different random seeds to avoid identical behavior
+        # SHA256 hash of the concatenated string of PID, worker index, episode index, and current time
+        # then take the first 8 characters of the hex digest and convert to an integer
         seed = get_unique_seed(process_num=position)
         random.seed(seed)
         np.random.seed(seed)
 
+        # Create ONE agent for this worker (for multiple episodes)
         agent = agent_factory.create_agent()
         process_num = multiprocessing.current_process().name
         while True:
+            # Get a task from the queue; if None, exit the loop
             item = task_queue.get()
             if item is None:
                 break
@@ -199,6 +229,7 @@ class EvaluatorManager:
                 )
                 result["process_num"] = process_num  # Include process number in result
                 result["env_name"] = env_name
+                # return the result to the main process
                 results_queue.put(result)
             except Exception as e:
                 tb = traceback.format_exc()
@@ -233,12 +264,13 @@ class Evaluator:
         self.env_name = env_name.strip()
         self.config = config
         self.output_dir = output_dir
-        self.tasks = config.tasks[f"{self.env_name}_tasks"]
+        self.tasks = config.tasks[f"{self.env_name}_tasks"] # tasks defined from config.yaml
 
         self.num_episodes = config.eval.num_episodes[self.env_name]
         self.num_workers = config.eval.num_workers
         self.max_steps_per_episode = config.eval.max_steps_per_episode
 
+        # Load the demonstration for FewShotAgent in the future
         self.dataset = InContextDataset(self.config, self.env_name, original_cwd=original_cwd)
 
     def run_episode(self, task, agent, process_num=None, position=0, episode_idx=0):
