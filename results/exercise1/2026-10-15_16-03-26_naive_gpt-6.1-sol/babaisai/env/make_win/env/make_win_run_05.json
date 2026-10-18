@@ -1,0 +1,43 @@
+{
+    "task": "env/make_win",
+    "action_frequency": {
+        "up": 5,
+        "left": 5,
+        "down": 1,
+        "right": 4
+    },
+    "input_tokens": 18934,
+    "output_tokens": 884,
+    "done": true,
+    "episode_return": 0.865,
+    "num_steps": 15,
+    "failed_candidates": [],
+    "target_plan": "make[key is win], goto[key]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-1",
+    "seed": 2856442695,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "openai",
+        "model_id": "gpt-6.1-sol",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": null,
+            "max_tokens": 1024,
+            "thinking_budget": null,
+            "reasoning_effort": "low"
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
