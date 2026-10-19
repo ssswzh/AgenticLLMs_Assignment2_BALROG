@@ -95,15 +95,36 @@ ACTION: <your next action>
         Returns:
             tuple: A tuple containing the extracted plan and action.
         """
+        # Local and smaller models often wrap the requested labels in Markdown
+        # (for example ``**ACTION:**``) or indent them. Accept those harmless
+        # variations instead of returning ``None`` and passing it to env.step().
+        if response_text is None:
+            response_text = ""
+        elif not isinstance(response_text, str):
+            response_text = str(response_text)
+
+        label_decoration = r"(?:\*\*|__|`{1,3})?"
         plan_match = re.search(
-            r"^PLAN:\s*(.*?)(?=^ACTION:|\Z)",
+            rf"^\s*{label_decoration}\s*PLAN\s*:\s*{label_decoration}\s*(.*?)"
+            rf"(?=^\s*{label_decoration}\s*ACTION\s*:|\Z)",
             response_text,
             re.IGNORECASE | re.MULTILINE | re.DOTALL,
         )
-        action_match = re.search(r"^ACTION:\s*([^\r\n]+)", response_text, re.IGNORECASE | re.MULTILINE)
+        action_match = re.search(
+            rf"^\s*{label_decoration}\s*ACTION\s*:\s*{label_decoration}\s*([^\r\n]+)",
+            response_text,
+            re.IGNORECASE | re.MULTILINE,
+        )
 
         plan = plan_match.group(1).strip() if plan_match else "No changes to the plan."
-        action = action_match.group(1).strip().strip("`*\"' ") if action_match else None
+        if action_match:
+            action = action_match.group(1).strip().strip("`*_\"' ")
+        else:
+            # Always return a non-empty string. Most environments will replace
+            # an invalid fallback with their default action; TextWorld accepts
+            # arbitrary text commands and cannot safely receive ``None``.
+            nonempty_lines = [line.strip().strip("`*_\"' ") for line in response_text.splitlines() if line.strip()]
+            action = nonempty_lines[-1] if nonempty_lines else "wait"
 
         return plan, action
 
