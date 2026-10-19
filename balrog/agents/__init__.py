@@ -39,7 +39,9 @@ class AgentFactory:
         Raises:
             ValueError: If an unknown agent type is specified in the configuration.
         """
+        # Create the LLM client, which is used to interact with the language model for generating actions
         client_factory = create_llm_client(self.config.client)
+        # Create the prompt builder, which is used to construct prompts for the agent based on observations and previous actions
         prompt_builder = create_prompt_builder(self.config.agent)
 
         if self.config.agent.type == "naive":

@@ -830,4 +830,5 @@ def create_llm_client(client_config):
         else:
             raise ValueError(f"Unsupported client name: {client_config.client_name}")
 
+    # Return the factory function instead of an instance to allow for lazy initialization
     return client_factory
