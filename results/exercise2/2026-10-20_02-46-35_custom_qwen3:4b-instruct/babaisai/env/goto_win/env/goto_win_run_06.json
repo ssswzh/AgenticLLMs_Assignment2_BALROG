@@ -1,0 +1,49 @@
+{
+    "task": "env/goto_win",
+    "action_frequency": {
+        "idle": 6,
+        "up": 1,
+        "right": 4,
+        "left": 2
+    },
+    "input_tokens": 24403,
+    "output_tokens": 6798,
+    "done": true,
+    "episode_return": 0.883,
+    "num_steps": 13,
+    "failed_candidates": [
+        "1. Move the rule blocks \"key\", \"is\", \"win\" to form \"key is win\" at a",
+        "But the game hasn't ended \u2014 the",
+        "move rule `key` to 1 step right and 0 step up",
+        "move rule `key` 1 step to the right and 0 step up",
+        "move rule `key` 1 step to the right",
+        "move rule `key` 1 step to the right"
+    ],
+    "target_plan": "goto[key]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-1",
+    "seed": 2601221593,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "qwen3:4b-instruct",
+        "base_url": "http://127.0.0.1:11434/v1",
+        "generate_kwargs": {
+            "temperature": 0.6,
+            "max_tokens": 1024,
+            "thinking_budget": null
+        },
+        "timeout": 300,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
