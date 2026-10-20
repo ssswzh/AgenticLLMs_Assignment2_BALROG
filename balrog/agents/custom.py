@@ -48,11 +48,11 @@ class CustomAgent(BaseAgent):
 
         planning_instructions = """
 Review the current plan above if present. Decide whether to continue with it or make changes.
-If you make changes, provide the updated plan. Then, provide the next action to take.
-You must output an action at every step.
-Format your answer in the following way:
-PLAN: <your updated plan if changed, or "No changes to the plan." if the current plan is good>
-ACTION: <your next action>
+Output exactly two lines in this order:
+ACTION: <one exact valid action from the action list, with no punctuation or explanation>
+PLAN: <one short sentence describing the next subgoal, at most 25 words>
+The ACTION line must be first and must never be omitted.
+Never output stop, wait, or any command that is not in the action list.
         """.strip()
 
         # Only append the plan and instructions to the last user message in the prompt
@@ -73,15 +73,13 @@ ACTION: <your next action>
         # Extract the plan and action from the LLM's response
         plan, action = self._extract_plan_and_action(response.completion)
 
-        # Update the internal plan if it has changed
-        if plan and plan.casefold() != "no changes to the plan.":
-            self.plan = plan
+        # Keep the internal plan compact so it cannot continually expand the next prompt
+        if plan and plan.casefold().rstrip(".") != "no changes to the plan":
+            compact_plan = re.sub(r"\s+", " ", plan).strip()
+            self.plan = compact_plan[:300]
 
-        # Save the plan in the response.reasoning field and the action in response.completion
-        effective_plan = self.plan or plan
-        reasoning = effective_plan
-        if loop_warning:
-            reasoning = f"{loop_warning}\nPlan: {effective_plan}"
+        # The model receives loop feedback through memory_text, so CSV reasoning only needs the compact warning
+        reasoning = loop_warning or ""
         # Use namedtuple._replace to create a new instance with updated fields, since namedtuples are immutable
         response = response._replace(reasoning=reasoning, completion=action)
         return response
@@ -95,36 +93,35 @@ ACTION: <your next action>
         Returns:
             tuple: A tuple containing the extracted plan and action.
         """
-        # Local and smaller models often wrap the requested labels in Markdown
-        # (for example ``**ACTION:**``) or indent them. Accept those harmless
-        # variations instead of returning ``None`` and passing it to env.step().
+        # Accept harmless Markdown decoration and indentation around labels
         if response_text is None:
             response_text = ""
         elif not isinstance(response_text, str):
             response_text = str(response_text)
 
         label_decoration = r"(?:\*\*|__|`{1,3})?"
-        plan_match = re.search(
-            rf"^\s*{label_decoration}\s*PLAN\s*:\s*{label_decoration}\s*(.*?)"
-            rf"(?=^\s*{label_decoration}\s*ACTION\s*:|\Z)",
-            response_text,
-            re.IGNORECASE | re.MULTILINE | re.DOTALL,
-        )
         action_match = re.search(
             rf"^\s*{label_decoration}\s*ACTION\s*:\s*{label_decoration}\s*([^\r\n]+)",
             response_text,
             re.IGNORECASE | re.MULTILINE,
         )
+        plan_match = re.search(
+            rf"^\s*{label_decoration}\s*PLAN\s*:\s*{label_decoration}\s*([^\r\n]+)",
+            response_text,
+            re.IGNORECASE | re.MULTILINE,
+        )
 
-        plan = plan_match.group(1).strip() if plan_match else "No changes to the plan."
+        plan = (
+            re.sub(r"\s+", " ", plan_match.group(1)).strip()
+            if plan_match
+            else "No changes to the plan."
+        )
         if action_match:
-            action = action_match.group(1).strip().strip("`*_\"' ")
+            action = re.sub(r"\s+", " ", action_match.group(1))
+            action = action.strip().strip("`*_\"' .").casefold()
         else:
-            # Always return a non-empty string. Most environments will replace
-            # an invalid fallback with their default action; TextWorld accepts
-            # arbitrary text commands and cannot safely receive ``None``.
-            nonempty_lines = [line.strip().strip("`*_\"' ") for line in response_text.splitlines() if line.strip()]
-            action = nonempty_lines[-1] if nonempty_lines else "wait"
+            # Never execute an arbitrary narrative line as an environment command
+            action = "look"
 
         return plan, action
 
