@@ -1,12 +1,5 @@
 # Exercise 1
 
-Before you do anything, replace the following scripts in original repo:
-- `balrog/client.py` with `Ass2-1/client.py`
-- `balrog/evaluator.py` with `Ass2-1/evaluator.py`
-- `balrog/utils.py` with `Ass2-1/utils.py`
-- `docker/Dockerfile` with `Ass2-1/Dockerfile`
-- `pyproject.toml` with `Ass2-1/pyproject.toml`
-
 ## Installation
 
 We use uv for the installation:
