@@ -47,7 +47,7 @@ COLUMNS = [
 def get_args():
     parser = argparse.ArgumentParser(description="Summarize benchmark results.")
     parser.add_argument("-d", "--dir", type=str, required=True, help="Directory prefix containing the benchmark results.")
-    parser.add_argument("-t", "--type", type=str, default="naive", choices=["naive", "cot", "few_shot"], help="Type of summary to generate.")
+    parser.add_argument("-t", "--type", type=str, default="naive", choices=["naive", "cot", "few_shot", "custom"], help="Type of summary to generate.")
     parser.add_argument("-o", "--output", type=str, default="summary.tsv", help="Output TSV file for the summary.")
     return parser.parse_args()
 
