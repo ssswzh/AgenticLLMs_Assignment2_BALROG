@@ -1,0 +1,56 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "goal": 5,
+        "go north": 5,
+        "take key": 1,
+        "go east": 4,
+        "go south": 4,
+        "go west": 5,
+        "open passageway": 2,
+        "unlock passageway with key": 1,
+        "take Henderson's limited edition key": 1,
+        "unlock Henderson's limited edition passageway with Henderson's limited edition key": 1,
+        "open Henderson's limited edition passageway": 1,
+        "open balsam door": 1,
+        "open safe": 1,
+        "look": 2,
+        "open cabinet": 1,
+        "inventory": 1,
+        "open box": 1,
+        "take fondue": 1
+    },
+    "input_tokens": 46226,
+    "output_tokens": 656,
+    "done": true,
+    "episode_return": 1.0,
+    "num_steps": 38,
+    "failed_candidates": [],
+    "progression": 1.0,
+    "process_num": null,
+    "seed": 2286381460,
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "openai",
+        "model_id": "gpt-6.1-sol",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": null,
+            "max_tokens": 1024,
+            "thinking_budget": null,
+            "reasoning_effort": "low"
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
