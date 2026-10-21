@@ -1,0 +1,55 @@
+Step,Action,Reasoning,Observation,Reward,Done
+0,go forward,,"a wall 1 step forward
+a wall 1 step left",0,False
+1,turn left,,"a wall 1 step forward
+a wall 1 step right",0,False
+2,turn right,,"a wall 1 step forward
+a wall 1 step left",0,False
+3,turn right,,"a wall 6 steps forward
+a wall 1 step left
+a grey key 2 steps right and 3 steps forward",0,False
+4,go forward,,"a wall 5 steps forward
+a wall 1 step left
+a grey key 2 steps right and 2 steps forward",0,False
+5,turn right,,"a wall 6 steps forward
+a wall 2 steps right
+a grey key 2 steps left and 2 steps forward",0,False
+6,turn left,,"a wall 5 steps forward
+a wall 1 step left
+a grey key 2 steps right and 2 steps forward",0,False
+7,go forward,,"a wall 4 steps forward
+a wall 1 step left
+a grey key 2 steps right and 1 step forward",0,False
+8,go forward,,"a wall 3 steps forward
+a wall 1 step left
+a grey key 2 steps right",0,False
+9,go forward,,"a wall 2 steps forward
+a wall 1 step left",0,False
+10,go forward,,"a wall 1 step forward
+a wall 1 step left",0,False
+11,go forward,,"a wall 1 step forward
+a wall 1 step left",0,False
+12,go forward,,"a wall 1 step forward
+a wall 1 step left",0,False
+13,turn right,"The action ""go forward"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","a wall 6 steps forward
+a wall 1 step left
+a grey key 2 steps right and 2 steps forward",0,False
+14,turn right,,"a wall 6 steps forward
+a wall 1 step right
+a grey key 2 steps left and 2 steps forward",0,False
+15,turn left,,"a wall 6 steps forward
+a wall 1 step left
+a grey key 2 steps right and 2 steps forward",0,False
+16,turn right,,"a wall 6 steps forward
+a wall 1 step right
+a grey key 2 steps left and 2 steps forward",0,False
+17,go forward,"The recent observations form a repeating cycle of 2 states. Recent actions: turn right, turn right, turn left, turn right. Do not repeat this action sequence.","a wall 5 steps forward
+a wall 1 step right
+a grey key 2 steps left and 1 step forward",0,False
+18,go forward,,"a wall 4 steps forward
+a wall 1 step right
+a grey key 2 steps left",0,False
+19,turn left,,"a wall 3 steps left
+a grey key 2 steps forward",0,False
+20,go forward,,"a wall 3 steps left
+a grey key 1 step forward",0.7046874999999999,True

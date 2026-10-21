@@ -1,0 +1,46 @@
+{
+    "average_progress": 23.333333333333332,
+    "standard_error": 5.027701042999451,
+    "environments": {
+        "babyai": {
+            "progression_percentage": 35.0,
+            "standard_error": 10.66536450385077,
+            "episodes_played": 20
+        },
+        "textworld": {
+            "progression_percentage": 0.0,
+            "standard_error": 0.0,
+            "episodes_played": 20
+        },
+        "babaisai": {
+            "progression_percentage": 35.0,
+            "standard_error": 10.665364503850768,
+            "episodes_played": 20
+        }
+    },
+    "total_input_tokens": 6883104,
+    "total_output_tokens": 112629,
+    "client": {
+        "client_name": "vllm",
+        "model_id": "qwen3:4b-instruct",
+        "base_url": "http://127.0.0.1:11434/v1",
+        "generate_kwargs": {
+            "temperature": 0.2,
+            "max_tokens": 1024,
+            "thinking_budget": null
+        },
+        "timeout": 300,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    },
+    "agent": {
+        "type": "custom",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    }
+}
