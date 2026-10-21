@@ -1,13 +1,5 @@
 # Exercise 2
 
-Before you do anything, replace the following scripts in original repo:
-- `balrog/client.py` with `Ass2-2/client.py`
-- `balrog/evaluator.py` with `Ass2-2/evaluator.py`
-- `balrog/utils.py` with `Ass2-2/utils.py`
-- `docker/Dockerfile` with `Ass2-2/Dockerfile`
-- `pyproject.toml` with `Ass2-2/pyproject.toml`
-- `balrog/agents/custom.py` with `Ass2-2/custom.py`
-
 ## Installation
 
 We use uv for the installation:
@@ -41,6 +33,7 @@ Three benchmarks are used here, and each with two subtypes: BabyAI (`goto`, `put
 - Set `eval.num_workers` to a smaller value if OOM or slow response occurs.
 - Set `client.generate_kwargs.max_tokens=1024` for GPT to avoid truncation because it also include reasoning tokens. Same value for Qwen for fair comparison.
 - 11434 is the default port for Ollama's local service.
+- Use `agent.type=custom` to call custom agent class.
 
 
 Run BALROG using Ollama's Qwen API (make sure Ollama is on):
@@ -130,16 +123,16 @@ docker run --rm \
 Summarize results from JSON files:
 
 ```bash
-uv run python Ass2-2/summarize_benchmark.py -d results/exercise2 -t custom -o Ass2-2/custom_summary_two_models.tsv
-uv run python Ass2-2/summarize_recent_json.py -d results/exercise2 -t custom -m qwen3:4b-instruct -o Ass2-2/custom_summary_qwen.tsv
+uv run python summarize_benchmark.py -d results/exercise2 -t custom -o custom_summary_two_models.tsv
+uv run python summarize_recent_json.py -d results/exercise2 -t custom -m qwen3:4b-instruct -o custom_summary_qwen.tsv
 ```
 
 Draw plots for Naive and Custom agents:
 ```bash
-uv run python Ass2-2/compare_summary.py -i Ass2-1/benchmark_summary.tsv Ass2-2/custom_summary_two_models.tsv -l Naive Custom -o Ass2-2/compare_naive_custom.png
+uv run python compare_summary.py -i Ass2-1/benchmark_summary.tsv custom_summary_two_models.tsv -l Naive Custom -o compare_naive_custom.png
 ```
 
 Draw plot for brittleness:
 ```bash
-uv run python Ass2-2/plot_model_temperature.py -d results/exercise2 -t custom -m qwen3:4b-instruct -o Ass2-2/temperature_summary.tsv -p Ass2-2/temperature_summary.png
+uv run python plot_model_temperature.py -d results/exercise2 -t custom -m qwen3:4b-instruct -o temperature_summary.tsv -p temperature_summary.png
 ```

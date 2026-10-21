@@ -160,6 +160,6 @@ docker run --rm \
 Summarize benchmark results from JSON files:
 
 ```bash
-uv run python Ass2-1/summarize_benchmark.py -d results/exercise1 -t naive -o Ass2-1/benchmark_summary.tsv
+uv run python summarize_benchmark.py -d results/exercise1 -t naive -o benchmark_summary.tsv
 ```
 
