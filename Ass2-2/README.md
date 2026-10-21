@@ -138,3 +138,8 @@ Draw plots for Naive and Custom agents:
 ```bash
 uv run python Ass2-2/compare_summary.py -i Ass2-1/benchmark_summary.tsv Ass2-2/custom_summary_two_models.tsv -l Naive Custom -o Ass2-2/compare_naive_custom.png
 ```
+
+Draw plot for brittleness:
+```bash
+uv run python Ass2-2/plot_model_temperature.py -d results/exercise2 -t custom -m qwen3:4b-instruct -o Ass2-2/temperature_summary.tsv -p Ass2-2/temperature_summary.png
+```
