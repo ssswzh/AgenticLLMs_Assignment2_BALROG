@@ -131,6 +131,6 @@ Summarize results from JSON files:
 
 ```bash
 uv run python Ass2-2/summarize_benchmark.py -d results/exercise2 -t custom -o Ass2-2/custom_summary_two_models.tsv
-uv run python Ass2-2/summarize_recent_json.py -d results/exercise2 -t custom -o Ass2-2/custom_summary_qwen.tsv
+uv run python Ass2-2/summarize_recent_json.py -d results/exercise2 -t custom -m qwen3:4b-instruct -o Ass2-2/custom_summary_qwen.tsv
 ```
 

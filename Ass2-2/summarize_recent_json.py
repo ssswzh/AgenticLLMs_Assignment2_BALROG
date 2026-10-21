@@ -60,6 +60,7 @@ def get_args():
     parser = argparse.ArgumentParser(description="Summarize JSON results.")
     parser.add_argument("-d", "--dir", type=str, required=True, help="Directory prefix containing the benchmark results.")
     parser.add_argument("-t", "--type", type=str, default="naive", choices=["naive", "cot", "few_shot", "custom"], help="Type of summary to generate.")
+    parser.add_argument("-m", "--models", type=str, nargs="+", default=["qwen3:4b-instruct", "gpt-6.1-sol"], help="Models to include in the summary.")
     parser.add_argument("-k", "--keep", type=non_negative_int, default=0, help="Number of recent runs to keep for each model (default: 0, keep all).")
     parser.add_argument("-o", "--output", type=str, default="summary.tsv", help="Output TSV file for the summary.")
     return parser.parse_args()
@@ -140,7 +141,7 @@ def build_run_row(summary_file, summary_data, model_id):
     return row
 
 
-def summarize_benchmark(input_dir, summary_type="naive", keep=0):
+def summarize_benchmark(input_dir, summary_type="naive", models=None, keep=0):
     if keep < 0:
         raise ValueError("keep must be greater than or equal to 0")
 
@@ -163,6 +164,9 @@ def summarize_benchmark(input_dir, summary_type="naive", keep=0):
         model_id = summary_data.get("client", {}).get("model_id")
         if not model_id:
             raise ValueError(f"Missing client.model_id in {summary_file}")
+
+        if models and model_id not in models:
+            continue
 
         row = build_run_row(summary_file, summary_data, model_id)
         runs_by_model.setdefault(model_id, []).append(row)
@@ -199,7 +203,7 @@ def print_table(rows):
 
 def main():
     args = get_args()
-    rows = summarize_benchmark(args.dir, args.type, keep=args.keep)
+    rows = summarize_benchmark(args.dir, args.type, models=args.models, keep=args.keep)
     if not rows:
         raise SystemExit(f"No {args.type!r} summary.json files found in {args.dir}")
 
