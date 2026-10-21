@@ -7,11 +7,12 @@ from balrog.agents.base import BaseAgent
 
 class CustomAgent(BaseAgent):
     """An agent that generates actions and plans based on observations with a customizable approach."""
-    # The memory length is set to 12 to cover repeated short cycles of up to three states while remaining within the 16-step textual context window
+    # The memory length is set to 12 to cover repeated short cycles of up to four states while remaining within the 16-step textual context window
     # This value is a practical heuristic rather than an optimised hyperparameter
     MEMORY_SIZE = 12
     NO_CHANGE_THRESHOLD = 2
-    MAX_CYCLE_PERIOD = 3
+    MAX_CYCLE_PERIOD = 4
+    TURN_LOOP_THRESHOLD = 4 # also consider the case of four identical turns returning an embodied agent to its original heading
 
     def __init__(self, client_factory, prompt_builder):
         super().__init__(client_factory, prompt_builder)
@@ -23,6 +24,8 @@ class CustomAgent(BaseAgent):
         self.state_visit_counts = Counter()
         self.no_progress_steps = 0
         self.last_loop_event = None
+        self.last_raw_completion = None
+        self.last_generated_plan = None
 
     def act(self, obs, prev_action=None):
         """Generate the next action and update the plan based on the current observation.
@@ -70,8 +73,13 @@ Never output stop, wait, or any command that is not in the action list.
 
         response = self.client.generate(messages)
 
+        # Preserve the model output for trajectory diagnostics before replacing the
+        # completion with the parsed environment action.
+        self.last_raw_completion = response.completion
+
         # Extract the plan and action from the LLM's response
         plan, action = self._extract_plan_and_action(response.completion)
+        self.last_generated_plan = plan
 
         # Keep the internal plan compact so it cannot continually expand the next prompt
         if plan and plan.casefold().rstrip(".") != "no changes to the plan":
@@ -177,6 +185,20 @@ Never output stop, wait, or any command that is not in the action list.
         actions = list(self.action_history)
         states = list(self.state_history)
 
+        # Four identical turns return an embodied agent to its original heading
+        # The observations during those turns are normally four distinct states, so unchanged-state detection alone cannot catch this common loop
+        recent_turns = actions[-self.TURN_LOOP_THRESHOLD :]
+        if (
+            len(recent_turns) == self.TURN_LOOP_THRESHOLD
+            and len(set(recent_turns)) == 1
+            and recent_turns[0].casefold() in {"turn left", "turn right"}
+        ):
+            return {
+                "type": "turn_cycle",
+                "action": recent_turns[0],
+                "steps": self.TURN_LOOP_THRESHOLD,
+            }
+
         # Check for repeated ineffective actions (same action leading to unchanged state)
         if self.no_progress_steps >= self.NO_CHANGE_THRESHOLD:
             recent_actions = actions[-self.NO_CHANGE_THRESHOLD :]
@@ -217,6 +239,12 @@ Never output stop, wait, or any command that is not in the action list.
                 f'The observation has remained unchanged for {loop_event["steps"]} consecutive actions. '
                 "Try a different action or subgoal."
             )
+        if loop_event["type"] == "turn_cycle":
+            return (
+                f'The action "{loop_event["action"]}" was repeated {loop_event["steps"]} times, '
+                "completing a full rotation without positional progress. Move toward the goal or choose "
+                "a different direction instead of continuing to turn."
+            )
 
         recent_actions = ", ".join(loop_event["actions"]) or "unavailable"
         return (
@@ -233,3 +261,5 @@ Never output stop, wait, or any command that is not in the action list.
         self.state_visit_counts.clear()
         self.no_progress_steps = 0
         self.last_loop_event = None
+        self.last_raw_completion = None
+        self.last_generated_plan = None

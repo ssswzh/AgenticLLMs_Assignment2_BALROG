@@ -27,7 +27,7 @@ eval:
   icl_dataset: records
   feedback_on_invalid_action : True       # Whether to provide feedback on invalid actions
   num_trials: 0         # 0 keeps the legacy run; values > 0 also add a summary grouped by trial
-  stop_on_success: false        # Whether to stop evaluation on the first successful trial for each environment/task. If true, the number of episodes may be less than num_episodes.
+  stop_on_success: false        # Stop later trials for an episode after its first success; the episode still counts once in evaluation
 
 client:
   client_name: openai           # LLM client to use (e.g., 'openai', 'gemini', 'claude', 'aws-bedrock')

@@ -59,29 +59,46 @@ class EvaluatorManager:
             # Queue up tasks for each environment and episode index: (env_name, task, episode_idx)
             for task in evaluator.tasks:
                 for episode_idx in range(evaluator.num_episodes):
-                    # Check if task has been completed
-                    if config.eval.num_trials == 0:
-                        # If num_trials is 0, we only save one JSON file per episode
-                        json_filename = os.path.join(
-                            self.output_dir,
-                            env_name,
-                            task,
-                            f"{task}_run_{episode_idx:02d}.json",
-                        )
-                    else:
-                        # If num_trials > 0, we save a JSON file for each trial, check if the maximum number of trials has been reached
-                        json_filename = os.path.join(
-                            self.output_dir,
-                            env_name,
-                            task,
-                            f"{task}_run_{episode_idx:02d}_trial_{config.eval.num_trials:02d}.json",
-                        )
-                    # If the JSON file already exists, skip this task and episode index
-                    if os.path.exists(json_filename):
+                    # If every configured trial exists, or an earlier trial
+                    # succeeded under stop_on_success, this episode is complete.
+                    if self._episode_is_complete(env_name, task, episode_idx):
                         logging.info(f"Skipping completed task: {env_name}, {task}, episode {episode_idx}")
                     else:
                         self.tasks.append((env_name, task, episode_idx))
         self.num_workers = config.eval.num_workers
+
+    def _episode_is_complete(self, env_name, task, episode_idx):
+        """Return whether an episode bundle is complete for resume purposes."""
+        configured_trials = int(self.config.eval.num_trials)
+        base_dir = os.path.join(self.output_dir, env_name, task)
+
+        if configured_trials == 0:
+            legacy_path = os.path.join(base_dir, f"{task}_run_{episode_idx:02d}.json")
+            return os.path.exists(legacy_path)
+
+        trial_paths = [
+            os.path.join(
+                base_dir,
+                f"{task}_run_{episode_idx:02d}_trial_{trial_idx:02d}.json",
+            )
+            for trial_idx in range(1, configured_trials + 1)
+        ]
+        if all(os.path.exists(path) for path in trial_paths):
+            return True
+
+        if bool(self.config.eval.stop_on_success):
+            for path in trial_paths:
+                if not os.path.exists(path):
+                    continue
+                try:
+                    with open(path, encoding="utf-8") as file:
+                        trial_log = json.load(file)
+                except (OSError, json.JSONDecodeError):
+                    continue
+                if trial_log.get("progression", 0.0) >= 1.0:
+                    return True
+
+        return False
 
     def run(self, agent_factory):
         """Run the evaluation using the specified agent factory.
@@ -351,6 +368,8 @@ class Evaluator:
                     trial_idx=trial_idx,
                 )
 
+                success = trial_log.get("progression", 0.0) >= 1.0
+
                 # If trial is set and the agent has a reflect method, call it to allow the agent to reflect on the completed trial
                 if configured_trials > 0 and hasattr(agent, "reflect"):
                     trial_log["reflections_used"] = reflections_used
@@ -358,15 +377,25 @@ class Evaluator:
                     input_tokens_before = getattr(agent, "reflection_input_tokens", 0)
                     output_tokens_before = getattr(agent, "reflection_output_tokens", 0)
                     # Store the reflection result to trial log
-                    reflection = agent.reflect(
-                        success=trial_log.get("progression", 0.0) >= 1.0,
-                        reward=trial_log["episode_return"],
-                        stats={
+                    reflection_kwargs = {
+                        "success": success,
+                        "reward": trial_log["episode_return"],
+                        "stats": {
                             "progression": trial_log.get("progression", 0.0),
                             "num_steps": trial_log["num_steps"],
                             "failed_candidates": trial_log["failed_candidates"],
                         },
-                    )
+                    }
+                    # If the agent has a reflect_on_trajectory method, use it to reflect on the trial's trajectory
+                    if hasattr(agent, "reflect_on_trajectory"):
+                        reflection = agent.reflect_on_trajectory(
+                            trajectory=trial_log.get("trajectory", []),
+                            **reflection_kwargs,
+                        )
+                    # otherwise, use the reflect method
+                    else:
+                        reflection = agent.reflect(**reflection_kwargs)
+                    
                     reflection_input_tokens = (
                         getattr(agent, "reflection_input_tokens", 0) - input_tokens_before
                     )
@@ -382,6 +411,15 @@ class Evaluator:
 
                 self._save_trial_log(task, episode_idx, trial_idx, trial_log)
                 trial_logs.append(trial_log)
+
+                # If stop_on_success is set and the trial succeeded, break the loop to stop further trials for this episode
+                if success and bool(self.config.eval.stop_on_success):
+                    logging.info(
+                        "Stopping episode %s after successful trial %s",
+                        episode_idx,
+                        trial_idx,
+                    )
+                    break
         finally:
             # A worker may process many episodes, so always release resources
             # even when an action or reflection call raises an exception.
@@ -417,6 +455,7 @@ class Evaluator:
             "output_tokens": 0,
             "episode_idx": episode_idx,
             "trial_idx": trial_idx,
+            "trajectory": [], # store the full trajectory of the trial for reflection and analysis
         }
 
         instructions = obs["mission"] if self.env_name == "babyai" else None
@@ -431,7 +470,19 @@ class Evaluator:
 
         with open(csv_filename, mode="w", newline="", encoding="utf-8") as csv_file:
             csv_writer = csv.writer(csv_file, escapechar="˘", quoting=csv.QUOTE_MINIMAL)
-            csv_writer.writerow(["Step", "Action", "Reasoning", "Observation", "Reward", "Done"])
+            csv_writer.writerow(
+                [
+                    "Step",
+                    "Action",
+                    "Executed Action",
+                    "Plan",
+                    "Raw Completion",
+                    "Reasoning",
+                    "Observation",
+                    "Reward",
+                    "Done",
+                ]
+            )
 
             if isinstance(agent, FewShotAgent):
                 self.dataset.load_in_context_learning_episodes(
@@ -450,6 +501,7 @@ class Evaluator:
 
             action = None
             last_valid_action = None
+            # Run the trial for a maximum number of steps, or until the environment signals termination
             for step in range(max_steps):
                 response = agent.act(obs, prev_action=action)
                 valid_action = env.check_action_validity(response.completion)
@@ -473,12 +525,35 @@ class Evaluator:
                     else obs["text"]["long_term_context"]
                 )
                 action = response.completion
+                long_term_observation = obs["text"].get("long_term_context", "")
+                short_term_observation = obs["text"].get("short_term_context", "")
+                observation_text = "\n".join(
+                    part for part in [long_term_observation, short_term_observation] if part
+                )
+                plan = getattr(agent, "last_generated_plan", None)
+                raw_completion = getattr(agent, "last_raw_completion", None)
+                episode_log["trajectory"].append(
+                    {
+                        "step": step,
+                        "requested_action": action,
+                        "action": valid_action,
+                        "plan": plan,
+                        "raw_completion": raw_completion,
+                        "reasoning": reasoning,
+                        "observation": observation_text,
+                        "reward": float(reward),
+                        "done": bool(done),
+                    }
+                )
                 csv_writer.writerow(
                     [
                         step,
                         action,
+                        valid_action,
+                        plan,
+                        raw_completion,
                         reasoning,
-                        obs["text"]["long_term_context"],
+                        observation_text,
                         reward,
                         done,
                     ]
@@ -510,10 +585,9 @@ class Evaluator:
             pbar.set_postfix_str("DONE")
             pbar.close()
 
-        # CustomAgent normally records an action and its resulting observation at
-        # the beginning of the next act() call. There is no next call after a
-        # terminal step, so append the final transition here. This lets reflect()
-        # inspect the action and observation that actually caused success/failure.
+        # CustomAgent normally records an action and its resulting observation at the beginning of the next act() call
+        # There is no next call after a terminal step, so append the final transition here
+        # This lets reflect() inspect the action and observation that actually caused success/failure
         if hasattr(agent, "reflect") and last_valid_action is not None:
             agent.prompt_builder.update_action(last_valid_action)
             agent.prompt_builder.update_observation(obs)
