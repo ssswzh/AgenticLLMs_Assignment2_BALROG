@@ -113,7 +113,7 @@ def plot_by_temperature(runs, output):
     markers = {task: marker for task, marker in zip(task_names, ["s", "^", "D", "P", "X", "v"])}
 
     figure, axes = plt.subplots(
-        1, len(models), figsize=(max(8, 5 * len(models)), 5), sharey=True, squeeze=False
+        1, len(models), figsize=(max(8, 4 * len(models)), 5), sharey=True, squeeze=False
     )
     box_width = 0.75 / len(temperatures)
 
@@ -136,13 +136,19 @@ def plot_by_temperature(runs, output):
                         boxprops={"facecolor": colors[temperature], "alpha": 0.45},
                         medianprops={"color": "black"},
                     )
-                    axis.scatter(
-                        point_positions(position, len(scores), box_width * 0.3),
-                        scores,
+                    average, error = parse_score(
+                        average_cells([row.get(benchmark, "") for row in group])
+                    )
+                    label = f"{average:.1f}" if error is None else f"{average:.1f}±{error:.1f}"
+                    axis.text(
+                        position,
+                        100,
+                        label,
+                        ha="center",
+                        va="top",
+                        rotation=90,
+                        fontsize=8,
                         color=colors[temperature],
-                        edgecolors="black",
-                        linewidths=0.5,
-                        zorder=3,
                     )
 
                 for task_index, task in enumerate(TASKS[benchmark]):
