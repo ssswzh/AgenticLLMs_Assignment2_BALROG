@@ -45,6 +45,8 @@ class EvaluatorManager:
         self.config = config
         self.original_cwd = original_cwd
         self.output_dir = output_dir
+        if int(config.eval.num_trials) < 0:
+            raise ValueError("eval.num_trials must be non-negative")
 
         # By default: babyai-babaisai-textworld-crafter-nle-minihack
         self.env_names = config.envs.names.split("-")
@@ -58,12 +60,22 @@ class EvaluatorManager:
             for task in evaluator.tasks:
                 for episode_idx in range(evaluator.num_episodes):
                     # Check if task has been completed
-                    json_filename = os.path.join(
-                        self.output_dir,
-                        env_name,
-                        task,
-                        f"{task}_run_{episode_idx:02d}.json",
-                    )
+                    if config.eval.num_trials == 0:
+                        # If num_trials is 0, we only save one JSON file per episode
+                        json_filename = os.path.join(
+                            self.output_dir,
+                            env_name,
+                            task,
+                            f"{task}_run_{episode_idx:02d}.json",
+                        )
+                    else:
+                        # If num_trials > 0, we save a JSON file for each trial, check if the maximum number of trials has been reached
+                        json_filename = os.path.join(
+                            self.output_dir,
+                            env_name,
+                            task,
+                            f"{task}_run_{episode_idx:02d}_trial_{config.eval.num_trials:02d}.json",
+                        )
                     # If the JSON file already exists, skip this task and episode index
                     if os.path.exists(json_filename):
                         logging.info(f"Skipping completed task: {env_name}, {task}, episode {episode_idx}")
@@ -110,8 +122,8 @@ class EvaluatorManager:
                 evaluator = self.env_evaluators[env_name]
                 # Create a new agent for each episode to ensure a fresh state
                 agent = agent_factory.create_agent()
-                episode_log = evaluator.run_episode(task, agent, position=1, episode_idx=episode_idx)
-                results[env_name].append(episode_log)
+                episode_logs = evaluator.run_episode(task, agent, position=1, episode_idx=episode_idx)
+                results[env_name].extend(episode_logs)
                 pbar.update(1)
         return results
 
@@ -168,7 +180,7 @@ class EvaluatorManager:
                 logging.error(f"Error in task {result['task']} processed by {result['process_num']}: {result['error']}")
                 logging.error(f"Traceback:\n{result['traceback']}")
             else:
-                results[result["env_name"]].append(result)
+                results[result["env_name"]].extend(result["trial_logs"])
             tasks_completed += 1
 
             # Update progress bar
@@ -209,8 +221,6 @@ class EvaluatorManager:
         random.seed(seed)
         np.random.seed(seed)
 
-        # Create ONE agent for this worker (for multiple episodes)
-        agent = agent_factory.create_agent()
         process_num = multiprocessing.current_process().name
         while True:
             # Get a task from the queue; if None, exit the loop
@@ -220,17 +230,27 @@ class EvaluatorManager:
             try:
                 env_name, task, episode_idx = item
                 evaluator = self.env_evaluators[env_name]
-                result = evaluator.run_episode(
+                # One agent owns all trials of this episode
+                # A new agent is created for the next episode to prevent memory leakage
+                agent = agent_factory.create_agent()
+                trial_logs = evaluator.run_episode(
                     task,
                     agent,
                     process_num=process_num,
                     position=position + 1,
                     episode_idx=episode_idx,
                 )
-                result["process_num"] = process_num  # Include process number in result
-                result["env_name"] = env_name
-                # return the result to the main process
-                results_queue.put(result)
+                # Send one result per episode back to the manager
+                # Trials stay grouped and are never independently scheduled by workers
+                results_queue.put(
+                    {
+                        "env_name": env_name,
+                        "task": task,
+                        "episode_idx": episode_idx,
+                        "process_num": process_num,
+                        "trial_logs": trial_logs,
+                    }
+                )
             except Exception as e:
                 tb = traceback.format_exc()
                 logging.error(f"Error in worker processing task {task}: {e}\n{tb}")
@@ -274,7 +294,9 @@ class Evaluator:
         self.dataset = InContextDataset(self.config, self.env_name, original_cwd=original_cwd)
 
     def run_episode(self, task, agent, process_num=None, position=0, episode_idx=0):
-        """Run a single evaluation episode.
+        """Run every trial for one episode sequentially with one agent.
+        The episode is the unit scheduled by EvaluatorManager.
+        All trials reuse the same environment seed and agent, so a reflective agent can carry verbal memory from trial n to trial n + 1.
 
         Args:
             task (str): Task name.
@@ -284,92 +306,173 @@ class Evaluator:
             episode_idx (int, optional): Index of the episode. Defaults to 0.
 
         Returns:
-            dict: Log of the episode containing statistics and results.
+            list[dict]: One result log for each trial.
         """
-        env = make_env(self.env_name, task, self.config)
-        agent.reset()
+        configured_trials = int(self.config.eval.num_trials)
+        # If num_trials is 0, we run one trial and save one JSON file per episode --> as before trial_idx = 0
+        # If num_trials > 0, we run multiple trials and save one JSON file for each trial --> trial_idx = 1, 2, ..., n
+        trial_indices = range(1, configured_trials + 1) if configured_trials > 0 else [0]
+        # trials in one episode share the same seed, so that the agent can reflect on previous trials of the same episode
+        seed = self._get_episode_seed(task, episode_idx, process_num)
 
-        # set the seed for the episode based on the base seed and episode index
-        # so that each episode has a unique seed, but is reproducible given the same base seed
-        # then we can compare the results across different runs with the same base seed
+        # Create the environment only once for this episode. Reusing the same
+        # environment object prevents factories such as TextWorld from selecting
+        # a different game between trials. The derived episode seed is copied into
+        # the environment config so environment selection is also episode-specific.
+        episode_config = copy.deepcopy(self.config)
+        episode_config.envs.env_kwargs.seed = seed
+        env = make_env(self.env_name, task, episode_config)
+
+        agent.reset()
+        trial_logs = []
+
+        try:
+            # Run every trial of this episode sequentially. With four trials,
+            # Trial 1 starts without memory and Trials 2-4 receive reflections
+            # accumulated from their preceding trials (bounded by max_reflections).
+            for trial_idx in trial_indices:
+                # The full reset above handles the legacy Trial 0 and Trial 1.
+                # Later trials clear only short-term state so reflection memory survives.
+                if trial_idx > 1:
+                    if hasattr(agent, "reset_trial"):
+                        agent.reset_trial()
+                    else:
+                        agent.reset()
+
+                reflections_used = list(getattr(agent, "reflections", []))
+                trial_log = self._run_trial(
+                    env=env,
+                    task=task,
+                    agent=agent,
+                    seed=seed,
+                    process_num=process_num,
+                    position=position,
+                    episode_idx=episode_idx,
+                    trial_idx=trial_idx,
+                )
+
+                # If trial is set and the agent has a reflect method, call it to allow the agent to reflect on the completed trial
+                if configured_trials > 0 and hasattr(agent, "reflect"):
+                    trial_log["reflections_used"] = reflections_used
+                    # Record the input and output tokens used for reflection separately, so we can analyze the cost of reflection
+                    input_tokens_before = getattr(agent, "reflection_input_tokens", 0)
+                    output_tokens_before = getattr(agent, "reflection_output_tokens", 0)
+                    # Store the reflection result to trial log
+                    reflection = agent.reflect(
+                        success=trial_log.get("progression", 0.0) >= 1.0,
+                        reward=trial_log["episode_return"],
+                        stats={
+                            "progression": trial_log.get("progression", 0.0),
+                            "num_steps": trial_log["num_steps"],
+                            "failed_candidates": trial_log["failed_candidates"],
+                        },
+                    )
+                    reflection_input_tokens = (
+                        getattr(agent, "reflection_input_tokens", 0) - input_tokens_before
+                    )
+                    reflection_output_tokens = (
+                        getattr(agent, "reflection_output_tokens", 0) - output_tokens_before
+                    )
+                    trial_log["reflection"] = reflection
+                    trial_log["reflection_memory_after_trial"] = list(agent.reflections)
+                    trial_log["reflection_input_tokens"] = reflection_input_tokens
+                    trial_log["reflection_output_tokens"] = reflection_output_tokens
+                    trial_log["input_tokens"] += reflection_input_tokens
+                    trial_log["output_tokens"] += reflection_output_tokens
+
+                self._save_trial_log(task, episode_idx, trial_idx, trial_log)
+                trial_logs.append(trial_log)
+        finally:
+            # A worker may process many episodes, so always release resources
+            # even when an action or reflection call raises an exception.
+            env.close()
+
+        return trial_logs
+
+    def _get_episode_seed(self, task, episode_idx, process_num):
+        """Return one seed shared by all trials of an episode."""
         base_seed = self.config.envs.env_kwargs.seed
         if base_seed is None:
-            seed = get_unique_seed(process_num=process_num, episode_idx=episode_idx)
-        else:
-            seed = get_episode_seed(
-                base_seed=base_seed,
-                env_name=self.env_name,
-                task=task,
-                episode_idx=episode_idx,
-            )
+            return get_unique_seed(process_num=process_num, episode_idx=episode_idx)
+        return get_episode_seed(
+            base_seed=base_seed,
+            env_name=self.env_name,
+            task=task,
+            episode_idx=episode_idx,
+        )
+
+    def _run_trial(self, env, task, agent, seed, process_num, position, episode_idx, trial_idx):
+        """Run one trial without resetting episode-level reflection memory."""
         random.seed(seed)
         np.random.seed(seed)
+        # EnvWrapper stores invalid candidates outside the underlying environment,
+        # so reset this list explicitly when reusing the object for another trial.
+        env.failed_candidates.clear()
         obs, info = env.reset(seed=seed)
+
         episode_log = {
             "task": task,
             "action_frequency": defaultdict(int),
             "input_tokens": 0,
             "output_tokens": 0,
+            "episode_idx": episode_idx,
+            "trial_idx": trial_idx,
         }
 
-        instructions = None
-        if self.env_name == "babyai":
-            instructions = obs["mission"]
-        agent.prompt_builder.update_instruction_prompt(env.get_instruction_prompt(instructions=instructions))
+        instructions = obs["mission"] if self.env_name == "babyai" else None
+        agent.prompt_builder.update_instruction_prompt(
+            env.get_instruction_prompt(instructions=instructions)
+        )
 
         episode_return = 0.0
-
-        max_steps_per_episode = env.max_steps if self.max_steps_per_episode is None else self.max_steps_per_episode
-
-        # Create a unique CSV filename for this episode
-        csv_filename = os.path.join(self.output_dir, self.env_name, task, f"{task}_run_{episode_idx:02d}.csv")
+        max_steps = env.max_steps if self.max_steps_per_episode is None else self.max_steps_per_episode
+        csv_filename = self._trial_path(task, episode_idx, trial_idx, "csv")
         Path(csv_filename).parent.mkdir(exist_ok=True, parents=True)
 
-        # Open the CSV file and write the header
         with open(csv_filename, mode="w", newline="", encoding="utf-8") as csv_file:
             csv_writer = csv.writer(csv_file, escapechar="˘", quoting=csv.QUOTE_MINIMAL)
             csv_writer.writerow(["Step", "Action", "Reasoning", "Observation", "Reward", "Done"])
 
-            # If the agent is an FewShotAgent, load the in-context learning episode
             if isinstance(agent, FewShotAgent):
-                self.dataset.load_in_context_learning_episodes(self.config.eval.icl_episodes, task, agent)
-
+                self.dataset.load_in_context_learning_episodes(
+                    self.config.eval.icl_episodes, task, agent
+                )
                 if self.config.agent.cache_icl and self.config.client.client_name == "gemini":
                     agent.cache_icl()
 
-            pbar_desc = f"Task: {task}, Proc: {process_num}"
             pbar = tqdm(
-                total=max_steps_per_episode,
-                desc=pbar_desc,
+                total=max_steps,
+                desc=f"Task: {task}, Trial: {trial_idx}, Proc: {process_num}",
                 position=position,
-                leave=False,  # Keep the progress bar after completion
+                leave=False,
                 dynamic_ncols=True,
             )
 
             action = None
-            for step in range(max_steps_per_episode):
+            last_valid_action = None
+            for step in range(max_steps):
                 response = agent.act(obs, prev_action=action)
-                action = env.check_action_validity(response.completion)
+                valid_action = env.check_action_validity(response.completion)
+                last_valid_action = valid_action
                 reasoning = response.reasoning if hasattr(response, "reasoning") else ""
 
-                episode_log["action_frequency"][action] += 1
+                episode_log["action_frequency"][valid_action] += 1
                 episode_log["input_tokens"] += response.input_tokens
                 episode_log["output_tokens"] += response.output_tokens
 
-                obs, reward, terminated, truncated, info = env.step(action)
+                obs, reward, terminated, truncated, info = env.step(valid_action)
                 done = terminated or truncated
-
                 episode_return += reward
 
-                # Give feedback on the action (if not valid)
                 obs["text"]["long_term_context"] = (
-                    f"\n\nYour previous output did not contain a valid action. Defaulted to action: {action}\n\nObservation:\n"
+                    f"\n\nYour previous output did not contain a valid action. "
+                    f"Defaulted to action: {valid_action}\n\nObservation:\n"
                     + obs["text"]["long_term_context"]
-                    if (action != response.completion) and (self.config.eval.feedback_on_invalid_action)
+                    if valid_action != response.completion
+                    and self.config.eval.feedback_on_invalid_action
                     else obs["text"]["long_term_context"]
                 )
                 action = response.completion
-                # Write the step data to the CSV file
                 csv_writer.writerow(
                     [
                         step,
@@ -380,48 +483,63 @@ class Evaluator:
                         done,
                     ]
                 )
-
                 pbar.update(1)
 
                 if self.config.eval.save_images and obs["image"]:
-                    images_dir = os.path.join(self.output_dir, self.env_name, task, f"episode_{episode_idx:02d}")
+                    images_dir = os.path.join(
+                        self.output_dir,
+                        self.env_name,
+                        task,
+                        f"episode_{episode_idx:02d}_trial_{trial_idx:02d}",
+                    )
                     Path(images_dir).mkdir(exist_ok=True, parents=True)
-                    image_filename = os.path.join(images_dir, f"step_{step:04d}.png")
-                    image = obs["image"]
-                    image.save(image_filename)
+                    obs["image"].save(os.path.join(images_dir, f"step_{step:04d}.png"))
 
                 if done:
-                    logging.info(f"Episode done with reward: {episode_return}")
+                    logging.info(
+                        "Episode %s trial %s done with reward: %s",
+                        episode_idx,
+                        trial_idx,
+                        episode_return,
+                    )
                     episode_log["done"] = True
-                    if pbar.n < pbar.total:
-                        pbar.update(pbar.total - pbar.n)
-                    pbar.set_postfix_str("DONE")
                     break
 
             if pbar.n < pbar.total:
                 pbar.update(pbar.total - pbar.n)
-            if "done" not in episode_log:
-                pbar.set_postfix_str("DONE")
+            pbar.set_postfix_str("DONE")
             pbar.close()
 
-            episode_log["episode_return"] = episode_return
-            episode_log["num_steps"] = step + 1
-            episode_log["failed_candidates"] = env.failed_candidates
-            episode_log.update(env.get_stats())
-            episode_log["process_num"] = process_num
-            episode_log["seed"] = seed
-            episode_log["agent"] = OmegaConf.to_container(self.config.agent, resolve=True)
-            episode_log["client"] = OmegaConf.to_container(self.config.client, resolve=True)
+        # CustomAgent normally records an action and its resulting observation at
+        # the beginning of the next act() call. There is no next call after a
+        # terminal step, so append the final transition here. This lets reflect()
+        # inspect the action and observation that actually caused success/failure.
+        if hasattr(agent, "reflect") and last_valid_action is not None:
+            agent.prompt_builder.update_action(last_valid_action)
+            agent.prompt_builder.update_observation(obs)
 
-            # Save the episode_log to a JSON file
-            json_filename = os.path.join(
-                self.output_dir,
-                self.env_name,
-                task,
-                f"{task}_run_{episode_idx:02d}.json",
-            )
-            Path(json_filename).parent.mkdir(exist_ok=True, parents=True)
-            with open(json_filename, "w") as f:
-                json.dump(episode_log, f, indent=4)
-
+        episode_log["episode_return"] = episode_return
+        episode_log["num_steps"] = step + 1
+        # Copy the list because the same wrapper is reused and cleared before
+        # the next trial; otherwise older in-memory logs would be mutated too.
+        episode_log["failed_candidates"] = list(env.failed_candidates)
+        episode_log.update(env.get_stats())
+        episode_log["process_num"] = process_num
+        episode_log["seed"] = seed
+        episode_log["agent"] = OmegaConf.to_container(self.config.agent, resolve=True)
+        episode_log["client"] = OmegaConf.to_container(self.config.client, resolve=True)
         return episode_log
+
+    def _trial_path(self, task, episode_idx, trial_idx, extension):
+        """Build a legacy or trial-specific output path."""
+        if int(self.config.eval.num_trials) == 0:
+            filename = f"{task}_run_{episode_idx:02d}.{extension}"
+        else:
+            filename = f"{task}_run_{episode_idx:02d}_trial_{trial_idx:02d}.{extension}"
+        return os.path.join(self.output_dir, self.env_name, task, filename)
+
+    def _save_trial_log(self, task, episode_idx, trial_idx, trial_log):
+        json_filename = self._trial_path(task, episode_idx, trial_idx, "json")
+        Path(json_filename).parent.mkdir(exist_ok=True, parents=True)
+        with open(json_filename, "w") as file:
+            json.dump(trial_log, file, indent=4)

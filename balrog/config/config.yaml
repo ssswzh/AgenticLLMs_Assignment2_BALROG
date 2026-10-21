@@ -6,6 +6,8 @@ agent:
   max_cot_history: 1     # Maximum number of chain-of-thought steps to keep in history (if using 'cot' type of agent)
   max_icl_history: 1000   # Maximum number of ICL steps to keep in history (if using 'few_shot' type of agent)
   cache_icl: False
+  max_reflections: 3     # Maximum number of reflections to keep in history (if using 'reflective' type of agent)
+  use_reflection: true   # Whether to use reflection for the agent (if using 'reflective' type of agent)
 
 eval:
   output_dir: "results"  # Directory where evaluation results will be saved
@@ -24,6 +26,8 @@ eval:
   icl_episodes: 1
   icl_dataset: records
   feedback_on_invalid_action : True       # Whether to provide feedback on invalid actions
+  num_trials: 0         # 0 keeps the legacy run; values > 0 also add a summary grouped by trial
+  stop_on_success: false        # Whether to stop evaluation on the first successful trial for each environment/task. If true, the number of episodes may be less than num_episodes.
 
 client:
   client_name: openai           # LLM client to use (e.g., 'openai', 'gemini', 'claude', 'aws-bedrock')

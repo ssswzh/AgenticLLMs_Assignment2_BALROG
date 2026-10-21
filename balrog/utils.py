@@ -1,3 +1,4 @@
+import csv
 import hashlib
 import json
 import math
@@ -158,6 +159,101 @@ def print_summary_table(summary):
         print(
             f"  {env_name}: {env_data['progression_percentage']:.2f}% ± {env_data['standard_error']:.2f}%, Episodes: {env_data['episodes_played']}"
         )
+
+
+def collect_and_summarize_results_by_trial(output_dir):
+    """Create one additional summary that compares the retry trials."""
+    results_by_environment = defaultdict(lambda: defaultdict(list))
+
+    for env_name in os.listdir(output_dir):
+        env_dir = os.path.join(output_dir, env_name)
+        if not os.path.isdir(env_dir):
+            continue
+        for root, dirs, files in os.walk(env_dir):
+            for filename in files:
+                if not filename.endswith(".json") or filename.endswith("_summary.json"):
+                    continue
+                with open(os.path.join(root, filename), "r") as f:
+                    episode_log = json.load(f)
+                trial_idx = episode_log.get("trial_idx")
+                if trial_idx is not None and int(trial_idx) > 0:
+                    results_by_environment[env_name][int(trial_idx)].append(episode_log)
+
+    environment_summaries = {}
+    for env_name, trial_results in results_by_environment.items():
+        trial_summaries = {}
+        for trial_idx, episodes in sorted(trial_results.items()):
+            progressions = [episode.get("progression", 0.0) for episode in episodes]
+            episode_count = len(episodes)
+            avg_progress = sum(progressions) / episode_count
+            std_dev = (
+                math.sqrt(sum((progress - avg_progress) ** 2 for progress in progressions) / episode_count)
+                if episode_count > 1
+                else 0.0
+            )
+            std_error = std_dev / math.sqrt(episode_count) if episode_count > 1 else 0.0
+            success_rate = sum(progress >= 1.0 for progress in progressions) / episode_count
+            env_steps = sum(episode.get("num_steps", 0) for episode in episodes)
+            env_input_tokens = sum(episode.get("input_tokens", 0) for episode in episodes)
+            env_output_tokens = sum(episode.get("output_tokens", 0) for episode in episodes)
+
+            task_runs = defaultdict(list)
+            for episode in episodes:
+                task_runs[episode.get("task")].append(episode)
+            task_summaries = {}
+            for task_name, runs in task_runs.items():
+                task_progressions = [run.get("progression", 0.0) for run in runs]
+                task_count = len(runs)
+                task_avg_progress = sum(task_progressions) / task_count
+                task_std_dev = (
+                    math.sqrt(
+                        sum((progress - task_avg_progress) ** 2 for progress in task_progressions) / task_count
+                    )
+                    if task_count > 1
+                    else 0.0
+                )
+                task_summaries[task_name] = {
+                    "progression_percentage": 100 * task_avg_progress,
+                    "standard_error": 100 * task_std_dev / math.sqrt(task_count) if task_count > 1 else 0.0,
+                    "success_rate_percentage": 100
+                    * sum(progress >= 1.0 for progress in task_progressions)
+                    / task_count,
+                    "average_steps": sum(run.get("num_steps", 0) for run in runs) / task_count,
+                    "episodes_played": task_count,
+                }
+
+            trial_summaries[str(trial_idx)] = {
+                "progression_percentage": 100 * avg_progress,
+                "standard_error": 100 * std_error,
+                "success_rate_percentage": 100 * success_rate,
+                "average_steps": env_steps / episode_count,
+                "episodes_played": episode_count,
+                "tasks": task_summaries,
+                "input_tokens": env_input_tokens,
+                "output_tokens": env_output_tokens,
+            }
+
+        environment_summaries[env_name] = {
+            "trials": trial_summaries,
+        }
+
+    summary = {"environments": environment_summaries}
+    with open(os.path.join(output_dir, "summary_by_trial.json"), "w") as f:
+        json.dump(summary, f, indent=4)
+    return summary
+
+
+def print_trial_summary_table(summary):
+    """Print the additional per-trial summary."""
+    print("\nSummary by Environment and Trial:")
+    for env_name, environment in summary["environments"].items():
+        print(f"  {env_name}:")
+        for trial_idx, trial in environment["trials"].items():
+            print(
+                f"    Trial {trial_idx}: progression {trial['progression_percentage']:.2f}%, "
+                f"success {trial['success_rate_percentage']:.2f}%, "
+                f"average steps {trial['average_steps']:.2f}"
+            )
 
 
 def get_unique_seed(process_num=None, episode_idx=0):

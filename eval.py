@@ -11,7 +11,13 @@ from omegaconf import DictConfig
 
 from balrog.agents import AgentFactory
 from balrog.evaluator import EvaluatorManager
-from balrog.utils import collect_and_summarize_results, print_summary_table, setup_environment
+from balrog.utils import (
+    collect_and_summarize_results,
+    collect_and_summarize_results_by_trial,
+    print_summary_table,
+    print_trial_summary_table,
+    setup_environment,
+)
 
 
 @contextmanager
@@ -57,9 +63,14 @@ def main(config: DictConfig):
     with redirect_to_file(log_filename):
         evaluator_manager.run(agent_factory)
 
-    # Collect and summarize results
+    # Always keep the original aggregate summary.
     summary = collect_and_summarize_results(output_dir)
     print_summary_table(summary)
+
+    # Trial mode adds a second summary without changing the original one.
+    if int(config.eval.num_trials) > 0:
+        trial_summary = collect_and_summarize_results_by_trial(output_dir)
+        print_trial_summary_table(trial_summary)
 
 
 if __name__ == "__main__":
