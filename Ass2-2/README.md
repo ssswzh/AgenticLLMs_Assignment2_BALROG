@@ -134,3 +134,7 @@ uv run python Ass2-2/summarize_benchmark.py -d results/exercise2 -t custom -o As
 uv run python Ass2-2/summarize_recent_json.py -d results/exercise2 -t custom -m qwen3:4b-instruct -o Ass2-2/custom_summary_qwen.tsv
 ```
 
+Draw plots for Naive and Custom agents:
+```bash
+uv run python Ass2-2/compare_summary.py -i Ass2-1/benchmark_summary.tsv Ass2-2/custom_summary_two_models.tsv -l Naive Custom -o Ass2-2/compare_naive_custom.png
+```
