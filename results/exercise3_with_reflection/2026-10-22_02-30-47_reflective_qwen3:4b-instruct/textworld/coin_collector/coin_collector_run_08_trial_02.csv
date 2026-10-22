@@ -1,0 +1,491 @@
+Step,Action,Executed Action,Plan,Raw Completion,Reasoning,Observation,Reward,Done
+0,go east,go east,Check if the coin is visible in the room after moving east,"ACTION: go east
+PLAN: Check if the coin is visible in the room after moving east",,"-= Launderette =-
+You've just sauntered into a launderette.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded. There is an unguarded exit to the north. You need an unguarded exit? You should try going south. You need an unblocked exit? You should try going west.",0,False
+1,take coin,take coin,Check if the coin is visible in the room before proceeding further,"ACTION: take coin
+PLAN: Check if the coin is visible in the room before proceeding further",,You can't see any such thing.,0,False
+2,go south,go south,Explore the room to the south to check if the coin is now visible,"ACTION: go south  
+PLAN: Explore the room to the south to check if the coin is now visible",,"-= Restroom =-
+Well how about that, you are in the place we're calling the restroom.
+
+
+
+You need an unguarded exit? You should try going north.",0,False
+3,go north,go north,Check if the coin is visible in the room to the north,"ACTION: go north
+PLAN: Check if the coin is visible in the room to the north",,"-= Launderette =-
+You've just sauntered into a launderette.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded. There is an unguarded exit to the north. You need an unguarded exit? You should try going south. You need an unblocked exit? You should try going west.",0,False
+4,go north,go north,Check if the coin is visible in the room to the north before moving further,"ACTION: go north  
+PLAN: Check if the coin is visible in the room to the north before moving further",,"-= Hot Cookhouse =-
+You've entered a hot cookhouse.
+
+
+
+You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+5,go north,go north,Check if the coin is visible in the room before proceeding further,"ACTION: go north  
+PLAN: Check if the coin is visible in the room before proceeding further",,You can't go that way.,0,False
+6,go south,go south,Check if the coin is visible in the room before moving further,"ACTION: go south
+PLAN: Check if the coin is visible in the room before moving further",,"-= Launderette =-
+You've just sauntered into a launderette.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded. There is an unguarded exit to the north. You need an unguarded exit? You should try going south. You need an unblocked exit? You should try going west.",0,False
+7,take coin,take coin,Check if the coin is visible in the room before proceeding to any other direction,"ACTION: take coin
+PLAN: Check if the coin is visible in the room before proceeding to any other direction",,You can't see any such thing.,0,False
+8,go west,go west,Check if the coin is visible in the room before moving to any other direction,"ACTION: go west
+PLAN: Check if the coin is visible in the room before moving to any other direction",,"-= Kitchenette =-
+You are in a kitchenette. An ordinary one. The room seems oddly familiar, as though it were only superficially different from the other rooms in the building.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked. There is an exit to the north. Don't worry, it is unguarded. You need an unguarded exit? You should try going west.",0,False
+9,go west,go west,Check if the coin is visible in the kitchenette before exploring any other direction,"ACTION: go west
+PLAN: Check if the coin is visible in the kitchenette before exploring any other direction",,"-= Bedroom =-
+You are in a bedroom. An usual one.
+
+
+
+There is an unguarded exit to the east.",0,False
+10,go east,go east,Check if the coin is visible in the room before moving to any other direction,"ACTION: go east
+PLAN: Check if the coin is visible in the room before moving to any other direction",,"-= Kitchenette =-
+You are in a kitchenette. An ordinary one. The room seems oddly familiar, as though it were only superficially different from the other rooms in the building.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked. There is an exit to the north. Don't worry, it is unguarded. You need an unguarded exit? You should try going west.",0,False
+11,go west,go west,Check if the coin is visible in the bedroom before exploring further directions,"ACTION: go west
+PLAN: Check if the coin is visible in the bedroom before exploring further directions",,"-= Bedroom =-
+You are in a bedroom. An usual one.
+
+
+
+There is an unguarded exit to the east.",0,False
+12,go east,go east,Explore the east exit to discover new rooms and check for the coin without repeating the west-east cycle,"ACTION: go east  
+PLAN: Explore the east exit to discover new rooms and check for the coin without repeating the west-east cycle","The recent observations form a repeating cycle of 2 states. Recent actions: go west, go west, go east, go west. Do not repeat this action sequence.","-= Kitchenette =-
+You are in a kitchenette. An ordinary one. The room seems oddly familiar, as though it were only superficially different from the other rooms in the building.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked. There is an exit to the north. Don't worry, it is unguarded. You need an unguarded exit? You should try going west.",0,False
+13,go north,go north,Check the north exit for the coin instead of repeating the west-east loop,"ACTION: go north  
+PLAN: Check the north exit for the coin instead of repeating the west-east loop","The recent observations form a repeating cycle of 2 states. Recent actions: go west, go east, go west, go east. Do not repeat this action sequence.","-= Misty Laundromat =-
+You find yourself in a laundromat. A misty one.
+
+
+
+There is an unblocked exit to the south.",0,False
+14,go north,go north,"Check the north exit for the coin, as it is unblocked and may lead to the target room","ACTION: go north  
+PLAN: Check the north exit for the coin, as it is unblocked and may lead to the target room",,You can't go that way.,0,False
+15,go south,go south,Move south to the misty laundromat and check for the coin in the room,"ACTION: go south  
+PLAN: Move south to the misty laundromat and check for the coin in the room",,"-= Kitchenette =-
+You are in a kitchenette. An ordinary one. The room seems oddly familiar, as though it were only superficially different from the other rooms in the building.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked. There is an exit to the north. Don't worry, it is unguarded. You need an unguarded exit? You should try going west.",0,False
+16,go south,go south,Move to the misty laundromat to check if the coin is visible in the room,"ACTION: go south
+PLAN: Move to the misty laundromat to check if the coin is visible in the room",,You can't go that way.,0,False
+17,go east,go east,Move to the launderette to check for the coin in the next room,"ACTION: go east  
+PLAN: Move to the launderette to check for the coin in the next room",,"-= Launderette =-
+You've just sauntered into a launderette.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded. There is an unguarded exit to the north. You need an unguarded exit? You should try going south. You need an unblocked exit? You should try going west.",0,False
+18,go west,go west,Check if the coin is visible in the bedroom room before continuing exploration,"ACTION: go west
+PLAN: Check if the coin is visible in the bedroom room before continuing exploration",,"-= Kitchenette =-
+You are in a kitchenette. An ordinary one. The room seems oddly familiar, as though it were only superficially different from the other rooms in the building.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked. There is an exit to the north. Don't worry, it is unguarded. You need an unguarded exit? You should try going west.",0,False
+19,go north,go north,Check if the coin is visible in the room before moving to ensure goal-directed exploration,"ACTION: go north
+PLAN: Check if the coin is visible in the room before moving to ensure goal-directed exploration",,"-= Misty Laundromat =-
+You find yourself in a laundromat. A misty one.
+
+
+
+There is an unblocked exit to the south.",0,False
+20,go south,go south,Move to the next room to check if the coin is visible before further exploration,"ACTION: go south
+PLAN: Move to the next room to check if the coin is visible before further exploration",,"-= Kitchenette =-
+You are in a kitchenette. An ordinary one. The room seems oddly familiar, as though it were only superficially different from the other rooms in the building.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked. There is an exit to the north. Don't worry, it is unguarded. You need an unguarded exit? You should try going west.",0,False
+21,go west,go west,Check if the coin is visible in the bedroom before exploring further rooms or exits,"ACTION: go west
+PLAN: Check if the coin is visible in the bedroom before exploring further rooms or exits",,"-= Bedroom =-
+You are in a bedroom. An usual one.
+
+
+
+There is an unguarded exit to the east.",0,False
+22,go east,go east,Check if the coin is visible in the room before moving to any other direction,"ACTION: go east
+PLAN: Check if the coin is visible in the room before moving to any other direction",,"-= Kitchenette =-
+You are in a kitchenette. An ordinary one. The room seems oddly familiar, as though it were only superficially different from the other rooms in the building.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked. There is an exit to the north. Don't worry, it is unguarded. You need an unguarded exit? You should try going west.",0,False
+23,take coin,take coin,Check if the coin is visible in the room before proceeding to any other direction,"ACTION: take coin
+PLAN: Check if the coin is visible in the room before proceeding to any other direction",,You can't see any such thing.,0,False
+24,go north,go north,Explore the north exit to find a new room where the coin might be visible,"ACTION: go north  
+PLAN: Explore the north exit to find a new room where the coin might be visible",,"-= Misty Laundromat =-
+You find yourself in a laundromat. A misty one.
+
+
+
+There is an unblocked exit to the south.",0,False
+25,go north,go north,Move to the north to explore a new room where the coin might be visible,"ACTION: go north
+PLAN: Move to the north to explore a new room where the coin might be visible",,You can't go that way.,0,False
+26,go south,go south,Return to the kitchenette to check if the coin is now visible in the room,"ACTION: go south
+PLAN: Return to the kitchenette to check if the coin is now visible in the room",,"-= Kitchenette =-
+You are in a kitchenette. An ordinary one. The room seems oddly familiar, as though it were only superficially different from the other rooms in the building.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked. There is an exit to the north. Don't worry, it is unguarded. You need an unguarded exit? You should try going west.",0,False
+27,go west,go west,Move to the bedroom to check if the coin is now visible in the room,"ACTION: go west
+PLAN: Move to the bedroom to check if the coin is now visible in the room",,"-= Bedroom =-
+You are in a bedroom. An usual one.
+
+
+
+There is an unguarded exit to the east.",0,False
+28,go east,go east,Check if the coin is visible in the next room after moving east,"ACTION: go east
+PLAN: Check if the coin is visible in the next room after moving east",,"-= Kitchenette =-
+You are in a kitchenette. An ordinary one. The room seems oddly familiar, as though it were only superficially different from the other rooms in the building.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked. There is an exit to the north. Don't worry, it is unguarded. You need an unguarded exit? You should try going west.",0,False
+29,go east,go east,Move to the next room to check if the coin is visible there,"ACTION: go east
+PLAN: Move to the next room to check if the coin is visible there",,"-= Launderette =-
+You've just sauntered into a launderette.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded. There is an unguarded exit to the north. You need an unguarded exit? You should try going south. You need an unblocked exit? You should try going west.",0,False
+30,go west,go west,Check if the coin is visible in the bedroom room before exploring further rooms,"ACTION: go west  
+PLAN: Check if the coin is visible in the bedroom room before exploring further rooms",,"-= Kitchenette =-
+You are in a kitchenette. An ordinary one. The room seems oddly familiar, as though it were only superficially different from the other rooms in the building.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked. There is an exit to the north. Don't worry, it is unguarded. You need an unguarded exit? You should try going west.",0,False
+31,go east,go east,Explore the launderette to check if the coin is visible in that room before continuing navigation,"ACTION: go east
+PLAN: Explore the launderette to check if the coin is visible in that room before continuing navigation",,"-= Launderette =-
+You've just sauntered into a launderette.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded. There is an unguarded exit to the north. You need an unguarded exit? You should try going south. You need an unblocked exit? You should try going west.",0,False
+32,go north,go north,"Check the northern exit of the launderette for the coin, as it is unguarded and previously unexplored in this path.","ACTION: go north  
+PLAN: Check the northern exit of the launderette for the coin, as it is unguarded and previously unexplored in this path.","The recent observations form a repeating cycle of 2 states. Recent actions: go east, go east, go west, go east. Do not repeat this action sequence.","-= Hot Cookhouse =-
+You've entered a hot cookhouse.
+
+
+
+You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+33,go south,go south,Explore the southern exit of the hot cookhouse to find the coin in the next room.,"ACTION: go south
+PLAN: Explore the southern exit of the hot cookhouse to find the coin in the next room.",,"-= Launderette =-
+You've just sauntered into a launderette.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded. There is an unguarded exit to the north. You need an unguarded exit? You should try going south. You need an unblocked exit? You should try going west.",0,False
+34,go south,go south,Move to the hot cookhouse to check for the coin in the next room,"ACTION: go south
+PLAN: Move to the hot cookhouse to check for the coin in the next room",,"-= Restroom =-
+Well how about that, you are in the place we're calling the restroom.
+
+
+
+You need an unguarded exit? You should try going north.",0,False
+35,go north,go north,Check the hot cookhouse for the coin as it is the next room in the path to the goal,"ACTION: go north  
+PLAN: Check the hot cookhouse for the coin as it is the next room in the path to the goal",,"-= Launderette =-
+You've just sauntered into a launderette.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded. There is an unguarded exit to the north. You need an unguarded exit? You should try going south. You need an unblocked exit? You should try going west.",0,False
+36,go east,go east,Explore the east exit of the launderette to find the coin in the next room,"ACTION: go east  
+PLAN: Explore the east exit of the launderette to find the coin in the next room",,"-= Basement =-
+You arrive in a basement. A normal one. You start to take note of what's in the room.
+
+
+
+There is an unguarded exit to the east. There is an unblocked exit to the north. You need an unguarded exit? You should try going south. You need an unguarded exit? You should try going west.",0,False
+37,go east,go east,Explore the east room to check if the coin is visible there,"ACTION: go east
+PLAN: Explore the east room to check if the coin is visible there",,"-= Dish-Pit =-
+You have walked into a dish-pit. Not the dish-pit you'd expect. No, this is a dish-pit.
+
+
+
+There is an unguarded exit to the west.",0,False
+38,go west,go west,Check if the coin is visible in the previous room before continuing exploration,"ACTION: go west
+PLAN: Check if the coin is visible in the previous room before continuing exploration",,"-= Basement =-
+You arrive in a basement. A normal one. You start to take note of what's in the room.
+
+
+
+There is an unguarded exit to the east. There is an unblocked exit to the north. You need an unguarded exit? You should try going south. You need an unguarded exit? You should try going west.",0,False
+39,take coin,take coin,Check if the coin is visible in the current room before proceeding with further exploration,"ACTION: take coin
+PLAN: Check if the coin is visible in the current room before proceeding with further exploration",,You can't see any such thing.,0,False
+40,go west,go west,Check if the coin is visible in the room before moving to ensure exploration is goal-directed and efficient,"ACTION: go west  
+PLAN: Check if the coin is visible in the room before moving to ensure exploration is goal-directed and efficient",,"-= Launderette =-
+You've just sauntered into a launderette.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded. There is an unguarded exit to the north. You need an unguarded exit? You should try going south. You need an unblocked exit? You should try going west.",0,False
+41,go west,go west,Check if the coin is visible in the room before proceeding to ensure goal-directed exploration,"ACTION: go west  
+PLAN: Check if the coin is visible in the room before proceeding to ensure goal-directed exploration",,"-= Kitchenette =-
+You are in a kitchenette. An ordinary one. The room seems oddly familiar, as though it were only superficially different from the other rooms in the building.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked. There is an exit to the north. Don't worry, it is unguarded. You need an unguarded exit? You should try going west.",0,False
+42,go east,go east,Check if the coin is visible in the next room before moving further in the exploration path,"ACTION: go east
+PLAN: Check if the coin is visible in the next room before moving further in the exploration path",,"-= Launderette =-
+You've just sauntered into a launderette.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded. There is an unguarded exit to the north. You need an unguarded exit? You should try going south. You need an unblocked exit? You should try going west.",0,False
+43,go north,go north,Check if the coin is visible in the room ahead before proceeding further in exploration,"ACTION: go north  
+PLAN: Check if the coin is visible in the room ahead before proceeding further in exploration",,"-= Hot Cookhouse =-
+You've entered a hot cookhouse.
+
+
+
+You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+44,go south,go south,Check if the coin is visible in the hot cookhouse before exploring further rooms or directions,"ACTION: go south
+PLAN: Check if the coin is visible in the hot cookhouse before exploring further rooms or directions",,"-= Launderette =-
+You've just sauntered into a launderette.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded. There is an unguarded exit to the north. You need an unguarded exit? You should try going south. You need an unblocked exit? You should try going west.",0,False
+45,go west,go west,Check if the coin is visible in the kitchenette before moving to any other room or direction,"ACTION: go west  
+PLAN: Check if the coin is visible in the kitchenette before moving to any other room or direction",,"-= Kitchenette =-
+You are in a kitchenette. An ordinary one. The room seems oddly familiar, as though it were only superficially different from the other rooms in the building.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked. There is an exit to the north. Don't worry, it is unguarded. You need an unguarded exit? You should try going west.",0,False
+46,take coin,take coin,Check if the coin is visible in the current room before exploring further directions,"ACTION: take coin
+PLAN: Check if the coin is visible in the current room before exploring further directions",,You can't see any such thing.,0,False
+47,go east,go east,Explore east to find a room where the coin might be visible and check for the coin upon entry,"ACTION: go east
+PLAN: Explore east to find a room where the coin might be visible and check for the coin upon entry",,"-= Launderette =-
+You've just sauntered into a launderette.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded. There is an unguarded exit to the north. You need an unguarded exit? You should try going south. You need an unblocked exit? You should try going west.",0,False
+48,go east,go east,Enter the room to the east and check if the coin is visible there,"ACTION: go east
+PLAN: Enter the room to the east and check if the coin is visible there",,"-= Basement =-
+You arrive in a basement. A normal one. You start to take note of what's in the room.
+
+
+
+There is an unguarded exit to the east. There is an unblocked exit to the north. You need an unguarded exit? You should try going south. You need an unguarded exit? You should try going west.",0,False
+49,go east,go east,Check if the coin is visible in the room to the east,"ACTION: go east
+PLAN: Check if the coin is visible in the room to the east",,"-= Dish-Pit =-
+You have walked into a dish-pit. Not the dish-pit you'd expect. No, this is a dish-pit.
+
+
+
+There is an unguarded exit to the west.",0,False
+50,go west,go west,Check if the coin is visible in the dish-pit room after moving west,"ACTION: go west  
+PLAN: Check if the coin is visible in the dish-pit room after moving west",,"-= Basement =-
+You arrive in a basement. A normal one. You start to take note of what's in the room.
+
+
+
+There is an unguarded exit to the east. There is an unblocked exit to the north. You need an unguarded exit? You should try going south. You need an unguarded exit? You should try going west.",0,False
+51,take coin,take coin,Check if the coin is visible in the current room after confirming presence in the dish-pit room,"ACTION: take coin
+PLAN: Check if the coin is visible in the current room after confirming presence in the dish-pit room",,You can't see any such thing.,0,False
+52,go north,go north,Explore the north exit to find a room where the coin might be visible,"ACTION: go north  
+PLAN: Explore the north exit to find a room where the coin might be visible",,"-= Spotless Restroom =-
+You are in a spotless kind of place. That is to say, you're in a restroom.
+
+
+
+You need an unguarded exit? You should try going south.",0,False
+53,go south,go south,Check if the coin is visible in the room south of the restroom,"ACTION: go south
+PLAN: Check if the coin is visible in the room south of the restroom",,"-= Basement =-
+You arrive in a basement. A normal one. You start to take note of what's in the room.
+
+
+
+There is an unguarded exit to the east. There is an unblocked exit to the north. You need an unguarded exit? You should try going south. You need an unguarded exit? You should try going west.",0,False
+54,go west,go west,Check if the coin is visible in the west basement room before proceeding further,"ACTION: go west
+PLAN: Check if the coin is visible in the west basement room before proceeding further",,"-= Launderette =-
+You've just sauntered into a launderette.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded. There is an unguarded exit to the north. You need an unguarded exit? You should try going south. You need an unblocked exit? You should try going west.",0,False
+55,go west,go west,Check if the coin is visible in the basement room before exploring further,"ACTION: go west  
+PLAN: Check if the coin is visible in the basement room before exploring further",,"-= Kitchenette =-
+You are in a kitchenette. An ordinary one. The room seems oddly familiar, as though it were only superficially different from the other rooms in the building.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked. There is an exit to the north. Don't worry, it is unguarded. You need an unguarded exit? You should try going west.",0,False
+56,go north,go north,Check if the coin is visible in the restroom room before continuing exploration,"ACTION: go north  
+PLAN: Check if the coin is visible in the restroom room before continuing exploration",,"-= Misty Laundromat =-
+You find yourself in a laundromat. A misty one.
+
+
+
+There is an unblocked exit to the south.",0,False
+57,go south,go south,Explore the next room to check if the coin is visible there,"ACTION: go south  
+PLAN: Explore the next room to check if the coin is visible there",,"-= Kitchenette =-
+You are in a kitchenette. An ordinary one. The room seems oddly familiar, as though it were only superficially different from the other rooms in the building.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked. There is an exit to the north. Don't worry, it is unguarded. You need an unguarded exit? You should try going west.",0,False
+58,go west,go west,Check if the coin is visible in the west room before proceeding further in exploration,"ACTION: go west
+PLAN: Check if the coin is visible in the west room before proceeding further in exploration",,"-= Bedroom =-
+You are in a bedroom. An usual one.
+
+
+
+There is an unguarded exit to the east.",0,False
+59,go east,go east,Check if the coin is visible in the east room before continuing exploration,"ACTION: go east
+PLAN: Check if the coin is visible in the east room before continuing exploration",,"-= Kitchenette =-
+You are in a kitchenette. An ordinary one. The room seems oddly familiar, as though it were only superficially different from the other rooms in the building.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked. There is an exit to the north. Don't worry, it is unguarded. You need an unguarded exit? You should try going west.",0,False
+60,go east,go east,Check if the coin is visible in the east room before proceeding further in exploration,"ACTION: go east
+PLAN: Check if the coin is visible in the east room before proceeding further in exploration",,"-= Launderette =-
+You've just sauntered into a launderette.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded. There is an unguarded exit to the north. You need an unguarded exit? You should try going south. You need an unblocked exit? You should try going west.",0,False
+61,go east,go east,Check if the coin is visible in the east room before continuing exploration,"ACTION: go east  
+PLAN: Check if the coin is visible in the east room before continuing exploration",,"-= Basement =-
+You arrive in a basement. A normal one. You start to take note of what's in the room.
+
+
+
+There is an unguarded exit to the east. There is an unblocked exit to the north. You need an unguarded exit? You should try going south. You need an unguarded exit? You should try going west.",0,False
+62,go east,go east,Check if the coin is visible in the east room before proceeding further in exploration,"ACTION: go east
+PLAN: Check if the coin is visible in the east room before proceeding further in exploration",,"-= Dish-Pit =-
+You have walked into a dish-pit. Not the dish-pit you'd expect. No, this is a dish-pit.
+
+
+
+There is an unguarded exit to the west.",0,False
+63,go west,go west,Check if the coin is visible in the dish-pit room before exploring further,"ACTION: go west
+PLAN: Check if the coin is visible in the dish-pit room before exploring further",,"-= Basement =-
+You arrive in a basement. A normal one. You start to take note of what's in the room.
+
+
+
+There is an unguarded exit to the east. There is an unblocked exit to the north. You need an unguarded exit? You should try going south. You need an unguarded exit? You should try going west.",0,False
+64,take coin,take coin,Check if the coin is visible in the current room before proceeding to any other location,"ACTION: take coin
+PLAN: Check if the coin is visible in the current room before proceeding to any other location",,You can't see any such thing.,0,False
+65,go north,go north,Check if the coin is visible in the next room before moving further in the maze,"ACTION: go north
+PLAN: Check if the coin is visible in the next room before moving further in the maze",,"-= Spotless Restroom =-
+You are in a spotless kind of place. That is to say, you're in a restroom.
+
+
+
+You need an unguarded exit? You should try going south.",0,False
+66,go south,go south,Check if the coin is visible in the restroom before exploring further rooms or exits,"ACTION: go south
+PLAN: Check if the coin is visible in the restroom before exploring further rooms or exits",,"-= Basement =-
+You arrive in a basement. A normal one. You start to take note of what's in the room.
+
+
+
+There is an unguarded exit to the east. There is an unblocked exit to the north. You need an unguarded exit? You should try going south. You need an unguarded exit? You should try going west.",0,False
+67,go east,go east,Explore the eastern exit to find the coin in the next room without repeating previous paths or missing visible objects,"ACTION: go east
+PLAN: Explore the eastern exit to find the coin in the next room without repeating previous paths or missing visible objects",,"-= Dish-Pit =-
+You have walked into a dish-pit. Not the dish-pit you'd expect. No, this is a dish-pit.
+
+
+
+There is an unguarded exit to the west.",0,False
+68,go west,go west,"Return to the basement and check for the coin in the room, ensuring no paths are missed or repeated.","ACTION: go west
+PLAN: Return to the basement and check for the coin in the room, ensuring no paths are missed or repeated.",,"-= Basement =-
+You arrive in a basement. A normal one. You start to take note of what's in the room.
+
+
+
+There is an unguarded exit to the east. There is an unblocked exit to the north. You need an unguarded exit? You should try going south. You need an unguarded exit? You should try going west.",0,False
+69,take coin,take coin,"Check if the coin is visible in the basement room, as it may have been overlooked during previous explorations.","ACTION: take coin
+PLAN: Check if the coin is visible in the basement room, as it may have been overlooked during previous explorations.",,You can't see any such thing.,0,False
+70,go north,go north,Explore the north exit to find a room where the coin might be visible,"ACTION: go north  
+PLAN: Explore the north exit to find a room where the coin might be visible",,"-= Spotless Restroom =-
+You are in a spotless kind of place. That is to say, you're in a restroom.
+
+
+
+You need an unguarded exit? You should try going south.",0,False
+71,go south,go south,Return to the basement and check if the coin is now visible in the room,"ACTION: go south
+PLAN: Return to the basement and check if the coin is now visible in the room",,"-= Basement =-
+You arrive in a basement. A normal one. You start to take note of what's in the room.
+
+
+
+There is an unguarded exit to the east. There is an unblocked exit to the north. You need an unguarded exit? You should try going south. You need an unguarded exit? You should try going west.",0,False
+72,go west,go west,Check if the coin is visible in the west room after moving from the basement,"ACTION: go west
+PLAN: Check if the coin is visible in the west room after moving from the basement",,"-= Launderette =-
+You've just sauntered into a launderette.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded. There is an unguarded exit to the north. You need an unguarded exit? You should try going south. You need an unblocked exit? You should try going west.",0,False
+73,go west,go west,Check if the coin is visible in the room after moving west from the launderette,"ACTION: go west
+PLAN: Check if the coin is visible in the room after moving west from the launderette",,"-= Kitchenette =-
+You are in a kitchenette. An ordinary one. The room seems oddly familiar, as though it were only superficially different from the other rooms in the building.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked. There is an exit to the north. Don't worry, it is unguarded. You need an unguarded exit? You should try going west.",0,False
+74,go west,go west,Check if the coin is visible in the kitchenette after moving west from the launderette,"ACTION: go west
+PLAN: Check if the coin is visible in the kitchenette after moving west from the launderette",,"-= Bedroom =-
+You are in a bedroom. An usual one.
+
+
+
+There is an unguarded exit to the east.",0,False
+75,go east,go east,Check if the coin is visible in the room after moving east from the bedroom,"ACTION: go east
+PLAN: Check if the coin is visible in the room after moving east from the bedroom",,"-= Kitchenette =-
+You are in a kitchenette. An ordinary one. The room seems oddly familiar, as though it were only superficially different from the other rooms in the building.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked. There is an exit to the north. Don't worry, it is unguarded. You need an unguarded exit? You should try going west.",0,False
+76,take coin,take coin,Check if the coin is visible in the current room after moving east from the bedroom,"ACTION: take coin
+PLAN: Check if the coin is visible in the current room after moving east from the bedroom",,You can't see any such thing.,0,False
+77,go north,go north,Check if the coin is visible in the room after moving north from the kitchenette,"ACTION: go north  
+PLAN: Check if the coin is visible in the room after moving north from the kitchenette",,"-= Misty Laundromat =-
+You find yourself in a laundromat. A misty one.
+
+
+
+There is an unblocked exit to the south.",0,False
+78,take coin,take coin,Check if the coin is visible in the misty laundromat room after entering from the north,"ACTION: take coin
+PLAN: Check if the coin is visible in the misty laundromat room after entering from the north",,You can't see any such thing.,0,False
+79,go south,go south,Explore the room south to check if the coin is visible there,"ACTION: go south
+PLAN: Explore the room south to check if the coin is visible there",,"-= Kitchenette =-
+You are in a kitchenette. An ordinary one. The room seems oddly familiar, as though it were only superficially different from the other rooms in the building.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked. There is an exit to the north. Don't worry, it is unguarded. You need an unguarded exit? You should try going west.",0,True

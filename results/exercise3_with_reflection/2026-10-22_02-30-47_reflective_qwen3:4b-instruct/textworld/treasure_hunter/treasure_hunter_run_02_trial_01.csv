@@ -1,0 +1,549 @@
+Step,Action,Executed Action,Plan,Raw Completion,Reasoning,Observation,Reward,Done
+0,look,look,Describe the room to identify visible objects and potential exits or containers,"ACTION: look  
+PLAN: Describe the room to identify visible objects and potential exits or containers",,"-= Sweaty Scullery =-
+You've entered a sweaty scullery. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+You need an unguarded exit? You should try going north.",0,False
+1,look,look,Identify visible objects and exits to determine next steps for exploration,"ACTION: look  
+PLAN: Identify visible objects and exits to determine next steps for exploration",,"-= Sweaty Scullery =-
+You've entered a sweaty scullery. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+You need an unguarded exit? You should try going north.",0,False
+2,go north,go north,Explore the room north to find exits or objects that may lead closer to the goal,"ACTION: go north
+PLAN: Explore the room north to find exits or objects that may lead closer to the goal","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Kitchenette =-
+You find yourself in a kitchenette. A typical kind of place.
+
+
+
+There is an open door leading north. You need an unblocked exit? You should try going south.",0,False
+3,look,look,Examine the room for objects or exits that might lead to the goal or hidden items,"ACTION: look  
+PLAN: Examine the room for objects or exits that might lead to the goal or hidden items",,"-= Kitchenette =-
+You find yourself in a kitchenette. A typical kind of place.
+
+
+
+There is an open door leading north. You need an unblocked exit? You should try going south.",0,False
+4,look,look,Check for objects or hidden items in the kitchenette that might be relevant to the goal or lead to further exploration,"ACTION: look  
+PLAN: Check for objects or hidden items in the kitchenette that might be relevant to the goal or lead to further exploration",,"-= Kitchenette =-
+You find yourself in a kitchenette. A typical kind of place.
+
+
+
+There is an open door leading north. You need an unblocked exit? You should try going south.",0,False
+5,go south,go south,Explore the south exit to locate new rooms or objects that may lead closer to the target goal,"ACTION: go south  
+PLAN: Explore the south exit to locate new rooms or objects that may lead closer to the target goal","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Sweaty Scullery =-
+You've entered a sweaty scullery. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+You need an unguarded exit? You should try going north.",0,False
+6,go north,go north,Proceed to the kitchenette to explore further and check for hidden objects or exits,"ACTION: go north  
+PLAN: Proceed to the kitchenette to explore further and check for hidden objects or exits",,"-= Kitchenette =-
+You find yourself in a kitchenette. A typical kind of place.
+
+
+
+There is an open door leading north. You need an unblocked exit? You should try going south.",0,False
+7,look,look,Check the kitchenette for objects or hidden exits that might lead closer to the target item,"ACTION: look  
+PLAN: Check the kitchenette for objects or hidden exits that might lead closer to the target item",,"-= Kitchenette =-
+You find yourself in a kitchenette. A typical kind of place.
+
+
+
+There is an open door leading north. You need an unblocked exit? You should try going south.",0,False
+8,look,look,Check the kitchenette for any objects or clues that might lead to the target item,"ACTION: look  
+PLAN: Check the kitchenette for any objects or clues that might lead to the target item",,"-= Kitchenette =-
+You find yourself in a kitchenette. A typical kind of place.
+
+
+
+There is an open door leading north. You need an unblocked exit? You should try going south.",0,False
+9,go north,go north,Explore the north room to find new exits or objects that may lead to the target item,"ACTION: go north  
+PLAN: Explore the north room to find new exits or objects that may lead to the target item","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+10,look,look,Examine the room for objects or exits that might lead to the target item,"ACTION: look  
+PLAN: Examine the room for objects or exits that might lead to the target item",,"-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+11,take cuboid keycard from floor,take cuboid keycard from floor,Use the keycard to unlock the closed cuboid portal leading north in the kitchen,"ACTION: take cuboid keycard from floor
+PLAN: Use the keycard to unlock the closed cuboid portal leading north in the kitchen",,You can't see any such thing.,0,False
+12,look,look,Check if there are any other visible objects or doors that might need unlocking with the keycard,"ACTION: look  
+PLAN: Check if there are any other visible objects or doors that might need unlocking with the keycard",,"-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+13,look,look,Check for visible objects or doors that might require the keycard to unlock,"ACTION: look  
+PLAN: Check for visible objects or doors that might require the keycard to unlock",,"-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+14,look,look,Check if there is any container or door that requires the cuboid keycard to unlock,"ACTION: look  
+PLAN: Check if there is any container or door that requires the cuboid keycard to unlock",,"-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+15,look,look,Verify room details to identify any locked doors or containers that might require the cuboid keycard for unlocking,"ACTION: look  
+PLAN: Verify room details to identify any locked doors or containers that might require the cuboid keycard for unlocking","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+16,go south,go south,Check the south exit to explore the room beyond and locate possible doors or objects that may require the keycard.,"ACTION: go south  
+PLAN: Check the south exit to explore the room beyond and locate possible doors or objects that may require the keycard.","The action ""look"" has repeatedly left the observation unchanged for 3 steps. Do not repeat this action in the current state.","-= Kitchenette =-
+You find yourself in a kitchenette. A typical kind of place.
+
+
+
+There is an open door leading north. You need an unblocked exit? You should try going south.",0,False
+17,go south,go south,Explore the room to the south and check for exits or objects that may require the keycard to unlock.,"ACTION: go south
+PLAN: Explore the room to the south and check for exits or objects that may require the keycard to unlock.",,"-= Sweaty Scullery =-
+You've entered a sweaty scullery. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+You need an unguarded exit? You should try going north.",0,False
+18,go north,go north,Move to the kitchen to check if the cuboid keycard can unlock the closed cuboid portal or hatch,"ACTION: go north  
+PLAN: Move to the kitchen to check if the cuboid keycard can unlock the closed cuboid portal or hatch",,"-= Kitchenette =-
+You find yourself in a kitchenette. A typical kind of place.
+
+
+
+There is an open door leading north. You need an unblocked exit? You should try going south.",0,False
+19,go north,go north,Enter the kitchen to use the cuboid keycard to unlock the cuboid portal or hatch,"ACTION: go north  
+PLAN: Enter the kitchen to use the cuboid keycard to unlock the cuboid portal or hatch",,"-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+20,look,look,Check if the cuboid portal or hatch can be unlocked with the cuboid keycard,"ACTION: look  
+PLAN: Check if the cuboid portal or hatch can be unlocked with the cuboid keycard",,"-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+21,unlock cuboid portal with cuboid keycard,unlock cuboid portal with cuboid keycard,Attempt to unlock the cuboid portal using the keycard to access the north exit,"ACTION: unlock cuboid portal with cuboid keycard
+PLAN: Attempt to unlock the cuboid portal using the keycard to access the north exit",,You need to take the cuboid keycard first.,0,False
+22,take cuboid keycard from floor,take cuboid keycard from floor,Retrieve the cuboid keycard to use it for unlocking the cuboid portal in the kitchen,"ACTION: take cuboid keycard from floor  
+PLAN: Retrieve the cuboid keycard to use it for unlocking the cuboid portal in the kitchen",,You can't see any such thing.,0,False
+23,look,look,Check the room for visible objects or new clues to locate the target object or necessary key,"ACTION: look  
+PLAN: Check the room for visible objects or new clues to locate the target object or necessary key",,"-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+24,look,look,Check for visible objects or clues in the kitchen that might lead to the target object or a new key,"ACTION: look  
+PLAN: Check for visible objects or clues in the kitchen that might lead to the target object or a new key",,"-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+25,go west,go west,Explore the west direction to find a hatch or hidden object that might lead to the target item,"ACTION: go west  
+PLAN: Explore the west direction to find a hatch or hidden object that might lead to the target item",,You have to open the rectangular hatch first.,0,False
+26,look,look,Check if the rectangular hatch is visible or if there is anything else in the room that can be interacted with,"ACTION: look  
+PLAN: Check if the rectangular hatch is visible or if there is anything else in the room that can be interacted with",,"-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+27,look,look,Check for visible objects or clues to unlock or open the rectangular hatch or other containers in the room,"ACTION: look  
+PLAN: Check for visible objects or clues to unlock or open the rectangular hatch or other containers in the room",,"-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+28,look,look,Check if there are any tools or keys needed to open the rectangular hatch or any other accessible containers,"ACTION: look  
+PLAN: Check if there are any tools or keys needed to open the rectangular hatch or any other accessible containers",,"-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+29,go west,go west,Attempt to open the rectangular hatch after confirming it requires a key or tool,"ACTION: go west  
+PLAN: Attempt to open the rectangular hatch after confirming it requires a key or tool","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",You have to open the rectangular hatch first.,0,False
+30,look,look,Check if any key or object is visible that can unlock the rectangular hatch,"ACTION: look  
+PLAN: Check if any key or object is visible that can unlock the rectangular hatch",,"-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+31,go south,go south,Explore the kitchenette to find new exits or objects that might lead to the goal or keys.,"ACTION: go south  
+PLAN: Explore the kitchenette to find new exits or objects that might lead to the goal or keys.","The recent observations form a repeating cycle of 4 states. Recent actions: look, look, go west, look, look, look, go west, look. Do not repeat this action sequence.","-= Kitchenette =-
+You find yourself in a kitchenette. A typical kind of place.
+
+
+
+There is an open door leading north. You need an unblocked exit? You should try going south.",0,False
+32,go south,go south,Return to the kitchen to investigate the closed portal or hatch for possible access or clues.,"ACTION: go south  
+PLAN: Return to the kitchen to investigate the closed portal or hatch for possible access or clues.",,"-= Sweaty Scullery =-
+You've entered a sweaty scullery. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+You need an unguarded exit? You should try going north.",0,False
+33,go north,go north,Return to the kitchen to attempt unlocking the cuboid portal with the keycard,"ACTION: go north  
+PLAN: Return to the kitchen to attempt unlocking the cuboid portal with the keycard",,"-= Kitchenette =-
+You find yourself in a kitchenette. A typical kind of place.
+
+
+
+There is an open door leading north. You need an unblocked exit? You should try going south.",0,False
+34,go north,go north,Reach the kitchen to unlock the cuboid portal with the cuboid keycard,"ACTION: go north
+PLAN: Reach the kitchen to unlock the cuboid portal with the cuboid keycard",,"-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+35,unlock cuboid portal with cuboid keycard,unlock cuboid portal with cuboid keycard,Unlock the cuboid portal using the cuboid keycard to access the next room,"ACTION: unlock cuboid portal with cuboid keycard
+PLAN: Unlock the cuboid portal using the cuboid keycard to access the next room",,You need to take the cuboid keycard first.,0,False
+36,take cuboid keycard from floor,take cuboid keycard from floor,Retrieve the cuboid keycard to use it for unlocking the cuboid portal north,"ACTION: take cuboid keycard from floor
+PLAN: Retrieve the cuboid keycard to use it for unlocking the cuboid portal north",,You can't see any such thing.,0,False
+37,look,look,Check the room for visible objects or clues to locate the cuboid keycard,"ACTION: look  
+PLAN: Check the room for visible objects or clues to locate the cuboid keycard",,"-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+38,look,look,Check for visible objects or clues in the kitchen that might help locate the cuboid keycard,"ACTION: look  
+PLAN: Check for visible objects or clues in the kitchen that might help locate the cuboid keycard",,"-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+39,go west,go west,Open the rectangular hatch to access the room behind it and look for hidden objects or keys,"ACTION: go west  
+PLAN: Open the rectangular hatch to access the room behind it and look for hidden objects or keys",,You have to open the rectangular hatch first.,0,False
+40,look,look,Check if there is any visible key or object that can unlock the hatch or provide new information about the room,"ACTION: look  
+PLAN: Check if there is any visible key or object that can unlock the hatch or provide new information about the room",,"-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+41,take cuboid keycard from floor,take cuboid keycard from floor,Retrieve the keycard to potentially unlock the rectangular hatch leading west,"ACTION: take cuboid keycard from floor  
+PLAN: Retrieve the keycard to potentially unlock the rectangular hatch leading west",,You can't see any such thing.,0,False
+42,look,look,Check the room for any visible objects or clues that might help unlock the hatch or progress further,"ACTION: look  
+PLAN: Check the room for any visible objects or clues that might help unlock the hatch or progress further",,"-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+43,look,look,Examine the room for any visible objects or clues related to the hatch or keycard usage,"ACTION: look  
+PLAN: Examine the room for any visible objects or clues related to the hatch or keycard usage",,"-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+44,look,look,Check if there are any visible tools or clues related to opening the hatch or using the keycard,"ACTION: look  
+PLAN: Check if there are any visible tools or clues related to opening the hatch or using the keycard",,"-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+45,go west,go west,Attempt to open the rectangular hatch after verifying its location and accessibility,"ACTION: go west  
+PLAN: Attempt to open the rectangular hatch after verifying its location and accessibility","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",You have to open the rectangular hatch first.,0,False
+46,look,look,Check the description of the rectangular hatch to determine if a key or object is needed to open it,"ACTION: look  
+PLAN: Check the description of the rectangular hatch to determine if a key or object is needed to open it",,"-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+47,look,look,Examine the rectangular hatch to see if a specific key or object is required to open it,"ACTION: look  
+PLAN: Examine the rectangular hatch to see if a specific key or object is required to open it",,"-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+48,look,look,"Check if the rectangular hatch requires a specific key to open, or if any object is visible near it","ACTION: look  
+PLAN: Check if the rectangular hatch requires a specific key to open, or if any object is visible near it",,"-= Kitchen =-
+You've just shown up in a kitchen. You start to take note of what's in the room.
+
+
+
+There is a closed cuboid portal leading north. There is a closed rectangular hatch leading west. There is an open door leading south.
+
+There is a cuboid keycard on the floor.",0,False
+49,go south,go south,Explore the room south to find new exits or objects that may lead to the target or key locations,"ACTION: go south  
+PLAN: Explore the room south to find new exits or objects that may lead to the target or key locations","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Kitchenette =-
+You find yourself in a kitchenette. A typical kind of place.
+
+
+
+There is an open door leading north. You need an unblocked exit? You should try going south.",0,False
+50,go south,go south,Explore the room to find new exits or objects that may lead to the target or key locations,"ACTION: go south
+PLAN: Explore the room to find new exits or objects that may lead to the target or key locations",,"-= Sweaty Scullery =-
+You've entered a sweaty scullery. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+You need an unguarded exit? You should try going north.",0,False
+51,look,look,"Check for hidden objects or exits in the scullery, especially near the north door","ACTION: look  
+PLAN: Check for hidden objects or exits in the scullery, especially near the north door",,"-= Sweaty Scullery =-
+You've entered a sweaty scullery. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+You need an unguarded exit? You should try going north.",0,False
+52,go north,go north,Explore the room north of the scullery to find exits or objects that might lead to the goal,"ACTION: go north
+PLAN: Explore the room north of the scullery to find exits or objects that might lead to the goal",,"-= Kitchenette =-
+You find yourself in a kitchenette. A typical kind of place.
+
+
+
+There is an open door leading north. You need an unblocked exit? You should try going south.",0,False
+53,look,look,Check the kitchenette for hidden objects or exits that might lead to the goal room,"ACTION: look  
+PLAN: Check the kitchenette for hidden objects or exits that might lead to the goal room",,"-= Kitchenette =-
+You find yourself in a kitchenette. A typical kind of place.
+
+
+
+There is an open door leading north. You need an unblocked exit? You should try going south.",0,False
+54,go south,go south,Return to the scullery to explore for clues or objects related to the goal,"ACTION: go south
+PLAN: Return to the scullery to explore for clues or objects related to the goal",,"-= Sweaty Scullery =-
+You've entered a sweaty scullery. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+You need an unguarded exit? You should try going north.",0,False
+55,look,look,Check for objects or clues in the sweaty scullery that might help find the target goal,"ACTION: look  
+PLAN: Check for objects or clues in the sweaty scullery that might help find the target goal",,"-= Sweaty Scullery =-
+You've entered a sweaty scullery. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+You need an unguarded exit? You should try going north.",0,False
+56,go north,go north,Explore the kitchenette to find exits or objects that might lead to the target or provide clues about the goal,"ACTION: go north  
+PLAN: Explore the kitchenette to find exits or objects that might lead to the target or provide clues about the goal",,"-= Kitchenette =-
+You find yourself in a kitchenette. A typical kind of place.
+
+
+
+There is an open door leading north. You need an unblocked exit? You should try going south.",0,False
+57,look,look,Examine the kitchenette for hidden objects or clues that might lead to the target or a key to a locked path,"ACTION: look  
+PLAN: Examine the kitchenette for hidden objects or clues that might lead to the target or a key to a locked path","The recent observations form a repeating cycle of 4 states. Recent actions: go south, go south, look, go north, look, go south, look, go north. Do not repeat this action sequence.","-= Kitchenette =-
+You find yourself in a kitchenette. A typical kind of place.
+
+
+
+There is an open door leading north. You need an unblocked exit? You should try going south.",0,False
+58,look,look,Check the kitchenette for visible objects or clues that might lead to the target or a key to a locked door,"ACTION: look  
+PLAN: Check the kitchenette for visible objects or clues that might lead to the target or a key to a locked door","The recent observations form a repeating cycle of 4 states. Recent actions: go south, look, go north, look, go south, look, go north, look. Do not repeat this action sequence.","-= Kitchenette =-
+You find yourself in a kitchenette. A typical kind of place.
+
+
+
+There is an open door leading north. You need an unblocked exit? You should try going south.",0,False
+59,go south,go south,Return to the sweaty scullery to check for hidden objects or clues that might lead to the target or a key,"ACTION: go south  
+PLAN: Return to the sweaty scullery to check for hidden objects or clues that might lead to the target or a key","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Sweaty Scullery =-
+You've entered a sweaty scullery. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+You need an unguarded exit? You should try going north.",0,False
+60,look,look,Check for objects or clues in the sweaty scullery that might help find the target or a key,"ACTION: look  
+PLAN: Check for objects or clues in the sweaty scullery that might help find the target or a key",,"-= Sweaty Scullery =-
+You've entered a sweaty scullery. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+You need an unguarded exit? You should try going north.",0,False
+61,look,look,Check for hidden objects or clues in the sweaty scullery that might lead to the target or a key,"ACTION: look  
+PLAN: Check for hidden objects or clues in the sweaty scullery that might lead to the target or a key",,"-= Sweaty Scullery =-
+You've entered a sweaty scullery. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+You need an unguarded exit? You should try going north.",0,False
+62,look,look,Reassess the room for any hidden objects or clues that could lead to the target object or a key,"ACTION: look  
+PLAN: Reassess the room for any hidden objects or clues that could lead to the target object or a key","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Sweaty Scullery =-
+You've entered a sweaty scullery. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+You need an unguarded exit? You should try going north.",0,False
+63,go north,go north,Return to kitchenette to check for exits or objects that might lead to the goal or a key,"ACTION: go north  
+PLAN: Return to kitchenette to check for exits or objects that might lead to the goal or a key","The action ""look"" has repeatedly left the observation unchanged for 3 steps. Do not repeat this action in the current state.","-= Kitchenette =-
+You find yourself in a kitchenette. A typical kind of place.
+
+
+
+There is an open door leading north. You need an unblocked exit? You should try going south.",0,False
+64,look,look,Check for any visible objects or clues that might lead to the goal or a key,"ACTION: look  
+PLAN: Check for any visible objects or clues that might lead to the goal or a key",,"-= Kitchenette =-
+You find yourself in a kitchenette. A typical kind of place.
+
+
+
+There is an open door leading north. You need an unblocked exit? You should try going south.",0,False
+65,go south,go south,Explore the sweaty scullery to find hidden objects or clues that might lead to the target item or a key,"ACTION: go south  
+PLAN: Explore the sweaty scullery to find hidden objects or clues that might lead to the target item or a key",,"-= Sweaty Scullery =-
+You've entered a sweaty scullery. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+You need an unguarded exit? You should try going north.",0,False
+66,look,look,Check for visible objects or clues in the sweaty scullery that might lead to the target item or a key,"ACTION: look  
+PLAN: Check for visible objects or clues in the sweaty scullery that might lead to the target item or a key",,"-= Sweaty Scullery =-
+You've entered a sweaty scullery. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+You need an unguarded exit? You should try going north.",0,False
+67,look,look,Check for visible objects or clues in the sweaty scullery that might lead to the target item or a key,"ACTION: look  
+PLAN: Check for visible objects or clues in the sweaty scullery that might lead to the target item or a key",,"-= Sweaty Scullery =-
+You've entered a sweaty scullery. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+You need an unguarded exit? You should try going north.",0,False
+68,goal,goal,Check the objective of the game to identify the target object and necessary steps to locate it,"ACTION: goal  
+PLAN: Check the objective of the game to identify the target object and necessary steps to locate it","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",,0,False
+69,goal,goal,Identify the target object to guide exploration and ensure correct path to the goal room.,"ACTION: goal  
+PLAN: Identify the target object to guide exploration and ensure correct path to the goal room.",,,0,False
+70,look,look,Check for hidden objects or clues in the sweaty scullery that might lead to the target item.,"ACTION: look  
+PLAN: Check for hidden objects or clues in the sweaty scullery that might lead to the target item.",,"-= Sweaty Scullery =-
+You've entered a sweaty scullery. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+You need an unguarded exit? You should try going north.",0,False
+71,look,look,Examine the sweaty scullery for any objects or clues that might lead to the target item.,"ACTION: look  
+PLAN: Examine the sweaty scullery for any objects or clues that might lead to the target item.",,"-= Sweaty Scullery =-
+You've entered a sweaty scullery. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+You need an unguarded exit? You should try going north.",0,False
+72,go north,go north,Return to the kitchenette to check for new exits or objects that may lead to the target item.,"ACTION: go north  
+PLAN: Return to the kitchenette to check for new exits or objects that may lead to the target item.",,"-= Kitchenette =-
+You find yourself in a kitchenette. A typical kind of place.
+
+
+
+There is an open door leading north. You need an unblocked exit? You should try going south.",0,False
+73,look,look,Examine the kitchenette for any visible objects or exits that might lead to the target item.,"ACTION: look  
+PLAN: Examine the kitchenette for any visible objects or exits that might lead to the target item.",,"-= Kitchenette =-
+You find yourself in a kitchenette. A typical kind of place.
+
+
+
+There is an open door leading north. You need an unblocked exit? You should try going south.",0,False
+74,go south,go south,Return to the sweaty scullery to search for hidden objects or clues that may lead to the target item.,"ACTION: go south  
+PLAN: Return to the sweaty scullery to search for hidden objects or clues that may lead to the target item.",,"-= Sweaty Scullery =-
+You've entered a sweaty scullery. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+You need an unguarded exit? You should try going north.",0,False
+75,look,look,Examine the sweaty scullery for objects or clues that might lead to the target item,"ACTION: look  
+PLAN: Examine the sweaty scullery for objects or clues that might lead to the target item",,"-= Sweaty Scullery =-
+You've entered a sweaty scullery. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+You need an unguarded exit? You should try going north.",0,False
+76,look,look,Examine the sweaty scullery for hidden objects or clues that might lead to the target item,"ACTION: look
+PLAN: Examine the sweaty scullery for hidden objects or clues that might lead to the target item",,"-= Sweaty Scullery =-
+You've entered a sweaty scullery. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+You need an unguarded exit? You should try going north.",0,False
+77,go north,go north,Explore the kitchenette to find potential clues or objects related to the goal,"ACTION: go north  
+PLAN: Explore the kitchenette to find potential clues or objects related to the goal","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Kitchenette =-
+You find yourself in a kitchenette. A typical kind of place.
+
+
+
+There is an open door leading north. You need an unblocked exit? You should try going south.",0,False
+78,look,look,Examine the kitchenette for hidden objects or clues that might lead to the target item,"ACTION: look  
+PLAN: Examine the kitchenette for hidden objects or clues that might lead to the target item",,"-= Kitchenette =-
+You find yourself in a kitchenette. A typical kind of place.
+
+
+
+There is an open door leading north. You need an unblocked exit? You should try going south.",0,False
+79,look,look,Examine the kitchenette for objects or clues that might lead to the target item,"ACTION: look  
+PLAN: Examine the kitchenette for objects or clues that might lead to the target item",,"-= Kitchenette =-
+You find yourself in a kitchenette. A typical kind of place.
+
+
+
+There is an open door leading north. You need an unblocked exit? You should try going south.",0,True

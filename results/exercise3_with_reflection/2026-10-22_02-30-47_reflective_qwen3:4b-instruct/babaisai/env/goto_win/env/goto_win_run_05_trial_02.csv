@@ -1,0 +1,26 @@
+Step,Action,Executed Action,Plan,Raw Completion,Reasoning,Observation,Reward,Done
+0,left,left,Move to align with the key's position to satisfy the 'key is win' rule and trigger the win condition,"ACTION: left  
+PLAN: Move to align with the key's position to satisfy the 'key is win' rule and trigger the win condition",,"Active rules:
+key is win
+baba is you
+
+Objects on the map:
+rule `key` 3 step to the left and 2 step up
+rule `is` 2 step to the left and 2 step up
+rule `win` 1 step to the left and 2 step up
+key 1 step up
+rule `baba` 3 step to the left and 3 steps down
+rule `is` 2 step to the left and 3 steps down
+rule `you` 1 step to the left and 3 steps down",0,False
+1,up,up,Move up to align with the key's position and satisfy the 'key is win' rule for immediate win condition trigger,"ACTION: up
+PLAN: Move up to align with the key's position and satisfy the 'key is win' rule for immediate win condition trigger",,"Active rules:
+key is win
+baba is you
+
+Objects on the map:
+rule `key` 3 step to the left and 1 step up
+rule `is` 2 step to the left and 1 step up
+rule `win` 1 step to the left and 1 step up
+rule `baba` 3 step to the left and 4 steps down
+rule `is` 2 step to the left and 4 steps down
+rule `you` 1 step to the left and 4 steps down",0.982,True

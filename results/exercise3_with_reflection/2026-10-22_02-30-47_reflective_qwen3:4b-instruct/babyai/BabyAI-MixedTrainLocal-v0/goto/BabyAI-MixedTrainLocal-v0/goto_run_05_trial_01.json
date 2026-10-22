@@ -1,0 +1,108 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/goto",
+    "action_frequency": {
+        "go forward": 4,
+        "turn left": 1
+    },
+    "input_tokens": 2539,
+    "output_tokens": 139,
+    "episode_idx": 5,
+    "trial_idx": 1,
+    "trajectory": [
+        {
+            "step": 0,
+            "requested_action": "go forward",
+            "action": "go forward",
+            "plan": "Move closer to the purple key by advancing forward in the current direction.",
+            "raw_completion": "ACTION: go forward\nPLAN: Move closer to the purple key by advancing forward in the current direction.",
+            "reasoning": "",
+            "observation": "a wall 5 steps forward\na wall 2 steps right\na purple key 1 step left and 3 steps forward",
+            "reward": 0.0,
+            "done": false
+        },
+        {
+            "step": 1,
+            "requested_action": "go forward",
+            "action": "go forward",
+            "plan": "Move closer to the purple key by taking another step forward.",
+            "raw_completion": "ACTION: go forward\nPLAN: Move closer to the purple key by taking another step forward.",
+            "reasoning": "",
+            "observation": "a wall 4 steps forward\na wall 2 steps right\na purple key 1 step left and 2 steps forward",
+            "reward": 0.0,
+            "done": false
+        },
+        {
+            "step": 2,
+            "requested_action": "go forward",
+            "action": "go forward",
+            "plan": "Move one step closer to the purple key from current position",
+            "raw_completion": "ACTION: go forward\nPLAN: Move one step closer to the purple key from current position",
+            "reasoning": "",
+            "observation": "a wall 3 steps forward\na wall 2 steps right\na purple key 1 step left and 1 step forward",
+            "reward": 0.0,
+            "done": false
+        },
+        {
+            "step": 3,
+            "requested_action": "go forward",
+            "action": "go forward",
+            "plan": "Move one step closer to the purple key from current position",
+            "raw_completion": "ACTION: go forward\nPLAN: Move one step closer to the purple key from current position",
+            "reasoning": "",
+            "observation": "a wall 2 steps forward\na wall 2 steps right\na purple key 1 step left",
+            "reward": 0.0,
+            "done": false
+        },
+        {
+            "step": 4,
+            "requested_action": "turn left",
+            "action": "turn left",
+            "plan": "Move to the position directly in front of the purple key to reach it",
+            "raw_completion": "ACTION: turn left\nPLAN: Move to the position directly in front of the purple key to reach it",
+            "reasoning": "",
+            "observation": "a wall 2 steps right\na purple key 1 step forward",
+            "reward": 0.9296875,
+            "done": true
+        }
+    ],
+    "done": true,
+    "episode_return": 0.9296875,
+    "num_steps": 5,
+    "failed_candidates": [],
+    "mission": "go to the purple key",
+    "progression": 1.0,
+    "process_num": "ForkProcess-2",
+    "seed": 3407976218,
+    "agent": {
+        "type": "reflective",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false,
+        "max_reflections": 2,
+        "use_reflection": true
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "qwen3:4b-instruct",
+        "base_url": "http://127.0.0.1:11434/v1",
+        "generate_kwargs": {
+            "temperature": 0.6,
+            "max_tokens": 1024,
+            "thinking_budget": null
+        },
+        "timeout": 300,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    },
+    "reflections_used": [],
+    "reflection": "Move forward until the purple key is directly in front, then turn left to align with it for final access\u2014this sequence efficiently positions you for pickup without redundant steps.",
+    "reflection_memory_after_trial": [
+        "Move forward until the purple key is directly in front, then turn left to align with it for final access\u2014this sequence efficiently positions you for pickup without redundant steps."
+    ],
+    "reflection_input_tokens": 591,
+    "reflection_output_tokens": 37
+}

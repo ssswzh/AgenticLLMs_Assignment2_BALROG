@@ -1,0 +1,359 @@
+Step,Action,Executed Action,Plan,Raw Completion,Reasoning,Observation,Reward,Done
+0,look,look,Verify the target object description to guide systematic exploration of unique rooms with named items,"ACTION: look  
+PLAN: Verify the target object description to guide systematic exploration of unique rooms with named items",,"-= Sweaty Kitchen =-
+You arrive in a kitchen. A sweaty one. You start to take note of what's in the room.
+
+You see a freezer. The light flickers for a second, but nothing else happens. The freezer is empty! This is the worst thing that could possibly happen, ever! You can see a saucepan. But the thing is empty, unfortunately. You see a rack. The rack is normal. Looks like someone's already been here and taken everything off it, though. Aw, here you were, all excited for there to be things on it!
+
+There is an unguarded exit to the south.",0,False
+1,goal,goal,Confirm the target object description to guide exploration of rooms with unique or named items,"ACTION: goal  
+PLAN: Confirm the target object description to guide exploration of rooms with unique or named items",,,0,False
+2,goal,goal,Verify the target object description to prioritize exploration of rooms with unique or named items,"ACTION: goal  
+PLAN: Verify the target object description to prioritize exploration of rooms with unique or named items",,,0,False
+3,goal,goal,Confirm the target object description to guide focused exploration of relevant rooms,"ACTION: goal  
+PLAN: Confirm the target object description to guide focused exploration of relevant rooms",,,0,False
+4,go south,go south,Explore the room south to find potential locations of the target object based on environmental clues and unique items,"ACTION: go south
+PLAN: Explore the room south to find potential locations of the target object based on environmental clues and unique items","The action ""goal"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Cookery =-
+You arrive in a cookery. An ordinary one.
+
+You see an opened case here. What a letdown! The case is empty! You can see a board. However, the board, like an empty board, has nothing on it.
+
+There is an open door leading east. There is an exit to the north. Don't worry, it is unblocked.",0,False
+5,look,look,Check for hidden objects or clues in the cookery room that might lead to the target item,"ACTION: look  
+PLAN: Check for hidden objects or clues in the cookery room that might lead to the target item",,"-= Cookery =-
+You arrive in a cookery. An ordinary one.
+
+You see an opened case here. What a letdown! The case is empty! You can see a board. However, the board, like an empty board, has nothing on it.
+
+There is an open door leading east. There is an exit to the north. Don't worry, it is unblocked.",0,False
+6,go east,go east,Explore the next room to the east for possible clues or the target object,"ACTION: go east
+PLAN: Explore the next room to the east for possible clues or the target object",,"-= Dish-Pit =-
+You're now in the dish-pit.
+
+
+
+There is a closed type 6 portal leading north. There is an open door leading west.
+
+There is a type 6 key on the floor.",0,False
+7,look,look,Examine the closed type 6 portal and the type 6 key for clues related to the target object,"ACTION: look  
+PLAN: Examine the closed type 6 portal and the type 6 key for clues related to the target object",,"-= Dish-Pit =-
+You're now in the dish-pit.
+
+
+
+There is a closed type 6 portal leading north. There is an open door leading west.
+
+There is a type 6 key on the floor.",0,False
+8,take type 6 key from floor,take type 6 key from floor,Verify if the type 6 key matches the lock of the type 6 portal to determine if it can be used to access the next room,"ACTION: take type 6 key from floor
+PLAN: Verify if the type 6 key matches the lock of the type 6 portal to determine if it can be used to access the next room",,You can't see any such thing.,0,False
+9,look,look,Check if the type 6 portal is described or if the key matches the lock based on the goal object's description,"ACTION: look  
+PLAN: Check if the type 6 portal is described or if the key matches the lock based on the goal object's description",,"-= Dish-Pit =-
+You're now in the dish-pit.
+
+
+
+There is a closed type 6 portal leading north. There is an open door leading west.
+
+There is a type 6 key on the floor.",0,False
+10,goal,goal,Verify the target object description to determine if the type 6 key or portal is relevant to the goal,"ACTION: goal  
+PLAN: Verify the target object description to determine if the type 6 key or portal is relevant to the goal",,,0,False
+11,goal,goal,Verify the target object description to confirm if the type 6 key or portal is the goal item,"ACTION: goal  
+PLAN: Verify the target object description to confirm if the type 6 key or portal is the goal item",,,0,False
+12,goal,goal,Confirm the target object description to determine if the type 6 key or portal is the actual goal item,"ACTION: goal  
+PLAN: Confirm the target object description to determine if the type 6 key or portal is the actual goal item",,,0,False
+13,go west,go west,Explore the west room to find possible clues or the target object beyond the dish-pit,"ACTION: go west  
+PLAN: Explore the west room to find possible clues or the target object beyond the dish-pit","The action ""goal"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Cookery =-
+You arrive in a cookery. An ordinary one.
+
+You see an opened case here. What a letdown! The case is empty! You can see a board. However, the board, like an empty board, has nothing on it.
+
+There is an open door leading east. There is an exit to the north. Don't worry, it is unblocked.",0,False
+14,go west,go west,Move to the dish-pit to investigate the closed type 6 portal and the type 6 key location,"ACTION: go west  
+PLAN: Move to the dish-pit to investigate the closed type 6 portal and the type 6 key location",,You can't go that way.,0,False
+15,look,look,Check the dish-pit for details about the type 6 portal and the key's relevance to the goal object,"ACTION: look  
+PLAN: Check the dish-pit for details about the type 6 portal and the key's relevance to the goal object",,"-= Cookery =-
+You arrive in a cookery. An ordinary one.
+
+You see an opened case here. What a letdown! The case is empty! You can see a board. However, the board, like an empty board, has nothing on it.
+
+There is an open door leading east. There is an exit to the north. Don't worry, it is unblocked.",0,False
+16,goal,goal,Verify the target object description to ensure focus on correct item and correct path for exploration,"ACTION: goal  
+PLAN: Verify the target object description to ensure focus on correct item and correct path for exploration",,,0,False
+17,goal,goal,Confirm the target object description to ensure accurate exploration and focus on relevant rooms and items,"ACTION: goal
+PLAN: Confirm the target object description to ensure accurate exploration and focus on relevant rooms and items",,,0,False
+18,goal,goal,Verify the target object description to guide focused exploration of relevant rooms and items,"ACTION: goal  
+PLAN: Verify the target object description to guide focused exploration of relevant rooms and items",,,0,False
+19,go north,go north,Explore the northern room to find the target object or relevant items that may lead to it,"ACTION: go north  
+PLAN: Explore the northern room to find the target object or relevant items that may lead to it","The action ""goal"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Sweaty Kitchen =-
+You arrive in a kitchen. A sweaty one. You start to take note of what's in the room.
+
+You see a freezer. The light flickers for a second, but nothing else happens. The freezer is empty! This is the worst thing that could possibly happen, ever! You can see a saucepan. But the thing is empty, unfortunately. You see a rack. The rack is normal. Looks like someone's already been here and taken everything off it, though. Aw, here you were, all excited for there to be things on it!
+
+There is an unguarded exit to the south.",0,False
+20,look,look,Check for hidden objects or clues in the sweaty kitchen that might lead to the target object,"ACTION: look  
+PLAN: Check for hidden objects or clues in the sweaty kitchen that might lead to the target object",,"-= Sweaty Kitchen =-
+You arrive in a kitchen. A sweaty one. You start to take note of what's in the room.
+
+You see a freezer. The light flickers for a second, but nothing else happens. The freezer is empty! This is the worst thing that could possibly happen, ever! You can see a saucepan. But the thing is empty, unfortunately. You see a rack. The rack is normal. Looks like someone's already been here and taken everything off it, though. Aw, here you were, all excited for there to be things on it!
+
+There is an unguarded exit to the south.",0,False
+21,goal,goal,Verify the target object's description to guide further exploration and ensure all actions are directed correctly,"ACTION: goal  
+PLAN: Verify the target object's description to guide further exploration and ensure all actions are directed correctly",,,0,False
+22,goal,goal,Confirm the target object's description to guide accurate and efficient exploration of remaining rooms,"ACTION: goal  
+PLAN: Confirm the target object's description to guide accurate and efficient exploration of remaining rooms",,,0,False
+23,goal,goal,Verify the target object's description to direct exploration of remaining rooms accurately and efficiently,"ACTION: goal  
+PLAN: Verify the target object's description to direct exploration of remaining rooms accurately and efficiently",,,0,False
+24,go south,go south,Explore the room south of the sweaty kitchen to locate the target object or find a new exit leading to potential areas with the target.,"ACTION: go south  
+PLAN: Explore the room south of the sweaty kitchen to locate the target object or find a new exit leading to potential areas with the target.","The action ""goal"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Cookery =-
+You arrive in a cookery. An ordinary one.
+
+You see an opened case here. What a letdown! The case is empty! You can see a board. However, the board, like an empty board, has nothing on it.
+
+There is an open door leading east. There is an exit to the north. Don't worry, it is unblocked.",0,False
+25,look,look,Check for hidden objects or clues in the current room that may lead to the target object.,"ACTION: look  
+PLAN: Check for hidden objects or clues in the current room that may lead to the target object.",,"-= Cookery =-
+You arrive in a cookery. An ordinary one.
+
+You see an opened case here. What a letdown! The case is empty! You can see a board. However, the board, like an empty board, has nothing on it.
+
+There is an open door leading east. There is an exit to the north. Don't worry, it is unblocked.",0,False
+26,go east,go east,Explore the room beyond the door to find any objects or clues related to the target item,"ACTION: go east
+PLAN: Explore the room beyond the door to find any objects or clues related to the target item",,"-= Dish-Pit =-
+You're now in the dish-pit.
+
+
+
+There is a closed type 6 portal leading north. There is an open door leading west.
+
+There is a type 6 key on the floor.",0,False
+27,look,look,Examine the room for visible objects or clues related to the target item,"ACTION: look  
+PLAN: Examine the room for visible objects or clues related to the target item",,"-= Dish-Pit =-
+You're now in the dish-pit.
+
+
+
+There is a closed type 6 portal leading north. There is an open door leading west.
+
+There is a type 6 key on the floor.",0,False
+28,take type 6 key from floor,take type 6 key from floor,Use the type 6 key to unlock the closed type 6 portal leading north,"ACTION: take type 6 key from floor
+PLAN: Use the type 6 key to unlock the closed type 6 portal leading north",,You can't see any such thing.,0,False
+29,look,look,Verify if the type 6 portal or key is described in the goal to confirm target object and required action,"ACTION: look  
+PLAN: Verify if the type 6 portal or key is described in the goal to confirm target object and required action",,"-= Dish-Pit =-
+You're now in the dish-pit.
+
+
+
+There is a closed type 6 portal leading north. There is an open door leading west.
+
+There is a type 6 key on the floor.",0,False
+30,goal,goal,Confirm the target object description to ensure the type 6 portal or key is the goal item,"ACTION: goal  
+PLAN: Confirm the target object description to ensure the type 6 portal or key is the goal item",,,0,False
+31,goal,goal,Verify the target object's description to confirm if the type 6 key or portal is the goal item,"ACTION: goal  
+PLAN: Verify the target object's description to confirm if the type 6 key or portal is the goal item",,,0,False
+32,goal,goal,Confirm the target object's description to determine if the type 6 key or portal is the goal item,"ACTION: goal  
+PLAN: Confirm the target object's description to determine if the type 6 key or portal is the goal item",,,0,False
+33,go west,go west,Explore the west exit to find new rooms and potential objects or paths that may contain the target item.,"ACTION: go west
+PLAN: Explore the west exit to find new rooms and potential objects or paths that may contain the target item.","The action ""goal"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Cookery =-
+You arrive in a cookery. An ordinary one.
+
+You see an opened case here. What a letdown! The case is empty! You can see a board. However, the board, like an empty board, has nothing on it.
+
+There is an open door leading east. There is an exit to the north. Don't worry, it is unblocked.",0,False
+34,go west,go west,Move to the dish-pit to check for the target object or access to the type 6 portal,"ACTION: go west  
+PLAN: Move to the dish-pit to check for the target object or access to the type 6 portal",,You can't go that way.,0,False
+35,look,look,Verify if the target object is described in the current room or if any new clues are available about the type 6 portal or key.,"ACTION: look  
+PLAN: Verify if the target object is described in the current room or if any new clues are available about the type 6 portal or key.",,"-= Cookery =-
+You arrive in a cookery. An ordinary one.
+
+You see an opened case here. What a letdown! The case is empty! You can see a board. However, the board, like an empty board, has nothing on it.
+
+There is an open door leading east. There is an exit to the north. Don't worry, it is unblocked.",0,False
+36,goal,goal,Confirm the target object's description to ensure accurate exploration and avoid unnecessary room checks.,"ACTION: goal  
+PLAN: Confirm the target object's description to ensure accurate exploration and avoid unnecessary room checks.",,,0,False
+37,goal,goal,Verify the target object's description to guide focused exploration and ensure correct path selection.,"ACTION: goal  
+PLAN: Verify the target object's description to guide focused exploration and ensure correct path selection.",,,0,False
+38,goal,goal,Confirm the target object's description to guide focused exploration and ensure correct path selection.,"ACTION: goal  
+PLAN: Confirm the target object's description to guide focused exploration and ensure correct path selection.",,,0,False
+39,go north,go north,Explore the north exit to find the target object or a key that might unlock a container or portal,"ACTION: go north  
+PLAN: Explore the north exit to find the target object or a key that might unlock a container or portal","The action ""goal"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Sweaty Kitchen =-
+You arrive in a kitchen. A sweaty one. You start to take note of what's in the room.
+
+You see a freezer. The light flickers for a second, but nothing else happens. The freezer is empty! This is the worst thing that could possibly happen, ever! You can see a saucepan. But the thing is empty, unfortunately. You see a rack. The rack is normal. Looks like someone's already been here and taken everything off it, though. Aw, here you were, all excited for there to be things on it!
+
+There is an unguarded exit to the south.",0,False
+40,go north,go north,Explore the next room to locate the target object or a key that might unlock a container or portal,"ACTION: go north
+PLAN: Explore the next room to locate the target object or a key that might unlock a container or portal",,You can't go that way.,0,False
+41,goal,goal,Verify the target object description to guide all future exploration steps,"ACTION: goal  
+PLAN: Verify the target object description to guide all future exploration steps",,,0,False
+42,goal,goal,Confirm the target object's description to guide focused and efficient exploration of relevant rooms,"ACTION: goal  
+PLAN: Confirm the target object's description to guide focused and efficient exploration of relevant rooms",,,0,False
+43,goal,goal,Verify the target object's description to guide focused exploration of relevant rooms,"ACTION: goal  
+PLAN: Verify the target object's description to guide focused exploration of relevant rooms",,,0,False
+44,look,look,Examine current room for hidden objects or clues that might lead to the target item,"ACTION: look  
+PLAN: Examine current room for hidden objects or clues that might lead to the target item","The action ""goal"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Sweaty Kitchen =-
+You arrive in a kitchen. A sweaty one. You start to take note of what's in the room.
+
+You see a freezer. The light flickers for a second, but nothing else happens. The freezer is empty! This is the worst thing that could possibly happen, ever! You can see a saucepan. But the thing is empty, unfortunately. You see a rack. The rack is normal. Looks like someone's already been here and taken everything off it, though. Aw, here you were, all excited for there to be things on it!
+
+There is an unguarded exit to the south.",0,False
+45,look,look,Check if any object in the kitchen is relevant to the target or hidden in description,"ACTION: look  
+PLAN: Check if any object in the kitchen is relevant to the target or hidden in description",,"-= Sweaty Kitchen =-
+You arrive in a kitchen. A sweaty one. You start to take note of what's in the room.
+
+You see a freezer. The light flickers for a second, but nothing else happens. The freezer is empty! This is the worst thing that could possibly happen, ever! You can see a saucepan. But the thing is empty, unfortunately. You see a rack. The rack is normal. Looks like someone's already been here and taken everything off it, though. Aw, here you were, all excited for there to be things on it!
+
+There is an unguarded exit to the south.",0,False
+46,goal,goal,Verify the target object description to guide exploration and ensure all actions are directed toward the correct item,"ACTION: goal  
+PLAN: Verify the target object description to guide exploration and ensure all actions are directed toward the correct item",,,0,False
+47,goal,goal,Confirm the target object's description to guide focused and efficient exploration of relevant rooms,"ACTION: goal
+PLAN: Confirm the target object's description to guide focused and efficient exploration of relevant rooms",,,0,False
+48,goal,goal,Verify the target object's description to guide focused exploration of relevant rooms,"ACTION: goal
+PLAN: Verify the target object's description to guide focused exploration of relevant rooms",,,0,False
+49,go south,go south,Explore the next room to find the target object using directional movement and observation,"ACTION: go south
+PLAN: Explore the next room to find the target object using directional movement and observation","The action ""goal"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Cookery =-
+You arrive in a cookery. An ordinary one.
+
+You see an opened case here. What a letdown! The case is empty! You can see a board. However, the board, like an empty board, has nothing on it.
+
+There is an open door leading east. There is an exit to the north. Don't worry, it is unblocked.",0,False
+50,go east,go east,Explore the room to the east for any unique or named objects that might contain the target item,"ACTION: go east
+PLAN: Explore the room to the east for any unique or named objects that might contain the target item",,"-= Dish-Pit =-
+You're now in the dish-pit.
+
+
+
+There is a closed type 6 portal leading north. There is an open door leading west.
+
+There is a type 6 key on the floor.",0,False
+51,take type 6 key from floor,take type 6 key from floor,Use the type 6 key to unlock the closed type 6 portal leading north,"ACTION: take type 6 key from floor
+PLAN: Use the type 6 key to unlock the closed type 6 portal leading north",,You can't see any such thing.,0,False
+52,unlock type 6 portal with type 6 key,unlock type 6 portal with type 6 key,Unlock the closed type 6 portal to access the room beyond it and check for the target object,"ACTION: unlock type 6 portal with type 6 key
+PLAN: Unlock the closed type 6 portal to access the room beyond it and check for the target object",,You need to take the type 6 key first.,0,False
+53,look,look,Verify if the type 6 key is visible and confirm the target object's description using the goal command,"ACTION: look  
+PLAN: Verify if the type 6 key is visible and confirm the target object's description using the goal command",,"-= Dish-Pit =-
+You're now in the dish-pit.
+
+
+
+There is a closed type 6 portal leading north. There is an open door leading west.
+
+There is a type 6 key on the floor.",0,False
+54,look,look,Check if the type 6 key is visible and confirm the target object with goal command,"ACTION: look  
+PLAN: Check if the type 6 key is visible and confirm the target object with goal command",,"-= Dish-Pit =-
+You're now in the dish-pit.
+
+
+
+There is a closed type 6 portal leading north. There is an open door leading west.
+
+There is a type 6 key on the floor.",0,False
+55,take type 6 key from floor,take type 6 key from floor,Verify the target object with goal command after acquiring the key,"ACTION: take type 6 key from floor  
+PLAN: Verify the target object with goal command after acquiring the key",,You can't see any such thing.,0,False
+56,goal,goal,Confirm the target object's description to guide further exploration and ensure correct actions are taken,"ACTION: goal
+PLAN: Confirm the target object's description to guide further exploration and ensure correct actions are taken",,,0,False
+57,goal,goal,Verify the target object's description to guide accurate exploration and ensure correct actions are taken,"ACTION: goal  
+PLAN: Verify the target object's description to guide accurate exploration and ensure correct actions are taken",,,0,False
+58,goal,goal,Confirm the target object's description to direct effective exploration and avoid redundant actions,"ACTION: goal  
+PLAN: Confirm the target object's description to direct effective exploration and avoid redundant actions",,,0,False
+59,go west,go west,Explore the west corridor to find new rooms and potential locations of the target object,"ACTION: go west
+PLAN: Explore the west corridor to find new rooms and potential locations of the target object","The action ""goal"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Cookery =-
+You arrive in a cookery. An ordinary one.
+
+You see an opened case here. What a letdown! The case is empty! You can see a board. However, the board, like an empty board, has nothing on it.
+
+There is an open door leading east. There is an exit to the north. Don't worry, it is unblocked.",0,False
+60,go west,go west,Check the dish-pit for the target object using the type 6 key and portal,"ACTION: go west
+PLAN: Check the dish-pit for the target object using the type 6 key and portal",,You can't go that way.,0,False
+61,look,look,Verify if the target object is described in the current room or if any new clues appear about the target or portal,"ACTION: look  
+PLAN: Verify if the target object is described in the current room or if any new clues appear about the target or portal",,"-= Cookery =-
+You arrive in a cookery. An ordinary one.
+
+You see an opened case here. What a letdown! The case is empty! You can see a board. However, the board, like an empty board, has nothing on it.
+
+There is an open door leading east. There is an exit to the north. Don't worry, it is unblocked.",0,False
+62,goal,goal,Confirm the target object's description to guide all future exploration and avoid redundant actions.,"ACTION: goal  
+PLAN: Confirm the target object's description to guide all future exploration and avoid redundant actions.",,,0,False
+63,goal,goal,Verify the target object's description to guide focused exploration and ensure all actions are directed correctly.,"ACTION: goal
+PLAN: Verify the target object's description to guide focused exploration and ensure all actions are directed correctly.",,,0,False
+64,goal,goal,Confirm the target object's description to guide accurate and efficient exploration of relevant rooms.,"ACTION: goal  
+PLAN: Confirm the target object's description to guide accurate and efficient exploration of relevant rooms.",,,0,False
+65,go north,go north,"Explore the exit room to find the target object described in the goal, avoiding redundant checks of irrelevant areas.","ACTION: go north  
+PLAN: Explore the exit room to find the target object described in the goal, avoiding redundant checks of irrelevant areas.","The action ""goal"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Sweaty Kitchen =-
+You arrive in a kitchen. A sweaty one. You start to take note of what's in the room.
+
+You see a freezer. The light flickers for a second, but nothing else happens. The freezer is empty! This is the worst thing that could possibly happen, ever! You can see a saucepan. But the thing is empty, unfortunately. You see a rack. The rack is normal. Looks like someone's already been here and taken everything off it, though. Aw, here you were, all excited for there to be things on it!
+
+There is an unguarded exit to the south.",0,False
+66,go south,go south,Check the room south of the sweaty kitchen for the target object described in the goal.,"ACTION: go south
+PLAN: Check the room south of the sweaty kitchen for the target object described in the goal.",,"-= Cookery =-
+You arrive in a cookery. An ordinary one.
+
+You see an opened case here. What a letdown! The case is empty! You can see a board. However, the board, like an empty board, has nothing on it.
+
+There is an open door leading east. There is an exit to the north. Don't worry, it is unblocked.",0,False
+67,goal,goal,Verify the target object description to guide all future exploration decisions,"ACTION: goal  
+PLAN: Verify the target object description to guide all future exploration decisions",,,0,False
+68,goal,goal,Confirm the target object's description to direct exploration to relevant rooms and avoid redundant checks,"ACTION: goal  
+PLAN: Confirm the target object's description to direct exploration to relevant rooms and avoid redundant checks",,,0,False
+69,goal,goal,Verify the target object's description to guide focused exploration of relevant rooms,"ACTION: goal  
+PLAN: Verify the target object's description to guide focused exploration of relevant rooms",,,0,False
+70,go east,go east,Explore the east room to find unique items that may contain or lead to the target object,"ACTION: go east  
+PLAN: Explore the east room to find unique items that may contain or lead to the target object","The action ""goal"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Dish-Pit =-
+You're now in the dish-pit.
+
+
+
+There is a closed type 6 portal leading north. There is an open door leading west.
+
+There is a type 6 key on the floor.",0,False
+71,look,look,Examine the room for visible items or clues related to the target object,"ACTION: look  
+PLAN: Examine the room for visible items or clues related to the target object",,"-= Dish-Pit =-
+You're now in the dish-pit.
+
+
+
+There is a closed type 6 portal leading north. There is an open door leading west.
+
+There is a type 6 key on the floor.",0,False
+72,take type 6 key from floor,take type 6 key from floor,Unlock the closed type 6 portal using the type 6 key to access the next room and check for the target object,"ACTION: take type 6 key from floor
+PLAN: Unlock the closed type 6 portal using the type 6 key to access the next room and check for the target object",,You can't see any such thing.,0,False
+73,look,look,Verify if the target object is described in the current room or nearby features,"ACTION: look  
+PLAN: Verify if the target object is described in the current room or nearby features",,"-= Dish-Pit =-
+You're now in the dish-pit.
+
+
+
+There is a closed type 6 portal leading north. There is an open door leading west.
+
+There is a type 6 key on the floor.",0,False
+74,goal,goal,Confirm the target object's description to guide exploration and ensure all actions are directed toward the correct goal,"ACTION: goal
+PLAN: Confirm the target object's description to guide exploration and ensure all actions are directed toward the correct goal",,,0,False
+75,goal,goal,Verify the target object's description to guide precise exploration and ensure all actions are directed correctly,"ACTION: goal  
+PLAN: Verify the target object's description to guide precise exploration and ensure all actions are directed correctly",,,0,False
+76,goal,goal,Confirm the target object's description to guide accurate exploration and ensure all actions are focused on the correct item,"ACTION: goal  
+PLAN: Confirm the target object's description to guide accurate exploration and ensure all actions are focused on the correct item",,,0,False
+77,go west,go west,Explore the west room to find potential containers or keys related to the target object,"ACTION: go west
+PLAN: Explore the west room to find potential containers or keys related to the target object","The action ""goal"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Cookery =-
+You arrive in a cookery. An ordinary one.
+
+You see an opened case here. What a letdown! The case is empty! You can see a board. However, the board, like an empty board, has nothing on it.
+
+There is an open door leading east. There is an exit to the north. Don't worry, it is unblocked.",0,False
+78,go east,go east,Return to the dish-pit to check for the type 6 portal and use the key if needed to access the target object,"ACTION: go east
+PLAN: Return to the dish-pit to check for the type 6 portal and use the key if needed to access the target object",,"-= Dish-Pit =-
+You're now in the dish-pit.
+
+
+
+There is a closed type 6 portal leading north. There is an open door leading west.
+
+There is a type 6 key on the floor.",0,False
+79,look,look,Verify if the type 6 portal is accessible and if the key can be used to unlock it,"ACTION: look  
+PLAN: Verify if the type 6 portal is accessible and if the key can be used to unlock it",,"-= Dish-Pit =-
+You're now in the dish-pit.
+
+
+
+There is a closed type 6 portal leading north. There is an open door leading west.
+
+There is a type 6 key on the floor.",0,True

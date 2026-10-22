@@ -1,0 +1,291 @@
+Step,Action,Executed Action,Plan,Raw Completion,Reasoning,Observation,Reward,Done
+0,look,look,Verify the chest's lock requirement and check if the latchkey matches the Microsoft gateway or chest lock,"ACTION: look  
+PLAN: Verify the chest's lock requirement and check if the latchkey matches the Microsoft gateway or chest lock",,"-= Study =-
+You're now in the study.
+
+You can make out a locked normal looking chest here. You hear a noise behind you and spin around, but you can't see anything other than a bookshelf. The bookshelf is typical. On the bookshelf you can see a latchkey. You lean against the wall, inadvertently pressing a secret button. The wall opens up to reveal a mantle. The mantle is standard. Unfortunately, there isn't a thing on it. Hm. Oh well
+
+There is a closed Microsoft gateway leading west. There is an exit to the north. Don't worry, it is unguarded.",0,False
+1,look,look,Check the chest's lock description to determine if a Microsoft key is required to unlock it,"ACTION: look  
+PLAN: Check the chest's lock description to determine if a Microsoft key is required to unlock it",,"-= Study =-
+You're now in the study.
+
+You can make out a locked normal looking chest here. You hear a noise behind you and spin around, but you can't see anything other than a bookshelf. The bookshelf is typical. On the bookshelf you can see a latchkey. You lean against the wall, inadvertently pressing a secret button. The wall opens up to reveal a mantle. The mantle is standard. Unfortunately, there isn't a thing on it. Hm. Oh well
+
+There is a closed Microsoft gateway leading west. There is an exit to the north. Don't worry, it is unguarded.",0,False
+2,look,look,Examine the chest to determine if a Microsoft key is required to unlock it,"ACTION: look  
+PLAN: Examine the chest to determine if a Microsoft key is required to unlock it","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Study =-
+You're now in the study.
+
+You can make out a locked normal looking chest here. You hear a noise behind you and spin around, but you can't see anything other than a bookshelf. The bookshelf is typical. On the bookshelf you can see a latchkey. You lean against the wall, inadvertently pressing a secret button. The wall opens up to reveal a mantle. The mantle is standard. Unfortunately, there isn't a thing on it. Hm. Oh well
+
+There is a closed Microsoft gateway leading west. There is an exit to the north. Don't worry, it is unguarded.",0,False
+3,open chest,open chest,"Check if the chest can be opened with the latchkey from the bookshelf, as it may be the required key type for the chest lock","ACTION: open chest  
+PLAN: Check if the chest can be opened with the latchkey from the bookshelf, as it may be the required key type for the chest lock","The action ""look"" has repeatedly left the observation unchanged for 3 steps. Do not repeat this action in the current state.",You have to unlock the chest with the latchkey first.,0,False
+4,unlock chest with latchkey,unlock chest with latchkey,Verify if the latchkey matches the chest's lock by using it to unlock the chest,"ACTION: unlock chest with latchkey
+PLAN: Verify if the latchkey matches the chest's lock by using it to unlock the chest",,You need to take the latchkey first.,0,False
+5,take latchkey,take latchkey,Verify if the latchkey matches the chest's lock by using it to unlock the chest,"ACTION: take latchkey
+PLAN: Verify if the latchkey matches the chest's lock by using it to unlock the chest",,You take the latchkey from the bookshelf.,0,False
+6,unlock chest with latchkey,unlock chest with latchkey,Use the latchkey to unlock the chest and check if the target object is inside,"ACTION: unlock chest with latchkey
+PLAN: Use the latchkey to unlock the chest and check if the target object is inside",,You unlock the chest.,0,False
+7,open chest,open chest,Check the contents of the chest for the target object,"ACTION: open chest
+PLAN: Check the contents of the chest for the target object",,"You open the chest, revealing a Microsoft key.",0,False
+8,take microsoft key from chest,take microsoft key from chest,Check if the Microsoft key can unlock the Microsoft gateway west,"ACTION: take Microsoft key from chest
+PLAN: Check if the Microsoft key can unlock the Microsoft gateway west",,You take the Microsoft key from the chest.,0,False
+9,go west,go west,Use the Microsoft key to unlock the Microsoft gateway leading west,"ACTION: go west
+PLAN: Use the Microsoft key to unlock the Microsoft gateway leading west",,You have to open the Microsoft gateway first.,0,False
+10,unlock microsoft gateway with microsoft key,unlock microsoft gateway with microsoft key,Use the Microsoft key to unlock the gateway and proceed to the next room to find the target object.,"ACTION: unlock Microsoft gateway with Microsoft key
+PLAN: Use the Microsoft key to unlock the gateway and proceed to the next room to find the target object.",,You unlock Microsoft gateway.,0,False
+11,go west,go west,Enter the Microsoft gateway to explore the next room and search for the target object,"ACTION: go west
+PLAN: Enter the Microsoft gateway to explore the next room and search for the target object",,You have to open the Microsoft gateway first.,0,False
+12,unlock microsoft gateway with microsoft key,unlock microsoft gateway with microsoft key,Enter the west room to search for the target object after unlocking the gateway,"ACTION: unlock microsoft gateway with microsoft key
+PLAN: Enter the west room to search for the target object after unlocking the gateway",,That's unlocked at the moment.,0,False
+13,go west,go west,Enter the west room to search for the target object after unlocking the gateway,"ACTION: go west  
+PLAN: Enter the west room to search for the target object after unlocking the gateway",,You have to open the Microsoft gateway first.,0,False
+14,unlock microsoft gateway with microsoft key,unlock microsoft gateway with microsoft key,Enter the west room to search for the target object after unlocking the gateway,"ACTION: unlock microsoft gateway with microsoft key  
+PLAN: Enter the west room to search for the target object after unlocking the gateway",,That's unlocked at the moment.,0,False
+15,look,look,Examine the current room for visible objects or clues that might lead to the target item,"ACTION: look  
+PLAN: Examine the current room for visible objects or clues that might lead to the target item","The recent observations form a repeating cycle of 2 states. Recent actions: go west, unlock microsoft gateway with microsoft key, go west, unlock microsoft gateway with microsoft key. Do not repeat this action sequence.","-= Study =-
+You're now in the study.
+
+You can make out an opened normal looking chest here. Empty! What kind of nightmare TextWorld is this? You hear a noise behind you and spin around, but you can't see anything other than a bookshelf. The bookshelf is typical. But oh no! there's nothing on this piece of garbage. Aw, here you were, all excited for there to be things on it! You lean against the wall, inadvertently pressing a secret button. The wall opens up to reveal a mantle. The mantle is standard. Unfortunately, there isn't a thing on it. Hm. Oh well
+
+There is a closed Microsoft gateway leading west. There is an exit to the north. Don't worry, it is unguarded.",0,False
+16,go north,go north,Explore the north exit to find new rooms or clues that may lead to the target object,"ACTION: go north  
+PLAN: Explore the north exit to find new rooms or clues that may lead to the target object",,"-= Basement =-
+You are in a basement. A typical one.
+
+You can make out a workbench. The workbench is normal. The workbench appears to be empty.
+
+There is an exit to the south. Don't worry, it is unblocked.",0,False
+17,look,look,Check the workbench for hidden objects or clues that might lead to the target object,"ACTION: look  
+PLAN: Check the workbench for hidden objects or clues that might lead to the target object",,"-= Basement =-
+You are in a basement. A typical one.
+
+You can make out a workbench. The workbench is normal. The workbench appears to be empty.
+
+There is an exit to the south. Don't worry, it is unblocked.",0,False
+18,look,look,Examine the workbench for any visible objects or clues that might indicate the target object's location,"ACTION: look  
+PLAN: Examine the workbench for any visible objects or clues that might indicate the target object's location",,"-= Basement =-
+You are in a basement. A typical one.
+
+You can make out a workbench. The workbench is normal. The workbench appears to be empty.
+
+There is an exit to the south. Don't worry, it is unblocked.",0,False
+19,go south,go south,Return to the study to check if the mantle or bookshelf holds the target object after reevaluating the layout and exits,"ACTION: go south  
+PLAN: Return to the study to check if the mantle or bookshelf holds the target object after reevaluating the layout and exits","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Study =-
+You're now in the study.
+
+You can make out an opened normal looking chest here. Empty! What kind of nightmare TextWorld is this? You hear a noise behind you and spin around, but you can't see anything other than a bookshelf. The bookshelf is typical. But oh no! there's nothing on this piece of garbage. Aw, here you were, all excited for there to be things on it! You lean against the wall, inadvertently pressing a secret button. The wall opens up to reveal a mantle. The mantle is standard. Unfortunately, there isn't a thing on it. Hm. Oh well
+
+There is a closed Microsoft gateway leading west. There is an exit to the north. Don't worry, it is unguarded.",0,False
+20,look,look,Check if the bookshelf or mantle contains the target object after verifying room details,"ACTION: look  
+PLAN: Check if the bookshelf or mantle contains the target object after verifying room details",,"-= Study =-
+You're now in the study.
+
+You can make out an opened normal looking chest here. Empty! What kind of nightmare TextWorld is this? You hear a noise behind you and spin around, but you can't see anything other than a bookshelf. The bookshelf is typical. But oh no! there's nothing on this piece of garbage. Aw, here you were, all excited for there to be things on it! You lean against the wall, inadvertently pressing a secret button. The wall opens up to reveal a mantle. The mantle is standard. Unfortunately, there isn't a thing on it. Hm. Oh well
+
+There is a closed Microsoft gateway leading west. There is an exit to the north. Don't worry, it is unguarded.",0,False
+21,go west,go west,Unlock the Microsoft gateway to access the next room and check for the target object,"ACTION: go west  
+PLAN: Unlock the Microsoft gateway to access the next room and check for the target object",,You have to open the Microsoft gateway first.,0,False
+22,unlock microsoft gateway with microsoft key,unlock microsoft gateway with microsoft key,Access the next room by unlocking the Microsoft gateway with the key retrieved from the chest,"ACTION: unlock microsoft gateway with microsoft key  
+PLAN: Access the next room by unlocking the Microsoft gateway with the key retrieved from the chest",,That's unlocked at the moment.,0,False
+23,go west,go west,Move to the next room after confirming the Microsoft gateway is accessible and unlocked,"ACTION: go west
+PLAN: Move to the next room after confirming the Microsoft gateway is accessible and unlocked",,You have to open the Microsoft gateway first.,0,False
+24,look,look,Check if any new objects or clues are visible in the current room after confirming the gateway status,"ACTION: look  
+PLAN: Check if any new objects or clues are visible in the current room after confirming the gateway status",,"-= Study =-
+You're now in the study.
+
+You can make out an opened normal looking chest here. Empty! What kind of nightmare TextWorld is this? You hear a noise behind you and spin around, but you can't see anything other than a bookshelf. The bookshelf is typical. But oh no! there's nothing on this piece of garbage. Aw, here you were, all excited for there to be things on it! You lean against the wall, inadvertently pressing a secret button. The wall opens up to reveal a mantle. The mantle is standard. Unfortunately, there isn't a thing on it. Hm. Oh well
+
+There is a closed Microsoft gateway leading west. There is an exit to the north. Don't worry, it is unguarded.",0,False
+25,look,look,Check for hidden objects or clues in the study room that might lead to the target object or a missing key.,"ACTION: look  
+PLAN: Check for hidden objects or clues in the study room that might lead to the target object or a missing key.",,"-= Study =-
+You're now in the study.
+
+You can make out an opened normal looking chest here. Empty! What kind of nightmare TextWorld is this? You hear a noise behind you and spin around, but you can't see anything other than a bookshelf. The bookshelf is typical. But oh no! there's nothing on this piece of garbage. Aw, here you were, all excited for there to be things on it! You lean against the wall, inadvertently pressing a secret button. The wall opens up to reveal a mantle. The mantle is standard. Unfortunately, there isn't a thing on it. Hm. Oh well
+
+There is a closed Microsoft gateway leading west. There is an exit to the north. Don't worry, it is unguarded.",0,False
+26,look,look,Examine the bookshelf and mantle for any hidden objects or clues that might reveal the target or a missing key.,"ACTION: look  
+PLAN: Examine the bookshelf and mantle for any hidden objects or clues that might reveal the target or a missing key.",,"-= Study =-
+You're now in the study.
+
+You can make out an opened normal looking chest here. Empty! What kind of nightmare TextWorld is this? You hear a noise behind you and spin around, but you can't see anything other than a bookshelf. The bookshelf is typical. But oh no! there's nothing on this piece of garbage. Aw, here you were, all excited for there to be things on it! You lean against the wall, inadvertently pressing a secret button. The wall opens up to reveal a mantle. The mantle is standard. Unfortunately, there isn't a thing on it. Hm. Oh well
+
+There is a closed Microsoft gateway leading west. There is an exit to the north. Don't worry, it is unguarded.",0,False
+27,look,look,Check if the bookshelf or mantle has hidden items or clues that might reveal the target object or key location,"ACTION: look  
+PLAN: Check if the bookshelf or mantle has hidden items or clues that might reveal the target object or key location","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Study =-
+You're now in the study.
+
+You can make out an opened normal looking chest here. Empty! What kind of nightmare TextWorld is this? You hear a noise behind you and spin around, but you can't see anything other than a bookshelf. The bookshelf is typical. But oh no! there's nothing on this piece of garbage. Aw, here you were, all excited for there to be things on it! You lean against the wall, inadvertently pressing a secret button. The wall opens up to reveal a mantle. The mantle is standard. Unfortunately, there isn't a thing on it. Hm. Oh well
+
+There is a closed Microsoft gateway leading west. There is an exit to the north. Don't worry, it is unguarded.",0,False
+28,look,look,Verify if any hidden objects or clues are visible on the bookshelf or mantle that might indicate the target or key location,"ACTION: look  
+PLAN: Verify if any hidden objects or clues are visible on the bookshelf or mantle that might indicate the target or key location","The action ""look"" has repeatedly left the observation unchanged for 3 steps. Do not repeat this action in the current state.","-= Study =-
+You're now in the study.
+
+You can make out an opened normal looking chest here. Empty! What kind of nightmare TextWorld is this? You hear a noise behind you and spin around, but you can't see anything other than a bookshelf. The bookshelf is typical. But oh no! there's nothing on this piece of garbage. Aw, here you were, all excited for there to be things on it! You lean against the wall, inadvertently pressing a secret button. The wall opens up to reveal a mantle. The mantle is standard. Unfortunately, there isn't a thing on it. Hm. Oh well
+
+There is a closed Microsoft gateway leading west. There is an exit to the north. Don't worry, it is unguarded.",0,False
+29,go north,go north,Explore the north exit to discover new rooms or potential locations of the target object or key,"ACTION: go north  
+PLAN: Explore the north exit to discover new rooms or potential locations of the target object or key","The action ""look"" has repeatedly left the observation unchanged for 4 steps. Do not repeat this action in the current state.","-= Basement =-
+You are in a basement. A typical one.
+
+You can make out a workbench. The workbench is normal. The workbench appears to be empty.
+
+There is an exit to the south. Don't worry, it is unblocked.",0,False
+30,look,look,Examine the workbench for hidden objects or clues that might lead to the target item or key,"ACTION: look  
+PLAN: Examine the workbench for hidden objects or clues that might lead to the target item or key",,"-= Basement =-
+You are in a basement. A typical one.
+
+You can make out a workbench. The workbench is normal. The workbench appears to be empty.
+
+There is an exit to the south. Don't worry, it is unblocked.",0,False
+31,look,look,Check if the workbench contains any visible objects or clues that might help locate the target item or key,"ACTION: look  
+PLAN: Check if the workbench contains any visible objects or clues that might help locate the target item or key",,"-= Basement =-
+You are in a basement. A typical one.
+
+You can make out a workbench. The workbench is normal. The workbench appears to be empty.
+
+There is an exit to the south. Don't worry, it is unblocked.",0,False
+32,look,look,Verify if the workbench has any hidden objects or clues that could lead to the target item or key,"ACTION: look  
+PLAN: Verify if the workbench has any hidden objects or clues that could lead to the target item or key","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Basement =-
+You are in a basement. A typical one.
+
+You can make out a workbench. The workbench is normal. The workbench appears to be empty.
+
+There is an exit to the south. Don't worry, it is unblocked.",0,False
+33,look,look,Check if the workbench contains any visible objects or clues that might help locate the target item or key,"ACTION: look  
+PLAN: Check if the workbench contains any visible objects or clues that might help locate the target item or key","The action ""look"" has repeatedly left the observation unchanged for 3 steps. Do not repeat this action in the current state.","-= Basement =-
+You are in a basement. A typical one.
+
+You can make out a workbench. The workbench is normal. The workbench appears to be empty.
+
+There is an exit to the south. Don't worry, it is unblocked.",0,False
+34,look,look,Verify if the workbench has any hidden objects or clues that might lead to the target item or key,"ACTION: look  
+PLAN: Verify if the workbench has any hidden objects or clues that might lead to the target item or key","The action ""look"" has repeatedly left the observation unchanged for 4 steps. Do not repeat this action in the current state.","-= Basement =-
+You are in a basement. A typical one.
+
+You can make out a workbench. The workbench is normal. The workbench appears to be empty.
+
+There is an exit to the south. Don't worry, it is unblocked.",0,False
+35,go south,go south,Return to the study to check if the chest or bookshelf holds clues or the Microsoft key,"ACTION: go south  
+PLAN: Return to the study to check if the chest or bookshelf holds clues or the Microsoft key","The action ""look"" has repeatedly left the observation unchanged for 5 steps. Do not repeat this action in the current state.","-= Study =-
+You're now in the study.
+
+You can make out an opened normal looking chest here. Empty! What kind of nightmare TextWorld is this? You hear a noise behind you and spin around, but you can't see anything other than a bookshelf. The bookshelf is typical. But oh no! there's nothing on this piece of garbage. Aw, here you were, all excited for there to be things on it! You lean against the wall, inadvertently pressing a secret button. The wall opens up to reveal a mantle. The mantle is standard. Unfortunately, there isn't a thing on it. Hm. Oh well
+
+There is a closed Microsoft gateway leading west. There is an exit to the north. Don't worry, it is unguarded.",0,False
+36,look,look,Check the bookshelf for hidden objects or clues that might contain the Microsoft key or lead to the goal,"ACTION: look  
+PLAN: Check the bookshelf for hidden objects or clues that might contain the Microsoft key or lead to the goal",,"-= Study =-
+You're now in the study.
+
+You can make out an opened normal looking chest here. Empty! What kind of nightmare TextWorld is this? You hear a noise behind you and spin around, but you can't see anything other than a bookshelf. The bookshelf is typical. But oh no! there's nothing on this piece of garbage. Aw, here you were, all excited for there to be things on it! You lean against the wall, inadvertently pressing a secret button. The wall opens up to reveal a mantle. The mantle is standard. Unfortunately, there isn't a thing on it. Hm. Oh well
+
+There is a closed Microsoft gateway leading west. There is an exit to the north. Don't worry, it is unguarded.",0,False
+37,look at bookshelf,look at bookshelf,Check if the bookshelf contains the Microsoft key or any clues about the gateway or goal,"ACTION: look at bookshelf  
+PLAN: Check if the bookshelf contains the Microsoft key or any clues about the gateway or goal",,The bookshelf is shaky.,0,False
+38,look at bookshelf,look at bookshelf,Check if the bookshelf contains the Microsoft key or hidden clues about the gateway or goal,"ACTION: look at bookshelf  
+PLAN: Check if the bookshelf contains the Microsoft key or hidden clues about the gateway or goal",,The bookshelf is shaky.,0,False
+39,look at bookshelf,look at bookshelf,Check if the shaky bookshelf hides the Microsoft key or contains clues about the gateway lock or key type,"ACTION: look at bookshelf  
+PLAN: Check if the shaky bookshelf hides the Microsoft key or contains clues about the gateway lock or key type",,The bookshelf is shaky.,0,False
+40,go west,go west,Investigate the Microsoft gateway to find if it holds a key or requires a specific key type for unlocking,"ACTION: go west  
+PLAN: Investigate the Microsoft gateway to find if it holds a key or requires a specific key type for unlocking","The action ""look at bookshelf"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",You have to open the Microsoft gateway first.,0,False
+41,look at microsoft gateway,look at microsoft gateway,Check if the gateway is locked and what key is required to unlock it,"ACTION: look at Microsoft gateway  
+PLAN: Check if the gateway is locked and what key is required to unlock it",,"it is what it is, a Microsoft gateway You can't see inside it because the lid's in your way.",0,False
+42,look at microsoft gateway,look at microsoft gateway,Verify if a Microsoft key is required to unlock the gateway and check for any visible clues on the gateway itself,"ACTION: look at microsoft gateway  
+PLAN: Verify if a Microsoft key is required to unlock the gateway and check for any visible clues on the gateway itself",,"it is what it is, a Microsoft gateway You can't see inside it because the lid's in your way.",0,False
+43,look at bookshelf,look at bookshelf,Check if the shaky bookshelf hides a Microsoft key or clue needed to unlock the Microsoft gateway,"ACTION: look at bookshelf  
+PLAN: Check if the shaky bookshelf hides a Microsoft key or clue needed to unlock the Microsoft gateway",,The bookshelf is shaky.,0,False
+44,look at bookshelf,look at bookshelf,Check if the shaky bookshelf holds a Microsoft key or contains a clue for the Microsoft gateway,"ACTION: look at bookshelf  
+PLAN: Check if the shaky bookshelf holds a Microsoft key or contains a clue for the Microsoft gateway",,The bookshelf is shaky.,0,False
+45,take bookshelf from here,take bookshelf from here,Check if the bookshelf contains a Microsoft key or hidden object to unlock the Microsoft gateway,"ACTION: take bookshelf from here  
+PLAN: Check if the bookshelf contains a Microsoft key or hidden object to unlock the Microsoft gateway",,You can't see any such thing.,0,False
+46,look,look,Verify if the bookshelf's shakiness hides a key or object needed to unlock the Microsoft gateway,"ACTION: look  
+PLAN: Verify if the bookshelf's shakiness hides a key or object needed to unlock the Microsoft gateway",,"-= Study =-
+You're now in the study.
+
+You can make out an opened normal looking chest here. Empty! What kind of nightmare TextWorld is this? You hear a noise behind you and spin around, but you can't see anything other than a bookshelf. The bookshelf is typical. But oh no! there's nothing on this piece of garbage. Aw, here you were, all excited for there to be things on it! You lean against the wall, inadvertently pressing a secret button. The wall opens up to reveal a mantle. The mantle is standard. Unfortunately, there isn't a thing on it. Hm. Oh well
+
+There is a closed Microsoft gateway leading west. There is an exit to the north. Don't worry, it is unguarded.",0,False
+47,look at microsoft gateway,look at microsoft gateway,Check if the Microsoft gateway requires a key and if the bookshelf's shakiness might conceal one,"ACTION: look at microsoft gateway  
+PLAN: Check if the Microsoft gateway requires a key and if the bookshelf's shakiness might conceal one",,"it is what it is, a Microsoft gateway You can't see inside it because the lid's in your way.",0,False
+48,look at microsoft gateway,look at microsoft gateway,Verify if the Microsoft gateway requires a Microsoft key to unlock,"ACTION: look at microsoft gateway  
+PLAN: Verify if the Microsoft gateway requires a Microsoft key to unlock",,"it is what it is, a Microsoft gateway You can't see inside it because the lid's in your way.",0,False
+49,look at chest,look at chest,Check if the chest contains a key or clues related to the Microsoft gateway or other locks,"ACTION: look at chest  
+PLAN: Check if the chest contains a key or clues related to the Microsoft gateway or other locks",,"The chest looks strong, and impossible to break. You can see inside it.",0,False
+50,look at chest,look at chest,Check if the chest contains a Microsoft key or any item that can unlock the Microsoft gateway,"ACTION: look at chest  
+PLAN: Check if the chest contains a Microsoft key or any item that can unlock the Microsoft gateway",,"The chest looks strong, and impossible to break. You can see inside it.",0,False
+51,look at chest,look at chest,Check if the chest contains a Microsoft key or any item that can unlock the Microsoft gateway,"ACTION: look at chest  
+PLAN: Check if the chest contains a Microsoft key or any item that can unlock the Microsoft gateway",,"The chest looks strong, and impossible to break. You can see inside it.",0,False
+52,look at bookshelf,look at bookshelf,Check if the bookshelf holds a key or item that can unlock the Microsoft gateway,"ACTION: look at bookshelf  
+PLAN: Check if the bookshelf holds a key or item that can unlock the Microsoft gateway","The action ""look at chest"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",The bookshelf is shaky.,0,False
+53,look at bookshelf,look at bookshelf,Check if the bookshelf contains a key or item that can unlock the Microsoft gateway,"ACTION: look at bookshelf  
+PLAN: Check if the bookshelf contains a key or item that can unlock the Microsoft gateway",,The bookshelf is shaky.,0,False
+54,look at bookshelf,look at bookshelf,Check if the bookshelf contains a Microsoft key or other item needed to unlock the gateway,"ACTION: look at bookshelf  
+PLAN: Check if the bookshelf contains a Microsoft key or other item needed to unlock the gateway",,The bookshelf is shaky.,0,False
+55,go north,go north,Explore the room north to find a potential key or path to the Microsoft gateway or chest,"ACTION: go north  
+PLAN: Explore the room north to find a potential key or path to the Microsoft gateway or chest","The action ""look at bookshelf"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Basement =-
+You are in a basement. A typical one.
+
+You can make out a workbench. The workbench is normal. The workbench appears to be empty.
+
+There is an exit to the south. Don't worry, it is unblocked.",0,False
+56,look at workbench,look at workbench,Check if the workbench contains any hidden objects or clues that might help unlock the Microsoft gateway or chest,"ACTION: look at workbench  
+PLAN: Check if the workbench contains any hidden objects or clues that might help unlock the Microsoft gateway or chest",,The workbench is solidly built.,0,False
+57,look at workbench,look at workbench,Check for hidden objects or clues that might help unlock the Microsoft gateway or chest,"ACTION: look at workbench  
+PLAN: Check for hidden objects or clues that might help unlock the Microsoft gateway or chest",,The workbench is solidly built.,0,False
+58,look at workbench,look at workbench,Check if the workbench holds any hidden items or clues related to keys or locks,"ACTION: look at workbench  
+PLAN: Check if the workbench holds any hidden items or clues related to keys or locks",,The workbench is solidly built.,0,False
+59,go south,go south,Return to the study to investigate the Microsoft gateway and chest for possible keys or clues,"ACTION: go south  
+PLAN: Return to the study to investigate the Microsoft gateway and chest for possible keys or clues","The action ""look at workbench"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Study =-
+You're now in the study.
+
+You can make out an opened normal looking chest here. Empty! What kind of nightmare TextWorld is this? You hear a noise behind you and spin around, but you can't see anything other than a bookshelf. The bookshelf is typical. But oh no! there's nothing on this piece of garbage. Aw, here you were, all excited for there to be things on it! You lean against the wall, inadvertently pressing a secret button. The wall opens up to reveal a mantle. The mantle is standard. Unfortunately, there isn't a thing on it. Hm. Oh well
+
+There is a closed Microsoft gateway leading west. There is an exit to the north. Don't worry, it is unguarded.",0,False
+60,look at microsoft gateway,look at microsoft gateway,Check if the gateway contains a key or reveals clues about its lock requirement,"ACTION: look at microsoft gateway  
+PLAN: Check if the gateway contains a key or reveals clues about its lock requirement",,"it is what it is, a Microsoft gateway You can't see inside it because the lid's in your way.",0,False
+61,look at microsoft gateway,look at microsoft gateway,Check if the gateway's description reveals if it requires a Microsoft key to unlock,"ACTION: look at microsoft gateway  
+PLAN: Check if the gateway's description reveals if it requires a Microsoft key to unlock",,"it is what it is, a Microsoft gateway You can't see inside it because the lid's in your way.",0,False
+62,look at microsoft gateway,look at microsoft gateway,Verify if the Microsoft gateway requires a key to unlock or if it is accessible without one,"ACTION: look at microsoft gateway  
+PLAN: Verify if the Microsoft gateway requires a key to unlock or if it is accessible without one",,"it is what it is, a Microsoft gateway You can't see inside it because the lid's in your way.",0,False
+63,look at bookshelf,look at bookshelf,Check if the bookshelf hides any key or object that might unlock the Microsoft gateway or chest,"ACTION: look at bookshelf  
+PLAN: Check if the bookshelf hides any key or object that might unlock the Microsoft gateway or chest","The action ""look at microsoft gateway"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",The bookshelf is shaky.,0,False
+64,look at bookshelf,look at bookshelf,Check if the shaky bookshelf hides a key or object that might unlock the Microsoft gateway or chest,"ACTION: look at bookshelf  
+PLAN: Check if the shaky bookshelf hides a key or object that might unlock the Microsoft gateway or chest",,The bookshelf is shaky.,0,False
+65,look at bookshelf,look at bookshelf,Check if the shaky bookshelf contains a key or object that can unlock the Microsoft gateway or chest,"ACTION: look at bookshelf  
+PLAN: Check if the shaky bookshelf contains a key or object that can unlock the Microsoft gateway or chest",,The bookshelf is shaky.,0,False
+66,go west,go west,Check the Microsoft gateway for a key or object that might unlock the chest or allow access to the goal,"ACTION: go west  
+PLAN: Check the Microsoft gateway for a key or object that might unlock the chest or allow access to the goal","The action ""look at bookshelf"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",You have to open the Microsoft gateway first.,0,False
+67,look at microsoft gateway,look at microsoft gateway,Check if the gateway contains a key or object that can unlock the chest or other doors,"ACTION: look at microsoft gateway  
+PLAN: Check if the gateway contains a key or object that can unlock the chest or other doors",,"it is what it is, a Microsoft gateway You can't see inside it because the lid's in your way.",0,False
+68,look at microsoft gateway,look at microsoft gateway,Check if the gateway contains a Microsoft key or other usable item to unlock doors or containers,"ACTION: look at microsoft gateway  
+PLAN: Check if the gateway contains a Microsoft key or other usable item to unlock doors or containers",,"it is what it is, a Microsoft gateway You can't see inside it because the lid's in your way.",0,False
+69,open microsoft gateway,open microsoft gateway,Check if the gateway contains a Microsoft key or other usable item to unlock doors or containers,"ACTION: open microsoft gateway  
+PLAN: Check if the gateway contains a Microsoft key or other usable item to unlock doors or containers",,You open Microsoft gateway.,0,False
+70,look at microsoft gateway,look at microsoft gateway,Check if the gateway contains a Microsoft key or other usable item to unlock doors or containers,"ACTION: look at microsoft gateway  
+PLAN: Check if the gateway contains a Microsoft key or other usable item to unlock doors or containers",,"it is what it is, a Microsoft gateway You can see inside it.",0,False
+71,look at microsoft gateway,look at microsoft gateway,Check if the gateway contains a Microsoft key or other usable item to unlock doors or containers,"ACTION: look at microsoft gateway  
+PLAN: Check if the gateway contains a Microsoft key or other usable item to unlock doors or containers",,"it is what it is, a Microsoft gateway You can see inside it.",0,False
+72,look at microsoft gateway,look at microsoft gateway,Check if the gateway contains a Microsoft key or other usable item,"ACTION: look at microsoft gateway  
+PLAN: Check if the gateway contains a Microsoft key or other usable item",,"it is what it is, a Microsoft gateway You can see inside it.",0,False
+73,take anything from microsoft gateway,take anything from microsoft gateway,Check if the gateway contains a Microsoft key or other usable item to unlock the bureau or other containers,"ACTION: take anything from microsoft gateway  
+PLAN: Check if the gateway contains a Microsoft key or other usable item to unlock the bureau or other containers","The action ""look at microsoft gateway"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",You can't see any such thing.,0,False
+74,look at microsoft gateway,look at microsoft gateway,Verify if the gateway contains a key or object that can unlock a container or door,"ACTION: look at microsoft gateway  
+PLAN: Verify if the gateway contains a key or object that can unlock a container or door",,"it is what it is, a Microsoft gateway You can see inside it.",0,False
+75,look at microsoft gateway,look at microsoft gateway,Check if the gateway contains a key or object that can unlock a door or container,"ACTION: look at microsoft gateway  
+PLAN: Check if the gateway contains a key or object that can unlock a door or container",,"it is what it is, a Microsoft gateway You can see inside it.",0,False
+76,look at microsoft gateway,look at microsoft gateway,Check if any object or key is visible inside the gateway for use in unlocking doors or containers,"ACTION: look at microsoft gateway  
+PLAN: Check if any object or key is visible inside the gateway for use in unlocking doors or containers",,"it is what it is, a Microsoft gateway You can see inside it.",0,False
+77,look around,look around,Check for nearby objects or exits that might lead to the target or provide new clues outside the gateway,"ACTION: look around  
+PLAN: Check for nearby objects or exits that might lead to the target or provide new clues outside the gateway","The action ""look at microsoft gateway"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",You can't see any such thing.,0,False
+78,go west,go west,Explore the west direction to find new rooms or exits that may contain clues or the target object,"ACTION: go west  
+PLAN: Explore the west direction to find new rooms or exits that may contain clues or the target object","The recent observations form a repeating cycle of 4 states. Recent actions: look at microsoft gateway, look at microsoft gateway, look at microsoft gateway, take anything from microsoft gateway, look at microsoft gateway, look at microsoft gateway, look at microsoft gateway, look around. Do not repeat this action sequence.","-= Workshop =-
+You've just shown up in a workshop.
+
+You can make out a locked bureau. You can see a stand. The stand is standard. The stand appears to be empty.
+
+There is an open Microsoft gateway leading east. There is a closed TextWorld limited edition door leading west.",0,False
+79,go west,go west,Check the closed TextWorld limited edition door for possible exits or hidden objects,"ACTION: go west  
+PLAN: Check the closed TextWorld limited edition door for possible exits or hidden objects",,You have to open the TextWorld limited edition door first.,0,True

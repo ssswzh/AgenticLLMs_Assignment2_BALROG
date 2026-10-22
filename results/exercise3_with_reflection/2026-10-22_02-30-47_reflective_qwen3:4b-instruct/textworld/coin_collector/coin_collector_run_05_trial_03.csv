@@ -1,0 +1,496 @@
+Step,Action,Executed Action,Plan,Raw Completion,Reasoning,Observation,Reward,Done
+0,go south,go south,Explore the south exit to reach a potentially relevant room with visible coin presence,"ACTION: go south
+PLAN: Explore the south exit to reach a potentially relevant room with visible coin presence",,"-= Bathroom =-
+Well, here we are in the bathroom. The room is well lit.
+
+
+
+There is an unguarded exit to the north.",0,False
+1,take coin,take coin,Verify coin presence in bathroom as it is a room with explicit coin visibility per prior observations,"ACTION: take coin
+PLAN: Verify coin presence in bathroom as it is a room with explicit coin visibility per prior observations",,You can't see any such thing.,0,False
+2,go north,go north,Return to studio and explore other unvisited exits for possible coin locations,"ACTION: go north  
+PLAN: Return to studio and explore other unvisited exits for possible coin locations",,"-= Studio =-
+You're now in a studio.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+3,go east,go east,Explore east exit for unvisited room and check for coin presence,"ACTION: go east
+PLAN: Explore east exit for unvisited room and check for coin presence",,"-= Launderette =-
+You arrive in a launderette. A typical one. You decide to start listing off everything you see in the room, as if you were in a text adventure.
+
+
+
+You need an unblocked exit? You should try going west.",0,False
+4,take coin,take coin,Check for coin presence in the launderette as it is a known room with visible object potential,"ACTION: take coin
+PLAN: Check for coin presence in the launderette as it is a known room with visible object potential",,You can't see any such thing.,0,False
+5,go west,go west,Return to studio to check for other exits and explore unvisited areas if available,"ACTION: go west  
+PLAN: Return to studio to check for other exits and explore unvisited areas if available",,"-= Studio =-
+You're now in a studio.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+6,go south,go south,Explore south exit to find unvisited room and check for coin presence,"ACTION: go south
+PLAN: Explore south exit to find unvisited room and check for coin presence",,"-= Bathroom =-
+Well, here we are in the bathroom. The room is well lit.
+
+
+
+There is an unguarded exit to the north.",0,False
+7,go west,go west,Check unvisited room for coin presence after exploring all exits from current location,"ACTION: go west  
+PLAN: Check unvisited room for coin presence after exploring all exits from current location",,You can't go that way.,0,False
+8,go east,go east,Explore the launderette for coin presence after verifying all exits from current location,"ACTION: go east  
+PLAN: Explore the launderette for coin presence after verifying all exits from current location",,You can't go that way.,0,False
+9,go west,go west,Check if coin is visible in studio's unvisited exit direction after confirming bathroom and launderette exploration,"ACTION: go west  
+PLAN: Check if coin is visible in studio's unvisited exit direction after confirming bathroom and launderette exploration",,You can't go that way.,0,False
+10,go east,go east,"Explore the east exit from studio, as it is unblocked and unvisited, to find the coin if present in that room","ACTION: go east  
+PLAN: Explore the east exit from studio, as it is unblocked and unvisited, to find the coin if present in that room",The observation has remained unchanged for 2 consecutive actions. Try a different action or subgoal.,You can't go that way.,0,False
+11,go south,go south,"Check the bathroom for coin presence, as it was previously identified as a room where the coin might be visible","ACTION: go south  
+PLAN: Check the bathroom for coin presence, as it was previously identified as a room where the coin might be visible",The observation has remained unchanged for 3 consecutive actions. Try a different action or subgoal.,You can't go that way.,0,False
+12,go north,go north,"Check if the coin is visible in the bathroom, as it was previously identified as a room where the coin might be present","ACTION: go north
+PLAN: Check if the coin is visible in the bathroom, as it was previously identified as a room where the coin might be present",The observation has remained unchanged for 4 consecutive actions. Try a different action or subgoal.,"-= Studio =-
+You're now in a studio.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+13,go east,go east,"Explore the launderette, as it was previously identified as a room where the coin might be present","ACTION: go east
+PLAN: Explore the launderette, as it was previously identified as a room where the coin might be present",,"-= Launderette =-
+You arrive in a launderette. A typical one. You decide to start listing off everything you see in the room, as if you were in a text adventure.
+
+
+
+You need an unblocked exit? You should try going west.",0,False
+14,take coin,take coin,Verify coin presence in launderette as it is a known potential location for the coin,"ACTION: take coin
+PLAN: Verify coin presence in launderette as it is a known potential location for the coin",,You can't see any such thing.,0,False
+15,go west,go west,Return to studio and explore unvisited exits to find the coin in bathroom or launderette,"ACTION: go west  
+PLAN: Return to studio and explore unvisited exits to find the coin in bathroom or launderette",,"-= Studio =-
+You're now in a studio.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+16,go south,go south,Explore south exit from studio to reach new room and check for coin presence,"ACTION: go south  
+PLAN: Explore south exit from studio to reach new room and check for coin presence",,"-= Bathroom =-
+Well, here we are in the bathroom. The room is well lit.
+
+
+
+There is an unguarded exit to the north.",0,False
+17,go north,go north,Return to studio to check all exits and ensure no other rooms contain the coin,"ACTION: go north
+PLAN: Return to studio to check all exits and ensure no other rooms contain the coin",,"-= Studio =-
+You're now in a studio.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+18,go east,go east,Explore the launderette to confirm coin presence and check for any visible objects in the room,"ACTION: go east
+PLAN: Explore the launderette to confirm coin presence and check for any visible objects in the room",,"-= Launderette =-
+You arrive in a launderette. A typical one. You decide to start listing off everything you see in the room, as if you were in a text adventure.
+
+
+
+You need an unblocked exit? You should try going west.",0,False
+19,take coin,take coin,Check if the coin is visible in the launderette room as per earlier observations,"ACTION: take coin
+PLAN: Check if the coin is visible in the launderette room as per earlier observations",,You can't see any such thing.,0,False
+20,go west,go west,Return to studio to explore other exits and verify coin presence in previously visited rooms,"ACTION: go west  
+PLAN: Return to studio to explore other exits and verify coin presence in previously visited rooms",,"-= Studio =-
+You're now in a studio.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+21,go south,go south,Explore bathroom for coin presence as it is a known room with visible object potential,"ACTION: go south  
+PLAN: Explore bathroom for coin presence as it is a known room with visible object potential",,"-= Bathroom =-
+Well, here we are in the bathroom. The room is well lit.
+
+
+
+There is an unguarded exit to the north.",0,False
+22,go north,go north,"Return to studio to explore east exit for coin in launderette, as it is a known room with visible object potential","ACTION: go north
+PLAN: Return to studio to explore east exit for coin in launderette, as it is a known room with visible object potential",,"-= Studio =-
+You're now in a studio.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+23,go east,go east,"Explore the launderette for the coin, as it is a room with known object visibility in previous trials","ACTION: go east
+PLAN: Explore the launderette for the coin, as it is a room with known object visibility in previous trials",,"-= Launderette =-
+You arrive in a launderette. A typical one. You decide to start listing off everything you see in the room, as if you were in a text adventure.
+
+
+
+You need an unblocked exit? You should try going west.",0,False
+24,take coin,take coin,Check for coin in launderette as it was previously identified as a room where the coin might be visible,"ACTION: take coin
+PLAN: Check for coin in launderette as it was previously identified as a room where the coin might be visible",,You can't see any such thing.,0,False
+25,go west,go west,Return to studio to explore other exits and check for coin in bathroom or other rooms with visible coin potential,"ACTION: go west
+PLAN: Return to studio to explore other exits and check for coin in bathroom or other rooms with visible coin potential",,"-= Studio =-
+You're now in a studio.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+26,go south,go south,"Enter the bathroom to check for coin, as it is a room with known coin visibility in previous trials.","ACTION: go south
+PLAN: Enter the bathroom to check for coin, as it is a room with known coin visibility in previous trials.",,"-= Bathroom =-
+Well, here we are in the bathroom. The room is well lit.
+
+
+
+There is an unguarded exit to the north.",0,False
+27,go north,go north,Return to studio and explore other exits to find coin in previously identified rooms without repetition.,"ACTION: go north
+PLAN: Return to studio and explore other exits to find coin in previously identified rooms without repetition.",,"-= Studio =-
+You're now in a studio.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+28,go west,go west,Explore the west exit from studio to reach a new room and check for coin presence there,"ACTION: go west
+PLAN: Explore the west exit from studio to reach a new room and check for coin presence there",,"-= Office =-
+You arrive in a standard kind of place. That is to say, you're in an office.
+
+
+
+There is an exit to the east. Don't worry, it is unblocked. You don't like doors? Why not try going north, that entranceway is unguarded. You need an unblocked exit? You should try going south. There is an exit to the west. Don't worry, it is unblocked.",0,False
+29,go west,go west,"Explore the office room to check for coin presence, as it is a new location and potentially contains the object","ACTION: go west
+PLAN: Explore the office room to check for coin presence, as it is a new location and potentially contains the object",,"-= Bedchamber =-
+You are in a bedchamber. You start to take note of what's in the room.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked.",0,False
+30,go east,go east,Check the next room for coin presence as it is a new location and may contain the object,"ACTION: go east  
+PLAN: Check the next room for coin presence as it is a new location and may contain the object",,"-= Office =-
+You arrive in a standard kind of place. That is to say, you're in an office.
+
+
+
+There is an exit to the east. Don't worry, it is unblocked. You don't like doors? Why not try going north, that entranceway is unguarded. You need an unblocked exit? You should try going south. There is an exit to the west. Don't worry, it is unblocked.",0,False
+31,go north,go north,"Check if the coin is visible in the north room, as it is a new location and may contain the object","ACTION: go north
+PLAN: Check if the coin is visible in the north room, as it is a new location and may contain the object",,"-= Cubicle =-
+You're now in a cubicle.
+
+
+
+There is an exit to the east. Don't worry, it is unblocked. You don't like doors? Why not try going north, that entranceway is unblocked. There is an exit to the south. Don't worry, it is unguarded. There is an unblocked exit to the west.",0,False
+32,go north,go north,"Check if the coin is visible in the north room, as it is a new location and may contain the object","ACTION: go north
+PLAN: Check if the coin is visible in the north room, as it is a new location and may contain the object",,"-= Silent Office =-
+Okay, so you're in an office, cool, but is it silent? You better believe it is. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an unblocked exit to the east. You don't like doors? Why not try going north, that entranceway is unguarded. There is an unblocked exit to the south. There is an unguarded exit to the west.",0,False
+33,go north,go north,Check if the coin is visible in the silent office room as it is a new location and may contain the object,"ACTION: go north
+PLAN: Check if the coin is visible in the silent office room as it is a new location and may contain the object",,"-= Washroom =-
+Well how about that, you are in a place we're calling a washroom. You begin to take stock of what's in the room.
+
+
+
+You don't like doors? Why not try going south, that entranceway is unblocked.",0,False
+34,go south,go south,Return to the studio to verify if the coin is visible in previously explored rooms,"ACTION: go south  
+PLAN: Return to the studio to verify if the coin is visible in previously explored rooms",,"-= Silent Office =-
+Okay, so you're in an office, cool, but is it silent? You better believe it is. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an unblocked exit to the east. You don't like doors? Why not try going north, that entranceway is unguarded. There is an unblocked exit to the south. There is an unguarded exit to the west.",0,False
+35,go west,go west,Return to studio to check for coin visibility in the bathroom or launderette room,"ACTION: go west  
+PLAN: Return to studio to check for coin visibility in the bathroom or launderette room",,"-= Still Office =-
+I never took you for the sort of person who would show up in a still office, but I guess I was wrong.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded. You don't like doors? Why not try going north, that entranceway is unguarded. There is an exit to the south. Don't worry, it is unblocked. There is an unblocked exit to the west.",0,False
+36,go south,go south,Move to the west corridor to return to studio and check for coin in bathroom or launderette room,"ACTION: go south  
+PLAN: Move to the west corridor to return to studio and check for coin in bathroom or launderette room",,"-= Austere Office =-
+You're now in an austere office.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. There is an unblocked exit to the south. There is an unguarded exit to the west.",0,False
+37,go west,go west,Return to studio to check for coin in bathroom or launderette room,"ACTION: go west
+PLAN: Return to studio to check for coin in bathroom or launderette room",,"-= Steam Room =-
+You arrive in a steam room. An ordinary one.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked. You need an unguarded exit? You should try going north. There is an exit to the south. Don't worry, it is unguarded. There is an exit to the west. Don't worry, it is unguarded.",0,False
+38,go north,go north,Check if coin is visible in the bathroom room from the steam room exit,"ACTION: go north
+PLAN: Check if coin is visible in the bathroom room from the steam room exit",,"-= Spacious Basement =-
+You find yourself in a basement. A spacious kind of place. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an unguarded exit to the south.",0,False
+39,go south,go south,Return to the steam room to check if the coin is visible in the bathroom room from the exit,"ACTION: go south  
+PLAN: Return to the steam room to check if the coin is visible in the bathroom room from the exit",,"-= Steam Room =-
+You arrive in a steam room. An ordinary one.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked. You need an unguarded exit? You should try going north. There is an exit to the south. Don't worry, it is unguarded. There is an exit to the west. Don't worry, it is unguarded.",0,False
+40,go east,go east,Explore the east exit to check if the coin is visible in the next room,"ACTION: go east  
+PLAN: Explore the east exit to check if the coin is visible in the next room",,"-= Austere Office =-
+You're now in an austere office.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. There is an unblocked exit to the south. There is an unguarded exit to the west.",0,False
+41,go east,go east,"Check if the coin is visible in the room to the east, as it may be the target location based on prior observations.","ACTION: go east
+PLAN: Check if the coin is visible in the room to the east, as it may be the target location based on prior observations.",,"-= Attic =-
+You've entered an attic.
+
+
+
+You need an unblocked exit? You should try going west.",0,False
+42,go west,go west,"Check if the coin is visible in the room, as prior observations indicate it is only present in bathroom or launderette.","ACTION: go west  
+PLAN: Check if the coin is visible in the room, as prior observations indicate it is only present in bathroom or launderette.",,"-= Austere Office =-
+You're now in an austere office.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. There is an unblocked exit to the south. There is an unguarded exit to the west.",0,False
+43,go north,go north,"Check if coin is visible in the room, as it was only seen in bathroom or launderette in prior trials.","ACTION: go north  
+PLAN: Check if coin is visible in the room, as it was only seen in bathroom or launderette in prior trials.",,"-= Still Office =-
+I never took you for the sort of person who would show up in a still office, but I guess I was wrong.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded. You don't like doors? Why not try going north, that entranceway is unguarded. There is an exit to the south. Don't worry, it is unblocked. There is an unblocked exit to the west.",0,False
+44,go south,go south,"Check if coin is visible in the room, as prior trials showed it only appears in bathroom or launderette.","ACTION: go south  
+PLAN: Check if coin is visible in the room, as prior trials showed it only appears in bathroom or launderette.",,"-= Austere Office =-
+You're now in an austere office.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. There is an unblocked exit to the south. There is an unguarded exit to the west.",0,False
+45,go east,go east,"Explore the next room to check if the coin is visible, as it was only seen in bathroom or launderette rooms in prior trials.","ACTION: go east  
+PLAN: Explore the next room to check if the coin is visible, as it was only seen in bathroom or launderette rooms in prior trials.",,"-= Attic =-
+You've entered an attic.
+
+
+
+You need an unblocked exit? You should try going west.",0,False
+46,go west,go west,"Move to the austere office to check for coin visibility, as prior trials indicate coin is only found in bathroom or launderette rooms.","ACTION: go west  
+PLAN: Move to the austere office to check for coin visibility, as prior trials indicate coin is only found in bathroom or launderette rooms.",,"-= Austere Office =-
+You're now in an austere office.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. There is an unblocked exit to the south. There is an unguarded exit to the west.",0,False
+47,go north,go north,"Check the north exit for a room with coin visibility, as per prior observations of bathroom or launderette locations.","ACTION: go north  
+PLAN: Check the north exit for a room with coin visibility, as per prior observations of bathroom or launderette locations.",,"-= Still Office =-
+I never took you for the sort of person who would show up in a still office, but I guess I was wrong.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded. You don't like doors? Why not try going north, that entranceway is unguarded. There is an exit to the south. Don't worry, it is unblocked. There is an unblocked exit to the west.",0,False
+48,go north,go north,"Explore the north exit to find a room with visible coin, as per prior observations of bathroom or launderette locations.","ACTION: go north  
+PLAN: Explore the north exit to find a room with visible coin, as per prior observations of bathroom or launderette locations.","The recent observations form a repeating cycle of 4 states. Recent actions: go east, go east, go west, go north, go south, go east, go west, go north. Do not repeat this action sequence.","-= Entertaining Recreation Zone =-
+You arrive in a recreation zone. An entertaining kind of place. The room is well lit.
+
+
+
+There is an exit to the south. Don't worry, it is unblocked.",0,False
+49,go south,go south,"Check if the south exit leads to a room with visible coin, such as a bathroom or launderette.","ACTION: go south
+PLAN: Check if the south exit leads to a room with visible coin, such as a bathroom or launderette.",,"-= Still Office =-
+I never took you for the sort of person who would show up in a still office, but I guess I was wrong.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded. You don't like doors? Why not try going north, that entranceway is unguarded. There is an exit to the south. Don't worry, it is unblocked. There is an unblocked exit to the west.",0,False
+50,go south,go south,"Explore the room to the south for visible coin, as it may lead to a bathroom or launderette based on prior observations.","ACTION: go south  
+PLAN: Explore the room to the south for visible coin, as it may lead to a bathroom or launderette based on prior observations.",,"-= Austere Office =-
+You're now in an austere office.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. There is an unblocked exit to the south. There is an unguarded exit to the west.",0,False
+51,go south,go south,"Check if the coin is visible in the room south, as prior trials indicated it might be in bathroom or launderette areas.","ACTION: go south
+PLAN: Check if the coin is visible in the room south, as prior trials indicated it might be in bathroom or launderette areas.",,"-= Alarmingly Hot Cookhouse =-
+You've entered an alarmingly hot cookhouse. Okay, just remember what you're here to do, and everything will go great.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.",0,False
+52,go north,go north,Check if coin is visible in the cookhouse or adjacent rooms with potential object presence,"ACTION: go north
+PLAN: Check if coin is visible in the cookhouse or adjacent rooms with potential object presence",,"-= Austere Office =-
+You're now in an austere office.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. There is an unblocked exit to the south. There is an unguarded exit to the west.",0,False
+53,go east,go east,Explore the east exit to check for coin visibility in the next room,"ACTION: go east  
+PLAN: Explore the east exit to check for coin visibility in the next room",,"-= Attic =-
+You've entered an attic.
+
+
+
+You need an unblocked exit? You should try going west.",0,False
+54,go west,go west,Return to austere office to check for coin visibility in adjacent rooms,"ACTION: go west  
+PLAN: Return to austere office to check for coin visibility in adjacent rooms",,"-= Austere Office =-
+You're now in an austere office.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. There is an unblocked exit to the south. There is an unguarded exit to the west.",0,False
+55,go north,go north,"Check if coin is visible in the still office room, as it is a distinct location from others explored.","ACTION: go north  
+PLAN: Check if coin is visible in the still office room, as it is a distinct location from others explored.",,"-= Still Office =-
+I never took you for the sort of person who would show up in a still office, but I guess I was wrong.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded. You don't like doors? Why not try going north, that entranceway is unguarded. There is an exit to the south. Don't worry, it is unblocked. There is an unblocked exit to the west.",0,False
+56,go east,go east,Explore the east exit to check if the coin is visible in the new room,"ACTION: go east  
+PLAN: Explore the east exit to check if the coin is visible in the new room",,"-= Silent Office =-
+Okay, so you're in an office, cool, but is it silent? You better believe it is. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an unblocked exit to the east. You don't like doors? Why not try going north, that entranceway is unguarded. There is an unblocked exit to the south. There is an unguarded exit to the west.",0,False
+57,go east,go east,Check if the coin is visible in the new room after moving east,"ACTION: go east
+PLAN: Check if the coin is visible in the new room after moving east",,"-= Pantry =-
+This might come as a shock to you, but you've just walked into a pantry. The room is well lit.
+
+
+
+You need an unguarded exit? You should try going west.",0,False
+58,go west,go west,Check if the coin is visible in the pantry room before exploring other exits,"ACTION: go west
+PLAN: Check if the coin is visible in the pantry room before exploring other exits",,"-= Silent Office =-
+Okay, so you're in an office, cool, but is it silent? You better believe it is. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an unblocked exit to the east. You don't like doors? Why not try going north, that entranceway is unguarded. There is an unblocked exit to the south. There is an unguarded exit to the west.",0,False
+59,go west,go west,Check if the coin is visible in the pantry room as per earlier observations of coin visibility in such rooms,"ACTION: go west  
+PLAN: Check if the coin is visible in the pantry room as per earlier observations of coin visibility in such rooms",,"-= Still Office =-
+I never took you for the sort of person who would show up in a still office, but I guess I was wrong.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded. You don't like doors? Why not try going north, that entranceway is unguarded. There is an exit to the south. Don't worry, it is unblocked. There is an unblocked exit to the west.",0,False
+60,go west,go west,Proceed to the austere office to check if the coin is visible in any room as per prior observations,"ACTION: go west  
+PLAN: Proceed to the austere office to check if the coin is visible in any room as per prior observations",,"-= Unreasonably Hot Cookery =-
+You've entered an unreasonably hot cookery.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked.",0,False
+61,go east,go east,Check if the coin is visible in the room as per prior observations of bathroom and launderette rooms,"ACTION: go east  
+PLAN: Check if the coin is visible in the room as per prior observations of bathroom and launderette rooms",,"-= Still Office =-
+I never took you for the sort of person who would show up in a still office, but I guess I was wrong.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded. You don't like doors? Why not try going north, that entranceway is unguarded. There is an exit to the south. Don't worry, it is unblocked. There is an unblocked exit to the west.",0,False
+62,go north,go north,Explore the north exit to check if the coin is visible in a room like bathroom or launderette as per prior observations,"ACTION: go north  
+PLAN: Explore the north exit to check if the coin is visible in a room like bathroom or launderette as per prior observations",,"-= Entertaining Recreation Zone =-
+You arrive in a recreation zone. An entertaining kind of place. The room is well lit.
+
+
+
+There is an exit to the south. Don't worry, it is unblocked.",0,False
+63,go south,go south,Check if coin is visible in the room based on prior knowledge of bathroom or launderette locations,"ACTION: go south
+PLAN: Check if coin is visible in the room based on prior knowledge of bathroom or launderette locations",,"-= Still Office =-
+I never took you for the sort of person who would show up in a still office, but I guess I was wrong.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded. You don't like doors? Why not try going north, that entranceway is unguarded. There is an exit to the south. Don't worry, it is unblocked. There is an unblocked exit to the west.",0,False
+64,go east,go east,Explore the east exit to check if the coin is visible in a potential bathroom or launderette room,"ACTION: go east  
+PLAN: Explore the east exit to check if the coin is visible in a potential bathroom or launderette room",,"-= Silent Office =-
+Okay, so you're in an office, cool, but is it silent? You better believe it is. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an unblocked exit to the east. You don't like doors? Why not try going north, that entranceway is unguarded. There is an unblocked exit to the south. There is an unguarded exit to the west.",0,False
+65,go east,go east,Check if the coin is visible in the room with potential bathroom or launderette features,"ACTION: go east
+PLAN: Check if the coin is visible in the room with potential bathroom or launderette features",,"-= Pantry =-
+This might come as a shock to you, but you've just walked into a pantry. The room is well lit.
+
+
+
+You need an unguarded exit? You should try going west.",0,False
+66,go west,go west,Check if the coin is visible in the office as it may be the only unvisited room with coin potential,"ACTION: go west  
+PLAN: Check if the coin is visible in the office as it may be the only unvisited room with coin potential",,"-= Silent Office =-
+Okay, so you're in an office, cool, but is it silent? You better believe it is. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an unblocked exit to the east. You don't like doors? Why not try going north, that entranceway is unguarded. There is an unblocked exit to the south. There is an unguarded exit to the west.",0,False
+67,go north,go north,Check if the coin is visible in the room with the unguarded entrance to the north,"ACTION: go north
+PLAN: Check if the coin is visible in the room with the unguarded entrance to the north",,"-= Washroom =-
+Well how about that, you are in a place we're calling a washroom. You begin to take stock of what's in the room.
+
+
+
+You don't like doors? Why not try going south, that entranceway is unblocked.",0,False
+68,take coin,take coin,Verify coin presence in the washroom as it is a room with potential object visibility,"ACTION: take coin
+PLAN: Verify coin presence in the washroom as it is a room with potential object visibility",,You can't see any such thing.,0,False
+69,go south,go south,"Explore the next room to check for coin visibility, as washroom did not contain it","ACTION: go south  
+PLAN: Explore the next room to check for coin visibility, as washroom did not contain it",,"-= Silent Office =-
+Okay, so you're in an office, cool, but is it silent? You better believe it is. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an unblocked exit to the east. You don't like doors? Why not try going north, that entranceway is unguarded. There is an unblocked exit to the south. There is an unguarded exit to the west.",0,False
+70,go north,go north,"Check the washroom for coin visibility, as it was previously identified as a potential location","ACTION: go north
+PLAN: Check the washroom for coin visibility, as it was previously identified as a potential location",,"-= Washroom =-
+Well how about that, you are in a place we're calling a washroom. You begin to take stock of what's in the room.
+
+
+
+You don't like doors? Why not try going south, that entranceway is unblocked.",0,False
+71,take coin,take coin,Verify coin presence in washroom as it is a known location where the coin may be found,"ACTION: take coin
+PLAN: Verify coin presence in washroom as it is a known location where the coin may be found",,You can't see any such thing.,0,False
+72,go south,go south,Return to silent office to explore other exits and check for unvisited rooms where the coin might be present,"ACTION: go south  
+PLAN: Return to silent office to explore other exits and check for unvisited rooms where the coin might be present","The recent observations form a repeating cycle of 3 states. Recent actions: go west, go north, take coin, go south, go north, take coin. Do not repeat this action sequence.","-= Silent Office =-
+Okay, so you're in an office, cool, but is it silent? You better believe it is. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an unblocked exit to the east. You don't like doors? Why not try going north, that entranceway is unguarded. There is an unblocked exit to the south. There is an unguarded exit to the west.",0,False
+73,go east,go east,Explore the eastern exit to discover new rooms where the coin might be visible,"ACTION: go east  
+PLAN: Explore the eastern exit to discover new rooms where the coin might be visible","The recent observations form a repeating cycle of 3 states. Recent actions: go north, take coin, go south, go north, take coin, go south. Do not repeat this action sequence.","-= Pantry =-
+This might come as a shock to you, but you've just walked into a pantry. The room is well lit.
+
+
+
+You need an unguarded exit? You should try going west.",0,False
+74,go west,go west,Return to the office to check for any previously missed exits or potential coin locations,"ACTION: go west
+PLAN: Return to the office to check for any previously missed exits or potential coin locations",,"-= Silent Office =-
+Okay, so you're in an office, cool, but is it silent? You better believe it is. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an unblocked exit to the east. You don't like doors? Why not try going north, that entranceway is unguarded. There is an unblocked exit to the south. There is an unguarded exit to the west.",0,False
+75,go north,go north,"Check the washroom for coin, as it was previously identified as a potential location with visible object presence","ACTION: go north
+PLAN: Check the washroom for coin, as it was previously identified as a potential location with visible object presence",,"-= Washroom =-
+Well how about that, you are in a place we're calling a washroom. You begin to take stock of what's in the room.
+
+
+
+You don't like doors? Why not try going south, that entranceway is unblocked.",0,False
+76,take coin,take coin,"Attempt to collect the coin in the washroom, as it was previously identified as a room where the coin may be visible","ACTION: take coin
+PLAN: Attempt to collect the coin in the washroom, as it was previously identified as a room where the coin may be visible",,You can't see any such thing.,0,False
+77,go south,go south,Move to the silent office to explore other exits and check for coin visibility in adjacent rooms,"ACTION: go south  
+PLAN: Move to the silent office to explore other exits and check for coin visibility in adjacent rooms",,"-= Silent Office =-
+Okay, so you're in an office, cool, but is it silent? You better believe it is. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an unblocked exit to the east. You don't like doors? Why not try going north, that entranceway is unguarded. There is an unblocked exit to the south. There is an unguarded exit to the west.",0,False
+78,go east,go east,"Explore the pantry to check for coin visibility, as it is a room with potential object presence based on prior observations","ACTION: go east  
+PLAN: Explore the pantry to check for coin visibility, as it is a room with potential object presence based on prior observations",,"-= Pantry =-
+This might come as a shock to you, but you've just walked into a pantry. The room is well lit.
+
+
+
+You need an unguarded exit? You should try going west.",0,False
+79,go west,go west,Return to the silent office and check if any new paths or rooms offer coin visibility without redundant exploration,"ACTION: go west
+PLAN: Return to the silent office and check if any new paths or rooms offer coin visibility without redundant exploration",,"-= Silent Office =-
+Okay, so you're in an office, cool, but is it silent? You better believe it is. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an unblocked exit to the east. You don't like doors? Why not try going north, that entranceway is unguarded. There is an unblocked exit to the south. There is an unguarded exit to the west.",0,True

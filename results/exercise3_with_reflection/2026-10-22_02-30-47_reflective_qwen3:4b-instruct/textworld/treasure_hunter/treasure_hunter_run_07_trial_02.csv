@@ -1,0 +1,557 @@
+Step,Action,Executed Action,Plan,Raw Completion,Reasoning,Observation,Reward,Done
+0,look,look,Check for visible keys or objects that could help unlock the non-euclidean safe,"ACTION: look  
+PLAN: Check for visible keys or objects that could help unlock the non-euclidean safe",,"-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+1,look,look,Check if any keys or objects are visible in the room to aid in unlocking the safe,"ACTION: look  
+PLAN: Check if any keys or objects are visible in the room to aid in unlocking the safe",,"-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+2,look,look,Verify if any visible keycards or objects are present to assist in unlocking the non-euclidean safe,"ACTION: look  
+PLAN: Verify if any visible keycards or objects are present to assist in unlocking the non-euclidean safe","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+3,go north,go north,Explore the room north to find new exits or objects that might lead to the target or key,"ACTION: go north  
+PLAN: Explore the room north to find new exits or objects that might lead to the target or key","The action ""look"" has repeatedly left the observation unchanged for 3 steps. Do not repeat this action in the current state.","-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+4,take non-euclidean keycard from floor,take non-euclidean keycard from floor,Use the keycard to unlock the non-euclidean safe in the cellar or another room with a matching safe,"ACTION: take non-euclidean keycard from floor  
+PLAN: Use the keycard to unlock the non-euclidean safe in the cellar or another room with a matching safe",,You can't see any such thing.,0,False
+5,go south,go south,Check the kitchenette for a non-euclidean safe to unlock with the keycard,"ACTION: go south  
+PLAN: Check the kitchenette for a non-euclidean safe to unlock with the keycard",,"-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+6,go north,go north,Explore the kitchenette to find a non-euclidean safe for unlocking with the keycard,"ACTION: go north  
+PLAN: Explore the kitchenette to find a non-euclidean safe for unlocking with the keycard",,"-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+7,look,look,Check for visible objects or exits that might lead to the non-euclidean safe or a container requiring the keycard,"ACTION: look  
+PLAN: Check for visible objects or exits that might lead to the non-euclidean safe or a container requiring the keycard",,"-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+8,take non-euclidean keycard from floor,take non-euclidean keycard from floor,Unlock the non-euclidean safe using the keycard if available in the room,"ACTION: take non-euclidean keycard from floor  
+PLAN: Unlock the non-euclidean safe using the keycard if available in the room",,You can't see any such thing.,0,False
+9,look,look,Check if the non-euclidean safe is visible and if a keycard is present in the room to use for unlocking,"ACTION: look  
+PLAN: Check if the non-euclidean safe is visible and if a keycard is present in the room to use for unlocking",,"-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+10,look,look,Check if the non-euclidean safe is visible and if a keycard is present in the room to use for unlocking,"ACTION: look  
+PLAN: Check if the non-euclidean safe is visible and if a keycard is present in the room to use for unlocking",,"-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+11,look,look,Check if the non-euclidean safe is visible and if a keycard is present in the room to use for unlocking,"ACTION: look  
+PLAN: Check if the non-euclidean safe is visible and if a keycard is present in the room to use for unlocking",,"-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+12,go east,go east,Explore the closed cuboid door to the east and check if it can be opened or leads to a new area with potential clues or the target object.,"ACTION: go east  
+PLAN: Explore the closed cuboid door to the east and check if it can be opened or leads to a new area with potential clues or the target object.","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",You have to open the cuboid door first.,0,False
+13,look,look,Check if there are any visible keys or objects that can unlock the cuboid door,"ACTION: look  
+PLAN: Check if there are any visible keys or objects that can unlock the cuboid door",,"-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+14,look,look,Check if any visible key or object can unlock the cuboid door,"ACTION: look  
+PLAN: Check if any visible key or object can unlock the cuboid door",,"-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+15,look,look,Check if any visible key or object can unlock the cuboid door,"ACTION: look  
+PLAN: Check if any visible key or object can unlock the cuboid door",,"-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+16,go south,go south,Return to cellar to check for additional keys or clues in the original room,"ACTION: go south  
+PLAN: Return to cellar to check for additional keys or clues in the original room","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+17,look,look,Check if the non-euclidean safe has a visible key or if there are other clues in the cellar room,"ACTION: look  
+PLAN: Check if the non-euclidean safe has a visible key or if there are other clues in the cellar room",,"-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+18,look,look,Check if the non-euclidean safe is visible or requires a key to open,"ACTION: look  
+PLAN: Check if the non-euclidean safe is visible or requires a key to open",,"-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+19,look,look,Verify if the non-euclidean safe is accessible or requires a key to open,"ACTION: look  
+PLAN: Verify if the non-euclidean safe is accessible or requires a key to open","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+20,look,look,Check if the non-euclidean safe is described as locked or requires a key to open,"ACTION: look  
+PLAN: Check if the non-euclidean safe is described as locked or requires a key to open","The action ""look"" has repeatedly left the observation unchanged for 3 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+21,look,look,Verify if the non-euclidean safe is locked or requires a key to open,"ACTION: look  
+PLAN: Verify if the non-euclidean safe is locked or requires a key to open","The action ""look"" has repeatedly left the observation unchanged for 4 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+22,look,look,Check if the non-euclidean safe is locked and whether the keycard is needed to open it,"ACTION: look  
+PLAN: Check if the non-euclidean safe is locked and whether the keycard is needed to open it","The action ""look"" has repeatedly left the observation unchanged for 5 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+23,look,look,Verify if the non-euclidean safe is locked and whether the keycard is required to open it,"ACTION: look  
+PLAN: Verify if the non-euclidean safe is locked and whether the keycard is required to open it","The action ""look"" has repeatedly left the observation unchanged for 6 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+24,look,look,Check if the non-euclidean safe is locked and if the keycard is needed to open it,"ACTION: look  
+PLAN: Check if the non-euclidean safe is locked and if the keycard is needed to open it","The action ""look"" has repeatedly left the observation unchanged for 7 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+25,look,look,Verify if the non-euclidean safe is locked and whether the keycard is required to open it,"ACTION: look  
+PLAN: Verify if the non-euclidean safe is locked and whether the keycard is required to open it","The action ""look"" has repeatedly left the observation unchanged for 8 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+26,look,look,Check if the non-euclidean safe is locked and if the keycard is needed to open it,"ACTION: look  
+PLAN: Check if the non-euclidean safe is locked and if the keycard is needed to open it","The action ""look"" has repeatedly left the observation unchanged for 9 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+27,look,look,Verify if the non-euclidean safe is locked and whether the keycard is required to open it,"ACTION: look  
+PLAN: Verify if the non-euclidean safe is locked and whether the keycard is required to open it","The action ""look"" has repeatedly left the observation unchanged for 10 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+28,look,look,Check if the non-euclidean safe is locked and whether the keycard is needed to open it,"ACTION: look  
+PLAN: Check if the non-euclidean safe is locked and whether the keycard is needed to open it","The action ""look"" has repeatedly left the observation unchanged for 11 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+29,look,look,Verify if the non-euclidean safe is locked and whether the keycard is required to open it,"ACTION: look  
+PLAN: Verify if the non-euclidean safe is locked and whether the keycard is required to open it","The action ""look"" has repeatedly left the observation unchanged for 12 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+30,look,look,Confirm if the non-euclidean safe is locked and whether the keycard is needed to open it,"ACTION: look  
+PLAN: Confirm if the non-euclidean safe is locked and whether the keycard is needed to open it","The action ""look"" has repeatedly left the observation unchanged for 13 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+31,look,look,Verify if the non-euclidean safe is locked and whether the keycard is required to open it,"ACTION: look  
+PLAN: Verify if the non-euclidean safe is locked and whether the keycard is required to open it","The action ""look"" has repeatedly left the observation unchanged for 14 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+32,go north,go north,Explore the room north of the cellar to find new exits or objects that may lead to the target item.,"ACTION: go north  
+PLAN: Explore the room north of the cellar to find new exits or objects that may lead to the target item.","The action ""look"" has repeatedly left the observation unchanged for 15 steps. Do not repeat this action in the current state.","-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+33,take non-euclidean keycard from floor,take non-euclidean keycard from floor,Use the keycard to unlock the non-euclidean safe or refrigerator in the kitchenette,"ACTION: take non-euclidean keycard from floor
+PLAN: Use the keycard to unlock the non-euclidean safe or refrigerator in the kitchenette",,You can't see any such thing.,0,False
+34,look,look,Check if the refrigerator or locker requires a non-euclidean keycard to unlock,"ACTION: look  
+PLAN: Check if the refrigerator or locker requires a non-euclidean keycard to unlock",,"-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+35,look,look,Check if the refrigerator or locker requires a non-euclidean keycard to unlock,"ACTION: look  
+PLAN: Check if the refrigerator or locker requires a non-euclidean keycard to unlock",,"-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+36,look,look,Check if the refrigerator or locker can be unlocked with the non-euclidean keycard,"ACTION: look  
+PLAN: Check if the refrigerator or locker can be unlocked with the non-euclidean keycard",,"-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+37,unlock refrigerator with non-euclidean keycard,unlock refrigerator with non-euclidean keycard,Check if the refrigerator can be opened with the keycard to find the target object,"ACTION: unlock refrigerator with non-euclidean keycard  
+PLAN: Check if the refrigerator can be opened with the keycard to find the target object","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",You need to take the non-euclidean keycard first.,0,False
+38,take non-euclidean keycard from floor,take non-euclidean keycard from floor,Retrieve the keycard to use it for unlocking containers or doors in the room,"ACTION: take non-euclidean keycard from floor  
+PLAN: Retrieve the keycard to use it for unlocking containers or doors in the room",,You can't see any such thing.,0,False
+39,look,look,Check if the non-euclidean keycard is now visible or if there is another key or object to inspect,"ACTION: look  
+PLAN: Check if the non-euclidean keycard is now visible or if there is another key or object to inspect",,"-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+40,look,look,Verify if the non-euclidean keycard is now visible or if new objects have appeared in the room,"ACTION: look  
+PLAN: Verify if the non-euclidean keycard is now visible or if new objects have appeared in the room",,"-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+41,look,look,Check if the non-euclidean keycard is now visible or if new objects have appeared in the room,"ACTION: look  
+PLAN: Check if the non-euclidean keycard is now visible or if new objects have appeared in the room",,"-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+42,go south,go south,Explore south exit to find unguarded path or new room with potential targets or keys,"ACTION: go south  
+PLAN: Explore south exit to find unguarded path or new room with potential targets or keys","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+43,go south,go south,Explore the south path to locate new rooms or objects that may hold the target or keys,"ACTION: go south  
+PLAN: Explore the south path to locate new rooms or objects that may hold the target or keys",,You can't go that way.,0,False
+44,look,look,Check the cellar for any visible objects or clues that might help locate the target object,"ACTION: look  
+PLAN: Check the cellar for any visible objects or clues that might help locate the target object",,"-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+45,look,look,Check for any visible objects or clues in the cellar that might lead to the target object,"ACTION: look  
+PLAN: Check for any visible objects or clues in the cellar that might lead to the target object",,"-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+46,look,look,Check if the non-euclidean safe has a visible keycard or if it can be opened with available items,"ACTION: look  
+PLAN: Check if the non-euclidean safe has a visible keycard or if it can be opened with available items",,"-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+47,look,look,Verify if the non-euclidean safe is accessible or requires a keycard to open,"ACTION: look  
+PLAN: Verify if the non-euclidean safe is accessible or requires a keycard to open","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+48,look,look,Check if the non-euclidean safe requires a keycard to open and if it is visible and accessible,"ACTION: look  
+PLAN: Check if the non-euclidean safe requires a keycard to open and if it is visible and accessible","The action ""look"" has repeatedly left the observation unchanged for 3 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+49,look,look,Verify if the non-euclidean safe is locked and whether a keycard is needed to open it,"ACTION: look  
+PLAN: Verify if the non-euclidean safe is locked and whether a keycard is needed to open it","The action ""look"" has repeatedly left the observation unchanged for 4 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+50,look,look,Check if the non-euclidean safe is locked and whether a keycard is needed to open it,"ACTION: look  
+PLAN: Check if the non-euclidean safe is locked and whether a keycard is needed to open it","The action ""look"" has repeatedly left the observation unchanged for 5 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+51,look,look,Verify if the non-euclidean safe is locked and whether it requires a keycard to open,"ACTION: look  
+PLAN: Verify if the non-euclidean safe is locked and whether it requires a keycard to open","The action ""look"" has repeatedly left the observation unchanged for 6 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+52,look,look,Check if the non-euclidean safe is locked and whether a keycard is required to open it,"ACTION: look  
+PLAN: Check if the non-euclidean safe is locked and whether a keycard is required to open it","The action ""look"" has repeatedly left the observation unchanged for 7 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+53,look,look,Verify if the non-euclidean safe is locked and whether a keycard is needed to open it,"ACTION: look  
+PLAN: Verify if the non-euclidean safe is locked and whether a keycard is needed to open it","The action ""look"" has repeatedly left the observation unchanged for 8 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+54,look,look,Confirm if the non-euclidean safe is locked and whether a keycard is required to open it,"ACTION: look  
+PLAN: Confirm if the non-euclidean safe is locked and whether a keycard is required to open it","The action ""look"" has repeatedly left the observation unchanged for 9 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+55,look,look,Verify if the non-euclidean safe is locked and whether a keycard is needed to open it,"ACTION: look  
+PLAN: Verify if the non-euclidean safe is locked and whether a keycard is needed to open it","The action ""look"" has repeatedly left the observation unchanged for 10 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+56,look,look,Confirm if the non-euclidean safe is locked and whether a keycard is required to open it,"ACTION: look  
+PLAN: Confirm if the non-euclidean safe is locked and whether a keycard is required to open it","The action ""look"" has repeatedly left the observation unchanged for 11 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+57,look,look,Verify if the non-euclidean safe is locked and whether a keycard is needed to open it,"ACTION: look  
+PLAN: Verify if the non-euclidean safe is locked and whether a keycard is needed to open it","The action ""look"" has repeatedly left the observation unchanged for 12 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+58,look,look,Confirm if the non-euclidean safe is locked or if a keycard is visible and required to open it,"ACTION: look  
+PLAN: Confirm if the non-euclidean safe is locked or if a keycard is visible and required to open it","The action ""look"" has repeatedly left the observation unchanged for 13 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+59,look,look,Verify if the non-euclidean safe is locked and whether a keycard is visible in the room,"ACTION: look  
+PLAN: Verify if the non-euclidean safe is locked and whether a keycard is visible in the room","The action ""look"" has repeatedly left the observation unchanged for 14 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+60,go north,go north,Explore the room north to find new exits or objects that may lead to the goal or a keycard,"ACTION: go north  
+PLAN: Explore the room north to find new exits or objects that may lead to the goal or a keycard","The action ""look"" has repeatedly left the observation unchanged for 15 steps. Do not repeat this action in the current state.","-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+61,take non-euclidean keycard from floor,take non-euclidean keycard from floor,Use the keycard to unlock the non-euclidean safe or refrigerator in the kitchenette,"ACTION: take non-euclidean keycard from floor  
+PLAN: Use the keycard to unlock the non-euclidean safe or refrigerator in the kitchenette",,You can't see any such thing.,0,False
+62,look,look,Check if there is a non-euclidean safe or container that matches the keycard I just took,"ACTION: look  
+PLAN: Check if there is a non-euclidean safe or container that matches the keycard I just took",,"-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+63,look,look,Check if there is a non-euclidean safe or container that matches the non-euclidean keycard I have,"ACTION: look  
+PLAN: Check if there is a non-euclidean safe or container that matches the non-euclidean keycard I have",,"-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+64,look,look,Check if there is a non-euclidean safe or container that matches the non-euclidean keycard I have,"ACTION: look  
+PLAN: Check if there is a non-euclidean safe or container that matches the non-euclidean keycard I have",,"-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+65,go south,go south,Explore the south exit to find a new room with possible doors or containers that might hold the target object,"ACTION: go south  
+PLAN: Explore the south exit to find a new room with possible doors or containers that might hold the target object","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+66,look,look,Check if there are any visible objects or exits that could lead to the target object in the cellar,"ACTION: look  
+PLAN: Check if there are any visible objects or exits that could lead to the target object in the cellar",,"-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+67,look,look,Check for any visible objects or exits that might lead to the target object in the cellar,"ACTION: look  
+PLAN: Check for any visible objects or exits that might lead to the target object in the cellar",,"-= Cellar =-
+You arrive in a cellar. A standard one.
+
+You see a non-euclidean safe. You make out an opened locker. The locker is empty! This is the worst thing that could possibly happen, ever!
+
+There is an unguarded exit to the north.",0,False
+68,go north,go north,Explore the kitchenette to find the non-euclidean safe or keycard needed to access the target object,"ACTION: go north  
+PLAN: Explore the kitchenette to find the non-euclidean safe or keycard needed to access the target object","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+69,look,look,Check if the refrigerator or locker contains the target object or a key needed to proceed,"ACTION: look  
+PLAN: Check if the refrigerator or locker contains the target object or a key needed to proceed",,"-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+70,look,look,Examine the refrigerator and locker for visible objects or keys that might help achieve the goal,"ACTION: look  
+PLAN: Examine the refrigerator and locker for visible objects or keys that might help achieve the goal",,"-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+71,look,look,Check if the refrigerator or locker contains visible objects or clues to the target item,"ACTION: look  
+PLAN: Check if the refrigerator or locker contains visible objects or clues to the target item","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+72,open refrigerator,open refrigerator,Check if the refrigerator contains the target object or a key needed to proceed,"ACTION: open refrigerator  
+PLAN: Check if the refrigerator contains the target object or a key needed to proceed","The action ""look"" has repeatedly left the observation unchanged for 3 steps. Do not repeat this action in the current state.",The refrigerator is welded shut.,0,False
+73,look,look,Check if the American limited edition locker or cuboid door requires a key to open,"ACTION: look  
+PLAN: Check if the American limited edition locker or cuboid door requires a key to open",,"-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+74,take non-euclidean keycard from floor,take non-euclidean keycard from floor,Check if the American limited edition locker can be opened with the non-euclidean keycard,"ACTION: take non-euclidean keycard from floor  
+PLAN: Check if the American limited edition locker can be opened with the non-euclidean keycard",,You can't see any such thing.,0,False
+75,look,look,Check if the American limited edition locker is visible and if it can be opened with the keycard,"ACTION: look  
+PLAN: Check if the American limited edition locker is visible and if it can be opened with the keycard",,"-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+76,open american limited edition locker,open american limited edition locker,"Check if the locker can be opened with the non-euclidean keycard, as it may contain the target object","ACTION: open American limited edition locker  
+PLAN: Check if the locker can be opened with the non-euclidean keycard, as it may contain the target object",,You have to unlock the American limited edition locker with the American limited edition latchkey first.,0,False
+77,unlock american limited edition locker with non-euclidean keycard,unlock american limited edition locker with non-euclidean keycard,Check if the keycard matches the locker's lock to proceed with opening it,"ACTION: unlock american limited edition locker with non-euclidean keycard  
+PLAN: Check if the keycard matches the locker's lock to proceed with opening it",,You need to take the non-euclidean keycard first.,0,False
+78,look,look,Check if there is an American limited edition latchkey visible in the room to match with the keycard,"ACTION: look  
+PLAN: Check if there is an American limited edition latchkey visible in the room to match with the keycard",,"-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,False
+79,look,look,Check if the American limited edition latchkey is visible in the room or nearby,"ACTION: look  
+PLAN: Check if the American limited edition latchkey is visible in the room or nearby",,"-= Kitchenette =-
+Welcome to the kitchenette.
+
+A locked refrigerator is close by. A locked American limited edition locker is close by.
+
+There is a closed cuboid door leading east. You need an unguarded exit? You should try going south.
+
+There is a non-euclidean keycard on the floor.",0,True

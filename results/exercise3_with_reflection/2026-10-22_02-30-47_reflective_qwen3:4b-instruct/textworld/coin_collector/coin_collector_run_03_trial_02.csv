@@ -1,0 +1,361 @@
+Step,Action,Executed Action,Plan,Raw Completion,Reasoning,Observation,Reward,Done
+0,go east,go east,Explore the eastward path to locate the cookery room where the coin is situated,"ACTION: go east
+PLAN: Explore the eastward path to locate the cookery room where the coin is situated",,"-= Studio =-
+You've just sauntered into a studio. You begin to take stock of what's in the room.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+1,go east,go east,Move east to reach the cookery room where the coin is located,"ACTION: go east
+PLAN: Move east to reach the cookery room where the coin is located",,"-= Cookery =-
+You are in a cookery. An usual kind of place. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+There is an exit to the west. Don't worry, it is unguarded.",0,False
+2,take coin,take coin,"The coin is in the cookery room, so I take it to complete the goal.","ACTION: take coin
+PLAN: The coin is in the cookery room, so I take it to complete the goal.",,You can't see any such thing.,0,False
+3,take coin,take coin,"The coin is in the cookery room, so I take it to complete the goal.","ACTION: take coin
+PLAN: The coin is in the cookery room, so I take it to complete the goal.",,You can't see any such thing.,0,False
+4,take coin,take coin,The coin is in the cookery room and visible; taking it completes the goal.,"ACTION: take coin
+PLAN: The coin is in the cookery room and visible; taking it completes the goal.",,You can't see any such thing.,0,False
+5,go west,go west,Return to the studio to ensure correct path and confirm coin location before attempting retrieval again,"ACTION: go west  
+PLAN: Return to the studio to ensure correct path and confirm coin location before attempting retrieval again","The action ""take coin"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Studio =-
+You've just sauntered into a studio. You begin to take stock of what's in the room.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+6,go north,go north,Explore north path from studio to find new route toward cookery room where coin is located,"ACTION: go north
+PLAN: Explore north path from studio to find new route toward cookery room where coin is located",,"-= Sweaty Scullery =-
+You find yourself in a scullery. A sweaty kind of place.
+
+
+
+There is an exit to the south. Don't worry, it is unguarded.",0,False
+7,go south,go south,Reach the steam room to reevaluate path toward cookery room where coin is located,"ACTION: go south
+PLAN: Reach the steam room to reevaluate path toward cookery room where coin is located",,"-= Studio =-
+You've just sauntered into a studio. You begin to take stock of what's in the room.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+8,go east,go east,Proceed east to reach cookery room where coin is located,"ACTION: go east
+PLAN: Proceed east to reach cookery room where coin is located",,"-= Cookery =-
+You are in a cookery. An usual kind of place. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+There is an exit to the west. Don't worry, it is unguarded.",0,False
+9,take coin,take coin,Retrieve the coin in the cookery room as it is the target location and already visible in the room,"ACTION: take coin
+PLAN: Retrieve the coin in the cookery room as it is the target location and already visible in the room",,You can't see any such thing.,0,False
+10,take coin,take coin,Attempt to take the coin as it is already in the room and visible despite the previous failure to detect it,"ACTION: take coin
+PLAN: Attempt to take the coin as it is already in the room and visible despite the previous failure to detect it",,You can't see any such thing.,0,False
+11,take coin,take coin,Confirm the coin is present in the room despite previous detection failure and ensure the action is successful,"ACTION: take coin
+PLAN: Confirm the coin is present in the room despite previous detection failure and ensure the action is successful",,You can't see any such thing.,0,False
+12,go west,go west,Return to the studio to reassess available exits and explore alternative paths toward the cookery room where the coin is located.,"ACTION: go west  
+PLAN: Return to the studio to reassess available exits and explore alternative paths toward the cookery room where the coin is located.","The action ""take coin"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Studio =-
+You've just sauntered into a studio. You begin to take stock of what's in the room.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+13,go north,go north,Explore the northern exit from the studio to discover new paths and progress toward the cookery room where the coin is located.,"ACTION: go north
+PLAN: Explore the northern exit from the studio to discover new paths and progress toward the cookery room where the coin is located.",,"-= Sweaty Scullery =-
+You find yourself in a scullery. A sweaty kind of place.
+
+
+
+There is an exit to the south. Don't worry, it is unguarded.",0,False
+14,go south,go south,Return to the steam room and explore eastward paths to reach the cookery room where the coin is located.,"ACTION: go south
+PLAN: Return to the steam room and explore eastward paths to reach the cookery room where the coin is located.",,"-= Studio =-
+You've just sauntered into a studio. You begin to take stock of what's in the room.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+15,go east,go east,Move east to reach the cookery room and take the coin there,"ACTION: go east
+PLAN: Move east to reach the cookery room and take the coin there",,"-= Cookery =-
+You are in a cookery. An usual kind of place. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+There is an exit to the west. Don't worry, it is unguarded.",0,False
+16,take coin,take coin,Retrieve the coin from the cookery room as it is the target location and the only remaining option,"ACTION: take coin
+PLAN: Retrieve the coin from the cookery room as it is the target location and the only remaining option",,You can't see any such thing.,0,False
+17,take coin,take coin,Attempt to retrieve the coin from the cookery room as it is the only remaining location where the coin might be present,"ACTION: take coin
+PLAN: Attempt to retrieve the coin from the cookery room as it is the only remaining location where the coin might be present",,You can't see any such thing.,0,False
+18,take coin,take coin,"Attempt to retrieve the coin from the cookery room, as it is the only room where the coin might be located","ACTION: take coin
+PLAN: Attempt to retrieve the coin from the cookery room, as it is the only room where the coin might be located",,You can't see any such thing.,0,False
+19,go west,go west,Return to studio to explore other exits and ensure all paths are covered before attempting cookery room again,"ACTION: go west  
+PLAN: Return to studio to explore other exits and ensure all paths are covered before attempting cookery room again","The action ""take coin"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Studio =-
+You've just sauntered into a studio. You begin to take stock of what's in the room.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+20,go east,go east,"Proceed to cookery room to locate and take the coin, as it is the only room where the coin is known to be present.","ACTION: go east
+PLAN: Proceed to cookery room to locate and take the coin, as it is the only room where the coin is known to be present.",,"-= Cookery =-
+You are in a cookery. An usual kind of place. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+There is an exit to the west. Don't worry, it is unguarded.",0,False
+21,take coin,take coin,"Retrieve the coin from the cookery room, as it is the only location where the coin is known to be present.","ACTION: take coin
+PLAN: Retrieve the coin from the cookery room, as it is the only location where the coin is known to be present.",,You can't see any such thing.,0,False
+22,take coin,take coin,Attempt to take the coin from the cookery room where it is known to be located,"ACTION: take coin
+PLAN: Attempt to take the coin from the cookery room where it is known to be located",,You can't see any such thing.,0,False
+23,take coin,take coin,"Attempt to take the coin as it is confirmed to be in the cookery room, despite previous failure to perceive it.","ACTION: take coin
+PLAN: Attempt to take the coin as it is confirmed to be in the cookery room, despite previous failure to perceive it.",,You can't see any such thing.,0,False
+24,go west,go west,Move to the studio to explore other exits and find a new path toward the cookery room where the coin is located.,"ACTION: go west  
+PLAN: Move to the studio to explore other exits and find a new path toward the cookery room where the coin is located.","The action ""take coin"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Studio =-
+You've just sauntered into a studio. You begin to take stock of what's in the room.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+25,go east,go east,Proceed to the cookery room to locate and take the coin.,"ACTION: go east
+PLAN: Proceed to the cookery room to locate and take the coin.",,"-= Cookery =-
+You are in a cookery. An usual kind of place. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+There is an exit to the west. Don't worry, it is unguarded.",0,False
+26,take coin,take coin,"Retrieve the coin from the cookery room, as it is the only location where the coin is present and accessible.","ACTION: take coin
+PLAN: Retrieve the coin from the cookery room, as it is the only location where the coin is present and accessible.",,You can't see any such thing.,0,False
+27,go west,go west,Return to studio to explore other exits and ensure no other path leads to the coin location.,"ACTION: go west
+PLAN: Return to studio to explore other exits and ensure no other path leads to the coin location.",,"-= Studio =-
+You've just sauntered into a studio. You begin to take stock of what's in the room.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+28,go north,go north,Explore north exit from studio to discover new paths and potential routes to the cookery room where the coin is located.,"ACTION: go north
+PLAN: Explore north exit from studio to discover new paths and potential routes to the cookery room where the coin is located.",,"-= Sweaty Scullery =-
+You find yourself in a scullery. A sweaty kind of place.
+
+
+
+There is an exit to the south. Don't worry, it is unguarded.",0,False
+29,go south,go south,Return to the starting point and reorient to explore eastward paths toward the cookery room where the coin is located.,"ACTION: go south
+PLAN: Return to the starting point and reorient to explore eastward paths toward the cookery room where the coin is located.",,"-= Studio =-
+You've just sauntered into a studio. You begin to take stock of what's in the room.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+30,go east,go east,Move east to reach the cookery room where the coin is located and take it.,"ACTION: go east
+PLAN: Move east to reach the cookery room where the coin is located and take it.",,"-= Cookery =-
+You are in a cookery. An usual kind of place. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+There is an exit to the west. Don't worry, it is unguarded.",0,False
+31,take coin,take coin,"The coin is in the cookery room, and I am already in that room. I will attempt to take it once more.","ACTION: take coin
+PLAN: The coin is in the cookery room, and I am already in that room. I will attempt to take it once more.",,You can't see any such thing.,0,False
+32,take coin,take coin,"Attempt to take the coin in the cookery room where it is located, as per the goal of the game.","ACTION: take coin
+PLAN: Attempt to take the coin in the cookery room where it is located, as per the goal of the game.",,You can't see any such thing.,0,False
+33,take coin,take coin,"Attempt to take the coin in the cookery room, where it is confirmed to be located based on prior observations.","ACTION: take coin
+PLAN: Attempt to take the coin in the cookery room, where it is confirmed to be located based on prior observations.",,You can't see any such thing.,0,False
+34,go east,go east,Move to the cookery room to confirm the coin's presence and ensure correct location before attempting to take it.,"ACTION: go east  
+PLAN: Move to the cookery room to confirm the coin's presence and ensure correct location before attempting to take it.","The action ""take coin"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",You can't go that way.,0,False
+35,go east,go east,Reach the cookery room to confirm the coin is visible and take it if present,"ACTION: go east
+PLAN: Reach the cookery room to confirm the coin is visible and take it if present",,You can't go that way.,0,False
+36,go west,go west,Return to studio to explore other exits and ensure all paths are fully explored before attempting to reach cookery again,"ACTION: go west
+PLAN: Return to studio to explore other exits and ensure all paths are fully explored before attempting to reach cookery again",,"-= Studio =-
+You've just sauntered into a studio. You begin to take stock of what's in the room.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+37,go north,go north,Explore the north exit of the studio to discover new areas and potential paths to the cookery room where the coin is located.,"ACTION: go north
+PLAN: Explore the north exit of the studio to discover new areas and potential paths to the cookery room where the coin is located.",,"-= Sweaty Scullery =-
+You find yourself in a scullery. A sweaty kind of place.
+
+
+
+There is an exit to the south. Don't worry, it is unguarded.",0,False
+38,go south,go south,Return to the studio to explore eastward path toward the cookery room where the coin is located.,"ACTION: go south
+PLAN: Return to the studio to explore eastward path toward the cookery room where the coin is located.",,"-= Studio =-
+You've just sauntered into a studio. You begin to take stock of what's in the room.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+39,go east,go east,Move east from the studio to reach the cookery room where the coin is located.,"ACTION: go east
+PLAN: Move east from the studio to reach the cookery room where the coin is located.",,"-= Cookery =-
+You are in a cookery. An usual kind of place. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+There is an exit to the west. Don't worry, it is unguarded.",0,False
+40,take coin,take coin,"Retrieve the coin from the cookery room, as it is located here and visible in the observation.","ACTION: take coin
+PLAN: Retrieve the coin from the cookery room, as it is located here and visible in the observation.",,You can't see any such thing.,0,False
+41,go east,go east,"Move toward the cookery room to locate and take the coin, which is confirmed to be present there.","ACTION: go east
+PLAN: Move toward the cookery room to locate and take the coin, which is confirmed to be present there.",,You can't go that way.,0,False
+42,go west,go west,Return to studio to explore other exits and ensure all paths are covered before attempting to reach the cookery room again.,"ACTION: go west
+PLAN: Return to studio to explore other exits and ensure all paths are covered before attempting to reach the cookery room again.",,"-= Studio =-
+You've just sauntered into a studio. You begin to take stock of what's in the room.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+43,go east,go east,"Proceed to cookery room to locate and take the coin, as it is confirmed to be there from earlier observations.","ACTION: go east
+PLAN: Proceed to cookery room to locate and take the coin, as it is confirmed to be there from earlier observations.",,"-= Cookery =-
+You are in a cookery. An usual kind of place. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+There is an exit to the west. Don't worry, it is unguarded.",0,False
+44,take coin,take coin,Retrieve the coin from the cookery room as it is the only location where the coin is present.,"ACTION: take coin
+PLAN: Retrieve the coin from the cookery room as it is the only location where the coin is present.",,You can't see any such thing.,0,False
+45,take coin,take coin,Attempt to take the coin from the cookery room where it is located and visible in the room description,"ACTION: take coin
+PLAN: Attempt to take the coin from the cookery room where it is located and visible in the room description",,You can't see any such thing.,0,False
+46,take coin,take coin,Attempt to take the coin from the cookery room where it is located and visible in the room description,"ACTION: take coin
+PLAN: Attempt to take the coin from the cookery room where it is located and visible in the room description",,You can't see any such thing.,0,False
+47,go west,go west,Return to the studio to explore other exits and proceed toward the cookery room via a different path,"ACTION: go west  
+PLAN: Return to the studio to explore other exits and proceed toward the cookery room via a different path","The action ""take coin"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Studio =-
+You've just sauntered into a studio. You begin to take stock of what's in the room.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+48,go north,go north,Explore the north exit of the studio to discover new pathways and advance toward the cookery room where the coin is located.,"ACTION: go north
+PLAN: Explore the north exit of the studio to discover new pathways and advance toward the cookery room where the coin is located.",,"-= Sweaty Scullery =-
+You find yourself in a scullery. A sweaty kind of place.
+
+
+
+There is an exit to the south. Don't worry, it is unguarded.",0,False
+49,go east,go east,Move east from the scullery to reach the cookery room where the coin is located.,"ACTION: go east
+PLAN: Move east from the scullery to reach the cookery room where the coin is located.",,You can't go that way.,0,False
+50,go south,go south,Return to studio to attempt eastward path to cookery room where coin is located,"ACTION: go south  
+PLAN: Return to studio to attempt eastward path to cookery room where coin is located",,"-= Studio =-
+You've just sauntered into a studio. You begin to take stock of what's in the room.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+51,go east,go east,Move east from studio to cookery room to locate and take the coin,"ACTION: go east
+PLAN: Move east from studio to cookery room to locate and take the coin",,"-= Cookery =-
+You are in a cookery. An usual kind of place. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+There is an exit to the west. Don't worry, it is unguarded.",0,False
+52,take coin,take coin,"Retrieve the coin from the cookery room, as it is the only location where the coin is present and accessible.","ACTION: take coin
+PLAN: Retrieve the coin from the cookery room, as it is the only location where the coin is present and accessible.",,You can't see any such thing.,0,False
+53,take coin,take coin,"Attempt to take the coin from the cookery room, as it is the only room where the coin is located and visible.","ACTION: take coin
+PLAN: Attempt to take the coin from the cookery room, as it is the only room where the coin is located and visible.",,You can't see any such thing.,0,False
+54,take coin,take coin,"Attempt to take the coin from the cookery room, as it is the only room where the coin is located and visible.","ACTION: take coin
+PLAN: Attempt to take the coin from the cookery room, as it is the only room where the coin is located and visible.",,You can't see any such thing.,0,False
+55,go north,go north,Explore the northern path from the studio to discover new areas and possible routes to the cookery room where the coin is located.,"ACTION: go north  
+PLAN: Explore the northern path from the studio to discover new areas and possible routes to the cookery room where the coin is located.","The action ""take coin"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",You can't go that way.,0,False
+56,go south,go south,Move south from the studio to the scullery and check for exits or paths leading toward the cookery room where the coin is located.,"ACTION: go south
+PLAN: Move south from the studio to the scullery and check for exits or paths leading toward the cookery room where the coin is located.",,You can't go that way.,0,False
+57,go west,go west,Return to studio to explore westward path and check for access to cookery room where coin is located,"ACTION: go west  
+PLAN: Return to studio to explore westward path and check for access to cookery room where coin is located",,"-= Studio =-
+You've just sauntered into a studio. You begin to take stock of what's in the room.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+58,go west,go west,Move west from studio to check if this path leads to cookery room where coin is located,"ACTION: go west
+PLAN: Move west from studio to check if this path leads to cookery room where coin is located",,"-= Steam Room =-
+You've moved into a normal room. Your mind races to think of what kind of room would be normal. And then it hits you. Of course. You're in the steam room. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked. There is an unguarded exit to the south. You need an unguarded exit? You should try going west.",0,False
+59,go west,go west,Check if west path leads to cookery room where coin is located,"ACTION: go west
+PLAN: Check if west path leads to cookery room where coin is located",,"-= Bedroom =-
+You've entered a bedroom.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked.",0,False
+60,go east,go east,Explore eastward path to reach cookery room where the coin is located,"ACTION: go east
+PLAN: Explore eastward path to reach cookery room where the coin is located",,"-= Steam Room =-
+You've moved into a normal room. Your mind races to think of what kind of room would be normal. And then it hits you. Of course. You're in the steam room. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+You don't like doors? Why not try going east, that entranceway is unblocked. There is an unguarded exit to the south. You need an unguarded exit? You should try going west.",0,False
+61,go east,go east,Move east to reach the cookery room where the coin is located,"ACTION: go east
+PLAN: Move east to reach the cookery room where the coin is located",,"-= Studio =-
+You've just sauntered into a studio. You begin to take stock of what's in the room.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+62,go east,go east,Proceed east to reach the cookery room and take the coin there,"ACTION: go east
+PLAN: Proceed east to reach the cookery room and take the coin there",,"-= Cookery =-
+You are in a cookery. An usual kind of place. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+There is an exit to the west. Don't worry, it is unguarded.",0,False
+63,take coin,take coin,"The coin is in the cookery room, so I take it immediately upon being in that room.","ACTION: take coin
+PLAN: The coin is in the cookery room, so I take it immediately upon being in that room.",,You can't see any such thing.,0,False
+64,go west,go west,Return to studio to explore eastward path and reach cookery room where the coin is located,"ACTION: go west  
+PLAN: Return to studio to explore eastward path and reach cookery room where the coin is located",,"-= Studio =-
+You've just sauntered into a studio. You begin to take stock of what's in the room.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+65,go east,go east,Move east from studio to cookery room to locate and take the coin,"ACTION: go east
+PLAN: Move east from studio to cookery room to locate and take the coin",,"-= Cookery =-
+You are in a cookery. An usual kind of place. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+There is an exit to the west. Don't worry, it is unguarded.",0,False
+66,take coin,take coin,"Attempt to take the coin in the cookery room, as it is the only room where the coin is located based on prior observations.","ACTION: take coin
+PLAN: Attempt to take the coin in the cookery room, as it is the only room where the coin is located based on prior observations.",,You can't see any such thing.,0,False
+67,go north,go north,Explore the north path from studio to find a new route toward the cookery room without repeating the east-west cycle.,"ACTION: go north  
+PLAN: Explore the north path from studio to find a new route toward the cookery room without repeating the east-west cycle.","The recent observations form a repeating cycle of 3 states. Recent actions: go east, go east, take coin, go west, go east, take coin. Do not repeat this action sequence.",You can't go that way.,0,False
+68,go south,go south,Move south from studio to find unexplored paths leading toward the cookery room where the coin is located.,"ACTION: go south
+PLAN: Move south from studio to find unexplored paths leading toward the cookery room where the coin is located.",,You can't go that way.,0,False
+69,go east,go east,Move east from studio to reach cookery room and take the coin there,"ACTION: go east
+PLAN: Move east from studio to reach cookery room and take the coin there",,You can't go that way.,0,False
+70,go west,go west,Move from studio to steam room to explore alternative paths toward cookery room where coin is located,"ACTION: go west
+PLAN: Move from studio to steam room to explore alternative paths toward cookery room where coin is located",The observation has remained unchanged for 2 consecutive actions. Try a different action or subgoal.,"-= Studio =-
+You've just sauntered into a studio. You begin to take stock of what's in the room.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+71,go east,go east,Proceed to cookery room to locate and take the coin,"ACTION: go east
+PLAN: Proceed to cookery room to locate and take the coin",,"-= Cookery =-
+You are in a cookery. An usual kind of place. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+There is an exit to the west. Don't worry, it is unguarded.",0,False
+72,take coin,take coin,Retrieve the coin from the cookery room as it is the only location where the coin is present,"ACTION: take coin
+PLAN: Retrieve the coin from the cookery room as it is the only location where the coin is present",,You can't see any such thing.,0,False
+73,go west,go west,Return to studio and attempt to proceed east to cookery room to locate and take the coin,"ACTION: go west  
+PLAN: Return to studio and attempt to proceed east to cookery room to locate and take the coin",,"-= Studio =-
+You've just sauntered into a studio. You begin to take stock of what's in the room.
+
+
+
+You need an unblocked exit? You should try going east. You don't like doors? Why not try going north, that entranceway is unblocked. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+74,go east,go east,Move to cookery room to locate and take the coin,"ACTION: go east
+PLAN: Move to cookery room to locate and take the coin",,"-= Cookery =-
+You are in a cookery. An usual kind of place. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+There is an exit to the west. Don't worry, it is unguarded.",0,False
+75,take coin,take coin,Attempt to take the coin as it is present in the cookery room based on previous observations,"ACTION: take coin
+PLAN: Attempt to take the coin as it is present in the cookery room based on previous observations",,You can't see any such thing.,0,False
+76,go north,go north,Explore the north exit from studio to find a new path leading toward the cookery room or another unvisited area,"ACTION: go north  
+PLAN: Explore the north exit from studio to find a new path leading toward the cookery room or another unvisited area","The recent observations form a repeating cycle of 3 states. Recent actions: go west, go east, take coin, go west, go east, take coin. Do not repeat this action sequence.",You can't go that way.,0,False
+77,go south,go south,Check if south exit leads to a new area or path from studio to cookery room,"ACTION: go south
+PLAN: Check if south exit leads to a new area or path from studio to cookery room",,You can't go that way.,0,False
+78,go east,go east,Explore eastward path from studio to reach cookery room and take the coin there,"ACTION: go east
+PLAN: Explore eastward path from studio to reach cookery room and take the coin there",,You can't go that way.,0,False
+79,go north,go north,Check if there's a northward path that might lead to a different route toward the cookery room or another room with a potential exit.,"ACTION: go north
+PLAN: Check if there's a northward path that might lead to a different route toward the cookery room or another room with a potential exit.",The observation has remained unchanged for 2 consecutive actions. Try a different action or subgoal.,You can't go that way.,0,True

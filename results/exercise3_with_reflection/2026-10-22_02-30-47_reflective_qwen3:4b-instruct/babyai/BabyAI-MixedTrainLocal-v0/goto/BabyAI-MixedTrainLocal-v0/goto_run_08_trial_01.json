@@ -1,0 +1,97 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/goto",
+    "action_frequency": {
+        "go forward": 3,
+        "turn right": 1
+    },
+    "input_tokens": 1997,
+    "output_tokens": 107,
+    "episode_idx": 8,
+    "trial_idx": 1,
+    "trajectory": [
+        {
+            "step": 0,
+            "requested_action": "go forward",
+            "action": "go forward",
+            "plan": "Move closer to the blue box by advancing one step forward.",
+            "raw_completion": "ACTION: go forward\nPLAN: Move closer to the blue box by advancing one step forward.",
+            "reasoning": "",
+            "observation": "a wall 3 steps forward\na wall 3 steps left\na blue box 1 step right and 2 steps forward",
+            "reward": 0.0,
+            "done": false
+        },
+        {
+            "step": 1,
+            "requested_action": "go forward",
+            "action": "go forward",
+            "plan": "Move one step closer to the blue box based on updated position.",
+            "raw_completion": "ACTION: go forward\nPLAN: Move one step closer to the blue box based on updated position.",
+            "reasoning": "",
+            "observation": "a wall 2 steps forward\na wall 3 steps left\na blue box 1 step right and 1 step forward",
+            "reward": 0.0,
+            "done": false
+        },
+        {
+            "step": 2,
+            "requested_action": "go forward",
+            "action": "go forward",
+            "plan": "Move one step closer to the blue box based on updated position.",
+            "raw_completion": "ACTION: go forward\nPLAN: Move one step closer to the blue box based on updated position.",
+            "reasoning": "",
+            "observation": "a wall 1 step forward\na wall 3 steps left\na blue box 1 step right",
+            "reward": 0.0,
+            "done": false
+        },
+        {
+            "step": 3,
+            "requested_action": "turn right",
+            "action": "turn right",
+            "plan": "Position myself to move directly toward the blue box.",
+            "raw_completion": "ACTION: turn right\nPLAN: Position myself to move directly toward the blue box.",
+            "reasoning": "",
+            "observation": "a wall 1 step left\na blue box 1 step forward",
+            "reward": 0.94375,
+            "done": true
+        }
+    ],
+    "done": true,
+    "episode_return": 0.94375,
+    "num_steps": 4,
+    "failed_candidates": [],
+    "mission": "go to the blue box",
+    "progression": 1.0,
+    "process_num": "ForkProcess-1",
+    "seed": 2063217808,
+    "agent": {
+        "type": "reflective",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false,
+        "max_reflections": 2,
+        "use_reflection": true
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "qwen3:4b-instruct",
+        "base_url": "http://127.0.0.1:11434/v1",
+        "generate_kwargs": {
+            "temperature": 0.6,
+            "max_tokens": 1024,
+            "thinking_budget": null
+        },
+        "timeout": 300,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    },
+    "reflections_used": [],
+    "reflection": "Move forward until the blue box is directly in front, then turn right to align directly toward it for final access.",
+    "reflection_memory_after_trial": [
+        "Move forward until the blue box is directly in front, then turn right to align directly toward it for final access."
+    ],
+    "reflection_input_tokens": 523,
+    "reflection_output_tokens": 27
+}
