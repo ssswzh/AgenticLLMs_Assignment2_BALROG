@@ -1,0 +1,480 @@
+Step,Action,Executed Action,Plan,Raw Completion,Reasoning,Observation,Reward,Done
+0,take non-euclidean passkey from floor,take non-euclidean passkey from floor,Use the passkey to unlock the non-euclidean locker and inspect its contents,"ACTION: take non-euclidean passkey from floor
+PLAN: Use the passkey to unlock the non-euclidean locker and inspect its contents",,You can't see any such thing.,0,False
+1,unlock non-eu或clidean locker with non-euclidean passkey,unlock non-eu或clidean locker with non-euclidean passkey,Open the locker to check its contents for the target object,"ACTION: unlock non-eu或clidean locker with non-euclidean passkey  
+PLAN: Open the locker to check its contents for the target object",,You can't see any such thing.,0,False
+2,look,look,Check if there is a visible key or object that can be used to unlock the locker,"ACTION: look  
+PLAN: Check if there is a visible key or object that can be used to unlock the locker",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+3,look,look,Check if there are any other visible objects or details that might help unlock the locker,"ACTION: look  
+PLAN: Check if there are any other visible objects or details that might help unlock the locker",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+4,look,look,Check for additional objects or clues in the room that might help with the locker or passkey,"ACTION: look  
+PLAN: Check for additional objects or clues in the room that might help with the locker or passkey",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+5,go south,go south,Explore the room south to find new paths or objects that might lead to the target object,"ACTION: go south  
+PLAN: Explore the room south to find new paths or objects that might lead to the target object","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Basement =-
+You find yourself in an ordinary kind of place. That is to say, you're in a basement. You begin looking for stuff.
+
+You can see a closed trunk.
+
+There is a closed gateway leading south. There is an unguarded exit to the north.",0,False
+6,look,look,Check the closed trunk for hidden objects or keys that might help in further exploration,"ACTION: look  
+PLAN: Check the closed trunk for hidden objects or keys that might help in further exploration",,"-= Basement =-
+You find yourself in an ordinary kind of place. That is to say, you're in a basement. You begin looking for stuff.
+
+You can see a closed trunk.
+
+There is a closed gateway leading south. There is an unguarded exit to the north.",0,False
+7,open trunk,open trunk,Check if the trunk contains a key or object that can unlock a door or container ahead,"ACTION: open trunk  
+PLAN: Check if the trunk contains a key or object that can unlock a door or container ahead",,You open the trunk.,0,False
+8,look,look,Check if the trunk contains a key or object that can unlock a door or container ahead,"ACTION: look  
+PLAN: Check if the trunk contains a key or object that can unlock a door or container ahead",,"-= Basement =-
+You find yourself in an ordinary kind of place. That is to say, you're in a basement. You begin looking for stuff.
+
+You can see an opened trunk. The trunk is empty! This is the worst thing that could possibly happen, ever!
+
+There is a closed gateway leading south. There is an unguarded exit to the north.",0,False
+9,go south,go south,Explore the south room to find a new container or exit that might hold a key or the target object,"ACTION: go south
+PLAN: Explore the south room to find a new container or exit that might hold a key or the target object",,You have to open the gateway first.,0,False
+10,open gateway,open gateway,Unlock the gateway to enter the room beyond and explore for hidden objects or keys,"ACTION: open gateway  
+PLAN: Unlock the gateway to enter the room beyond and explore for hidden objects or keys",,You have to unlock the gateway with the latchkey first.,0,False
+11,unlock gateway with latchkey,unlock gateway with latchkey,Retrieve the latchkey to unlock the gateway and proceed into the next room to explore for the target object,"ACTION: unlock gateway with latchkey  
+PLAN: Retrieve the latchkey to unlock the gateway and proceed into the next room to explore for the target object",,You can't see any such thing.,0,False
+12,look,look,Check the current room for any visible keys or objects that might be useful to unlock doors,"ACTION: look  
+PLAN: Check the current room for any visible keys or objects that might be useful to unlock doors",,"-= Basement =-
+You find yourself in an ordinary kind of place. That is to say, you're in a basement. You begin looking for stuff.
+
+You can see an opened trunk. The trunk is empty! This is the worst thing that could possibly happen, ever!
+
+There is a closed gateway leading south. There is an unguarded exit to the north.",0,False
+13,look,look,Check if any objects or keys are visible in the current room that could be used to unlock doors or containers,"ACTION: look  
+PLAN: Check if any objects or keys are visible in the current room that could be used to unlock doors or containers",,"-= Basement =-
+You find yourself in an ordinary kind of place. That is to say, you're in a basement. You begin looking for stuff.
+
+You can see an opened trunk. The trunk is empty! This is the worst thing that could possibly happen, ever!
+
+There is a closed gateway leading south. There is an unguarded exit to the north.",0,False
+14,look,look,Check for visible objects or keys that could unlock the gateway or other containers,"ACTION: look  
+PLAN: Check for visible objects or keys that could unlock the gateway or other containers",,"-= Basement =-
+You find yourself in an ordinary kind of place. That is to say, you're in a basement. You begin looking for stuff.
+
+You can see an opened trunk. The trunk is empty! This is the worst thing that could possibly happen, ever!
+
+There is a closed gateway leading south. There is an unguarded exit to the north.",0,False
+15,look,look,Check if any new objects or keys are visible in the basement that could assist in unlocking the gateway,"ACTION: look  
+PLAN: Check if any new objects or keys are visible in the basement that could assist in unlocking the gateway","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Basement =-
+You find yourself in an ordinary kind of place. That is to say, you're in a basement. You begin looking for stuff.
+
+You can see an opened trunk. The trunk is empty! This is the worst thing that could possibly happen, ever!
+
+There is a closed gateway leading south. There is an unguarded exit to the north.",0,False
+16,go north,go north,Return to the bar to check for any hidden objects or keys that might help unlock the gateway,"ACTION: go north  
+PLAN: Return to the bar to check for any hidden objects or keys that might help unlock the gateway","The action ""look"" has repeatedly left the observation unchanged for 3 steps. Do not repeat this action in the current state.","-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+17,take non-euclidean passkey from floor,take non-euclidean passkey from floor,Use the passkey to unlock the non-euclidean locker in the bar to retrieve the latchkey,"ACTION: take non-euclidean passkey from floor  
+PLAN: Use the passkey to unlock the non-euclidean locker in the bar to retrieve the latchkey",,You can't see any such thing.,0,False
+18,open non-euclidean locker,open non-euclidean locker,Unlock the locker with the passkey to retrieve the latchkey inside,"ACTION: open non-euclidean locker  
+PLAN: Unlock the locker with the passkey to retrieve the latchkey inside",,You have to unlock the non-euclidean locker with the non-euclidean passkey first.,0,False
+19,unlock non-euclidean locker with non-euclidean passkey,unlock non-euclidean locker with non-euclidean passkey,Retrieve the latchkey from the locker to unlock the gateway south,"ACTION: unlock non-euclidean locker with non-euclidean passkey
+PLAN: Retrieve the latchkey from the locker to unlock the gateway south",,You need to take the non-euclidean passkey first.,0,False
+20,look,look,Check if the non-euclidean passkey is visible and can be picked up from the floor,"ACTION: look  
+PLAN: Check if the non-euclidean passkey is visible and can be picked up from the floor",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+21,take non-euclidean passkey from floor,take non-euclidean passkey from floor,Unlock the non-euclidean locker with the retrieved passkey,"ACTION: take non-euclidean passkey from floor  
+PLAN: Unlock the non-euclidean locker with the retrieved passkey",,You can't see any such thing.,0,False
+22,unlock non-euclidean locker with non-euclidean passkey,unlock non-euclidean locker with non-euclidean passkey,Unlock the locker to access its contents and check if the target object is inside,"ACTION: unlock non-euclidean locker with non-euclidean passkey
+PLAN: Unlock the locker to access its contents and check if the target object is inside",,You need to take the non-euclidean passkey first.,0,False
+23,take non-euclidean passkey from floor,take non-euclidean passkey from floor,Obtain the passkey to unlock the non-euclidean locker in the bar room,"ACTION: take non-euclidean passkey from floor  
+PLAN: Obtain the passkey to unlock the non-euclidean locker in the bar room",,You can't see any such thing.,0,False
+24,take non-euclidean passkey from floor,take non-euclidean passkey from floor,Unlock the non-euclidean locker with the obtained passkey to access its contents,"ACTION: take non-euclidean passkey from floor  
+PLAN: Unlock the non-euclidean locker with the obtained passkey to access its contents",,You can't see any such thing.,0,False
+25,look,look,Check if the non-euclidean passkey is now visible after attempting to take it again,"ACTION: look  
+PLAN: Check if the non-euclidean passkey is now visible after attempting to take it again",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+26,look,look,Confirm the presence and visibility of the non-euclidean passkey on the floor,"ACTION: look  
+PLAN: Confirm the presence and visibility of the non-euclidean passkey on the floor",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+27,look,look,Verify if the non-euclidean passkey is visible and confirm its location on the floor,"ACTION: look  
+PLAN: Verify if the non-euclidean passkey is visible and confirm its location on the floor",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+28,take non-euclidean passkey from floor,take non-euclidean passkey from floor,Retrieve the passkey to unlock the non-euclidean locker in the bar room,"ACTION: take non-euclidean passkey from floor  
+PLAN: Retrieve the passkey to unlock the non-euclidean locker in the bar room","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",You can't see any such thing.,0,False
+29,look,look,Check if the non-euclidean passkey is now visible or if there is another clue in the room.,"ACTION: look  
+PLAN: Check if the non-euclidean passkey is now visible or if there is another clue in the room.",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+30,look,look,Check if the non-euclidean passkey is now visible or if there is another object in the room to investigate.,"ACTION: look  
+PLAN: Check if the non-euclidean passkey is now visible or if there is another object in the room to investigate.",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+31,look,look,Verify if the non-euclidean passkey is now visible or if there are other objects in the room to investigate.,"ACTION: look  
+PLAN: Verify if the non-euclidean passkey is now visible or if there are other objects in the room to investigate.",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+32,look,look,Confirm room details and verify if the passkey is visible or if new information has appeared,"ACTION: look  
+PLAN: Confirm room details and verify if the passkey is visible or if new information has appeared","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+33,go south,go south,Explore the room south to find new exits or objects that might lead to the goal or key,"ACTION: go south  
+PLAN: Explore the room south to find new exits or objects that might lead to the goal or key","The action ""look"" has repeatedly left the observation unchanged for 3 steps. Do not repeat this action in the current state.","-= Basement =-
+You find yourself in an ordinary kind of place. That is to say, you're in a basement. You begin looking for stuff.
+
+You can see an opened trunk. The trunk is empty! This is the worst thing that could possibly happen, ever!
+
+There is a closed gateway leading south. There is an unguarded exit to the north.",0,False
+34,look,look,Check the trunk and surrounding area for hidden objects or clues that might lead to the goal,"ACTION: look  
+PLAN: Check the trunk and surrounding area for hidden objects or clues that might lead to the goal",,"-= Basement =-
+You find yourself in an ordinary kind of place. That is to say, you're in a basement. You begin looking for stuff.
+
+You can see an opened trunk. The trunk is empty! This is the worst thing that could possibly happen, ever!
+
+There is a closed gateway leading south. There is an unguarded exit to the north.",0,False
+35,look,look,Examine the trunk and basement environment for any hidden objects or clues that might lead to the target item,"ACTION: look  
+PLAN: Examine the trunk and basement environment for any hidden objects or clues that might lead to the target item",,"-= Basement =-
+You find yourself in an ordinary kind of place. That is to say, you're in a basement. You begin looking for stuff.
+
+You can see an opened trunk. The trunk is empty! This is the worst thing that could possibly happen, ever!
+
+There is a closed gateway leading south. There is an unguarded exit to the north.",0,False
+36,look,look,Check if any objects in the basement or trunk could provide clues or lead to the target object,"ACTION: look  
+PLAN: Check if any objects in the basement or trunk could provide clues or lead to the target object","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Basement =-
+You find yourself in an ordinary kind of place. That is to say, you're in a basement. You begin looking for stuff.
+
+You can see an opened trunk. The trunk is empty! This is the worst thing that could possibly happen, ever!
+
+There is a closed gateway leading south. There is an unguarded exit to the north.",0,False
+37,go north,go north,Return to the bar to retrieve the non-euclidean passkey and unlock the non-euclidean locker,"ACTION: go north  
+PLAN: Return to the bar to retrieve the non-euclidean passkey and unlock the non-euclidean locker","The action ""look"" has repeatedly left the observation unchanged for 3 steps. Do not repeat this action in the current state.","-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+38,take non-euclidean passkey from floor,take non-euclidean passkey from floor,Unlock the non-euclidean locker with the retrieved passkey,"ACTION: take non-euclidean passkey from floor  
+PLAN: Unlock the non-euclidean locker with the retrieved passkey",,You can't see any such thing.,0,False
+39,open non-euclidean locker,open non-euclidean locker,Unlock the locker with the non-euclidean passkey to access the target object inside,"ACTION: open non-euclidean locker  
+PLAN: Unlock the locker with the non-euclidean passkey to access the target object inside",,You have to unlock the non-euclidean locker with the non-euclidean passkey first.,0,False
+40,unlock non-euclidean locker with non-euclidean passkey,unlock non-euclidean locker with non-euclidean passkey,Access the contents of the locker to find the target object inside,"ACTION: unlock non-euclidean locker with non-euclidean passkey
+PLAN: Access the contents of the locker to find the target object inside",,You need to take the non-euclidean passkey first.,0,False
+41,take non-euclidean passkey from floor,take non-euclidean passkey from floor,Unlock the non-euclidean locker with the passkey to access its contents,"ACTION: take non-euclidean passkey from floor  
+PLAN: Unlock the non-euclidean locker with the passkey to access its contents",,You can't see any such thing.,0,False
+42,take non-euclidean passkey from floor,take non-euclidean passkey from floor,Retrieve the passkey to unlock the non-euclidean locker for access to its contents,"ACTION: take non-euclidean passkey from floor  
+PLAN: Retrieve the passkey to unlock the non-euclidean locker for access to its contents",,You can't see any such thing.,0,False
+43,look,look,Check if the non-euclidean passkey is visible and confirm its location in the room,"ACTION: look  
+PLAN: Check if the non-euclidean passkey is visible and confirm its location in the room",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+44,look,look,Check if the non-euclidean passkey is visible on the floor in the bar room,"ACTION: look  
+PLAN: Check if the non-euclidean passkey is visible on the floor in the bar room",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+45,look,look,Confirm if the non-euclidean passkey is visible on the floor in the bar room,"ACTION: look  
+PLAN: Confirm if the non-euclidean passkey is visible on the floor in the bar room",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+46,take non-euclidean passkey from floor,take non-euclidean passkey from floor,Retrieve the passkey to unlock the non-euclidean locker in the bar room,"ACTION: take non-euclidean passkey from floor  
+PLAN: Retrieve the passkey to unlock the non-euclidean locker in the bar room","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",You can't see any such thing.,0,False
+47,look,look,Check if the non-euclidean passkey is now visible or if there's another clue in the room,"ACTION: look  
+PLAN: Check if the non-euclidean passkey is now visible or if there's another clue in the room",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+48,look,look,Check if the non-euclidean passkey is now visible or if there's another object in the room to investigate,"ACTION: look  
+PLAN: Check if the non-euclidean passkey is now visible or if there's another object in the room to investigate",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+49,look,look,Check if the non-euclidean passkey is now visible or if there are other objects in the room to investigate,"ACTION: look  
+PLAN: Check if the non-euclidean passkey is now visible or if there are other objects in the room to investigate",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+50,look,look,Verify the room's current state and confirm the presence of the non-euclidean passkey or any other visible items,"ACTION: look  
+PLAN: Verify the room's current state and confirm the presence of the non-euclidean passkey or any other visible items","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+51,go south,go south,Explore the south exit to discover new rooms and possible paths to the target object,"ACTION: go south  
+PLAN: Explore the south exit to discover new rooms and possible paths to the target object","The action ""look"" has repeatedly left the observation unchanged for 3 steps. Do not repeat this action in the current state.","-= Basement =-
+You find yourself in an ordinary kind of place. That is to say, you're in a basement. You begin looking for stuff.
+
+You can see an opened trunk. The trunk is empty! This is the worst thing that could possibly happen, ever!
+
+There is a closed gateway leading south. There is an unguarded exit to the north.",0,False
+52,go south,go south,Explore the south gateway to find new rooms and possible locations of the target object,"ACTION: go south
+PLAN: Explore the south gateway to find new rooms and possible locations of the target object",,You have to open the gateway first.,0,False
+53,look,look,Check if there are any visible objects or exits in the south gateway room,"ACTION: look  
+PLAN: Check if there are any visible objects or exits in the south gateway room",,"-= Basement =-
+You find yourself in an ordinary kind of place. That is to say, you're in a basement. You begin looking for stuff.
+
+You can see an opened trunk. The trunk is empty! This is the worst thing that could possibly happen, ever!
+
+There is a closed gateway leading south. There is an unguarded exit to the north.",0,False
+54,look,look,Check for visible objects or clues in the room to the south of the closed gateway,"ACTION: look  
+PLAN: Check for visible objects or clues in the room to the south of the closed gateway",,"-= Basement =-
+You find yourself in an ordinary kind of place. That is to say, you're in a basement. You begin looking for stuff.
+
+You can see an opened trunk. The trunk is empty! This is the worst thing that could possibly happen, ever!
+
+There is a closed gateway leading south. There is an unguarded exit to the north.",0,False
+55,look,look,Check if there are any visible objects or clues in the basement room to the north or south,"ACTION: look  
+PLAN: Check if there are any visible objects or clues in the basement room to the north or south",,"-= Basement =-
+You find yourself in an ordinary kind of place. That is to say, you're in a basement. You begin looking for stuff.
+
+You can see an opened trunk. The trunk is empty! This is the worst thing that could possibly happen, ever!
+
+There is a closed gateway leading south. There is an unguarded exit to the north.",0,False
+56,go north,go north,Explore the northern room to find possible objects or exits that might lead closer to the target object,"ACTION: go north  
+PLAN: Explore the northern room to find possible objects or exits that might lead closer to the target object","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+57,look,look,Check for hidden objects or clues in the bar room that might help unlock the non-euclidean locker,"ACTION: look  
+PLAN: Check for hidden objects or clues in the bar room that might help unlock the non-euclidean locker",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+58,open non-euclidean locker,open non-euclidean locker,Unlock the locker with the non-euclidean passkey to retrieve the target object,"ACTION: open non-euclidean locker  
+PLAN: Unlock the locker with the non-euclidean passkey to retrieve the target object",,You have to unlock the non-euclidean locker with the non-euclidean passkey first.,0,False
+59,unlock non-euclidean locker with non-euclidean passkey,unlock non-euclidean locker with non-euclidean passkey,Retrieve the target object from the now unlocked locker,"ACTION: unlock non-euclidean locker with non-euclidean passkey
+PLAN: Retrieve the target object from the now unlocked locker",,You need to take the non-euclidean passkey first.,0,False
+60,take non-euclidean passkey from floor,take non-euclidean passkey from floor,Unlock the non-euclidean locker with the retrieved passkey to access its contents,"ACTION: take non-euclidean passkey from floor  
+PLAN: Unlock the non-euclidean locker with the retrieved passkey to access its contents",,You can't see any such thing.,0,False
+61,unlock non-euclidean locker with non-euclidean passkey,unlock non-euclidean locker with non-euclidean passkey,Access the locker's contents after successfully unlocking it with the passkey,"ACTION: unlock non-euclidean locker with non-euclidean passkey  
+PLAN: Access the locker's contents after successfully unlocking it with the passkey",,You need to take the non-euclidean passkey first.,0,False
+62,look,look,Check if the non-euclidean passkey is now visible or if any new details about the locker or room have appeared,"ACTION: look  
+PLAN: Check if the non-euclidean passkey is now visible or if any new details about the locker or room have appeared",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+63,look,look,Check if the non-euclidean passkey is now visible or if the locker has new details,"ACTION: look  
+PLAN: Check if the non-euclidean passkey is now visible or if the locker has new details",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+64,look,look,Check if the non-euclidean passkey is now visible or if the locker has new details after revisiting the room.,"ACTION: look  
+PLAN: Check if the non-euclidean passkey is now visible or if the locker has new details after revisiting the room.",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+65,take non-euclidean passkey from floor,take non-euclidean passkey from floor,Retrieve the passkey to unlock the non-euclidean locker in the bar room,"ACTION: take non-euclidean passkey from floor  
+PLAN: Retrieve the passkey to unlock the non-euclidean locker in the bar room","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",You can't see any such thing.,0,False
+66,look,look,Check if the non-euclidean passkey is visible or if there's another clue in the room to proceed,"ACTION: look  
+PLAN: Check if the non-euclidean passkey is visible or if there's another clue in the room to proceed",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+67,look,look,Check if the non-euclidean passkey is visible or if there's another object to examine in the room,"ACTION: look  
+PLAN: Check if the non-euclidean passkey is visible or if there's another object to examine in the room",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+68,look,look,Check if the non-euclidean passkey is visible or if there is anything else in the room to examine,"ACTION: look  
+PLAN: Check if the non-euclidean passkey is visible or if there is anything else in the room to examine",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+69,take non-euclidean passkey from floor,take non-euclidean passkey from floor,Retrieve the passkey to unlock the non-euclidean locker in the bar room,"ACTION: take non-euclidean passkey from floor  
+PLAN: Retrieve the passkey to unlock the non-euclidean locker in the bar room","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",You can't see any such thing.,0,False
+70,look,look,Check if there are other visible objects or clues in the bar room that might help access the target object.,"ACTION: look  
+PLAN: Check if there are other visible objects or clues in the bar room that might help access the target object.","The recent observations form a repeating cycle of 4 states. Recent actions: look, look, look, take non-euclidean passkey from floor, look, look, look, take non-euclidean passkey from floor. Do not repeat this action sequence.","-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+71,look,look,Check for additional visible objects or clues in the bar room that might aid in accessing the locker or goal.,"ACTION: look  
+PLAN: Check for additional visible objects or clues in the bar room that might aid in accessing the locker or goal.","The recent observations form a repeating cycle of 4 states. Recent actions: look, look, take non-euclidean passkey from floor, look, look, look, take non-euclidean passkey from floor, look. Do not repeat this action sequence.","-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+72,go south,go south,Explore the room south to find new exits or objects that might lead to the goal or key.,"ACTION: go south  
+PLAN: Explore the room south to find new exits or objects that might lead to the goal or key.","The recent observations form a repeating cycle of 4 states. Recent actions: look, take non-euclidean passkey from floor, look, look, look, take non-euclidean passkey from floor, look, look. Do not repeat this action sequence.","-= Basement =-
+You find yourself in an ordinary kind of place. That is to say, you're in a basement. You begin looking for stuff.
+
+You can see an opened trunk. The trunk is empty! This is the worst thing that could possibly happen, ever!
+
+There is a closed gateway leading south. There is an unguarded exit to the north.",0,False
+73,look,look,Check the trunk and surrounding area for hidden objects or clues that might lead to the goal or key,"ACTION: look  
+PLAN: Check the trunk and surrounding area for hidden objects or clues that might lead to the goal or key",,"-= Basement =-
+You find yourself in an ordinary kind of place. That is to say, you're in a basement. You begin looking for stuff.
+
+You can see an opened trunk. The trunk is empty! This is the worst thing that could possibly happen, ever!
+
+There is a closed gateway leading south. There is an unguarded exit to the north.",0,False
+74,look,look,Examine the opened trunk for any hidden items or clues that might lead to the target object,"ACTION: look  
+PLAN: Examine the opened trunk for any hidden items or clues that might lead to the target object",,"-= Basement =-
+You find yourself in an ordinary kind of place. That is to say, you're in a basement. You begin looking for stuff.
+
+You can see an opened trunk. The trunk is empty! This is the worst thing that could possibly happen, ever!
+
+There is a closed gateway leading south. There is an unguarded exit to the north.",0,False
+75,look,look,Check if the opened trunk contains any hidden objects or clues that might lead to the target item,"ACTION: look  
+PLAN: Check if the opened trunk contains any hidden objects or clues that might lead to the target item","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Basement =-
+You find yourself in an ordinary kind of place. That is to say, you're in a basement. You begin looking for stuff.
+
+You can see an opened trunk. The trunk is empty! This is the worst thing that could possibly happen, ever!
+
+There is a closed gateway leading south. There is an unguarded exit to the north.",0,False
+76,go north,go north,Return to the bar to check if the non-euclidean locker contains the target object,"ACTION: go north  
+PLAN: Return to the bar to check if the non-euclidean locker contains the target object","The action ""look"" has repeatedly left the observation unchanged for 3 steps. Do not repeat this action in the current state.","-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+77,look,look,Check if the non-euclidean locker is visible or contains the target object,"ACTION: look  
+PLAN: Check if the non-euclidean locker is visible or contains the target object",,"-= Bar =-
+You find yourself in a bar. An ordinary one.
+
+You see a locked ordinary looking non-euclidean locker in the room.
+
+There is an unblocked exit to the south.
+
+There is a non-euclidean passkey on the floor.",0,False
+78,open non-euclidean locker with non-euclidean passkey,open non-euclidean locker with non-euclidean passkey,Unlock the locker to check if it contains the target object,"ACTION: open non-euclidean locker with non-euclidean passkey  
+PLAN: Unlock the locker to check if it contains the target object",,You need to take the non-euclidean passkey first.,0,False
+79,take non-euclidean passkey from floor,take non-euclidean passkey from floor,Retrieve the passkey to use for unlocking the non-euclidean locker,"ACTION: take non-euclidean passkey from floor  
+PLAN: Retrieve the passkey to use for unlocking the non-euclidean locker",,You can't see any such thing.,0,True

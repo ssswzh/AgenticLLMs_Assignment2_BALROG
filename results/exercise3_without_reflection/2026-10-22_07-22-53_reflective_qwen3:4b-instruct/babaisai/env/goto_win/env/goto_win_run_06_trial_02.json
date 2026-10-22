@@ -1,0 +1,73 @@
+{
+    "task": "env/goto_win",
+    "action_frequency": {
+        "left": 1,
+        "up": 1
+    },
+    "input_tokens": 1070,
+    "output_tokens": 42,
+    "episode_idx": 6,
+    "trial_idx": 2,
+    "trajectory": [
+        {
+            "step": 0,
+            "requested_action": "left",
+            "action": "left",
+            "plan": "Move closer to the key to potentially change the win condition or interact with it directly",
+            "raw_completion": "ACTION: left  \nPLAN: Move closer to the key to potentially change the win condition or interact with it directly",
+            "reasoning": "",
+            "observation": "Active rules:\nkey is win\nbaba is you\n\nObjects on the map:\nrule `key` 3 step to the left and 5 step up\nrule `is` 2 step to the left and 5 step up\nrule `win` 1 step to the left and 5 step up\nkey 1 step up\nrule `baba` 3 step to the left\nrule `is` 2 step to the left\nrule `you` 1 step to the left",
+            "reward": 0.0,
+            "done": false
+        },
+        {
+            "step": 1,
+            "requested_action": "up",
+            "action": "up",
+            "plan": "Move upward to better position for interacting with key or adjusting rules",
+            "raw_completion": "ACTION: up\nPLAN: Move upward to better position for interacting with key or adjusting rules",
+            "reasoning": "",
+            "observation": "Active rules:\nkey is win\nbaba is you\n\nObjects on the map:\nrule `key` 3 step to the left and 4 step up\nrule `is` 2 step to the left and 4 step up\nrule `win` 1 step to the left and 4 step up\nrule `baba` 3 step to the left and 1 step down\nrule `is` 2 step to the left and 1 step down\nrule `you` 1 step to the left and 1 step down",
+            "reward": 0.982,
+            "done": true
+        }
+    ],
+    "done": true,
+    "episode_return": 0.982,
+    "num_steps": 2,
+    "failed_candidates": [],
+    "target_plan": "goto[key]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-2",
+    "seed": 2601221593,
+    "agent": {
+        "type": "reflective",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false,
+        "max_reflections": 0,
+        "use_reflection": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "qwen3:4b-instruct",
+        "base_url": "http://127.0.0.1:11434/v1",
+        "generate_kwargs": {
+            "temperature": 0.6,
+            "max_tokens": 1024,
+            "thinking_budget": null
+        },
+        "timeout": 300,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    },
+    "reflections_used": [],
+    "reflection": null,
+    "reflection_memory_after_trial": [],
+    "reflection_input_tokens": 0,
+    "reflection_output_tokens": 0
+}

@@ -1,0 +1,544 @@
+Step,Action,Executed Action,Plan,Raw Completion,Reasoning,Observation,Reward,Done
+0,go south,go south,Explore the unguarded entranceway to find new exits or objects leading closer to the goal.,"ACTION: go south
+PLAN: Explore the unguarded entranceway to find new exits or objects leading closer to the goal.",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+1,look,look,Check the passkey for possible use or connection to a locked container or door,"ACTION: look  
+PLAN: Check the passkey for possible use or connection to a locked container or door",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+2,take passkey from floor,take passkey from floor,Check if the passkey can unlock a locked door or container in the current or next room,"ACTION: take passkey from floor
+PLAN: Check if the passkey can unlock a locked door or container in the current or next room",,You can't see any such thing.,0,False
+3,go north,go north,Check the north room for a locked door or container that might require the passkey to unlock,"ACTION: go north  
+PLAN: Check the north room for a locked door or container that might require the passkey to unlock",,"-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+4,go south,go south,Return to the cellar to check if the passkey can be used to unlock anything,"ACTION: go south  
+PLAN: Return to the cellar to check if the passkey can be used to unlock anything",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+5,look,look,Check if there are any doors or containers that can be unlocked with the passkey,"ACTION: look  
+PLAN: Check if there are any doors or containers that can be unlocked with the passkey",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+6,look,look,Check for any locked doors or containers that might require the passkey to unlock,"ACTION: look  
+PLAN: Check for any locked doors or containers that might require the passkey to unlock",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+7,take passkey from floor,take passkey from floor,Retrieve the passkey to potentially unlock a locked door or container in the next room,"ACTION: take passkey from floor  
+PLAN: Retrieve the passkey to potentially unlock a locked door or container in the next room","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",You can't see any such thing.,0,False
+8,look,look,Check the current room for new objects or exits after retrieving the passkey,"ACTION: look  
+PLAN: Check the current room for new objects or exits after retrieving the passkey",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+9,go north,go north,Explore the next room to find new exits or objects that might lead to the goal,"ACTION: go north  
+PLAN: Explore the next room to find new exits or objects that might lead to the goal",,"-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+10,go south,go south,Return to the cellar to check if the passkey can be used to unlock a door or container,"ACTION: go south
+PLAN: Return to the cellar to check if the passkey can be used to unlock a door or container",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+11,look,look,Confirm if there are any other objects or doors in the cellar that might need the passkey to unlock,"ACTION: look  
+PLAN: Confirm if there are any other objects or doors in the cellar that might need the passkey to unlock",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+12,look,look,Check for any other objects or doors that might require the passkey to unlock,"ACTION: look  
+PLAN: Check for any other objects or doors that might require the passkey to unlock",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+13,go north,go north,Return to dish-pit to investigate the closed hatch west for possible hidden passages or objects,"ACTION: go north  
+PLAN: Return to dish-pit to investigate the closed hatch west for possible hidden passages or objects","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+14,go west,go west,Explore the closed hatch west in the dish-pit for possible exits or hidden objects,"ACTION: go west
+PLAN: Explore the closed hatch west in the dish-pit for possible exits or hidden objects",,You have to open the hatch first.,0,False
+15,open hatch,open hatch,Check if the hatch can be opened with a key or tool from inventory or nearby,"ACTION: open hatch  
+PLAN: Check if the hatch can be opened with a key or tool from inventory or nearby",,You have to unlock the hatch with the passkey first.,0,False
+16,unlock hatch with passkey,unlock hatch with passkey,"Use the passkey to unlock the hatch, then open it to proceed into the next room","ACTION: unlock hatch with passkey  
+PLAN: Use the passkey to unlock the hatch, then open it to proceed into the next room",,You can't see any such thing.,0,False
+17,open hatch,open hatch,"The hatch is now open, allowing entry into the next room to continue exploration.","ACTION: open hatch  
+PLAN: The hatch is now open, allowing entry into the next room to continue exploration.",,You have to unlock the hatch with the passkey first.,0,False
+18,go west,go west,Enter the room beyond the hatch to explore and find the target object,"ACTION: go west
+PLAN: Enter the room beyond the hatch to explore and find the target object",,You have to open the hatch first.,0,False
+19,look,look,Check the current room for visible objects or exits to find the target object,"ACTION: look  
+PLAN: Check the current room for visible objects or exits to find the target object",,"-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+20,go south,go south,Return to cellar to check for additional objects or exits that might lead to the target object,"ACTION: go south  
+PLAN: Return to cellar to check for additional objects or exits that might lead to the target object",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+21,look,look,Check if there are any other objects or exits visible in the cellar that might lead to the target object.,"ACTION: look  
+PLAN: Check if there are any other objects or exits visible in the cellar that might lead to the target object.",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+22,go north,go north,Explore the northern path to discover new rooms and possible exits or objects.,"ACTION: go north  
+PLAN: Explore the northern path to discover new rooms and possible exits or objects.",,"-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+23,look,look,Examine the dish-pit for hidden objects or new exits leading to potential paths or containers.,"ACTION: look  
+PLAN: Examine the dish-pit for hidden objects or new exits leading to potential paths or containers.",,"-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+24,go south,go south,Return to the cellar to check if the passkey can be used elsewhere or if new clues appear.,"ACTION: go south  
+PLAN: Return to the cellar to check if the passkey can be used elsewhere or if new clues appear.",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+25,look,look,Check if there are any new objects or clues visible in the cellar after confirming the passkey's location.,"ACTION: look  
+PLAN: Check if there are any new objects or clues visible in the cellar after confirming the passkey's location.",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+26,look,look,Check for any new visible objects or clues in the cellar room.,"ACTION: look  
+PLAN: Check for any new visible objects or clues in the cellar room.",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+27,look,look,Verify if any new objects or exits are visible in the cellar room after reassessing the environment.,"ACTION: look  
+PLAN: Verify if any new objects or exits are visible in the cellar room after reassessing the environment.","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+28,go north,go north,Explore the north exit to discover new rooms or objects that may lead to the target item.,"ACTION: go north  
+PLAN: Explore the north exit to discover new rooms or objects that may lead to the target item.","The action ""look"" has repeatedly left the observation unchanged for 3 steps. Do not repeat this action in the current state.","-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+29,go south,go south,Return to the cellar to collect the passkey and use it to unlock the hatch in the dish-pit.,"ACTION: go south  
+PLAN: Return to the cellar to collect the passkey and use it to unlock the hatch in the dish-pit.",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+30,take passkey from floor,take passkey from floor,Use the passkey to unlock the hatch in the dish-pit after returning there.,"ACTION: take passkey from floor
+PLAN: Use the passkey to unlock the hatch in the dish-pit after returning there.",,You can't see any such thing.,0,False
+31,go west,go west,Unlock the hatch with the passkey once in the dish-pit.,"ACTION: go west
+PLAN: Unlock the hatch with the passkey once in the dish-pit.",,You can't go that way.,0,False
+32,look,look,Check the room for any visible objects or exits that might help locate the target object.,"ACTION: look  
+PLAN: Check the room for any visible objects or exits that might help locate the target object.",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+33,go north,go north,Return to the dish-pit to investigate the closed hatch and check for possible access or clues related to the hatch.,"ACTION: go north  
+PLAN: Return to the dish-pit to investigate the closed hatch and check for possible access or clues related to the hatch.",,"-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+34,look,look,Examine the closed hatch for possible clues or requirements to open it,"ACTION: look  
+PLAN: Examine the closed hatch for possible clues or requirements to open it",,"-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+35,look,look,Examine the closed hatch for possible clues or requirements to open it,"ACTION: look  
+PLAN: Examine the closed hatch for possible clues or requirements to open it",,"-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+36,look,look,Examine the closed hatch for possible key or lock requirements to open it,"ACTION: look  
+PLAN: Examine the closed hatch for possible key or lock requirements to open it","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+37,look,look,Check if the closed hatch has any visible details or clues about its lock or required key,"ACTION: look  
+PLAN: Check if the closed hatch has any visible details or clues about its lock or required key","The action ""look"" has repeatedly left the observation unchanged for 3 steps. Do not repeat this action in the current state.","-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+38,go south,go south,Explore the entranceway to the cellar to locate any hidden objects or doors that may require a key to open,"ACTION: go south  
+PLAN: Explore the entranceway to the cellar to locate any hidden objects or doors that may require a key to open","The action ""look"" has repeatedly left the observation unchanged for 4 steps. Do not repeat this action in the current state.","-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+39,look,look,Check for any hidden objects or clues in the cellar that might lead to the target object or a locked container,"ACTION: look  
+PLAN: Check for any hidden objects or clues in the cellar that might lead to the target object or a locked container",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+40,look,look,Examine the cellar for any hidden objects or clues that might lead to the target object or a locked container,"ACTION: look  
+PLAN: Examine the cellar for any hidden objects or clues that might lead to the target object or a locked container",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+41,go north,go north,Explore the north path to discover new rooms or objects that may contain the target or a key to a locked container,"ACTION: go north  
+PLAN: Explore the north path to discover new rooms or objects that may contain the target or a key to a locked container","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+42,look,look,Examine the dish-pit for hidden objects or clues about the closed hatch or possible exits,"ACTION: look  
+PLAN: Examine the dish-pit for hidden objects or clues about the closed hatch or possible exits",,"-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+43,look,look,Check if there are any visible objects or clues related to the hatch or exit in the dish-pit,"ACTION: look  
+PLAN: Check if there are any visible objects or clues related to the hatch or exit in the dish-pit",,"-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+44,go west,go west,Explore the west hatch to find possible exits or hidden objects in the dish-pit area,"ACTION: go west  
+PLAN: Explore the west hatch to find possible exits or hidden objects in the dish-pit area","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",You have to open the hatch first.,0,False
+45,open hatch,open hatch,Unlock the closed hatch to access the room beyond and explore for the target object,"ACTION: open hatch  
+PLAN: Unlock the closed hatch to access the room beyond and explore for the target object",,You have to unlock the hatch with the passkey first.,0,False
+46,unlock hatch with passkey,unlock hatch with passkey,Unlock the hatch using the passkey to access the room beyond and explore for the target object.,"ACTION: unlock hatch with passkey
+PLAN: Unlock the hatch using the passkey to access the room beyond and explore for the target object.",,You can't see any such thing.,0,False
+47,look,look,Examine the room beyond the hatch after it is opened to locate the target object.,"ACTION: look  
+PLAN: Examine the room beyond the hatch after it is opened to locate the target object.",,"-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+48,go south,go south,Explore the south exit to find new rooms and possible paths to the target object.,"ACTION: go south  
+PLAN: Explore the south exit to find new rooms and possible paths to the target object.",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+49,look,look,Check the room for hidden objects or new exits that might lead closer to the target object.,"ACTION: look  
+PLAN: Check the room for hidden objects or new exits that might lead closer to the target object.",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+50,take passkey from floor,take passkey from floor,Carry the passkey to unlock a door or hatch in another room that may lead to the target object.,"ACTION: take passkey from floor  
+PLAN: Carry the passkey to unlock a door or hatch in another room that may lead to the target object.",,You can't see any such thing.,0,False
+51,go north,go north,Return to the dish-pit to check for any new exits or objects after re-entering from the cellar.,"ACTION: go north  
+PLAN: Return to the dish-pit to check for any new exits or objects after re-entering from the cellar.",,"-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+52,look,look,Examine the room for any visible objects or exits that may have changed since entry.,"ACTION: look  
+PLAN: Examine the room for any visible objects or exits that may have changed since entry.",,"-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+53,go south,go south,Check the cellar for hidden objects or new exits after returning from the dish-pit.,"ACTION: go south  
+PLAN: Check the cellar for hidden objects or new exits after returning from the dish-pit.",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+54,look,look,Examine the cellar to see if there are new objects or exits after retrieving the passkey.,"ACTION: look  
+PLAN: Examine the cellar to see if there are new objects or exits after retrieving the passkey.",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+55,look,look,Check if there are any new objects or exits in the cellar after confirming the passkey is retrieved.,"ACTION: look  
+PLAN: Check if there are any new objects or exits in the cellar after confirming the passkey is retrieved.",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+56,go north,go north,Explore the north exit to discover new rooms or objects that might lead to the goal or hidden items.,"ACTION: go north  
+PLAN: Explore the north exit to discover new rooms or objects that might lead to the goal or hidden items.","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+57,go south,go south,Return to the cellar to check if the passkey can now be used to unlock the hatch in the dish-pit,"ACTION: go south  
+PLAN: Return to the cellar to check if the passkey can now be used to unlock the hatch in the dish-pit",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+58,look,look,Check if the passkey is now visible or if there are new objects in the cellar to investigate,"ACTION: look  
+PLAN: Check if the passkey is now visible or if there are new objects in the cellar to investigate",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+59,look,look,Check for any new objects or clues in the cellar that might help progress toward the goal.,"ACTION: look  
+PLAN: Check for any new objects or clues in the cellar that might help progress toward the goal.",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+60,go north,go north,Return to the dish-pit to check for any new exits or objects that may lead to the goal room.,"ACTION: go north  
+PLAN: Return to the dish-pit to check for any new exits or objects that may lead to the goal room.","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+61,look,look,Examine the dish-pit for any visible objects or exits that might lead to the goal room.,"ACTION: look  
+PLAN: Examine the dish-pit for any visible objects or exits that might lead to the goal room.","The recent observations form a repeating cycle of 4 states. Recent actions: go south, look, look, go north, go south, look, look, go north. Do not repeat this action sequence.","-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+62,go south,go south,Explore the cellar to locate the target object or any hidden passages or containers.,"ACTION: go south  
+PLAN: Explore the cellar to locate the target object or any hidden passages or containers.",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+63,look,look,Check for any additional objects or clues in the cellar that might lead to the target object.,"ACTION: look  
+PLAN: Check for any additional objects or clues in the cellar that might lead to the target object.",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+64,look,look,Confirm if there are any other objects or clues in the cellar that might help locate the target object.,"ACTION: look  
+PLAN: Confirm if there are any other objects or clues in the cellar that might help locate the target object.",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+65,go north,go north,Explore the dish-pit to find a hatch or object that might lead to the target or reveal a path forward.,"ACTION: go north  
+PLAN: Explore the dish-pit to find a hatch or object that might lead to the target or reveal a path forward.","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+66,go west,go west,Check the closed hatch in the dish-pit for possible exits or hidden objects.,"ACTION: go west
+PLAN: Check the closed hatch in the dish-pit for possible exits or hidden objects.",,You have to open the hatch first.,0,False
+67,look,look,Examine the closed hatch to determine if it can be opened or if a key is needed to unlock it.,"ACTION: look  
+PLAN: Examine the closed hatch to determine if it can be opened or if a key is needed to unlock it.",,"-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+68,look,look,Examine the closed hatch to see if a key or tool is needed to open it,"ACTION: look  
+PLAN: Examine the closed hatch to see if a key or tool is needed to open it",,"-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+69,look,look,"Check if the closed hatch requires a key or tool to open, and see if the passkey from the cellar can be used","ACTION: look  
+PLAN: Check if the closed hatch requires a key or tool to open, and see if the passkey from the cellar can be used",,"-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+70,open hatch,open hatch,Check if the passkey from the cellar can unlock the hatch in the dish-pit,"ACTION: open hatch  
+PLAN: Check if the passkey from the cellar can unlock the hatch in the dish-pit","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",You have to unlock the hatch with the passkey first.,0,False
+71,unlock hatch with passkey,unlock hatch with passkey,Use the passkey from the cellar to unlock the hatch in the dish-pit,"ACTION: unlock hatch with passkey
+PLAN: Use the passkey from the cellar to unlock the hatch in the dish-pit",,You can't see any such thing.,0,False
+72,go north,go north,Return to cellar to collect passkey if not already obtained,"ACTION: go north  
+PLAN: Return to cellar to collect passkey if not already obtained",,You can't go that way.,0,False
+73,look,look,Check if passkey is still visible in the cellar for proper use,"ACTION: look  
+PLAN: Check if passkey is still visible in the cellar for proper use",,"-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+74,look,look,Check if the passkey is still visible in the cellar for correct use,"ACTION: look  
+PLAN: Check if the passkey is still visible in the cellar for correct use",,"-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+75,go south,go south,Return to cellar to check if the passkey is still visible and usable for unlocking the hatch,"ACTION: go south  
+PLAN: Return to cellar to check if the passkey is still visible and usable for unlocking the hatch",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+76,look,look,Check if the passkey is still visible and if it can be used to unlock the hatch in the dish-pit,"ACTION: look  
+PLAN: Check if the passkey is still visible and if it can be used to unlock the hatch in the dish-pit",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+77,look,look,Verify if the passkey is still on the floor and if any other objects or exits are visible in the cellar,"ACTION: look  
+PLAN: Verify if the passkey is still on the floor and if any other objects or exits are visible in the cellar",,"-= Cellar =-
+You make a grand eccentric entrance into a cellar. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unblocked.
+
+There is a passkey on the floor.",0,False
+78,go north,go north,Explore the north exit to discover new rooms and possible paths to the target object,"ACTION: go north  
+PLAN: Explore the north exit to discover new rooms and possible paths to the target object","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,False
+79,look,look,Check the room for hidden objects or new exits that might lead to the target object,"ACTION: look  
+PLAN: Check the room for hidden objects or new exits that might lead to the target object",,"-= Dish-Pit =-
+You've entered a dish-pit.
+
+
+
+There is a closed hatch leading west. You don't like doors? Why not try going south, that entranceway is unguarded.",0,True

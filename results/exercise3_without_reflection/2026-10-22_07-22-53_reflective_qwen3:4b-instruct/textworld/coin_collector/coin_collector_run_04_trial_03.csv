@@ -1,0 +1,511 @@
+Step,Action,Executed Action,Plan,Raw Completion,Reasoning,Observation,Reward,Done
+0,go north,go north,Explore the room north to find exits and possible paths toward the coin,"ACTION: go north
+PLAN: Explore the room north to find exits and possible paths toward the coin",,"-= Salon =-
+You've seen better salons, but at least this one seems pretty typical. You begin to take stock of what's in the room.
+
+
+
+There is an unblocked exit to the east. There is an exit to the north. Don't worry, it is unblocked. There is an unguarded exit to the south. You don't like doors? Why not try going west, that entranceway is unguarded.",0,False
+1,go north,go north,Explore the north exit to find new rooms and possible paths toward the coin,"ACTION: go north
+PLAN: Explore the north exit to find new rooms and possible paths toward the coin",,"-= Workshop =-
+You are in a workshop. A standard kind of place. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+There is an exit to the east. Don't worry, it is unblocked. You need an unguarded exit? You should try going north. There is an unblocked exit to the south. You need an unblocked exit? You should try going west.",0,False
+2,go north,go north,Explore the northern exit to discover new rooms and progress closer to the coin,"ACTION: go north
+PLAN: Explore the northern exit to discover new rooms and progress closer to the coin",,"-= Silent Office =-
+I am honoured to announce that you are now in the silent office.
+
+
+
+There is an unblocked exit to the south.",0,False
+3,go south,go south,Return to the previous room and check for any exits or objects that might lead to the coin,"ACTION: go south
+PLAN: Return to the previous room and check for any exits or objects that might lead to the coin",,"-= Workshop =-
+You are in a workshop. A standard kind of place. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+There is an exit to the east. Don't worry, it is unblocked. You need an unguarded exit? You should try going north. There is an unblocked exit to the south. You need an unblocked exit? You should try going west.",0,False
+4,go west,go west,Check the west exit for possible paths to the coin in the next room,"ACTION: go west
+PLAN: Check the west exit for possible paths to the coin in the next room",,"-= Lounge =-
+You are in a lounge. An ordinary one. You begin to take stock of what's here.
+
+
+
+There is an exit to the east. Don't worry, it is unblocked.",0,False
+5,go east,go east,Explore the east exit to find the coin in the next room,"ACTION: go east
+PLAN: Explore the east exit to find the coin in the next room",,"-= Workshop =-
+You are in a workshop. A standard kind of place. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+There is an exit to the east. Don't worry, it is unblocked. You need an unguarded exit? You should try going north. There is an unblocked exit to the south. You need an unblocked exit? You should try going west.",0,False
+6,go east,go east,Explore the east exit to find the coin in the next room,"ACTION: go east
+PLAN: Explore the east exit to find the coin in the next room",,"-= Playroom =-
+You arrive in a playroom. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an unguarded exit to the east. There is an exit to the north. Don't worry, it is unguarded. You need an unguarded exit? You should try going south. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+7,go east,go east,Explore the east exit to locate the coin in the playroom's next room,"ACTION: go east
+PLAN: Explore the east exit to locate the coin in the playroom's next room",,"-= Austere Workshop =-
+You've fallen into an austere room. Your mind races to think of what kind of room would be austere. And then it hits you. Of course. You're in the austere workshop.
+
+
+
+You need an unguarded exit? You should try going east. There is an exit to the north. Don't worry, it is unblocked. There is an exit to the south. Don't worry, it is unblocked. There is an unguarded exit to the west.",0,False
+8,go east,go east,Check the room to the east for the presence of the coin,"ACTION: go east
+PLAN: Check the room to the east for the presence of the coin",,"-= Silent Studio =-
+You find yourself in a studio. A silent one.
+
+
+
+You need an unguarded exit? You should try going east. There is an unblocked exit to the north. There is an exit to the south. Don't worry, it is unguarded. There is an exit to the west. Don't worry, it is unblocked.",0,False
+9,go east,go east,Check the east room for the coin as it might be present in this location,"ACTION: go east
+PLAN: Check the east room for the coin as it might be present in this location",,"-= Cellar =-
+You find yourself in a cellar. An ordinary one.
+
+
+
+You need an unguarded exit? You should try going west.",0,False
+10,go west,go west,Check the west room for the coin as it might be present in this location,"ACTION: go west  
+PLAN: Check the west room for the coin as it might be present in this location",,"-= Silent Studio =-
+You find yourself in a studio. A silent one.
+
+
+
+You need an unguarded exit? You should try going east. There is an unblocked exit to the north. There is an exit to the south. Don't worry, it is unguarded. There is an exit to the west. Don't worry, it is unblocked.",0,False
+11,go east,go east,Explore the east room to check if the coin is present there,"ACTION: go east
+PLAN: Explore the east room to check if the coin is present there",,"-= Cellar =-
+You find yourself in a cellar. An ordinary one.
+
+
+
+You need an unguarded exit? You should try going west.",0,False
+12,go west,go west,Check the west exit to escape the cycle and explore a new room without repeating previous movements,"ACTION: go west  
+PLAN: Check the west exit to escape the cycle and explore a new room without repeating previous movements","The recent observations form a repeating cycle of 2 states. Recent actions: go east, go east, go west, go east. Do not repeat this action sequence.","-= Silent Studio =-
+You find yourself in a studio. A silent one.
+
+
+
+You need an unguarded exit? You should try going east. There is an unblocked exit to the north. There is an exit to the south. Don't worry, it is unguarded. There is an exit to the west. Don't worry, it is unblocked.",0,False
+13,go north,go north,Explore the north exit to reach a new room and break the cycle of repetitive movement,"ACTION: go north  
+PLAN: Explore the north exit to reach a new room and break the cycle of repetitive movement","The recent observations form a repeating cycle of 2 states. Recent actions: go east, go west, go east, go west. Do not repeat this action sequence.","-= Pantry =-
+You are in a pantry. An usual one. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+You don't like doors? Why not try going south, that entranceway is unblocked.",0,False
+14,go south,go south,Check the south exit to explore a new area and progress toward the coin location,"ACTION: go south
+PLAN: Check the south exit to explore a new area and progress toward the coin location",,"-= Silent Studio =-
+You find yourself in a studio. A silent one.
+
+
+
+You need an unguarded exit? You should try going east. There is an unblocked exit to the north. There is an exit to the south. Don't worry, it is unguarded. There is an exit to the west. Don't worry, it is unblocked.",0,False
+15,go south,go south,Explore the southern exit to discover new rooms and progress toward finding the coin,"ACTION: go south  
+PLAN: Explore the southern exit to discover new rooms and progress toward finding the coin",,"-= Fun Recreation Zone =-
+You arrive in a recreation zone. A fun kind of place.
+
+
+
+You need an unblocked exit? You should try going east. There is an unblocked exit to the north. There is an unguarded exit to the south. You don't like doors? Why not try going west, that entranceway is unguarded.",0,False
+16,go south,go south,Enter the southern exit to explore the next room and continue the search for the coin,"ACTION: go south
+PLAN: Enter the southern exit to explore the next room and continue the search for the coin",,"-= Hot Kitchen =-
+You find yourself in a kitchen. A hot one. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unguarded. There is an exit to the north. Don't worry, it is unguarded. You don't like doors? Why not try going south, that entranceway is unguarded. There is an exit to the west. Don't worry, it is unguarded.",0,False
+17,go south,go south,Explore the southern exit to find the coin in the next room,"ACTION: go south
+PLAN: Explore the southern exit to find the coin in the next room",,"-= Serious Workshop =-
+You've just sauntered into a serious workshop. Let's see what's in here.
+
+
+
+There is an unblocked exit to the north.",0,False
+18,go south,go south,Check the southern room for the coin as per the current path and exit directions,"ACTION: go south
+PLAN: Check the southern room for the coin as per the current path and exit directions",,You can't go that way.,0,False
+19,go north,go north,Explore the northern room to find the coin as per the available exits and room descriptions,"ACTION: go north  
+PLAN: Explore the northern room to find the coin as per the available exits and room descriptions",,"-= Hot Kitchen =-
+You find yourself in a kitchen. A hot one. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unguarded. There is an exit to the north. Don't worry, it is unguarded. You don't like doors? Why not try going south, that entranceway is unguarded. There is an exit to the west. Don't worry, it is unguarded.",0,False
+20,go north,go north,Explore the northern room to locate the coin using available exits and room descriptions,"ACTION: go north
+PLAN: Explore the northern room to locate the coin using available exits and room descriptions",,"-= Fun Recreation Zone =-
+You arrive in a recreation zone. A fun kind of place.
+
+
+
+You need an unblocked exit? You should try going east. There is an unblocked exit to the north. There is an unguarded exit to the south. You don't like doors? Why not try going west, that entranceway is unguarded.",0,False
+21,go north,go north,Explore the northern room to locate the coin using available exits and room descriptions,"ACTION: go north
+PLAN: Explore the northern room to locate the coin using available exits and room descriptions",,"-= Silent Studio =-
+You find yourself in a studio. A silent one.
+
+
+
+You need an unguarded exit? You should try going east. There is an unblocked exit to the north. There is an exit to the south. Don't worry, it is unguarded. There is an exit to the west. Don't worry, it is unblocked.",0,False
+22,go north,go north,Explore the northern room to locate the coin using available exits and room descriptions,"ACTION: go north
+PLAN: Explore the northern room to locate the coin using available exits and room descriptions",,"-= Pantry =-
+You are in a pantry. An usual one. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+You don't like doors? Why not try going south, that entranceway is unblocked.",0,False
+23,go south,go south,Return to the Silent Studio to check for coin or available exits in the next direction,"ACTION: go south
+PLAN: Return to the Silent Studio to check for coin or available exits in the next direction",,"-= Silent Studio =-
+You find yourself in a studio. A silent one.
+
+
+
+You need an unguarded exit? You should try going east. There is an unblocked exit to the north. There is an exit to the south. Don't worry, it is unguarded. There is an exit to the west. Don't worry, it is unblocked.",0,False
+24,go east,go east,Explore east exit from Silent Studio to find new room and possible coin location,"ACTION: go east
+PLAN: Explore east exit from Silent Studio to find new room and possible coin location",,"-= Cellar =-
+You find yourself in a cellar. An ordinary one.
+
+
+
+You need an unguarded exit? You should try going west.",0,False
+25,go west,go west,Return to the cellar and check for exits or objects that may lead to the coin location,"ACTION: go west
+PLAN: Return to the cellar and check for exits or objects that may lead to the coin location",,"-= Silent Studio =-
+You find yourself in a studio. A silent one.
+
+
+
+You need an unguarded exit? You should try going east. There is an unblocked exit to the north. There is an exit to the south. Don't worry, it is unguarded. There is an exit to the west. Don't worry, it is unblocked.",0,False
+26,go east,go east,Move to the cellar to check for any exits or objects that might lead to the coin,"ACTION: go east  
+PLAN: Move to the cellar to check for any exits or objects that might lead to the coin",,"-= Cellar =-
+You find yourself in a cellar. An ordinary one.
+
+
+
+You need an unguarded exit? You should try going west.",0,False
+27,go north,go north,Explore the north exit from the cellar to find a new path toward the coin without repeating previous cycles,"ACTION: go north  
+PLAN: Explore the north exit from the cellar to find a new path toward the coin without repeating previous cycles","The recent observations form a repeating cycle of 2 states. Recent actions: go south, go east, go west, go east. Do not repeat this action sequence.",You can't go that way.,0,False
+28,go west,go west,Return to the studio to check for any new exits or clues about the coin's location,"ACTION: go west
+PLAN: Return to the studio to check for any new exits or clues about the coin's location",,"-= Silent Studio =-
+You find yourself in a studio. A silent one.
+
+
+
+You need an unguarded exit? You should try going east. There is an unblocked exit to the north. There is an exit to the south. Don't worry, it is unguarded. There is an exit to the west. Don't worry, it is unblocked.",0,False
+29,go east,go east,Explore the cellar to find the coin or discover a path leading to the coin location,"ACTION: go east
+PLAN: Explore the cellar to find the coin or discover a path leading to the coin location",,"-= Cellar =-
+You find yourself in a cellar. An ordinary one.
+
+
+
+You need an unguarded exit? You should try going west.",0,False
+30,go west,go west,Return to the studio and check for exits that may lead to the coin location,"ACTION: go west
+PLAN: Return to the studio and check for exits that may lead to the coin location",,"-= Silent Studio =-
+You find yourself in a studio. A silent one.
+
+
+
+You need an unguarded exit? You should try going east. There is an unblocked exit to the north. There is an exit to the south. Don't worry, it is unguarded. There is an exit to the west. Don't worry, it is unblocked.",0,False
+31,go south,go south,Explore the south exit to find a room where the coin might be located,"ACTION: go south
+PLAN: Explore the south exit to find a room where the coin might be located",,"-= Fun Recreation Zone =-
+You arrive in a recreation zone. A fun kind of place.
+
+
+
+You need an unblocked exit? You should try going east. There is an unblocked exit to the north. There is an unguarded exit to the south. You don't like doors? Why not try going west, that entranceway is unguarded.",0,False
+32,go south,go south,Move to the south exit to explore the room where the coin might be located,"ACTION: go south
+PLAN: Move to the south exit to explore the room where the coin might be located",,"-= Hot Kitchen =-
+You find yourself in a kitchen. A hot one. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unguarded. There is an exit to the north. Don't worry, it is unguarded. You don't like doors? Why not try going south, that entranceway is unguarded. There is an exit to the west. Don't worry, it is unguarded.",0,False
+33,go south,go south,Explore the room to the south for the presence of the coin,"ACTION: go south
+PLAN: Explore the room to the south for the presence of the coin",,"-= Serious Workshop =-
+You've just sauntered into a serious workshop. Let's see what's in here.
+
+
+
+There is an unblocked exit to the north.",0,False
+34,go north,go north,Check the room to the north for the presence of the coin,"ACTION: go north
+PLAN: Check the room to the north for the presence of the coin",,"-= Hot Kitchen =-
+You find yourself in a kitchen. A hot one. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unguarded. There is an exit to the north. Don't worry, it is unguarded. You don't like doors? Why not try going south, that entranceway is unguarded. There is an exit to the west. Don't worry, it is unguarded.",0,False
+35,go north,go north,Explore the room to the north to check if the coin is present there,"ACTION: go north
+PLAN: Explore the room to the north to check if the coin is present there",,"-= Fun Recreation Zone =-
+You arrive in a recreation zone. A fun kind of place.
+
+
+
+You need an unblocked exit? You should try going east. There is an unblocked exit to the north. There is an unguarded exit to the south. You don't like doors? Why not try going west, that entranceway is unguarded.",0,False
+36,go north,go north,Check the room to the north for the presence of the coin,"ACTION: go north
+PLAN: Check the room to the north for the presence of the coin",,"-= Silent Studio =-
+You find yourself in a studio. A silent one.
+
+
+
+You need an unguarded exit? You should try going east. There is an unblocked exit to the north. There is an exit to the south. Don't worry, it is unguarded. There is an exit to the west. Don't worry, it is unblocked.",0,False
+37,go north,go north,Check the room to the north for the presence of the coin,"ACTION: go north
+PLAN: Check the room to the north for the presence of the coin",,"-= Pantry =-
+You are in a pantry. An usual one. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+You don't like doors? Why not try going south, that entranceway is unblocked.",0,False
+38,go north,go north,Explore the north room to check if the coin is present in the current location,"ACTION: go north
+PLAN: Explore the north room to check if the coin is present in the current location",,You can't go that way.,0,False
+39,go south,go south,Check if the coin is in the pantry or if there's a new path to explore from the south room,"ACTION: go south  
+PLAN: Check if the coin is in the pantry or if there's a new path to explore from the south room",,"-= Silent Studio =-
+You find yourself in a studio. A silent one.
+
+
+
+You need an unguarded exit? You should try going east. There is an unblocked exit to the north. There is an exit to the south. Don't worry, it is unguarded. There is an exit to the west. Don't worry, it is unblocked.",0,False
+40,go east,go east,Explore the east exit to find the coin or access a new room with potential leads,"ACTION: go east  
+PLAN: Explore the east exit to find the coin or access a new room with potential leads",,"-= Cellar =-
+You find yourself in a cellar. An ordinary one.
+
+
+
+You need an unguarded exit? You should try going west.",0,False
+41,go west,go west,Return to the studio to check for any new exits or clues that might lead to the coin,"ACTION: go west
+PLAN: Return to the studio to check for any new exits or clues that might lead to the coin",,"-= Silent Studio =-
+You find yourself in a studio. A silent one.
+
+
+
+You need an unguarded exit? You should try going east. There is an unblocked exit to the north. There is an exit to the south. Don't worry, it is unguarded. There is an exit to the west. Don't worry, it is unblocked.",0,False
+42,go east,go east,Explore the cellar to find any clues or exits that might lead to the coin,"ACTION: go east
+PLAN: Explore the cellar to find any clues or exits that might lead to the coin",,"-= Cellar =-
+You find yourself in a cellar. An ordinary one.
+
+
+
+You need an unguarded exit? You should try going west.",0,False
+43,go west,go west,Return to the studio to check for new exits or clues that might lead to the coin,"ACTION: go west  
+PLAN: Return to the studio to check for new exits or clues that might lead to the coin","The recent observations form a repeating cycle of 2 states. Recent actions: go south, go east, go west, go east. Do not repeat this action sequence.","-= Silent Studio =-
+You find yourself in a studio. A silent one.
+
+
+
+You need an unguarded exit? You should try going east. There is an unblocked exit to the north. There is an exit to the south. Don't worry, it is unguarded. There is an exit to the west. Don't worry, it is unblocked.",0,False
+44,go north,go north,Explore the north exit to discover new areas or locate the coin in the Pantry or adjacent room,"ACTION: go north  
+PLAN: Explore the north exit to discover new areas or locate the coin in the Pantry or adjacent room","The recent observations form a repeating cycle of 2 states. Recent actions: go east, go west, go east, go west. Do not repeat this action sequence.","-= Pantry =-
+You are in a pantry. An usual one. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+You don't like doors? Why not try going south, that entranceway is unblocked.",0,False
+45,go south,go south,Return to the Silent Studio to check for exits or clues leading to the coin location,"ACTION: go south
+PLAN: Return to the Silent Studio to check for exits or clues leading to the coin location",,"-= Silent Studio =-
+You find yourself in a studio. A silent one.
+
+
+
+You need an unguarded exit? You should try going east. There is an unblocked exit to the north. There is an exit to the south. Don't worry, it is unguarded. There is an exit to the west. Don't worry, it is unblocked.",0,False
+46,go east,go east,Explore the cellar to find any possible path or object related to the coin,"ACTION: go east
+PLAN: Explore the cellar to find any possible path or object related to the coin",,"-= Cellar =-
+You find yourself in a cellar. An ordinary one.
+
+
+
+You need an unguarded exit? You should try going west.",0,False
+47,go west,go west,Check the west exit from the cellar to find a path leading to the coin or another room,"ACTION: go west
+PLAN: Check the west exit from the cellar to find a path leading to the coin or another room",,"-= Silent Studio =-
+You find yourself in a studio. A silent one.
+
+
+
+You need an unguarded exit? You should try going east. There is an unblocked exit to the north. There is an exit to the south. Don't worry, it is unguarded. There is an exit to the west. Don't worry, it is unblocked.",0,False
+48,go east,go east,Explore the east exit from the Silent Studio to reach a new room where the coin might be located,"ACTION: go east
+PLAN: Explore the east exit from the Silent Studio to reach a new room where the coin might be located",,"-= Cellar =-
+You find yourself in a cellar. An ordinary one.
+
+
+
+You need an unguarded exit? You should try going west.",0,False
+49,go north,go north,Move to the pantry to explore a new area and search for the coin without repeating previous loops,"ACTION: go north  
+PLAN: Move to the pantry to explore a new area and search for the coin without repeating previous loops","The recent observations form a repeating cycle of 2 states. Recent actions: go south, go east, go west, go east. Do not repeat this action sequence.",You can't go that way.,0,False
+50,go south,go south,Move to the pantry to search for the coin in a new area without repeating previous paths,"ACTION: go south  
+PLAN: Move to the pantry to search for the coin in a new area without repeating previous paths",,You can't go that way.,0,False
+51,go south,go south,Move to the pantry to search for the coin in a previously unexplored area,"ACTION: go south  
+PLAN: Move to the pantry to search for the coin in a previously unexplored area",,You can't go that way.,0,False
+52,go east,go east,"Explore the cellar to locate the coin, as it is a new area not yet visited and may contain the target object.","ACTION: go east
+PLAN: Explore the cellar to locate the coin, as it is a new area not yet visited and may contain the target object.","The action ""go south"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",You can't go that way.,0,False
+53,go west,go west,Check the west exit from the cellar to locate the coin or access a new area,"ACTION: go west  
+PLAN: Check the west exit from the cellar to locate the coin or access a new area",The observation has remained unchanged for 3 consecutive actions. Try a different action or subgoal.,"-= Silent Studio =-
+You find yourself in a studio. A silent one.
+
+
+
+You need an unguarded exit? You should try going east. There is an unblocked exit to the north. There is an exit to the south. Don't worry, it is unguarded. There is an exit to the west. Don't worry, it is unblocked.",0,False
+54,go west,go west,Move west from the studio to explore the cellar and check for the coin or new exits,"ACTION: go west
+PLAN: Move west from the studio to explore the cellar and check for the coin or new exits",,"-= Austere Workshop =-
+You've fallen into an austere room. Your mind races to think of what kind of room would be austere. And then it hits you. Of course. You're in the austere workshop.
+
+
+
+You need an unguarded exit? You should try going east. There is an exit to the north. Don't worry, it is unblocked. There is an exit to the south. Don't worry, it is unblocked. There is an unguarded exit to the west.",0,False
+55,go west,go west,Explore the west exit to find the coin or access a new room in the maze,"ACTION: go west
+PLAN: Explore the west exit to find the coin or access a new room in the maze",,"-= Playroom =-
+You arrive in a playroom. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an unguarded exit to the east. There is an exit to the north. Don't worry, it is unguarded. You need an unguarded exit? You should try going south. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+56,go west,go west,Check the west exit to explore the new room and look for the coin,"ACTION: go west
+PLAN: Check the west exit to explore the new room and look for the coin",,"-= Workshop =-
+You are in a workshop. A standard kind of place. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+There is an exit to the east. Don't worry, it is unblocked. You need an unguarded exit? You should try going north. There is an unblocked exit to the south. You need an unblocked exit? You should try going west.",0,False
+57,go west,go west,Explore the room to the west for the presence of the coin,"ACTION: go west
+PLAN: Explore the room to the west for the presence of the coin",,"-= Lounge =-
+You are in a lounge. An ordinary one. You begin to take stock of what's here.
+
+
+
+There is an exit to the east. Don't worry, it is unblocked.",0,False
+58,go east,go east,Check the east exit for the coin in the next room,"ACTION: go east
+PLAN: Check the east exit for the coin in the next room",,"-= Workshop =-
+You are in a workshop. A standard kind of place. You decide to just list off a complete list of everything you see in the room, because hey, why not?
+
+
+
+There is an exit to the east. Don't worry, it is unblocked. You need an unguarded exit? You should try going north. There is an unblocked exit to the south. You need an unblocked exit? You should try going west.",0,False
+59,go east,go east,Explore the next room to find the coin using the east exit,"ACTION: go east
+PLAN: Explore the next room to find the coin using the east exit",,"-= Playroom =-
+You arrive in a playroom. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an unguarded exit to the east. There is an exit to the north. Don't worry, it is unguarded. You need an unguarded exit? You should try going south. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+60,go east,go east,Move to the next room to check if the coin is visible in the playroom or adjacent areas,"ACTION: go east
+PLAN: Move to the next room to check if the coin is visible in the playroom or adjacent areas",,"-= Austere Workshop =-
+You've fallen into an austere room. Your mind races to think of what kind of room would be austere. And then it hits you. Of course. You're in the austere workshop.
+
+
+
+You need an unguarded exit? You should try going east. There is an exit to the north. Don't worry, it is unblocked. There is an exit to the south. Don't worry, it is unblocked. There is an unguarded exit to the west.",0,False
+61,go east,go east,Explore the next room to see if the coin is visible in the playroom or adjacent area,"ACTION: go east
+PLAN: Explore the next room to see if the coin is visible in the playroom or adjacent area",,"-= Silent Studio =-
+You find yourself in a studio. A silent one.
+
+
+
+You need an unguarded exit? You should try going east. There is an unblocked exit to the north. There is an exit to the south. Don't worry, it is unguarded. There is an exit to the west. Don't worry, it is unblocked.",0,False
+62,go east,go east,Check the next room to the east for the presence of the coin,"ACTION: go east
+PLAN: Check the next room to the east for the presence of the coin",,"-= Cellar =-
+You find yourself in a cellar. An ordinary one.
+
+
+
+You need an unguarded exit? You should try going west.",0,False
+63,go west,go west,Return to the studio to check for the coin in the room,"ACTION: go west
+PLAN: Return to the studio to check for the coin in the room",,"-= Silent Studio =-
+You find yourself in a studio. A silent one.
+
+
+
+You need an unguarded exit? You should try going east. There is an unblocked exit to the north. There is an exit to the south. Don't worry, it is unguarded. There is an exit to the west. Don't worry, it is unblocked.",0,False
+64,take coin,take coin,"Check if the coin is present in the current room, as the goal has been reached.","ACTION: take coin
+PLAN: Check if the coin is present in the current room, as the goal has been reached.",,You can't see any such thing.,0,False
+65,go east,go east,"Explore the next room to find the coin, following the path from the studio.","ACTION: go east
+PLAN: Explore the next room to find the coin, following the path from the studio.",,"-= Cellar =-
+You find yourself in a cellar. An ordinary one.
+
+
+
+You need an unguarded exit? You should try going west.",0,False
+66,go west,go west,Move west from the cellar to return to the silent studio and check for the coin there,"ACTION: go west
+PLAN: Move west from the cellar to return to the silent studio and check for the coin there",,"-= Silent Studio =-
+You find yourself in a studio. A silent one.
+
+
+
+You need an unguarded exit? You should try going east. There is an unblocked exit to the north. There is an exit to the south. Don't worry, it is unguarded. There is an exit to the west. Don't worry, it is unblocked.",0,False
+67,go east,go east,Explore the east exit from the silent studio to find the coin or reach another room with the coin,"ACTION: go east
+PLAN: Explore the east exit from the silent studio to find the coin or reach another room with the coin",,"-= Cellar =-
+You find yourself in a cellar. An ordinary one.
+
+
+
+You need an unguarded exit? You should try going west.",0,False
+68,go west,go west,Return to the silent studio to check for the coin or explore other exits from there,"ACTION: go west
+PLAN: Return to the silent studio to check for the coin or explore other exits from there",,"-= Silent Studio =-
+You find yourself in a studio. A silent one.
+
+
+
+You need an unguarded exit? You should try going east. There is an unblocked exit to the north. There is an exit to the south. Don't worry, it is unguarded. There is an exit to the west. Don't worry, it is unblocked.",0,False
+69,go north,go north,Explore the northern exit to find the coin or discover a new path not yet visited,"ACTION: go north  
+PLAN: Explore the northern exit to find the coin or discover a new path not yet visited","The recent observations form a repeating cycle of 2 states. Recent actions: go east, go west, go east, go west. Do not repeat this action sequence.","-= Pantry =-
+You are in a pantry. An usual one. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+You don't like doors? Why not try going south, that entranceway is unblocked.",0,False
+70,go south,go south,Check the southern exit to find the coin or access an unexplored area,"ACTION: go south
+PLAN: Check the southern exit to find the coin or access an unexplored area",,"-= Silent Studio =-
+You find yourself in a studio. A silent one.
+
+
+
+You need an unguarded exit? You should try going east. There is an unblocked exit to the north. There is an exit to the south. Don't worry, it is unguarded. There is an exit to the west. Don't worry, it is unblocked.",0,False
+71,go south,go south,Check the southern exit for the coin or access a new area,"ACTION: go south
+PLAN: Check the southern exit for the coin or access a new area",,"-= Fun Recreation Zone =-
+You arrive in a recreation zone. A fun kind of place.
+
+
+
+You need an unblocked exit? You should try going east. There is an unblocked exit to the north. There is an unguarded exit to the south. You don't like doors? Why not try going west, that entranceway is unguarded.",0,False
+72,go south,go south,Explore the southern exit to find the coin or access a new area where the coin might be located,"ACTION: go south
+PLAN: Explore the southern exit to find the coin or access a new area where the coin might be located",,"-= Hot Kitchen =-
+You find yourself in a kitchen. A hot one. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unguarded. There is an exit to the north. Don't worry, it is unguarded. You don't like doors? Why not try going south, that entranceway is unguarded. There is an exit to the west. Don't worry, it is unguarded.",0,False
+73,go south,go south,Explore the southern exit to locate the coin or access a room where the coin might be found,"ACTION: go south
+PLAN: Explore the southern exit to locate the coin or access a room where the coin might be found",,"-= Serious Workshop =-
+You've just sauntered into a serious workshop. Let's see what's in here.
+
+
+
+There is an unblocked exit to the north.",0,False
+74,go south,go south,Check the southern exit for the coin or access a room where the coin might be located,"ACTION: go south
+PLAN: Check the southern exit for the coin or access a room where the coin might be located",,You can't go that way.,0,False
+75,go north,go north,Explore the northern room to find the coin or identify a path leading to it,"ACTION: go north
+PLAN: Explore the northern room to find the coin or identify a path leading to it",,"-= Hot Kitchen =-
+You find yourself in a kitchen. A hot one. I guess you better just go and list everything you see here.
+
+
+
+You don't like doors? Why not try going east, that entranceway is unguarded. There is an exit to the north. Don't worry, it is unguarded. You don't like doors? Why not try going south, that entranceway is unguarded. There is an exit to the west. Don't worry, it is unguarded.",0,False
+76,go north,go north,Explore the northern room to find the coin or identify a path leading to it,"ACTION: go north
+PLAN: Explore the northern room to find the coin or identify a path leading to it",,"-= Fun Recreation Zone =-
+You arrive in a recreation zone. A fun kind of place.
+
+
+
+You need an unblocked exit? You should try going east. There is an unblocked exit to the north. There is an unguarded exit to the south. You don't like doors? Why not try going west, that entranceway is unguarded.",0,False
+77,go east,go east,Move to the north exit to explore the next room and search for the coin,"ACTION: go east
+PLAN: Move to the north exit to explore the next room and search for the coin",,"-= Super Hot Kitchenette =-
+You're now in a super hot kitchenette. Okay, just remember what you're here to do, and everything will go great.
+
+
+
+There is an unblocked exit to the west.",0,False
+78,go north,go north,Explore the room north of the super hot kitchenette to find the coin,"ACTION: go north
+PLAN: Explore the room north of the super hot kitchenette to find the coin",,You can't go that way.,0,False
+79,go west,go west,Return to the previous room to check for any visible coin or available exits,"ACTION: go west
+PLAN: Return to the previous room to check for any visible coin or available exits",,"-= Fun Recreation Zone =-
+You arrive in a recreation zone. A fun kind of place.
+
+
+
+You need an unblocked exit? You should try going east. There is an unblocked exit to the north. There is an unguarded exit to the south. You don't like doors? Why not try going west, that entranceway is unguarded.",0,True

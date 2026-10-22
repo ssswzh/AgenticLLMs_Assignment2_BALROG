@@ -1,0 +1,637 @@
+Step,Action,Executed Action,Plan,Raw Completion,Reasoning,Observation,Reward,Done
+0,take non-euclidean passkey from floor,take non-euclidean passkey from floor,Unlock the door with the non-euclidean passkey to access the next room,"ACTION: take non-euclidean passkey from floor
+PLAN: Unlock the door with the non-euclidean passkey to access the next room",,You can't see any such thing.,0,False
+1,look,look,Check if there is a locked door or container I can unlock with the passkey,"ACTION: look  
+PLAN: Check if there is a locked door or container I can unlock with the passkey",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+2,look,look,Check if there are any doors or containers that need unlocking with the passkey,"ACTION: look  
+PLAN: Check if there are any doors or containers that need unlocking with the passkey",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+3,go north,go north,Explore the entranceway to find a door or container that might require the passkey to unlock,"ACTION: go north
+PLAN: Explore the entranceway to find a door or container that might require the passkey to unlock",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+4,look,look,Check if the non-euclidean gate is lockable with the passkey I collected,"ACTION: look  
+PLAN: Check if the non-euclidean gate is lockable with the passkey I collected",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+5,unlock non-euclidean gate with non-euclidean passkey,unlock non-euclidean gate with non-euclidean passkey,Unlock the gate to access the north exit and explore the room beyond,"ACTION: unlock non-euclidean gate with non-euclidean passkey
+PLAN: Unlock the gate to access the north exit and explore the room beyond",,I only understood you as far as wanting to unlock non-euclidean gate with non-euclidean gate.,0,False
+6,go north,go north,Enter the room beyond the gate to explore and find the target object,"ACTION: go north
+PLAN: Enter the room beyond the gate to explore and find the target object",,You have to open the non-euclidean gate first.,0,False
+7,look,look,Check if there is a key or object visible that can be used to unlock the gate or help find the target object,"ACTION: look  
+PLAN: Check if there is a key or object visible that can be used to unlock the gate or help find the target object",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+8,look,look,Check for visible objects or clues that might help unlock the non-euclidean gate or reveal the target object,"ACTION: look  
+PLAN: Check for visible objects or clues that might help unlock the non-euclidean gate or reveal the target object",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+9,go south,go south,Explore the south entrance to find new objects or exits that may lead closer to the target,"ACTION: go south  
+PLAN: Explore the south entrance to find new objects or exits that may lead closer to the target",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+10,look,look,Check the room for new objects or exits that might lead to the target object,"ACTION: look  
+PLAN: Check the room for new objects or exits that might lead to the target object",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+11,go north,go north,Explore the kitchen to find a possible exit or object related to the target goal,"ACTION: go north
+PLAN: Explore the kitchen to find a possible exit or object related to the target goal",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+12,look,look,Check if there are any visible objects or exits in the kitchen that might lead to the target or a new path.,"ACTION: look  
+PLAN: Check if there are any visible objects or exits in the kitchen that might lead to the target or a new path.",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+13,go south,go south,Return to the shower to check for any new items or clues that might help progress toward the goal.,"ACTION: go south  
+PLAN: Return to the shower to check for any new items or clues that might help progress toward the goal.",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+14,look,look,Check if there are any new items or clues in the shower room that could aid in finding the target object.,"ACTION: look  
+PLAN: Check if there are any new items or clues in the shower room that could aid in finding the target object.",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+15,look,look,Examine the shower room for any hidden items or clues that might lead to the target object,"ACTION: look  
+PLAN: Examine the shower room for any hidden items or clues that might lead to the target object","The recent observations form a repeating cycle of 4 states. Recent actions: look, look, go south, look, go north, look, go south, look. Do not repeat this action sequence.","-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+16,go north,go north,Explore the kitchen to locate the closed non-euclidean gate and attempt to unlock it with the passkey,"ACTION: go north  
+PLAN: Explore the kitchen to locate the closed non-euclidean gate and attempt to unlock it with the passkey","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+17,look,look,Check if there is any other object or clue in the kitchen that might help unlock the gate,"ACTION: look  
+PLAN: Check if there is any other object or clue in the kitchen that might help unlock the gate",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+18,go south,go south,Return to the shower to see if the passkey can be used or if there's another clue,"ACTION: go south  
+PLAN: Return to the shower to see if the passkey can be used or if there's another clue",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+19,take non-euclidean passkey from floor,take non-euclidean passkey from floor,Return to kitchen to unlock the non-euclidean gate with the passkey,"ACTION: take non-euclidean passkey from floor
+PLAN: Return to kitchen to unlock the non-euclidean gate with the passkey",,You can't see any such thing.,0,False
+20,go north,go north,Move to kitchen to unlock the non-euclidean gate with the passkey,"ACTION: go north
+PLAN: Move to kitchen to unlock the non-euclidean gate with the passkey",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+21,look,look,Check if the non-euclidean gate is visible or if there's another path to the target location,"ACTION: look  
+PLAN: Check if the non-euclidean gate is visible or if there's another path to the target location",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+22,go south,go south,Reach the shower to collect the non-euclidean passkey and use it to unlock the non-euclidean gate in the kitchen,"ACTION: go south
+PLAN: Reach the shower to collect the non-euclidean passkey and use it to unlock the non-euclidean gate in the kitchen",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+23,take non-euclidean passkey from floor,take non-euclidean passkey from floor,Use the passkey to unlock the non-euclidean gate in the kitchen,"ACTION: take non-euclidean passkey from floor
+PLAN: Use the passkey to unlock the non-euclidean gate in the kitchen",,You can't see any such thing.,0,False
+24,look,look,Check if the non-euclidean gate in the kitchen has any visible details or clues about unlocking it,"ACTION: look  
+PLAN: Check if the non-euclidean gate in the kitchen has any visible details or clues about unlocking it","The recent observations form a repeating cycle of 4 states. Recent actions: go north, look, go south, take non-euclidean passkey from floor, go north, look, go south, take non-euclidean passkey from floor. Do not repeat this action sequence.","-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+25,go north,go north,Check the closed non-euclidean gate in the kitchen for possible unlocking or additional clues,"ACTION: go north  
+PLAN: Check the closed non-euclidean gate in the kitchen for possible unlocking or additional clues",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+26,look,look,Examine the closed non-euclidean gate for possible clues or requirements to unlock it,"ACTION: look  
+PLAN: Examine the closed non-euclidean gate for possible clues or requirements to unlock it",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+27,look,look,Examine the closed non-euclidean gate for possible clues or unlock requirements,"ACTION: look  
+PLAN: Examine the closed non-euclidean gate for possible clues or unlock requirements",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+28,look,look,Examine the room for hidden objects or clues that may lead to the target object or a key,"ACTION: look  
+PLAN: Examine the room for hidden objects or clues that may lead to the target object or a key","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+29,go south,go south,Check the shower for any new objects or clues that might help progress toward the goal,"ACTION: go south  
+PLAN: Check the shower for any new objects or clues that might help progress toward the goal","The action ""look"" has repeatedly left the observation unchanged for 3 steps. Do not repeat this action in the current state.","-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+30,look,look,Check if there are any new objects or clues in the shower that could help progress toward the goal,"ACTION: look  
+PLAN: Check if there are any new objects or clues in the shower that could help progress toward the goal",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+31,go north,go north,Explore the kitchen to find the closed non-euclidean gate and check for possible keys or objects inside,"ACTION: go north  
+PLAN: Explore the kitchen to find the closed non-euclidean gate and check for possible keys or objects inside",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+32,go south,go south,Move to the shower to check if the non-euclidean passkey can be used to unlock anything,"ACTION: go south  
+PLAN: Move to the shower to check if the non-euclidean passkey can be used to unlock anything",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+33,look,look,Check if there is anything else visible in the shower that might require the passkey to unlock,"ACTION: look  
+PLAN: Check if there is anything else visible in the shower that might require the passkey to unlock",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+34,look,look,Examine the shower room for any hidden objects or clues that might be related to the passkey or goal,"ACTION: look  
+PLAN: Examine the shower room for any hidden objects or clues that might be related to the passkey or goal","The recent observations form a repeating cycle of 3 states. Recent actions: look, go south, look, go north, go south, look. Do not repeat this action sequence.","-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+35,go north,go north,Move to the kitchen to check if the closed non-euclidean gate can be opened with the passkey,"ACTION: go north  
+PLAN: Move to the kitchen to check if the closed non-euclidean gate can be opened with the passkey","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+36,look,look,Check if the non-euclidean gate can be opened with the non-euclidean passkey,"ACTION: look  
+PLAN: Check if the non-euclidean gate can be opened with the non-euclidean passkey",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+37,open non-euclidean gate with non-euclidean passkey,open non-euclidean gate with non-euclidean passkey,"Unlock the gate to access the room beyond, then explore to find the target object","ACTION: open non-euclidean gate with non-euclidean passkey
+PLAN: Unlock the gate to access the room beyond, then explore to find the target object",,I only understood you as far as wanting to open non-euclidean gate with non-euclidean gate.,0,False
+38,go north,go north,Move through the now-opened gate to access the next room and search for the target object,"ACTION: go north  
+PLAN: Move through the now-opened gate to access the next room and search for the target object",,You have to open the non-euclidean gate first.,0,False
+39,look,look,Check if the non-euclidean gate is now open and if there are any visible objects or exits available,"ACTION: look  
+PLAN: Check if the non-euclidean gate is now open and if there are any visible objects or exits available",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+40,go south,go south,Return to the shower to check if the passkey is still visible and if there are new opportunities to proceed,"ACTION: go south  
+PLAN: Return to the shower to check if the passkey is still visible and if there are new opportunities to proceed",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+41,take non-euclidean passkey from floor,take non-euclidean passkey from floor,Return to kitchen to attempt opening the non-euclidean gate with the passkey,"ACTION: take non-euclidean passkey from floor  
+PLAN: Return to kitchen to attempt opening the non-euclidean gate with the passkey",,You can't see any such thing.,0,False
+42,go north,go north,Open the non-euclidean gate with the passkey I collected in the shower,"ACTION: go north
+PLAN: Open the non-euclidean gate with the passkey I collected in the shower",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+43,look,look,Check if the non-euclidean gate is now visible or if there's a new object to interact with,"ACTION: look  
+PLAN: Check if the non-euclidean gate is now visible or if there's a new object to interact with",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+44,go south,go south,Reach the shower to check for any new objects or clues that might help unlock the gate or find the target object,"ACTION: go south  
+PLAN: Reach the shower to check for any new objects or clues that might help unlock the gate or find the target object",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+45,look,look,Check if there are any new objects or clues in the shower that could help progress toward the goal.,"ACTION: look  
+PLAN: Check if there are any new objects or clues in the shower that could help progress toward the goal.",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+46,look,look,Check the room for any new objects or clues that might help unlock or access the goal.,"ACTION: look  
+PLAN: Check the room for any new objects or clues that might help unlock or access the goal.",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+47,go north,go north,Return to kitchen to check if the non-euclidean gate can now be opened with the passkey found in the shower.,"ACTION: go north  
+PLAN: Return to kitchen to check if the non-euclidean gate can now be opened with the passkey found in the shower.","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+48,look,look,Check if the non-euclidean gate is still closed and if any new objects or clues are visible in the kitchen.,"ACTION: look  
+PLAN: Check if the non-euclidean gate is still closed and if any new objects or clues are visible in the kitchen.",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+49,go south,go south,Return to the shower to check if the non-euclidean passkey can be obtained or if new clues appear,"ACTION: go south  
+PLAN: Return to the shower to check if the non-euclidean passkey can be obtained or if new clues appear",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+50,look,look,Check if there are any new objects or clues in the shower room that could help progress toward the goal.,"ACTION: look  
+PLAN: Check if there are any new objects or clues in the shower room that could help progress toward the goal.",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+51,go north,go north,Return to kitchen to attempt opening the non-euclidean gate with the passkey retrieved from the shower.,"ACTION: go north  
+PLAN: Return to kitchen to attempt opening the non-euclidean gate with the passkey retrieved from the shower.",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+52,look,look,Check if the non-euclidean gate is now visible or accessible after retrieving the passkey from the shower.,"ACTION: look  
+PLAN: Check if the non-euclidean gate is now visible or accessible after retrieving the passkey from the shower.",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+53,open non-euclidean gate with non-euclidean passkey,open non-euclidean gate with non-euclidean passkey,Unlock the gate using the passkey to access the room beyond it and explore the next area.,"ACTION: open non-euclidean gate with non-euclidean passkey  
+PLAN: Unlock the gate using the passkey to access the room beyond it and explore the next area.","The recent observations form a repeating cycle of 4 states. Recent actions: look, look, go north, look, go south, look, go north, look. Do not repeat this action sequence.",I only understood you as far as wanting to open non-euclidean gate with non-euclidean gate.,0,False
+54,go north,go north,Enter the room beyond the gate to find the target object,"ACTION: go north  
+PLAN: Enter the room beyond the gate to find the target object",,You have to open the non-euclidean gate first.,0,False
+55,look,look,Check the room for any visible objects or exits that might lead to the target object,"ACTION: look  
+PLAN: Check the room for any visible objects or exits that might lead to the target object",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+56,go south,go south,Return to the shower to check if the non-euclidean passkey can be used elsewhere or if new objects are visible,"ACTION: go south  
+PLAN: Return to the shower to check if the non-euclidean passkey can be used elsewhere or if new objects are visible",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+57,take non-euclidean passkey from floor,take non-euclidean passkey from floor,Return to kitchen to attempt opening the non-euclidean gate with the passkey,"ACTION: take non-euclidean passkey from floor  
+PLAN: Return to kitchen to attempt opening the non-euclidean gate with the passkey",,You can't see any such thing.,0,False
+58,go north,go north,Return to kitchen to open the non-euclidean gate with the passkey,"ACTION: go north  
+PLAN: Return to kitchen to open the non-euclidean gate with the passkey",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+59,look,look,Check if there is a non-euclidean gate or passkey visible in the kitchen that can be used to proceed,"ACTION: look  
+PLAN: Check if there is a non-euclidean gate or passkey visible in the kitchen that can be used to proceed",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+60,go south,go south,Reach the shower to check for the non-euclidean passkey and confirm its availability,"ACTION: go south  
+PLAN: Reach the shower to check for the non-euclidean passkey and confirm its availability",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+61,look,look,Check if the non-euclidean passkey is still visible and if any new objects or exits are present,"ACTION: look  
+PLAN: Check if the non-euclidean passkey is still visible and if any new objects or exits are present",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+62,go north,go north,Explore the room beyond the gate to locate the target object or new exits,"ACTION: go north  
+PLAN: Explore the room beyond the gate to locate the target object or new exits",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+63,go south,go south,Retrieve the passkey from the shower floor to potentially unlock the gate in the kitchen,"ACTION: go south  
+PLAN: Retrieve the passkey from the shower floor to potentially unlock the gate in the kitchen",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+64,take non-euclidean passkey from floor,take non-euclidean passkey from floor,Possess the key to unlock the non-euclidean gate in the kitchen for access to the next area,"ACTION: take non-euclidean passkey from floor  
+PLAN: Possess the key to unlock the non-euclidean gate in the kitchen for access to the next area",,You can't see any such thing.,0,False
+65,go north,go north,Unlock the non-euclidean gate with the passkey found in the shower,"ACTION: go north  
+PLAN: Unlock the non-euclidean gate with the passkey found in the shower",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+66,look,look,Check if the non-euclidean gate is still closed and if any new objects are visible in the room,"ACTION: look  
+PLAN: Check if the non-euclidean gate is still closed and if any new objects are visible in the room",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+67,go south,go south,Reach the shower to check if the non-euclidean passkey is now visible on the floor,"ACTION: go south
+PLAN: Reach the shower to check if the non-euclidean passkey is now visible on the floor",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+68,look,look,Check if the non-euclidean passkey is visible or if any new objects or exits are present in the shower room,"ACTION: look  
+PLAN: Check if the non-euclidean passkey is visible or if any new objects or exits are present in the shower room",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+69,go north,go north,Return to kitchen to attempt opening the non-euclidean gate with the passkey,"ACTION: go north  
+PLAN: Return to kitchen to attempt opening the non-euclidean gate with the passkey",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+70,look,look,Check if the non-euclidean gate is now describable or if additional details are available,"ACTION: look  
+PLAN: Check if the non-euclidean gate is now describable or if additional details are available",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+71,go south,go south,Reach the shower to check if the non-euclidean passkey is still visible or usable,"ACTION: go south
+PLAN: Reach the shower to check if the non-euclidean passkey is still visible or usable",,"-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+72,go north,go north,Proceed to the kitchen to examine the closed non-euclidean gate and look for clues or new items,"ACTION: go north
+PLAN: Proceed to the kitchen to examine the closed non-euclidean gate and look for clues or new items",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+73,look,look,Examine the closed non-euclidean gate for possible clues or requirements to unlock or open it,"ACTION: look  
+PLAN: Examine the closed non-euclidean gate for possible clues or requirements to unlock or open it",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+74,look,look,Examine the kitchen for hidden objects or clues that might help unlock the non-euclidean gate,"ACTION: look  
+PLAN: Examine the kitchen for hidden objects or clues that might help unlock the non-euclidean gate","The recent observations form a repeating cycle of 3 states. Recent actions: look, go north, look, go south, go north, look. Do not repeat this action sequence.","-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+75,go south,go south,Move to the shower to check if the passkey can be used to unlock the gate in the kitchen,"ACTION: go south  
+PLAN: Move to the shower to check if the passkey can be used to unlock the gate in the kitchen","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,False
+76,go north,go north,Unlock the non-euclidean gate in the kitchen using the non-euclidean passkey,"ACTION: go north  
+PLAN: Unlock the non-euclidean gate in the kitchen using the non-euclidean passkey",,"-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+77,look,look,Examine the kitchen for any visible objects or clues to locate the target object or key,"ACTION: look  
+PLAN: Examine the kitchen for any visible objects or clues to locate the target object or key","The recent observations form a repeating cycle of 4 states. Recent actions: go north, look, go south, go north, look, look, go south, go north. Do not repeat this action sequence.","-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+78,look,look,Examine the kitchen for hidden clues or objects that may lead to the target or a key to a locked container,"ACTION: look  
+PLAN: Examine the kitchen for hidden clues or objects that may lead to the target or a key to a locked container","The recent observations form a repeating cycle of 4 states. Recent actions: look, go south, go north, look, look, go south, go north, look. Do not repeat this action sequence.","-= Kitchen =-
+I am obligated to announce that you are now in the kitchen.
+
+
+
+There is a closed non-euclidean gate leading north. You don't like doors? Why not try going south, that entranceway is unblocked.
+
+There is a pear on the floor.",0,False
+79,go south,go south,Move to the shower to check for any new objects or clues not previously observed,"ACTION: go south  
+PLAN: Move to the shower to check for any new objects or clues not previously observed","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Shower =-
+You're now in a shower.
+
+
+
+You don't like doors? Why not try going north, that entranceway is unguarded.
+
+There is a non-euclidean passkey on the floor.",0,True

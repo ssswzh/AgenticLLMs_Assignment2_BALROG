@@ -1,0 +1,371 @@
+Step,Action,Executed Action,Plan,Raw Completion,Reasoning,Observation,Reward,Done
+0,look,look,Describe the room to identify visible objects or exits and assess the current situation.,"ACTION: look  
+PLAN: Describe the room to identify visible objects or exits and assess the current situation.",,"-= Spare Room =-
+You're now in a spare room.
+
+
+
+There is an exit to the north. Don't worry, it is unguarded.",0,False
+1,look,look,Identify visible objects and exits in the spare room to determine next steps,"ACTION: look  
+PLAN: Identify visible objects and exits in the spare room to determine next steps",,"-= Spare Room =-
+You're now in a spare room.
+
+
+
+There is an exit to the north. Don't worry, it is unguarded.",0,False
+2,go north,go north,Explore the room north of the spare room to find new exits or objects that may lead closer to the goal,"ACTION: go north
+PLAN: Explore the room north of the spare room to find new exits or objects that may lead closer to the goal","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Kitchenette =-
+You are in a kitchenette. A typical kind of place. The room is well lit.
+
+Look over there! a rack. But the thing hasn't got anything on it. You swear loudly.
+
+There is a closed gate leading east. You don't like doors? Why not try going south, that entranceway is unblocked. There is an unguarded exit to the west.",0,False
+3,look,look,Examine the rack and check for hidden objects or clues that might lead to the goal,"ACTION: look  
+PLAN: Examine the rack and check for hidden objects or clues that might lead to the goal",,"-= Kitchenette =-
+You are in a kitchenette. A typical kind of place. The room is well lit.
+
+Look over there! a rack. But the thing hasn't got anything on it. You swear loudly.
+
+There is a closed gate leading east. You don't like doors? Why not try going south, that entranceway is unblocked. There is an unguarded exit to the west.",0,False
+4,look,look,Examine the rack for visible objects or clues that might lead to the target item,"ACTION: look  
+PLAN: Examine the rack for visible objects or clues that might lead to the target item",,"-= Kitchenette =-
+You are in a kitchenette. A typical kind of place. The room is well lit.
+
+Look over there! a rack. But the thing hasn't got anything on it. You swear loudly.
+
+There is a closed gate leading east. You don't like doors? Why not try going south, that entranceway is unblocked. There is an unguarded exit to the west.",0,False
+5,go south,go south,Explore the south exit to discover new rooms and potential locations of the target object,"ACTION: go south  
+PLAN: Explore the south exit to discover new rooms and potential locations of the target object","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Spare Room =-
+You're now in a spare room.
+
+
+
+There is an exit to the north. Don't worry, it is unguarded.",0,False
+6,look,look,Examine the current room for any visible objects or exits that might lead closer to the goal,"ACTION: look  
+PLAN: Examine the current room for any visible objects or exits that might lead closer to the goal",,"-= Spare Room =-
+You're now in a spare room.
+
+
+
+There is an exit to the north. Don't worry, it is unguarded.",0,False
+7,look,look,Check for any new objects or exits after returning to the spare room,"ACTION: look  
+PLAN: Check for any new objects or exits after returning to the spare room",,"-= Spare Room =-
+You're now in a spare room.
+
+
+
+There is an exit to the north. Don't worry, it is unguarded.",0,False
+8,go west,go west,Explore the kitchenette to find hidden objects or keys that might aid in unlocking doors or containers,"ACTION: go west  
+PLAN: Explore the kitchenette to find hidden objects or keys that might aid in unlocking doors or containers","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",You can't go that way.,0,False
+9,look,look,Examine the rack in the kitchenette for visible objects or clues about hidden items or keys,"ACTION: look  
+PLAN: Examine the rack in the kitchenette for visible objects or clues about hidden items or keys",,"-= Spare Room =-
+You're now in a spare room.
+
+
+
+There is an exit to the north. Don't worry, it is unguarded.",0,False
+10,go east,go east,Check the closed gate in the kitchenette for possible exits or hidden items behind it,"ACTION: go east
+PLAN: Check the closed gate in the kitchenette for possible exits or hidden items behind it",,You can't go that way.,0,False
+11,look,look,Examine the rack in the kitchenette for visible objects or clues to the target item,"ACTION: look  
+PLAN: Examine the rack in the kitchenette for visible objects or clues to the target item","The recent observations form a repeating cycle of 2 states. Recent actions: look, go west, look, go east. Do not repeat this action sequence.","-= Spare Room =-
+You're now in a spare room.
+
+
+
+There is an exit to the north. Don't worry, it is unguarded.",0,False
+12,look,look,Examine the kitchenette room for hidden objects or clues to the target item,"ACTION: look  
+PLAN: Examine the kitchenette room for hidden objects or clues to the target item","The recent observations form a repeating cycle of 2 states. Recent actions: go west, look, go east, look. Do not repeat this action sequence.","-= Spare Room =-
+You're now in a spare room.
+
+
+
+There is an exit to the north. Don't worry, it is unguarded.",0,False
+13,go north,go north,Enter the kitchenette to inspect the rack and check for possible objects or clues,"ACTION: go north  
+PLAN: Enter the kitchenette to inspect the rack and check for possible objects or clues",,"-= Kitchenette =-
+You are in a kitchenette. A typical kind of place. The room is well lit.
+
+Look over there! a rack. But the thing hasn't got anything on it. You swear loudly.
+
+There is a closed gate leading east. You don't like doors? Why not try going south, that entranceway is unblocked. There is an unguarded exit to the west.",0,False
+14,look,look,Examine the rack for hidden objects or clues that might lead to the target item,"ACTION: look  
+PLAN: Examine the rack for hidden objects or clues that might lead to the target item",,"-= Kitchenette =-
+You are in a kitchenette. A typical kind of place. The room is well lit.
+
+Look over there! a rack. But the thing hasn't got anything on it. You swear loudly.
+
+There is a closed gate leading east. You don't like doors? Why not try going south, that entranceway is unblocked. There is an unguarded exit to the west.",0,False
+15,look,look,Examine the rack for any visible objects or clues that might lead to the target item,"ACTION: look  
+PLAN: Examine the rack for any visible objects or clues that might lead to the target item",,"-= Kitchenette =-
+You are in a kitchenette. A typical kind of place. The room is well lit.
+
+Look over there! a rack. But the thing hasn't got anything on it. You swear loudly.
+
+There is a closed gate leading east. You don't like doors? Why not try going south, that entranceway is unblocked. There is an unguarded exit to the west.",0,False
+16,go east,go east,Attempt to open the closed gate leading east to explore the room beyond,"ACTION: go east  
+PLAN: Attempt to open the closed gate leading east to explore the room beyond","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",You have to open the gate first.,0,False
+17,look,look,Check if there is any key or object that can unlock the closed gate leading east,"ACTION: look  
+PLAN: Check if there is any key or object that can unlock the closed gate leading east",,"-= Kitchenette =-
+You are in a kitchenette. A typical kind of place. The room is well lit.
+
+Look over there! a rack. But the thing hasn't got anything on it. You swear loudly.
+
+There is a closed gate leading east. You don't like doors? Why not try going south, that entranceway is unblocked. There is an unguarded exit to the west.",0,False
+18,look,look,Check for any visible key or object that could unlock the gate leading east,"ACTION: look  
+PLAN: Check for any visible key or object that could unlock the gate leading east",,"-= Kitchenette =-
+You are in a kitchenette. A typical kind of place. The room is well lit.
+
+Look over there! a rack. But the thing hasn't got anything on it. You swear loudly.
+
+There is a closed gate leading east. You don't like doors? Why not try going south, that entranceway is unblocked. There is an unguarded exit to the west.",0,False
+19,look,look,Check if any object or key is visible that could unlock the east gate,"ACTION: look  
+PLAN: Check if any object or key is visible that could unlock the east gate",,"-= Kitchenette =-
+You are in a kitchenette. A typical kind of place. The room is well lit.
+
+Look over there! a rack. But the thing hasn't got anything on it. You swear loudly.
+
+There is a closed gate leading east. You don't like doors? Why not try going south, that entranceway is unblocked. There is an unguarded exit to the west.",0,False
+20,look,look,Check for visible objects or clues that might help unlock the east gate,"ACTION: look  
+PLAN: Check for visible objects or clues that might help unlock the east gate","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Kitchenette =-
+You are in a kitchenette. A typical kind of place. The room is well lit.
+
+Look over there! a rack. But the thing hasn't got anything on it. You swear loudly.
+
+There is a closed gate leading east. You don't like doors? Why not try going south, that entranceway is unblocked. There is an unguarded exit to the west.",0,False
+21,go south,go south,Explore the southern path to find new exits or objects that might help access the east gate or the goal,"ACTION: go south  
+PLAN: Explore the southern path to find new exits or objects that might help access the east gate or the goal","The action ""look"" has repeatedly left the observation unchanged for 3 steps. Do not repeat this action in the current state.","-= Spare Room =-
+You're now in a spare room.
+
+
+
+There is an exit to the north. Don't worry, it is unguarded.",0,False
+22,look,look,Check if there are any new objects or exits in the spare room that could aid in reaching the goal,"ACTION: look  
+PLAN: Check if there are any new objects or exits in the spare room that could aid in reaching the goal",,"-= Spare Room =-
+You're now in a spare room.
+
+
+
+There is an exit to the north. Don't worry, it is unguarded.",0,False
+23,go north,go north,Explore the kitchenette to find possible objects or keys needed to unlock exits or containers,"ACTION: go north  
+PLAN: Explore the kitchenette to find possible objects or keys needed to unlock exits or containers",,"-= Kitchenette =-
+You are in a kitchenette. A typical kind of place. The room is well lit.
+
+Look over there! a rack. But the thing hasn't got anything on it. You swear loudly.
+
+There is a closed gate leading east. You don't like doors? Why not try going south, that entranceway is unblocked. There is an unguarded exit to the west.",0,False
+24,look,look,Examine the rack in the kitchenette for any visible objects or clues that might help find the target item,"ACTION: look  
+PLAN: Examine the rack in the kitchenette for any visible objects or clues that might help find the target item",,"-= Kitchenette =-
+You are in a kitchenette. A typical kind of place. The room is well lit.
+
+Look over there! a rack. But the thing hasn't got anything on it. You swear loudly.
+
+There is a closed gate leading east. You don't like doors? Why not try going south, that entranceway is unblocked. There is an unguarded exit to the west.",0,False
+25,look,look,Examine the rack for any hidden objects or clues that may lead to the target item,"ACTION: look  
+PLAN: Examine the rack for any hidden objects or clues that may lead to the target item",,"-= Kitchenette =-
+You are in a kitchenette. A typical kind of place. The room is well lit.
+
+Look over there! a rack. But the thing hasn't got anything on it. You swear loudly.
+
+There is a closed gate leading east. You don't like doors? Why not try going south, that entranceway is unblocked. There is an unguarded exit to the west.",0,False
+26,go east,go east,Open the closed gate to access the eastward room and search for hidden objects or keys,"ACTION: go east  
+PLAN: Open the closed gate to access the eastward room and search for hidden objects or keys","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",You have to open the gate first.,0,False
+27,look,look,Examine the closed gate to determine if any key or clue is visible or accessible for unlocking,"ACTION: look  
+PLAN: Examine the closed gate to determine if any key or clue is visible or accessible for unlocking",,"-= Kitchenette =-
+You are in a kitchenette. A typical kind of place. The room is well lit.
+
+Look over there! a rack. But the thing hasn't got anything on it. You swear loudly.
+
+There is a closed gate leading east. You don't like doors? Why not try going south, that entranceway is unblocked. There is an unguarded exit to the west.",0,False
+28,look,look,Examine the closed gate for visible clues or required key details to unlock it,"ACTION: look  
+PLAN: Examine the closed gate for visible clues or required key details to unlock it",,"-= Kitchenette =-
+You are in a kitchenette. A typical kind of place. The room is well lit.
+
+Look over there! a rack. But the thing hasn't got anything on it. You swear loudly.
+
+There is a closed gate leading east. You don't like doors? Why not try going south, that entranceway is unblocked. There is an unguarded exit to the west.",0,False
+29,look,look,Examine the closed gate for signs of a key or lock that might require a specific key to unlock,"ACTION: look  
+PLAN: Examine the closed gate for signs of a key or lock that might require a specific key to unlock",,"-= Kitchenette =-
+You are in a kitchenette. A typical kind of place. The room is well lit.
+
+Look over there! a rack. But the thing hasn't got anything on it. You swear loudly.
+
+There is a closed gate leading east. You don't like doors? Why not try going south, that entranceway is unblocked. There is an unguarded exit to the west.",0,False
+30,look,look,Examine the rack for hidden objects or clues that might help locate a key or the target object,"ACTION: look  
+PLAN: Examine the rack for hidden objects or clues that might help locate a key or the target object","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Kitchenette =-
+You are in a kitchenette. A typical kind of place. The room is well lit.
+
+Look over there! a rack. But the thing hasn't got anything on it. You swear loudly.
+
+There is a closed gate leading east. You don't like doors? Why not try going south, that entranceway is unblocked. There is an unguarded exit to the west.",0,False
+31,look at rack,look at rack,Check if the rack holds any object or clue that might help find the key or target item,"ACTION: look at rack  
+PLAN: Check if the rack holds any object or clue that might help find the key or target item","The action ""look"" has repeatedly left the observation unchanged for 3 steps. Do not repeat this action in the current state.",The rack is balanced.,0,False
+32,look,look,Check if the rack contains any hidden object or clue related to the gate or key,"ACTION: look  
+PLAN: Check if the rack contains any hidden object or clue related to the gate or key",,"-= Kitchenette =-
+You are in a kitchenette. A typical kind of place. The room is well lit.
+
+Look over there! a rack. But the thing hasn't got anything on it. You swear loudly.
+
+There is a closed gate leading east. You don't like doors? Why not try going south, that entranceway is unblocked. There is an unguarded exit to the west.",0,False
+33,look at rack,look at rack,Check if the rack holds any object or clue that might help unlock the east gate or reveal a key,"ACTION: look at rack  
+PLAN: Check if the rack holds any object or clue that might help unlock the east gate or reveal a key",,The rack is balanced.,0,False
+34,go south,go south,Explore the south room to find new items or exits that might lead to the east gate or a key,"ACTION: go south  
+PLAN: Explore the south room to find new items or exits that might lead to the east gate or a key","The recent observations form a repeating cycle of 2 states. Recent actions: look, look at rack, look, look at rack. Do not repeat this action sequence.","-= Spare Room =-
+You're now in a spare room.
+
+
+
+There is an exit to the north. Don't worry, it is unguarded.",0,False
+35,look,look,Check if there are any visible objects or exits that might help access the east gate or lead to a key,"ACTION: look  
+PLAN: Check if there are any visible objects or exits that might help access the east gate or lead to a key",,"-= Spare Room =-
+You're now in a spare room.
+
+
+
+There is an exit to the north. Don't worry, it is unguarded.",0,False
+36,look,look,Check for hidden objects or clues in the spare room that might help access the east gate or reveal a key,"ACTION: look  
+PLAN: Check for hidden objects or clues in the spare room that might help access the east gate or reveal a key",,"-= Spare Room =-
+You're now in a spare room.
+
+
+
+There is an exit to the north. Don't worry, it is unguarded.",0,False
+37,look at rack,look at rack,Check if the rack holds any hidden object or clue that could help progress toward the goal,"ACTION: look at rack  
+PLAN: Check if the rack holds any hidden object or clue that could help progress toward the goal","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",You can't see any such thing.,0,False
+38,go west,go west,Explore the kitchenette to find a possible key or object that might unlock the east gate or lead to the goal,"ACTION: go west  
+PLAN: Explore the kitchenette to find a possible key or object that might unlock the east gate or lead to the goal",,You can't go that way.,0,False
+39,look,look,Check if any objects or clues are visible in the kitchenette that could help unlock the east gate or lead to the goal,"ACTION: look  
+PLAN: Check if any objects or clues are visible in the kitchenette that could help unlock the east gate or lead to the goal",,"-= Spare Room =-
+You're now in a spare room.
+
+
+
+There is an exit to the north. Don't worry, it is unguarded.",0,False
+40,go north,go north,Return to kitchenette to check for keys or clues related to the east gate or goal,"ACTION: go north  
+PLAN: Return to kitchenette to check for keys or clues related to the east gate or goal",,"-= Kitchenette =-
+You are in a kitchenette. A typical kind of place. The room is well lit.
+
+Look over there! a rack. But the thing hasn't got anything on it. You swear loudly.
+
+There is a closed gate leading east. You don't like doors? Why not try going south, that entranceway is unblocked. There is an unguarded exit to the west.",0,False
+41,look at rack,look at rack,Check if the rack holds any hidden object or clue that might help with the east gate or goal,"ACTION: look at rack  
+PLAN: Check if the rack holds any hidden object or clue that might help with the east gate or goal",,The rack is balanced.,0,False
+42,look at gate,look at gate,Check if the gate has a visible key or clue to unlock it with the rack or other objects,"ACTION: look at gate  
+PLAN: Check if the gate has a visible key or clue to unlock it with the rack or other objects",,"it is what it is, a gate You can't see inside it because the lid's in your way.",0,False
+43,look at gate,look at gate,Check if the gate has a visible key or clue to unlock it with the rack or other objects,"ACTION: look at gate  
+PLAN: Check if the gate has a visible key or clue to unlock it with the rack or other objects",,"it is what it is, a gate You can't see inside it because the lid's in your way.",0,False
+44,look at rack,look at rack,Check if the rack has any object or clue that might help unlock the gate or identify a key,"ACTION: look at rack  
+PLAN: Check if the rack has any object or clue that might help unlock the gate or identify a key",,The rack is balanced.,0,False
+45,look at gate,look at gate,"Check if the gate has a hidden key or clue inside, despite the lid blocking the view","ACTION: look at gate  
+PLAN: Check if the gate has a hidden key or clue inside, despite the lid blocking the view",,"it is what it is, a gate You can't see inside it because the lid's in your way.",0,False
+46,look at gate lid,look at gate lid,Check if the lid is a container that can be opened or if it holds a key or clue,"ACTION: look at gate lid  
+PLAN: Check if the lid is a container that can be opened or if it holds a key or clue",,You can't see any such thing.,0,False
+47,look at gate lid,look at gate lid,Check if the lid is a container that can be opened or holds a key or clue,"ACTION: look at gate lid  
+PLAN: Check if the lid is a container that can be opened or holds a key or clue",,You can't see any such thing.,0,False
+48,look at gate,look at gate,Check if the gate lid is a container that might hold a key or clue to progress,"ACTION: look at gate  
+PLAN: Check if the gate lid is a container that might hold a key or clue to progress",,"it is what it is, a gate You can't see inside it because the lid's in your way.",0,False
+49,look at gate lid,look at gate lid,Check if the lid is a container that might hold a key or clue to unlock the gate,"ACTION: look at gate lid  
+PLAN: Check if the lid is a container that might hold a key or clue to unlock the gate",,You can't see any such thing.,0,False
+50,look at gate lid,look at gate lid,Check if the lid hides a key or object that could help unlock the gate,"ACTION: look at gate lid  
+PLAN: Check if the lid hides a key or object that could help unlock the gate",,You can't see any such thing.,0,False
+51,go south,go south,Explore the southern exit to find new objects or pathways that might lead closer to the goal,"ACTION: go south  
+PLAN: Explore the southern exit to find new objects or pathways that might lead closer to the goal","The recent observations form a repeating cycle of 3 states. Recent actions: look at gate, look at gate lid, look at gate lid, look at gate, look at gate lid, look at gate lid. Do not repeat this action sequence.","-= Spare Room =-
+You're now in a spare room.
+
+
+
+There is an exit to the north. Don't worry, it is unguarded.",0,False
+52,look,look,Examine the room for visible objects or exits that might lead toward the goal,"ACTION: look  
+PLAN: Examine the room for visible objects or exits that might lead toward the goal",,"-= Spare Room =-
+You're now in a spare room.
+
+
+
+There is an exit to the north. Don't worry, it is unguarded.",0,False
+53,look,look,Check for any visible objects or exits that might lead to the goal room,"ACTION: look  
+PLAN: Check for any visible objects or exits that might lead to the goal room",,"-= Spare Room =-
+You're now in a spare room.
+
+
+
+There is an exit to the north. Don't worry, it is unguarded.",0,False
+54,look,look,Examine the room for any hidden objects or new exits that might lead to a new area or the target object,"ACTION: look  
+PLAN: Examine the room for any hidden objects or new exits that might lead to a new area or the target object","The action ""look"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Spare Room =-
+You're now in a spare room.
+
+
+
+There is an exit to the north. Don't worry, it is unguarded.",0,False
+55,look at gate,look at gate,Check if the gate lid contains a key or object that might unlock a path to another room or the target object,"ACTION: look at gate  
+PLAN: Check if the gate lid contains a key or object that might unlock a path to another room or the target object","The action ""look"" has repeatedly left the observation unchanged for 3 steps. Do not repeat this action in the current state.",You can't see any such thing.,0,False
+56,go north,go north,Return to the kitchenette to investigate the gate and lid for hidden objects or keys,"ACTION: go north  
+PLAN: Return to the kitchenette to investigate the gate and lid for hidden objects or keys",,"-= Kitchenette =-
+You are in a kitchenette. A typical kind of place. The room is well lit.
+
+Look over there! a rack. But the thing hasn't got anything on it. You swear loudly.
+
+There is a closed gate leading east. You don't like doors? Why not try going south, that entranceway is unblocked. There is an unguarded exit to the west.",0,False
+57,look at gate,look at gate,Check if the gate or its lid contains any visible objects or clues,"ACTION: look at gate  
+PLAN: Check if the gate or its lid contains any visible objects or clues",,"it is what it is, a gate You can't see inside it because the lid's in your way.",0,False
+58,look at rack,look at rack,Check if the rack has anything visible or if it holds a key or object that might help with the gate,"ACTION: look at rack  
+PLAN: Check if the rack has anything visible or if it holds a key or object that might help with the gate",,The rack is balanced.,0,False
+59,look at gate lid,look at gate lid,Check if the gate lid holds a key or can be opened with something in inventory,"ACTION: look at gate lid  
+PLAN: Check if the gate lid holds a key or can be opened with something in inventory",,You can't see any such thing.,0,False
+60,look at gate,look at gate,Check if the gate lid contains a key or hidden object that could aid in opening the gate,"ACTION: look at gate  
+PLAN: Check if the gate lid contains a key or hidden object that could aid in opening the gate",,"it is what it is, a gate You can't see inside it because the lid's in your way.",0,False
+61,look at gate lid,look at gate lid,Check if the lid hides a key or object that can unlock the gate,"ACTION: look at gate lid  
+PLAN: Check if the lid hides a key or object that can unlock the gate",,You can't see any such thing.,0,False
+62,go south,go south,Explore the south exit to find clues or objects related to the gate or its lid,"ACTION: go south  
+PLAN: Explore the south exit to find clues or objects related to the gate or its lid",,"-= Spare Room =-
+You're now in a spare room.
+
+
+
+There is an exit to the north. Don't worry, it is unguarded.",0,False
+63,look at rack,look at rack,Check if the rack holds anything useful or if it connects to the gate mechanism,"ACTION: look at rack  
+PLAN: Check if the rack holds anything useful or if it connects to the gate mechanism",,You can't see any such thing.,0,False
+64,look at gate,look at gate,Investigate the gate's lid and possible connection to the rack or other objects in the room,"ACTION: look at gate  
+PLAN: Investigate the gate's lid and possible connection to the rack or other objects in the room",,You can't see any such thing.,0,False
+65,look at rack,look at rack,Check if the rack holds anything relevant to the gate or gate lid,"ACTION: look at rack  
+PLAN: Check if the rack holds anything relevant to the gate or gate lid",,You can't see any such thing.,0,False
+66,go west,go west,Explore the west exit to discover new objects or rooms that might contain clues or the target object.,"ACTION: go west
+PLAN: Explore the west exit to discover new objects or rooms that might contain clues or the target object.",The observation has remained unchanged for 2 consecutive actions. Try a different action or subgoal.,You can't go that way.,0,False
+67,look,look,Examine the room for visible objects or exits that might lead to the target or provide clues.,"ACTION: look  
+PLAN: Examine the room for visible objects or exits that might lead to the target or provide clues.",,"-= Spare Room =-
+You're now in a spare room.
+
+
+
+There is an exit to the north. Don't worry, it is unguarded.",0,False
+68,go north,go north,Explore the kitchenette to find objects or exits that may lead to the goal or hidden items.,"ACTION: go north  
+PLAN: Explore the kitchenette to find objects or exits that may lead to the goal or hidden items.",,"-= Kitchenette =-
+You are in a kitchenette. A typical kind of place. The room is well lit.
+
+Look over there! a rack. But the thing hasn't got anything on it. You swear loudly.
+
+There is a closed gate leading east. You don't like doors? Why not try going south, that entranceway is unblocked. There is an unguarded exit to the west.",0,False
+69,look at gate lid,look at gate lid,Check if the gate lid contains a key or hidden object that might aid in unlocking a door or container,"ACTION: look at gate lid  
+PLAN: Check if the gate lid contains a key or hidden object that might aid in unlocking a door or container",,You can't see any such thing.,0,False
+70,look at gate,look at gate,Check if the gate lid hides a key or object that could unlock a container or door in another room,"ACTION: look at gate  
+PLAN: Check if the gate lid hides a key or object that could unlock a container or door in another room",,"it is what it is, a gate You can't see inside it because the lid's in your way.",0,False
+71,look at rack,look at rack,Check if the rack holds any visible object that could be useful for opening the gate or other containers,"ACTION: look at rack  
+PLAN: Check if the rack holds any visible object that could be useful for opening the gate or other containers",,The rack is balanced.,0,False
+72,look at rack,look at rack,Check if the rack contains any object that could help open the gate or access hidden areas,"ACTION: look at rack  
+PLAN: Check if the rack contains any object that could help open the gate or access hidden areas",,The rack is balanced.,0,False
+73,look at rack,look at rack,Check if the rack holds a key or item that could unlock the gate or access another area,"ACTION: look at rack  
+PLAN: Check if the rack holds a key or item that could unlock the gate or access another area",,The rack is balanced.,0,False
+74,go south,go south,Explore the south exit to find new objects or doors that might lead to the goal or a key,"ACTION: go south  
+PLAN: Explore the south exit to find new objects or doors that might lead to the goal or a key","The action ""look at rack"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","-= Spare Room =-
+You're now in a spare room.
+
+
+
+There is an exit to the north. Don't worry, it is unguarded.",0,False
+75,look at gate,look at gate,Check if the gate lid holds a clue or key to opening the gate or accessing something inside,"ACTION: look at gate  
+PLAN: Check if the gate lid holds a clue or key to opening the gate or accessing something inside",,You can't see any such thing.,0,False
+76,look at gate lid,look at gate lid,Check if the lid contains a key or clue to unlock the gate or access the inside,"ACTION: look at gate lid  
+PLAN: Check if the lid contains a key or clue to unlock the gate or access the inside",,You can't see any such thing.,0,False
+77,look at rack,look at rack,Check if the rack holds any object that might help unlock the gate or access the gate lid,"ACTION: look at rack  
+PLAN: Check if the rack holds any object that might help unlock the gate or access the gate lid",,You can't see any such thing.,0,False
+78,go east,go east,Examine the closed gate and its lid to see if there is a key or object inside that can help unlock it,"ACTION: go east  
+PLAN: Examine the closed gate and its lid to see if there is a key or object inside that can help unlock it",The observation has remained unchanged for 2 consecutive actions. Try a different action or subgoal.,You can't go that way.,0,False
+79,look at gate,look at gate,Check if the gate or its lid contains a key or object that might help unlock it,"ACTION: look at gate  
+PLAN: Check if the gate or its lid contains a key or object that might help unlock it",,You can't see any such thing.,0,True

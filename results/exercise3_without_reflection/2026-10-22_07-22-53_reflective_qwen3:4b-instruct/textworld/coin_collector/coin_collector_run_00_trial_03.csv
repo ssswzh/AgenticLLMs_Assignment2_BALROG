@@ -1,0 +1,476 @@
+Step,Action,Executed Action,Plan,Raw Completion,Reasoning,Observation,Reward,Done
+0,go north,go north,Explore the north exit to discover new rooms and potential paths toward the coin.,"ACTION: go north
+PLAN: Explore the north exit to discover new rooms and potential paths toward the coin.",,"-= Chamber =-
+Well how about that, you are in a place we're calling a chamber.
+
+
+
+There is an unblocked exit to the south.",0,False
+1,go south,go south,Return to the closet to check for new exits or clues that might lead to the coin.,"ACTION: go south
+PLAN: Return to the closet to check for new exits or clues that might lead to the coin.",,"-= Closet =-
+Fancy seeing you here. Here, by the way, being the closet.
+
+
+
+There is an exit to the north. Don't worry, it is unblocked. You don't like doors? Why not try going south, that entranceway is unblocked. You need an unguarded exit? You should try going west.",0,False
+2,go west,go west,Explore the west exit to find new paths or the coin in the closet.,"ACTION: go west
+PLAN: Explore the west exit to find new paths or the coin in the closet.",,"-= Kitchen =-
+You have stumbled into the most usual of all possible kitchens. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an exit to the east. Don't worry, it is unblocked.",0,False
+3,go east,go east,Explore the east exit to discover new rooms or find the coin,"ACTION: go east
+PLAN: Explore the east exit to discover new rooms or find the coin",,"-= Closet =-
+Fancy seeing you here. Here, by the way, being the closet.
+
+
+
+There is an exit to the north. Don't worry, it is unblocked. You don't like doors? Why not try going south, that entranceway is unblocked. You need an unguarded exit? You should try going west.",0,False
+4,go west,go west,Move west from the closet to explore the new room and check for the coin,"ACTION: go west  
+PLAN: Move west from the closet to explore the new room and check for the coin",,"-= Kitchen =-
+You have stumbled into the most usual of all possible kitchens. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an exit to the east. Don't worry, it is unblocked.",0,False
+5,go north,go north,Explore the chamber north of the closet to break the cycle and find a new path forward,"ACTION: go north  
+PLAN: Explore the chamber north of the closet to break the cycle and find a new path forward","The recent observations form a repeating cycle of 2 states. Recent actions: go south, go west, go east, go west. Do not repeat this action sequence.",You can't go that way.,0,False
+6,go south,go south,Return to the chamber and check for exits that lead to new areas or the coin,"ACTION: go south  
+PLAN: Return to the chamber and check for exits that lead to new areas or the coin",,You can't go that way.,0,False
+7,go east,go east,Explore the kitchen to the east for possible exits or the coin,"ACTION: go east  
+PLAN: Explore the kitchen to the east for possible exits or the coin",,"-= Closet =-
+Fancy seeing you here. Here, by the way, being the closet.
+
+
+
+There is an exit to the north. Don't worry, it is unblocked. You don't like doors? Why not try going south, that entranceway is unblocked. You need an unguarded exit? You should try going west.",0,False
+8,go east,go east,Explore the kitchen for the coin or exits to discover the next room or objective,"ACTION: go east  
+PLAN: Explore the kitchen for the coin or exits to discover the next room or objective",,You can't go that way.,0,False
+9,go west,go west,Check the west exit in the closet for possible access to new rooms or the coin,"ACTION: go west  
+PLAN: Check the west exit in the closet for possible access to new rooms or the coin",,"-= Kitchen =-
+You have stumbled into the most usual of all possible kitchens. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an exit to the east. Don't worry, it is unblocked.",0,False
+10,go east,go east,Explore the east exit in the kitchen to find new rooms or the coin,"ACTION: go east
+PLAN: Explore the east exit in the kitchen to find new rooms or the coin",,"-= Closet =-
+Fancy seeing you here. Here, by the way, being the closet.
+
+
+
+There is an exit to the north. Don't worry, it is unblocked. You don't like doors? Why not try going south, that entranceway is unblocked. You need an unguarded exit? You should try going west.",0,False
+11,go east,go east,Check the east exit in the kitchen for new rooms or the coin,"ACTION: go east  
+PLAN: Check the east exit in the kitchen for new rooms or the coin",,You can't go that way.,0,False
+12,go west,go west,Explore the west exit in the closet to find a new room or the coin,"ACTION: go west  
+PLAN: Explore the west exit in the closet to find a new room or the coin",,"-= Kitchen =-
+You have stumbled into the most usual of all possible kitchens. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an exit to the east. Don't worry, it is unblocked.",0,False
+13,go north,go north,Explore the northern exit from the closet to find a new room or the coin,"ACTION: go north  
+PLAN: Explore the northern exit from the closet to find a new room or the coin","The recent observations form a repeating cycle of 3 states. Recent actions: go east, go east, go west, go east, go east, go west. Do not repeat this action sequence.",You can't go that way.,0,False
+14,go west,go west,Move west from the kitchen to reach the closet and check for exits or the coin,"ACTION: go west  
+PLAN: Move west from the kitchen to reach the closet and check for exits or the coin",,You can't go that way.,0,False
+15,go west,go west,Move west to the closet and check for exits or the coin,"ACTION: go west
+PLAN: Move west to the closet and check for exits or the coin",,You can't go that way.,0,False
+16,go north,go north,Check if there is a path north from the kitchen that leads to a new area or the coin location,"ACTION: go north  
+PLAN: Check if there is a path north from the kitchen that leads to a new area or the coin location","The action ""go west"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.",You can't go that way.,0,False
+17,go east,go east,Explore the eastern path from the kitchen to discover new areas or the coin location,"ACTION: go east  
+PLAN: Explore the eastern path from the kitchen to discover new areas or the coin location",The observation has remained unchanged for 3 consecutive actions. Try a different action or subgoal.,"-= Closet =-
+Fancy seeing you here. Here, by the way, being the closet.
+
+
+
+There is an exit to the north. Don't worry, it is unblocked. You don't like doors? Why not try going south, that entranceway is unblocked. You need an unguarded exit? You should try going west.",0,False
+18,go west,go west,Check the western exit from the closet to explore new areas or locate the coin,"ACTION: go west
+PLAN: Check the western exit from the closet to explore new areas or locate the coin",,"-= Kitchen =-
+You have stumbled into the most usual of all possible kitchens. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an exit to the east. Don't worry, it is unblocked.",0,False
+19,go east,go east,Explore the eastern exit to discover new rooms and potentially find the coin,"ACTION: go east
+PLAN: Explore the eastern exit to discover new rooms and potentially find the coin",,"-= Closet =-
+Fancy seeing you here. Here, by the way, being the closet.
+
+
+
+There is an exit to the north. Don't worry, it is unblocked. You don't like doors? Why not try going south, that entranceway is unblocked. You need an unguarded exit? You should try going west.",0,False
+20,go west,go west,Check the western exit in the closet for possible new rooms or the coin,"ACTION: go west
+PLAN: Check the western exit in the closet for possible new rooms or the coin",,"-= Kitchen =-
+You have stumbled into the most usual of all possible kitchens. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an exit to the east. Don't worry, it is unblocked.",0,False
+21,go north,go north,Explore the northern exit from the closet to discover new rooms or the coin outside the current loop,"ACTION: go north
+PLAN: Explore the northern exit from the closet to discover new rooms or the coin outside the current loop","The recent observations form a repeating cycle of 2 states. Recent actions: go east, go west, go east, go west. Do not repeat this action sequence.",You can't go that way.,0,False
+22,go east,go east,"Move to the kitchen to check for exits or the coin, as it is the only accessible room in this loop.","ACTION: go east  
+PLAN: Move to the kitchen to check for exits or the coin, as it is the only accessible room in this loop.",,"-= Closet =-
+Fancy seeing you here. Here, by the way, being the closet.
+
+
+
+There is an exit to the north. Don't worry, it is unblocked. You don't like doors? Why not try going south, that entranceway is unblocked. You need an unguarded exit? You should try going west.",0,False
+23,go west,go west,Move to the kitchen to explore exits and check for the coin in the next step.,"ACTION: go west
+PLAN: Move to the kitchen to explore exits and check for the coin in the next step.",,"-= Kitchen =-
+You have stumbled into the most usual of all possible kitchens. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an exit to the east. Don't worry, it is unblocked.",0,False
+24,go east,go east,Explore the east exit from the kitchen to find a new room or the coin.,"ACTION: go east
+PLAN: Explore the east exit from the kitchen to find a new room or the coin.",,"-= Closet =-
+Fancy seeing you here. Here, by the way, being the closet.
+
+
+
+There is an exit to the north. Don't worry, it is unblocked. You don't like doors? Why not try going south, that entranceway is unblocked. You need an unguarded exit? You should try going west.",0,False
+25,go west,go west,Move west from the closet to check if there is a new path or the coin in the kitchen room,"ACTION: go west
+PLAN: Move west from the closet to check if there is a new path or the coin in the kitchen room",,"-= Kitchen =-
+You have stumbled into the most usual of all possible kitchens. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an exit to the east. Don't worry, it is unblocked.",0,False
+26,go north,go north,"Explore the northern exit from the closet, as it is mentioned as unblocked and may lead to a new area or the coin.","ACTION: go north  
+PLAN: Explore the northern exit from the closet, as it is mentioned as unblocked and may lead to a new area or the coin.","The recent observations form a repeating cycle of 2 states. Recent actions: go east, go west, go east, go west. Do not repeat this action sequence.",You can't go that way.,0,False
+27,go east,go east,Move to the east exit from the kitchen to explore the next room and search for the coin.,"ACTION: go east  
+PLAN: Move to the east exit from the kitchen to explore the next room and search for the coin.",,"-= Closet =-
+Fancy seeing you here. Here, by the way, being the closet.
+
+
+
+There is an exit to the north. Don't worry, it is unblocked. You don't like doors? Why not try going south, that entranceway is unblocked. You need an unguarded exit? You should try going west.",0,False
+28,go west,go west,Move west from the closet to explore the kitchen and check for the coin in the room.,"ACTION: go west
+PLAN: Move west from the closet to explore the kitchen and check for the coin in the room.",,"-= Kitchen =-
+You have stumbled into the most usual of all possible kitchens. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an exit to the east. Don't worry, it is unblocked.",0,False
+29,go east,go east,Move to the closet to check for the coin and explore possible exits from there.,"ACTION: go east
+PLAN: Move to the closet to check for the coin and explore possible exits from there.",,"-= Closet =-
+Fancy seeing you here. Here, by the way, being the closet.
+
+
+
+There is an exit to the north. Don't worry, it is unblocked. You don't like doors? Why not try going south, that entranceway is unblocked. You need an unguarded exit? You should try going west.",0,False
+30,go west,go west,Move to the kitchen to check for the coin and explore available exits from there.,"ACTION: go west
+PLAN: Move to the kitchen to check for the coin and explore available exits from there.",,"-= Kitchen =-
+You have stumbled into the most usual of all possible kitchens. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an exit to the east. Don't worry, it is unblocked.",0,False
+31,go north,go north,Check if there is a path north from the kitchen that leads to a new area or the coin location,"ACTION: go north  
+PLAN: Check if there is a path north from the kitchen that leads to a new area or the coin location","The recent observations form a repeating cycle of 2 states. Recent actions: go east, go west, go east, go west. Do not repeat this action sequence.",You can't go that way.,0,False
+32,go east,go east,Explore the east exit from the kitchen to discover new rooms or reach the coin location,"ACTION: go east  
+PLAN: Explore the east exit from the kitchen to discover new rooms or reach the coin location",,"-= Closet =-
+Fancy seeing you here. Here, by the way, being the closet.
+
+
+
+There is an exit to the north. Don't worry, it is unblocked. You don't like doors? Why not try going south, that entranceway is unblocked. You need an unguarded exit? You should try going west.",0,False
+33,go west,go west,Move to the south exit from the closet to explore new areas in the maze,"ACTION: go west  
+PLAN: Move to the south exit from the closet to explore new areas in the maze",,"-= Kitchen =-
+You have stumbled into the most usual of all possible kitchens. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an exit to the east. Don't worry, it is unblocked.",0,False
+34,go east,go east,Explore the east exit to discover new rooms and advance toward the coin location,"ACTION: go east
+PLAN: Explore the east exit to discover new rooms and advance toward the coin location",,"-= Closet =-
+Fancy seeing you here. Here, by the way, being the closet.
+
+
+
+There is an exit to the north. Don't worry, it is unblocked. You don't like doors? Why not try going south, that entranceway is unblocked. You need an unguarded exit? You should try going west.",0,False
+35,go west,go west,Move to the west exit to explore the closet and check for the coin or new exits,"ACTION: go west
+PLAN: Move to the west exit to explore the closet and check for the coin or new exits",,"-= Kitchen =-
+You have stumbled into the most usual of all possible kitchens. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an exit to the east. Don't worry, it is unblocked.",0,False
+36,go north,go north,"Attempt the north exit from the closet, which is unblocked and may lead to a new area or the coin","ACTION: go north  
+PLAN: Attempt the north exit from the closet, which is unblocked and may lead to a new area or the coin","The recent observations form a repeating cycle of 2 states. Recent actions: go east, go west, go east, go west. Do not repeat this action sequence.",You can't go that way.,0,False
+37,go east,go east,Explore the east exit from the closet to discover new areas or the coin,"ACTION: go east  
+PLAN: Explore the east exit from the closet to discover new areas or the coin",,"-= Closet =-
+Fancy seeing you here. Here, by the way, being the closet.
+
+
+
+There is an exit to the north. Don't worry, it is unblocked. You don't like doors? Why not try going south, that entranceway is unblocked. You need an unguarded exit? You should try going west.",0,False
+38,go west,go west,Move to the south exit from the closet to explore new rooms and find the coin,"ACTION: go west  
+PLAN: Move to the south exit from the closet to explore new rooms and find the coin",,"-= Kitchen =-
+You have stumbled into the most usual of all possible kitchens. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an exit to the east. Don't worry, it is unblocked.",0,False
+39,go east,go east,Explore the kitchen to find any new exits or clues leading to the coin,"ACTION: go east  
+PLAN: Explore the kitchen to find any new exits or clues leading to the coin",,"-= Closet =-
+Fancy seeing you here. Here, by the way, being the closet.
+
+
+
+There is an exit to the north. Don't worry, it is unblocked. You don't like doors? Why not try going south, that entranceway is unblocked. You need an unguarded exit? You should try going west.",0,False
+40,go south,go south,Explore the southern exit from the closet to discover new rooms or paths leading closer to the coin,"ACTION: go south
+PLAN: Explore the southern exit from the closet to discover new rooms or paths leading closer to the coin",,"-= Laundry Place =-
+You arrive in a laundry place. A standard kind of place.
+
+
+
+There is an exit to the east. Don't worry, it is unblocked. There is an exit to the north. Don't worry, it is unguarded. There is an exit to the south. Don't worry, it is unguarded. You don't like doors? Why not try going west, that entranceway is unguarded.",0,False
+41,go south,go south,Explore the southern exit to find new areas and potentially locate the coin in the next room,"ACTION: go south
+PLAN: Explore the southern exit to find new areas and potentially locate the coin in the next room",,"-= Spare Room =-
+You've entered a spare room.
+
+
+
+There is an exit to the east. Don't worry, it is unblocked. You need an unblocked exit? You should try going north. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unguarded.",0,False
+42,go south,go south,Check the room south to find potential paths or the coin in the next area,"ACTION: go south
+PLAN: Check the room south to find potential paths or the coin in the next area",,"-= Unreasonably Hot Kitchenette =-
+You arrive in a kitchenette. An unreasonably hot kind of place. You can barely contain your excitement.
+
+
+
+You need an unblocked exit? You should try going east. There is an unblocked exit to the north. You need an unblocked exit? You should try going south. You need an unguarded exit? You should try going west.",0,False
+43,go south,go south,Explore the room south to find the coin or discover new exits leading closer to the goal,"ACTION: go south
+PLAN: Explore the room south to find the coin or discover new exits leading closer to the goal",,"-= Steamy Dish-Pit =-
+You find yourself in a dish-pit. A steamy kind of place.
+
+
+
+You need an unguarded exit? You should try going east. There is an unguarded exit to the north. There is an exit to the south. Don't worry, it is unblocked. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+44,go south,go south,Move south to explore the next room and check for the coin or new exits,"ACTION: go south
+PLAN: Move south to explore the next room and check for the coin or new exits",,"-= Spacious Garage =-
+You've entered a spacious garage. Let's see what's in here.
+
+
+
+There is an exit to the north. Don't worry, it is unguarded.",0,False
+45,go south,go south,Explore the room south to find the coin or new exits,"ACTION: go south
+PLAN: Explore the room south to find the coin or new exits",,You can't go that way.,0,False
+46,go north,go north,Check the northern exit for new rooms or the coin,"ACTION: go north
+PLAN: Check the northern exit for new rooms or the coin",,"-= Steamy Dish-Pit =-
+You find yourself in a dish-pit. A steamy kind of place.
+
+
+
+You need an unguarded exit? You should try going east. There is an unguarded exit to the north. There is an exit to the south. Don't worry, it is unblocked. You don't like doors? Why not try going west, that entranceway is unblocked.",0,False
+47,go north,go north,Explore the room north of the steamy dish-pit to find the coin or new exits,"ACTION: go north
+PLAN: Explore the room north of the steamy dish-pit to find the coin or new exits",,"-= Unreasonably Hot Kitchenette =-
+You arrive in a kitchenette. An unreasonably hot kind of place. You can barely contain your excitement.
+
+
+
+You need an unblocked exit? You should try going east. There is an unblocked exit to the north. You need an unblocked exit? You should try going south. You need an unguarded exit? You should try going west.",0,False
+48,go west,go west,Check the west exit of the unreasonably hot kitchenette for the coin or new paths,"ACTION: go west
+PLAN: Check the west exit of the unreasonably hot kitchenette for the coin or new paths",,"-= Garage =-
+You arrive in a garage. An usual one.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded.",0,False
+49,go east,go east,Explore the east exit of the garage to find the coin or new pathways,"ACTION: go east
+PLAN: Explore the east exit of the garage to find the coin or new pathways",,"-= Unreasonably Hot Kitchenette =-
+You arrive in a kitchenette. An unreasonably hot kind of place. You can barely contain your excitement.
+
+
+
+You need an unblocked exit? You should try going east. There is an unblocked exit to the north. You need an unblocked exit? You should try going south. You need an unguarded exit? You should try going west.",0,False
+50,go east,go east,Move to the next room to check for the coin or new exits,"ACTION: go east
+PLAN: Move to the next room to check for the coin or new exits",,"-= Study =-
+You arrive in a study.
+
+
+
+There is an exit to the west. Don't worry, it is unblocked.",0,False
+51,go west,go west,Check the previous room for the coin or new exits,"ACTION: go west
+PLAN: Check the previous room for the coin or new exits",,"-= Unreasonably Hot Kitchenette =-
+You arrive in a kitchenette. An unreasonably hot kind of place. You can barely contain your excitement.
+
+
+
+You need an unblocked exit? You should try going east. There is an unblocked exit to the north. You need an unblocked exit? You should try going south. You need an unguarded exit? You should try going west.",0,False
+52,go west,go west,Check the kitchenette's west exit for the coin or new accessible rooms,"ACTION: go west
+PLAN: Check the kitchenette's west exit for the coin or new accessible rooms",,"-= Garage =-
+You arrive in a garage. An usual one.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded.",0,False
+53,go east,go east,Explore the next room to the east for the coin or new exits,"ACTION: go east
+PLAN: Explore the next room to the east for the coin or new exits",,"-= Unreasonably Hot Kitchenette =-
+You arrive in a kitchenette. An unreasonably hot kind of place. You can barely contain your excitement.
+
+
+
+You need an unblocked exit? You should try going east. There is an unblocked exit to the north. You need an unblocked exit? You should try going south. You need an unguarded exit? You should try going west.",0,False
+54,go east,go east,Explore the room to the east for the coin or new exits,"ACTION: go east
+PLAN: Explore the room to the east for the coin or new exits",,"-= Study =-
+You arrive in a study.
+
+
+
+There is an exit to the west. Don't worry, it is unblocked.",0,False
+55,go north,go north,Check the north exit for the coin or new pathways to break the cycle and progress toward the goal,"ACTION: go north  
+PLAN: Check the north exit for the coin or new pathways to break the cycle and progress toward the goal","The recent observations form a repeating cycle of 4 states. Recent actions: go north, go west, go east, go east, go west, go west, go east, go east. Do not repeat this action sequence.",You can't go that way.,0,False
+56,go west,go west,Move to the previous room to explore the west exit and search for the coin or new paths,"ACTION: go west  
+PLAN: Move to the previous room to explore the west exit and search for the coin or new paths",,"-= Unreasonably Hot Kitchenette =-
+You arrive in a kitchenette. An unreasonably hot kind of place. You can barely contain your excitement.
+
+
+
+You need an unblocked exit? You should try going east. There is an unblocked exit to the north. You need an unblocked exit? You should try going south. You need an unguarded exit? You should try going west.",0,False
+57,go west,go west,Move to the study to check for the coin or new exits,"ACTION: go west
+PLAN: Move to the study to check for the coin or new exits",,"-= Garage =-
+You arrive in a garage. An usual one.
+
+
+
+There is an exit to the east. Don't worry, it is unguarded.",0,False
+58,go east,go east,Move to the kitchenette to explore new exits and check for the coin,"ACTION: go east  
+PLAN: Move to the kitchenette to explore new exits and check for the coin",,"-= Unreasonably Hot Kitchenette =-
+You arrive in a kitchenette. An unreasonably hot kind of place. You can barely contain your excitement.
+
+
+
+You need an unblocked exit? You should try going east. There is an unblocked exit to the north. You need an unblocked exit? You should try going south. You need an unguarded exit? You should try going west.",0,False
+59,go north,go north,Explore the north exit of the kitchenette to find the coin or access a new room,"ACTION: go north
+PLAN: Explore the north exit of the kitchenette to find the coin or access a new room",,"-= Spare Room =-
+You've entered a spare room.
+
+
+
+There is an exit to the east. Don't worry, it is unblocked. You need an unblocked exit? You should try going north. You don't like doors? Why not try going south, that entranceway is unguarded. You don't like doors? Why not try going west, that entranceway is unguarded.",0,False
+60,go north,go north,Check the north exit to access a new room and look for the coin,"ACTION: go north
+PLAN: Check the north exit to access a new room and look for the coin",,"-= Laundry Place =-
+You arrive in a laundry place. A standard kind of place.
+
+
+
+There is an exit to the east. Don't worry, it is unblocked. There is an exit to the north. Don't worry, it is unguarded. There is an exit to the south. Don't worry, it is unguarded. You don't like doors? Why not try going west, that entranceway is unguarded.",0,False
+61,go north,go north,Explore the room to the north for any visible coin or exit,"ACTION: go north
+PLAN: Explore the room to the north for any visible coin or exit",,"-= Closet =-
+Fancy seeing you here. Here, by the way, being the closet.
+
+
+
+There is an exit to the north. Don't worry, it is unblocked. You don't like doors? Why not try going south, that entranceway is unblocked. You need an unguarded exit? You should try going west.",0,False
+62,go north,go north,Check the room north for the coin or any exit that might lead to the goal,"ACTION: go north
+PLAN: Check the room north for the coin or any exit that might lead to the goal",,"-= Chamber =-
+Well how about that, you are in a place we're calling a chamber.
+
+
+
+There is an unblocked exit to the south.",0,False
+63,go south,go south,Return to the previous room to check for the coin or viable exits leading to the goal,"ACTION: go south
+PLAN: Return to the previous room to check for the coin or viable exits leading to the goal",,"-= Closet =-
+Fancy seeing you here. Here, by the way, being the closet.
+
+
+
+There is an exit to the north. Don't worry, it is unblocked. You don't like doors? Why not try going south, that entranceway is unblocked. You need an unguarded exit? You should try going west.",0,False
+64,go west,go west,Check if the west exit leads to a room with the coin or a path toward the goal,"ACTION: go west
+PLAN: Check if the west exit leads to a room with the coin or a path toward the goal",,"-= Kitchen =-
+You have stumbled into the most usual of all possible kitchens. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an exit to the east. Don't worry, it is unblocked.",0,False
+65,go east,go east,Explore the east exit to find the coin or reach a room with the goal,"ACTION: go east
+PLAN: Explore the east exit to find the coin or reach a room with the goal",,"-= Closet =-
+Fancy seeing you here. Here, by the way, being the closet.
+
+
+
+There is an exit to the north. Don't worry, it is unblocked. You don't like doors? Why not try going south, that entranceway is unblocked. You need an unguarded exit? You should try going west.",0,False
+66,go north,go north,Move north to explore the chamber and check for the coin or exits leading to the goal,"ACTION: go north
+PLAN: Move north to explore the chamber and check for the coin or exits leading to the goal",,"-= Chamber =-
+Well how about that, you are in a place we're calling a chamber.
+
+
+
+There is an unblocked exit to the south.",0,False
+67,go south,go south,Return to the closet to check for the coin or unguarded exits leading to the goal,"ACTION: go south
+PLAN: Return to the closet to check for the coin or unguarded exits leading to the goal",,"-= Closet =-
+Fancy seeing you here. Here, by the way, being the closet.
+
+
+
+There is an exit to the north. Don't worry, it is unblocked. You don't like doors? Why not try going south, that entranceway is unblocked. You need an unguarded exit? You should try going west.",0,False
+68,go west,go west,Check the west exit in the closet for the coin or unguarded path to the goal,"ACTION: go west
+PLAN: Check the west exit in the closet for the coin or unguarded path to the goal",,"-= Kitchen =-
+You have stumbled into the most usual of all possible kitchens. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an exit to the east. Don't worry, it is unblocked.",0,False
+69,go east,go east,"Explore the kitchen to find a new path or the coin, avoiding repeating cycles in the closet and chamber areas","ACTION: go east  
+PLAN: Explore the kitchen to find a new path or the coin, avoiding repeating cycles in the closet and chamber areas","The recent observations form a repeating cycle of 4 states. Recent actions: go north, go north, go south, go west, go east, go north, go south, go west. Do not repeat this action sequence.","-= Closet =-
+Fancy seeing you here. Here, by the way, being the closet.
+
+
+
+There is an exit to the north. Don't worry, it is unblocked. You don't like doors? Why not try going south, that entranceway is unblocked. You need an unguarded exit? You should try going west.",0,False
+70,go north,go north,Explore the northern path to discover new rooms or locate the coin without repeating the closet cycle,"ACTION: go north  
+PLAN: Explore the northern path to discover new rooms or locate the coin without repeating the closet cycle","The recent observations form a repeating cycle of 4 states. Recent actions: go north, go south, go west, go east, go north, go south, go west, go east. Do not repeat this action sequence.","-= Chamber =-
+Well how about that, you are in a place we're calling a chamber.
+
+
+
+There is an unblocked exit to the south.",0,False
+71,go south,go south,Exit the chamber and proceed to the kitchen to check for the coin without repeating the closet loop,"ACTION: go south  
+PLAN: Exit the chamber and proceed to the kitchen to check for the coin without repeating the closet loop","The recent observations form a repeating cycle of 4 states. Recent actions: go south, go west, go east, go north, go south, go west, go east, go north. Do not repeat this action sequence.","-= Closet =-
+Fancy seeing you here. Here, by the way, being the closet.
+
+
+
+There is an exit to the north. Don't worry, it is unblocked. You don't like doors? Why not try going south, that entranceway is unblocked. You need an unguarded exit? You should try going west.",0,False
+72,go west,go west,"Check the west exit of the closet for the coin, breaking the loop and progressing toward the goal","ACTION: go west  
+PLAN: Check the west exit of the closet for the coin, breaking the loop and progressing toward the goal","The recent observations form a repeating cycle of 4 states. Recent actions: go west, go east, go north, go south, go west, go east, go north, go south. Do not repeat this action sequence.","-= Kitchen =-
+You have stumbled into the most usual of all possible kitchens. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an exit to the east. Don't worry, it is unblocked.",0,False
+73,go east,go east,"Explore the kitchen to find the coin, as it is the only room mentioned with possible object presence","ACTION: go east  
+PLAN: Explore the kitchen to find the coin, as it is the only room mentioned with possible object presence","The recent observations form a repeating cycle of 4 states. Recent actions: go east, go north, go south, go west, go east, go north, go south, go west. Do not repeat this action sequence.","-= Closet =-
+Fancy seeing you here. Here, by the way, being the closet.
+
+
+
+There is an exit to the north. Don't worry, it is unblocked. You don't like doors? Why not try going south, that entranceway is unblocked. You need an unguarded exit? You should try going west.",0,False
+74,go north,go north,Move to the chamber to explore a new area and search for the coin in a different room,"ACTION: go north  
+PLAN: Move to the chamber to explore a new area and search for the coin in a different room","The recent observations form a repeating cycle of 4 states. Recent actions: go north, go south, go west, go east, go north, go south, go west, go east. Do not repeat this action sequence.","-= Chamber =-
+Well how about that, you are in a place we're calling a chamber.
+
+
+
+There is an unblocked exit to the south.",0,False
+75,go south,go south,Explore the chamber for any visible coin or new exit not previously visited,"ACTION: go south  
+PLAN: Explore the chamber for any visible coin or new exit not previously visited","The recent observations form a repeating cycle of 4 states. Recent actions: go south, go west, go east, go north, go south, go west, go east, go north. Do not repeat this action sequence.","-= Closet =-
+Fancy seeing you here. Here, by the way, being the closet.
+
+
+
+There is an exit to the north. Don't worry, it is unblocked. You don't like doors? Why not try going south, that entranceway is unblocked. You need an unguarded exit? You should try going west.",0,False
+76,go west,go west,"Check the kitchen for the coin, as it is the only room with no repeated path and might contain the target object","ACTION: go west  
+PLAN: Check the kitchen for the coin, as it is the only room with no repeated path and might contain the target object","The recent observations form a repeating cycle of 4 states. Recent actions: go west, go east, go north, go south, go west, go east, go north, go south. Do not repeat this action sequence.","-= Kitchen =-
+You have stumbled into the most usual of all possible kitchens. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+
+
+There is an exit to the east. Don't worry, it is unblocked.",0,False
+77,go north,go north,"Explore the chamber for the coin, as it is a new environment and may contain the target object","ACTION: go north  
+PLAN: Explore the chamber for the coin, as it is a new environment and may contain the target object","The recent observations form a repeating cycle of 4 states. Recent actions: go east, go north, go south, go west, go east, go north, go south, go west. Do not repeat this action sequence.",You can't go that way.,0,False
+78,go north,go north,Check the chamber for the coin as it is a new environment and may contain the target object,"ACTION: go north  
+PLAN: Check the chamber for the coin as it is a new environment and may contain the target object",,You can't go that way.,0,False
+79,go south,go south,Move to the chamber to explore and check for the coin in the new environment,"ACTION: go south  
+PLAN: Move to the chamber to explore and check for the coin in the new environment",,You can't go that way.,0,True

@@ -1,0 +1,195 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/goto",
+    "action_frequency": {
+        "go forward": 9,
+        "turn left": 1,
+        "turn right": 3
+    },
+    "input_tokens": 6080,
+    "output_tokens": 282,
+    "episode_idx": 0,
+    "trial_idx": 2,
+    "trajectory": [
+        {
+            "step": 0,
+            "requested_action": "go forward",
+            "action": "go forward",
+            "plan": "Move forward to assess the new environment and identify the path toward the green box.",
+            "raw_completion": "ACTION: go forward\nPLAN: Move forward to assess the new environment and identify the path toward the green box.",
+            "reasoning": "",
+            "observation": "a wall 2 steps forward\na wall 1 step left",
+            "reward": 0.0,
+            "done": false
+        },
+        {
+            "step": 1,
+            "requested_action": "go forward",
+            "action": "go forward",
+            "plan": "Move forward to explore the new environment and locate the path toward the green box.",
+            "raw_completion": "ACTION: go forward\nPLAN: Move forward to explore the new environment and locate the path toward the green box.",
+            "reasoning": "",
+            "observation": "a wall 1 step forward\na wall 1 step left",
+            "reward": 0.0,
+            "done": false
+        },
+        {
+            "step": 2,
+            "requested_action": "go forward",
+            "action": "go forward",
+            "plan": "Move forward to explore beyond the current wall and find a path toward the green box.",
+            "raw_completion": "ACTION: go forward\nPLAN: Move forward to explore beyond the current wall and find a path toward the green box.",
+            "reasoning": "",
+            "observation": "a wall 1 step forward\na wall 1 step left",
+            "reward": 0.0,
+            "done": false
+        },
+        {
+            "step": 3,
+            "requested_action": "turn left",
+            "action": "turn left",
+            "plan": "Check the left side for a path or accessible area to move toward the green box",
+            "raw_completion": "ACTION: turn left  \nPLAN: Check the left side for a path or accessible area to move toward the green box",
+            "reasoning": "",
+            "observation": "a wall 1 step forward\na wall 1 step right",
+            "reward": 0.0,
+            "done": false
+        },
+        {
+            "step": 4,
+            "requested_action": "go forward",
+            "action": "go forward",
+            "plan": "Move forward to explore the path beyond the wall and check for access to the green box",
+            "raw_completion": "ACTION: go forward\nPLAN: Move forward to explore the path beyond the wall and check for access to the green box",
+            "reasoning": "",
+            "observation": "a wall 1 step forward\na wall 1 step right",
+            "reward": 0.0,
+            "done": false
+        },
+        {
+            "step": 5,
+            "requested_action": "turn right",
+            "action": "turn right",
+            "plan": "Explore the right side to find a path toward the green box",
+            "raw_completion": "ACTION: turn right\nPLAN: Explore the right side to find a path toward the green box",
+            "reasoning": "",
+            "observation": "a wall 1 step forward\na wall 1 step left",
+            "reward": 0.0,
+            "done": false
+        },
+        {
+            "step": 6,
+            "requested_action": "go forward",
+            "action": "go forward",
+            "plan": "Move forward to explore the path on the right side leading toward the green box",
+            "raw_completion": "ACTION: go forward\nPLAN: Move forward to explore the path on the right side leading toward the green box",
+            "reasoning": "",
+            "observation": "a wall 1 step forward\na wall 1 step left",
+            "reward": 0.0,
+            "done": false
+        },
+        {
+            "step": 7,
+            "requested_action": "turn right",
+            "action": "turn right",
+            "plan": "Move to the right to explore the path leading toward the green box",
+            "raw_completion": "ACTION: turn right\nPLAN: Move to the right to explore the path leading toward the green box",
+            "reasoning": "",
+            "observation": "a wall 6 steps forward\na wall 1 step left",
+            "reward": 0.0,
+            "done": false
+        },
+        {
+            "step": 8,
+            "requested_action": "turn right",
+            "action": "turn right",
+            "plan": "Move right to explore the path leading toward the green box",
+            "raw_completion": "ACTION: turn right\nPLAN: Move right to explore the path leading toward the green box",
+            "reasoning": "",
+            "observation": "a wall 1 step right\na green box 5 steps forward",
+            "reward": 0.0,
+            "done": false
+        },
+        {
+            "step": 9,
+            "requested_action": "go forward",
+            "action": "go forward",
+            "plan": "Move forward to reach the green box located 5 steps ahead",
+            "raw_completion": "ACTION: go forward\nPLAN: Move forward to reach the green box located 5 steps ahead",
+            "reasoning": "",
+            "observation": "a wall 1 step right\na green box 4 steps forward",
+            "reward": 0.0,
+            "done": false
+        },
+        {
+            "step": 10,
+            "requested_action": "go forward",
+            "action": "go forward",
+            "plan": "Move forward to reach the green box located 4 steps ahead",
+            "raw_completion": "ACTION: go forward\nPLAN: Move forward to reach the green box located 4 steps ahead",
+            "reasoning": "",
+            "observation": "a wall 1 step right\na green box 3 steps forward",
+            "reward": 0.0,
+            "done": false
+        },
+        {
+            "step": 11,
+            "requested_action": "go forward",
+            "action": "go forward",
+            "plan": "Move forward to reach the green box located 3 steps ahead",
+            "raw_completion": "ACTION: go forward\nPLAN: Move forward to reach the green box located 3 steps ahead",
+            "reasoning": "",
+            "observation": "a wall 1 step right\na green box 2 steps forward",
+            "reward": 0.0,
+            "done": false
+        },
+        {
+            "step": 12,
+            "requested_action": "go forward",
+            "action": "go forward",
+            "plan": "Reach the green box by moving forward one step",
+            "raw_completion": "ACTION: go forward\nPLAN: Reach the green box by moving forward one step",
+            "reasoning": "",
+            "observation": "a wall 1 step right\na green box 1 step forward",
+            "reward": 0.8171875,
+            "done": true
+        }
+    ],
+    "done": true,
+    "episode_return": 0.8171875,
+    "num_steps": 13,
+    "failed_candidates": [],
+    "mission": "go to the green box",
+    "progression": 1.0,
+    "process_num": "ForkProcess-1",
+    "seed": 2735192959,
+    "agent": {
+        "type": "reflective",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false,
+        "max_reflections": 0,
+        "use_reflection": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "qwen3:4b-instruct",
+        "base_url": "http://127.0.0.1:11434/v1",
+        "generate_kwargs": {
+            "temperature": 0.6,
+            "max_tokens": 1024,
+            "thinking_budget": null
+        },
+        "timeout": 300,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    },
+    "reflections_used": [],
+    "reflection": null,
+    "reflection_memory_after_trial": [],
+    "reflection_input_tokens": 0,
+    "reflection_output_tokens": 0
+}
