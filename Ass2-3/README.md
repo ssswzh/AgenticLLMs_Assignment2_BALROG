@@ -106,3 +106,6 @@ uv run python eval.py \
 
 Summarize results from JSON files by trials:
 
+```bash
+uv run python Ass2-3/compare_reflection.py -i results/exercise3_with_reflection/2026-10-22_02-30-47_reflective_qwen3\:4b-instruct/summary_by_trial.json results/exercise3_without_reflection/2026-10-22_07-22-53_reflective_qwen3\:4b-instruct/summary_by_trial.json -o Ass2-3/reflection_summary
+```
