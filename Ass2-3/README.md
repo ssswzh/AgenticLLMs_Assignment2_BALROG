@@ -59,8 +59,8 @@ uv run python eval.py \
     envs.env_kwargs.seed=2026 \
     agent.type=reflective \
     agent.use_reflection=true \
-    agent.max_reflections=3 \
-    eval.num_trials=4 \
+    agent.max_reflections=2 \
+    eval.num_trials=3 \
     agent.max_image_history=0 \
     agent.max_text_history=16 \
     client.client_name=vllm \
@@ -90,7 +90,7 @@ uv run python eval.py \
     agent.type=reflective \
     agent.use_reflection=false \
     agent.max_reflections=0 \
-    eval.num_trials=4 \
+    eval.num_trials=3 \
     agent.max_image_history=0 \
     agent.max_text_history=16 \
     client.client_name=vllm \
