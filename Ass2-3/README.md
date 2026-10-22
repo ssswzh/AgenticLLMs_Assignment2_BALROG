@@ -35,8 +35,8 @@ Three benchmarks are used here, and each with two subtypes: BabyAI (`goto`, `put
 - 11434 is the default port for Ollama's local service.
 - Use `agent.type=reflective` to call reflective agent class.
 - `agent.use_reflection=true` to enable reflection.
-- `agent.max_reflections=3` to set the maximum number of reflections.
-- `eval.num_trials=4` to set the number of trials for each episode, so the latter 3 trials would use reflections.
+- `agent.max_reflections=2` to set the maximum number of reflections.
+- `eval.num_trials=3` to set the number of trials for each episode, so the latter 3 trials would use reflections.
 
 
 Run BALROG using Ollama's Qwen API (make sure Ollama is on).
