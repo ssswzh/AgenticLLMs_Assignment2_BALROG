@@ -1,498 +1,522 @@
 Step,Action,Executed Action,Plan,Raw Completion,Reasoning,Observation,Reward,Done
-0,go forward,go forward,Move closer to the yellow ball by advancing forward one step to reduce distance and align with its position.,"ACTION: go forward
-PLAN: Move closer to the yellow ball by advancing forward one step to reduce distance and align with its position.",,"a wall 4 steps forward
+0,go forward,go forward,Move closer to the yellow key and yellow ball by advancing forward to reduce distance and assess new positions.,"ACTION: go forward
+PLAN: Move closer to the yellow key and yellow ball by advancing forward to reduce distance and assess new positions.",,"a wall 4 steps forward
 a wall 3 steps right
 a yellow key 1 step left and 3 steps forward
 a yellow ball 1 step left and 1 step forward",0,False
-1,go forward,go forward,Advance forward to reduce distance and align with the yellow ball's position,"ACTION: go forward
-PLAN: Advance forward to reduce distance and align with the yellow ball's position",,"a wall 3 steps forward
+1,go forward,go forward,Continue moving forward to reduce distance between agent and both the yellow key and yellow ball.,"ACTION: go forward
+PLAN: Continue moving forward to reduce distance between agent and both the yellow key and yellow ball.",,"a wall 3 steps forward
 a wall 3 steps right
 a yellow key 1 step left and 2 steps forward
 a yellow ball 1 step left",0,False
-2,go forward,go forward,Move closer to the yellow ball by advancing forward until it is directly adjacent,"ACTION: go forward
-PLAN: Move closer to the yellow ball by advancing forward until it is directly adjacent",,"a wall 2 steps forward
+2,go forward,go forward,Move forward to reduce distance between agent and both the yellow key and yellow ball,"ACTION: go forward
+PLAN: Move forward to reduce distance between agent and both the yellow key and yellow ball",,"a wall 2 steps forward
 a wall 3 steps right
 a yellow key 1 step left and 1 step forward",0,False
-3,go forward,go forward,Move forward to place the yellow key next to the yellow ball,"ACTION: go forward
-PLAN: Move forward to place the yellow key next to the yellow ball",,"a wall 1 step forward
+3,go forward,go forward,Move forward to reduce distance between agent and the yellow key and yellow ball,"ACTION: go forward
+PLAN: Move forward to reduce distance between agent and the yellow key and yellow ball",,"a wall 1 step forward
 a wall 3 steps right
 a yellow key 1 step left",0,False
-4,go forward,go forward,Move forward to place the yellow key next to the yellow ball,"ACTION: go forward
-PLAN: Move forward to place the yellow key next to the yellow ball",,"a wall 1 step forward
+4,go forward,go forward,"Move forward to align with the yellow key and yellow ball, which are now directly adjacent to the left.","ACTION: go forward
+PLAN: Move forward to align with the yellow key and yellow ball, which are now directly adjacent to the left.",,"a wall 1 step forward
 a wall 3 steps right
 a yellow key 1 step left",0,False
-5,go forward,go forward,Move forward to align with the yellow ball and place the yellow key next to it,"ACTION: go forward
-PLAN: Move forward to align with the yellow ball and place the yellow key next to it",,"a wall 1 step forward
-a wall 3 steps right
-a yellow key 1 step left",0,False
-6,turn right,turn right,Align with the yellow ball's position to place the key next to it without repeating forward movement,"ACTION: turn right  
-PLAN: Align with the yellow ball's position to place the key next to it without repeating forward movement","The action ""go forward"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","a wall 3 steps forward
-a wall 1 step left",0,False
-7,go forward,go forward,Move closer to the yellow ball to place the key next to it without hitting walls or repeating unnecessary steps,"ACTION: go forward
-PLAN: Move closer to the yellow ball to place the key next to it without hitting walls or repeating unnecessary steps",,"a wall 2 steps forward
-a wall 1 step left",0,False
-8,go forward,go forward,Move forward to align with the yellow ball and place the key next to it without hitting walls,"ACTION: go forward
-PLAN: Move forward to align with the yellow ball and place the key next to it without hitting walls",,"a wall 1 step forward
-a wall 1 step left",0,False
-9,go forward,go forward,Move forward to reach the yellow ball and place the key next to it without hitting walls,"ACTION: go forward
-PLAN: Move forward to reach the yellow ball and place the key next to it without hitting walls",,"a wall 1 step forward
-a wall 1 step left",0,False
-10,go forward,go forward,Proceed forward to reach the yellow ball and place the key next to it without hitting walls,"ACTION: go forward
-PLAN: Proceed forward to reach the yellow ball and place the key next to it without hitting walls",,"a wall 1 step forward
-a wall 1 step left",0,False
-11,turn left,turn left,Align with the yellow ball's position to move directly toward it without hitting walls or repeating ineffective actions,"ACTION: turn left  
-PLAN: Align with the yellow ball's position to move directly toward it without hitting walls or repeating ineffective actions","The action ""go forward"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","a wall 1 step forward
-a wall 1 step right
-a yellow key 3 steps left",0,False
-12,turn left,turn left,Move to align with the yellow ball's position to proceed directly toward it without obstruction.,"ACTION: turn left
-PLAN: Move to align with the yellow ball's position to proceed directly toward it without obstruction.",,"a wall 1 step right
-a yellow ball 2 steps left and 3 steps forward
-a yellow key 3 steps forward",0,False
-13,go forward,go forward,Move closer to the yellow ball by advancing one step forward to reduce distance and align with its position.,"ACTION: go forward
-PLAN: Move closer to the yellow ball by advancing one step forward to reduce distance and align with its position.",,"a wall 1 step right
-a yellow ball 2 steps left and 2 steps forward
-a yellow key 2 steps forward",0,False
-14,go forward,go forward,Move forward to reduce distance between yellow key and yellow ball and align with their positions,"ACTION: go forward
-PLAN: Move forward to reduce distance between yellow key and yellow ball and align with their positions",,"a wall 1 step right
+5,turn left,turn left,Position self directly adjacent to both yellow key and yellow ball to complete the goal.,"ACTION: turn left
+PLAN: Position self directly adjacent to both yellow key and yellow ball to complete the goal.",,"a wall 1 step right
 a yellow ball 2 steps left and 1 step forward
 a yellow key 1 step forward",0,False
-15,go forward,go forward,Move forward to place yellow key next to yellow ball,"ACTION: go forward
-PLAN: Move forward to place yellow key next to yellow ball",,"a wall 1 step right
+6,toggle,toggle,Place the yellow key next to the yellow ball by interacting with the key and adjusting position until both are adjacent.,"ACTION: toggle
+PLAN: Place the yellow key next to the yellow ball by interacting with the key and adjusting position until both are adjacent.",,"a wall 1 step right
 a yellow ball 2 steps left and 1 step forward
 a yellow key 1 step forward",0,False
-16,go forward,go forward,Move forward to place yellow key next to yellow ball,"ACTION: go forward
-PLAN: Move forward to place yellow key next to yellow ball",,"a wall 1 step right
-a yellow ball 2 steps left and 1 step forward
-a yellow key 1 step forward",0,False
-17,turn left,turn left,Align with yellow ball to place yellow key next to it by moving directly toward its position,"ACTION: turn left
-PLAN: Align with yellow ball to place yellow key next to it by moving directly toward its position","The action ""go forward"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","a wall 6 steps forward
+7,turn left,turn left,Align with the yellow ball to place the key next to it by moving into adjacency.,"ACTION: turn left
+PLAN: Align with the yellow ball to place the key next to it by moving into adjacency.",,"a wall 6 steps forward
 a wall 3 steps left
 a yellow ball 1 step right and 2 steps forward
 a yellow key 1 step right",0,False
-18,go forward,go forward,Move closer to the yellow ball by advancing one step forward to reduce distance and align position.,"ACTION: go forward
-PLAN: Move closer to the yellow ball by advancing one step forward to reduce distance and align position.",,"a wall 5 steps forward
-a wall 3 steps left
-a yellow ball 1 step right and 1 step forward",0,False
-19,go forward,go forward,Move one step forward to reduce distance and align with the yellow ball's position.,"ACTION: go forward
-PLAN: Move one step forward to reduce distance and align with the yellow ball's position.",,"a wall 4 steps forward
-a wall 3 steps left
-a yellow ball 1 step right",0,False
-20,go forward,go forward,Move forward to reduce distance and align with the yellow ball's position.,"ACTION: go forward
-PLAN: Move forward to reduce distance and align with the yellow ball's position.",,"a wall 3 steps forward
-a wall 3 steps left",0,False
-21,go forward,go forward,Move forward to close the gap and align with the yellow ball's position.,"ACTION: go forward
-PLAN: Move forward to close the gap and align with the yellow ball's position.",,"a wall 2 steps forward
-a wall 3 steps left",0,False
-22,go forward,go forward,Move forward to reach the yellow ball and position the yellow key next to it.,"ACTION: go forward
-PLAN: Move forward to reach the yellow ball and position the yellow key next to it.",,"a wall 1 step forward
-a wall 3 steps left",0,False
-23,go forward,go forward,Proceed forward to place the yellow key next to the yellow ball,"ACTION: go forward
-PLAN: Proceed forward to place the yellow key next to the yellow ball",,"a wall 1 step forward
-a wall 3 steps left",0,False
-24,go forward,go forward,Move forward to reach the yellow ball and place the yellow key next to it,"ACTION: go forward
-PLAN: Move forward to reach the yellow ball and place the yellow key next to it",,"a wall 1 step forward
-a wall 3 steps left",0,False
-25,turn left,turn left,Align with the yellow ball's position to proceed directly toward it without continuing forward into a wall,"ACTION: turn left  
-PLAN: Align with the yellow ball's position to proceed directly toward it without continuing forward into a wall","The action ""go forward"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","a wall 3 steps forward
-a wall 1 step right",0,False
-26,turn left,turn left,Align with yellow ball's position to move directly toward it without hitting walls or missing its location,"ACTION: turn left
-PLAN: Align with yellow ball's position to move directly toward it without hitting walls or missing its location",,"a wall 6 steps forward
-a wall 3 steps right
-a yellow key 1 step left and 5 steps forward
-a yellow ball 1 step left and 3 steps forward",0,False
-27,go forward,go forward,Move closer to the yellow ball while avoiding walls and maintaining alignment with its position,"ACTION: go forward
-PLAN: Move closer to the yellow ball while avoiding walls and maintaining alignment with its position",,"a wall 5 steps forward
-a wall 3 steps right
-a yellow key 1 step left and 4 steps forward
-a yellow ball 1 step left and 2 steps forward",0,False
-28,go forward,go forward,Move closer to the yellow ball while staying aligned with its position and avoiding walls,"ACTION: go forward
-PLAN: Move closer to the yellow ball while staying aligned with its position and avoiding walls",,"a wall 4 steps forward
-a wall 3 steps right
-a yellow key 1 step left and 3 steps forward
-a yellow ball 1 step left and 1 step forward",0,False
-29,go forward,go forward,Move one step closer to the yellow ball while maintaining alignment with its position and avoiding walls,"ACTION: go forward
-PLAN: Move one step closer to the yellow ball while maintaining alignment with its position and avoiding walls",,"a wall 3 steps forward
-a wall 3 steps right
-a yellow key 1 step left and 2 steps forward
-a yellow ball 1 step left",0,False
-30,go forward,go forward,Move one step closer to the yellow ball while staying aligned with its position and avoiding walls,"ACTION: go forward
-PLAN: Move one step closer to the yellow ball while staying aligned with its position and avoiding walls",,"a wall 2 steps forward
-a wall 3 steps right
-a yellow key 1 step left and 1 step forward",0,False
-31,go forward,go forward,Move one step closer to the yellow ball while maintaining alignment and avoiding walls,"ACTION: go forward
-PLAN: Move one step closer to the yellow ball while maintaining alignment and avoiding walls",,"a wall 1 step forward
-a wall 3 steps right
-a yellow key 1 step left",0,False
-32,go forward,go forward,Move forward to place the yellow key next to the yellow ball without hitting walls or drifting off course.,"ACTION: go forward
-PLAN: Move forward to place the yellow key next to the yellow ball without hitting walls or drifting off course.",,"a wall 1 step forward
-a wall 3 steps right
-a yellow key 1 step left",0,False
-33,go forward,go forward,Position the yellow key directly next to the yellow ball without obstruction or collision.,"ACTION: go forward
-PLAN: Position the yellow key directly next to the yellow ball without obstruction or collision.",,"a wall 1 step forward
-a wall 3 steps right
-a yellow key 1 step left",0,False
-34,turn left,turn left,Align with the yellow ball to place the key next to it without further forward movement.,"ACTION: turn left
-PLAN: Align with the yellow ball to place the key next to it without further forward movement.","The action ""go forward"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","a wall 1 step right
-a yellow ball 2 steps left and 1 step forward
-a yellow key 1 step forward",0,False
-35,go forward,go forward,Move directly to place the yellow key next to the yellow ball without crossing walls or making unnecessary turns.,"ACTION: go forward
-PLAN: Move directly to place the yellow key next to the yellow ball without crossing walls or making unnecessary turns.",,"a wall 1 step right
-a yellow ball 2 steps left and 1 step forward
-a yellow key 1 step forward",0,False
-36,go forward,go forward,Move forward to align the yellow key with the yellow ball's position directly next to it.,"ACTION: go forward
-PLAN: Move forward to align the yellow key with the yellow ball's position directly next to it.",,"a wall 1 step right
-a yellow ball 2 steps left and 1 step forward
-a yellow key 1 step forward",0,False
-37,turn left,turn left,Align with the yellow ball to place the yellow key directly next to it without further forward movement.,"ACTION: turn left
-PLAN: Align with the yellow ball to place the yellow key directly next to it without further forward movement.","The action ""go forward"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","a wall 6 steps forward
+8,turn left,turn left,Move to align directly with the yellow ball to place the key next to it.,"ACTION: turn left
+PLAN: Move to align directly with the yellow ball to place the key next to it.",,"a wall 3 steps forward
+a wall 1 step left",0,False
+9,turn right,turn right,Align with the yellow ball to place the key next to it.,"ACTION: turn right
+PLAN: Align with the yellow ball to place the key next to it.",,"a wall 6 steps forward
 a wall 3 steps left
 a yellow ball 1 step right and 2 steps forward
 a yellow key 1 step right",0,False
-38,turn left,turn left,Move to align with the yellow ball to place the key next to it without crossing walls or moving forward unnecessarily.,"ACTION: turn left
-PLAN: Move to align with the yellow ball to place the key next to it without crossing walls or moving forward unnecessarily.",,"a wall 3 steps forward
-a wall 1 step left",0,False
-39,go forward,go forward,Move closer to the yellow ball to place the key next to it without hitting walls.,"ACTION: go forward
-PLAN: Move closer to the yellow ball to place the key next to it without hitting walls.",,"a wall 2 steps forward
-a wall 1 step left",0,False
-40,go forward,go forward,Move forward to reduce distance between yellow key and yellow ball without hitting walls.,"ACTION: go forward
-PLAN: Move forward to reduce distance between yellow key and yellow ball without hitting walls.",,"a wall 1 step forward
-a wall 1 step left",0,False
-41,go forward,go forward,"Move forward to align with yellow ball and key, ensuring they are adjacent without hitting walls.","ACTION: go forward
-PLAN: Move forward to align with yellow ball and key, ensuring they are adjacent without hitting walls.",,"a wall 1 step forward
-a wall 1 step left",0,False
-42,go forward,go forward,Proceed forward to place yellow key next to yellow ball without hitting walls or obstacles,"ACTION: go forward
-PLAN: Proceed forward to place yellow key next to yellow ball without hitting walls or obstacles",,"a wall 1 step forward
-a wall 1 step left",0,False
-43,turn left,turn left,Align with the yellow ball's position to proceed directly toward it without hitting walls or obstacles,"ACTION: turn left  
-PLAN: Align with the yellow ball's position to proceed directly toward it without hitting walls or obstacles","The action ""go forward"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","a wall 1 step forward
-a wall 1 step right
-a yellow key 3 steps left",0,False
-44,turn left,turn left,Move to align with the yellow ball's position to proceed directly toward it without hitting walls or obstacles,"ACTION: turn left
-PLAN: Move to align with the yellow ball's position to proceed directly toward it without hitting walls or obstacles",,"a wall 1 step right
-a yellow ball 2 steps left and 3 steps forward
-a yellow key 3 steps forward",0,False
-45,go forward,go forward,"Move closer to the yellow ball by advancing forward without obstruction, maintaining alignment with its position.","ACTION: go forward
-PLAN: Move closer to the yellow ball by advancing forward without obstruction, maintaining alignment with its position.",,"a wall 1 step right
-a yellow ball 2 steps left and 2 steps forward
-a yellow key 2 steps forward",0,False
-46,go forward,go forward,Move forward to reduce distance between yellow key and yellow ball while avoiding walls and staying aligned with their positions.,"ACTION: go forward
-PLAN: Move forward to reduce distance between yellow key and yellow ball while avoiding walls and staying aligned with their positions.",,"a wall 1 step right
+10,turn right,turn right,Move closer to the yellow ball by aligning direction and advancing forward to place the key next to it.,"ACTION: turn right
+PLAN: Move closer to the yellow ball by aligning direction and advancing forward to place the key next to it.",,"a wall 1 step right
 a yellow ball 2 steps left and 1 step forward
 a yellow key 1 step forward",0,False
-47,go forward,go forward,Reduce distance between yellow key and yellow ball by moving forward while maintaining alignment with their positions.,"ACTION: go forward
-PLAN: Reduce distance between yellow key and yellow ball by moving forward while maintaining alignment with their positions.",,"a wall 1 step right
+11,go forward,go forward,Move forward to place the yellow key next to the yellow ball.,"ACTION: go forward
+PLAN: Move forward to place the yellow key next to the yellow ball.",,"a wall 1 step right
 a yellow ball 2 steps left and 1 step forward
 a yellow key 1 step forward",0,False
-48,go forward,go forward,"Move forward to place the yellow key next to the yellow ball, which is now directly adjacent.","ACTION: go forward
-PLAN: Move forward to place the yellow key next to the yellow ball, which is now directly adjacent.",,"a wall 1 step right
+12,go forward,go forward,Move forward to position the yellow key next to the yellow ball.,"ACTION: go forward
+PLAN: Move forward to position the yellow key next to the yellow ball.",,"a wall 1 step right
 a yellow ball 2 steps left and 1 step forward
 a yellow key 1 step forward",0,False
-49,turn left,turn left,Align with the yellow ball's position to place the key next to it by adjusting direction before moving forward.,"ACTION: turn left
-PLAN: Align with the yellow ball's position to place the key next to it by adjusting direction before moving forward.","The action ""go forward"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","a wall 6 steps forward
+13,turn left,turn left,Align with the yellow ball to place the key next to it by adjusting position and orientation properly,"ACTION: turn left  
+PLAN: Align with the yellow ball to place the key next to it by adjusting position and orientation properly","The action ""go forward"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","a wall 6 steps forward
 a wall 3 steps left
 a yellow ball 1 step right and 2 steps forward
 a yellow key 1 step right",0,False
-50,turn left,turn left,Align with the yellow ball's position to move directly toward it and place the key next to it.,"ACTION: turn left
-PLAN: Align with the yellow ball's position to move directly toward it and place the key next to it.",,"a wall 3 steps forward
-a wall 1 step left",0,False
-51,go forward,go forward,Move forward to align with the yellow ball and place the yellow key next to it.,"ACTION: go forward
-PLAN: Move forward to align with the yellow ball and place the yellow key next to it.",,"a wall 2 steps forward
-a wall 1 step left",0,False
-52,go forward,go forward,Move forward to position the yellow key next to the yellow ball without hitting walls.,"ACTION: go forward
-PLAN: Move forward to position the yellow key next to the yellow ball without hitting walls.",,"a wall 1 step forward
-a wall 1 step left",0,False
-53,go forward,go forward,Move forward to align yellow key with yellow ball without hitting walls or circumnavigating obstacles.,"ACTION: go forward
-PLAN: Move forward to align yellow key with yellow ball without hitting walls or circumnavigating obstacles.",,"a wall 1 step forward
-a wall 1 step left",0,False
-54,turn left,turn left,Align with yellow ball to place yellow key next to it without hitting walls or obstacles.,"ACTION: turn left
-PLAN: Align with yellow ball to place yellow key next to it without hitting walls or obstacles.",,"a wall 1 step forward
-a wall 1 step right
-a yellow key 3 steps left",0,False
-55,turn left,turn left,Move to align with yellow ball to place key next to it without hitting walls or obstacles.,"ACTION: turn left
-PLAN: Move to align with yellow ball to place key next to it without hitting walls or obstacles.",,"a wall 1 step right
-a yellow ball 2 steps left and 3 steps forward
-a yellow key 3 steps forward",0,False
-56,go forward,go forward,Move closer to yellow ball while avoiding walls and positioning key next to it.,"ACTION: go forward
-PLAN: Move closer to yellow ball while avoiding walls and positioning key next to it.",,"a wall 1 step right
-a yellow ball 2 steps left and 2 steps forward
-a yellow key 2 steps forward",0,False
-57,go forward,go forward,Move forward to reduce distance between yellow key and yellow ball while maintaining alignment with their positions.,"ACTION: go forward
-PLAN: Move forward to reduce distance between yellow key and yellow ball while maintaining alignment with their positions.",,"a wall 1 step right
+14,turn right,turn right,Move closer to the yellow ball by aligning orientation and advancing toward its position,"ACTION: turn right
+PLAN: Move closer to the yellow ball by aligning orientation and advancing toward its position",,"a wall 1 step right
 a yellow ball 2 steps left and 1 step forward
 a yellow key 1 step forward",0,False
-58,go forward,go forward,Move forward to close the gap between the yellow key and yellow ball while staying aligned with their positions.,"ACTION: go forward
-PLAN: Move forward to close the gap between the yellow key and yellow ball while staying aligned with their positions.",,"a wall 1 step right
+15,go forward,go forward,"Move forward to reduce distance between agent and yellow ball, which is currently 1 step right and 1 step forward.","ACTION: go forward
+PLAN: Move forward to reduce distance between agent and yellow ball, which is currently 1 step right and 1 step forward.",,"a wall 1 step right
 a yellow ball 2 steps left and 1 step forward
 a yellow key 1 step forward",0,False
-59,go forward,go forward,Move forward to position the yellow key directly next to the yellow ball.,"ACTION: go forward
-PLAN: Move forward to position the yellow key directly next to the yellow ball.",,"a wall 1 step right
+16,go forward,go forward,Move closer to the yellow ball by advancing forward to reduce distance and improve positioning for final interaction.,"ACTION: go forward
+PLAN: Move closer to the yellow ball by advancing forward to reduce distance and improve positioning for final interaction.",,"a wall 1 step right
 a yellow ball 2 steps left and 1 step forward
 a yellow key 1 step forward",0,False
-60,turn left,turn left,Align with the yellow ball's position to adjust direction before moving forward to place the key next to the ball.,"ACTION: turn left
-PLAN: Align with the yellow ball's position to adjust direction before moving forward to place the key next to the ball.","The action ""go forward"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","a wall 6 steps forward
+17,turn left,turn left,Align directly with the yellow ball to enable a toggle action for placing the key next to it,"ACTION: turn left  
+PLAN: Align directly with the yellow ball to enable a toggle action for placing the key next to it","The action ""go forward"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","a wall 6 steps forward
 a wall 3 steps left
 a yellow ball 1 step right and 2 steps forward
 a yellow key 1 step right",0,False
-61,turn left,turn left,Align with the yellow ball to move directly toward it and place the key next to it.,"ACTION: turn left
-PLAN: Align with the yellow ball to move directly toward it and place the key next to it.",,"a wall 3 steps forward
-a wall 1 step left",0,False
-62,go forward,go forward,Move forward to align with the yellow ball and place the yellow key next to it.,"ACTION: go forward
-PLAN: Move forward to align with the yellow ball and place the yellow key next to it.",,"a wall 2 steps forward
-a wall 1 step left",0,False
-63,go forward,go forward,Move forward to reach the yellow ball and place the yellow key next to it.,"ACTION: go forward
-PLAN: Move forward to reach the yellow ball and place the yellow key next to it.",,"a wall 1 step forward
-a wall 1 step left",0,False
-64,go forward,go forward,Move forward to align with the yellow ball and place the yellow key next to it.,"ACTION: go forward
-PLAN: Move forward to align with the yellow ball and place the yellow key next to it.",,"a wall 1 step forward
-a wall 1 step left",0,False
-65,go forward,go forward,Move forward to position the yellow key next to the yellow ball.,"ACTION: go forward
-PLAN: Move forward to position the yellow key next to the yellow ball.",,"a wall 1 step forward
-a wall 1 step left",0,False
-66,turn left,turn left,Realign direction to face the yellow ball's position and move forward to place the key next to the ball,"ACTION: turn left  
-PLAN: Realign direction to face the yellow ball's position and move forward to place the key next to the ball","The action ""go forward"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","a wall 1 step forward
-a wall 1 step right
-a yellow key 3 steps left",0,False
-67,turn left,turn left,Move to align with the yellow ball's position and proceed forward to place the key next to it.,"ACTION: turn left
-PLAN: Move to align with the yellow ball's position and proceed forward to place the key next to it.",,"a wall 1 step right
-a yellow ball 2 steps left and 3 steps forward
-a yellow key 3 steps forward",0,False
-68,go forward,go forward,Move forward to position the yellow key next to the yellow ball as it is now 3 steps forward.,"ACTION: go forward
-PLAN: Move forward to position the yellow key next to the yellow ball as it is now 3 steps forward.",,"a wall 1 step right
-a yellow ball 2 steps left and 2 steps forward
-a yellow key 2 steps forward",0,False
-69,go forward,go forward,"Move forward to reduce distance between yellow key and yellow ball, positioning the key next to the ball.","ACTION: go forward
-PLAN: Move forward to reduce distance between yellow key and yellow ball, positioning the key next to the ball.",,"a wall 1 step right
+18,turn right,turn right,Position self to face yellow ball directly for precise toggle action to place key next to it,"ACTION: turn right
+PLAN: Position self to face yellow ball directly for precise toggle action to place key next to it","The recent observations form a repeating cycle of 4 states. Recent actions: turn right, go forward, go forward, turn left, turn right, go forward, go forward, turn left. Do not repeat this action sequence.","a wall 1 step right
 a yellow ball 2 steps left and 1 step forward
 a yellow key 1 step forward",0,False
-70,go forward,go forward,"Move forward to place the yellow key next to the yellow ball, which is currently 1 step forward and 2 steps left.","ACTION: go forward
-PLAN: Move forward to place the yellow key next to the yellow ball, which is currently 1 step forward and 2 steps left.",,"a wall 1 step right
-a yellow ball 2 steps left and 1 step forward
-a yellow key 1 step forward",0,False
-71,go forward,go forward,Move forward to align the yellow key with the yellow ball's position.,"ACTION: go forward
-PLAN: Move forward to align the yellow key with the yellow ball's position.",,"a wall 1 step right
-a yellow ball 2 steps left and 1 step forward
-a yellow key 1 step forward",0,False
-72,turn left,turn left,Align with the yellow ball's position to move directly toward it without repeating forward movement.,"ACTION: turn left
-PLAN: Align with the yellow ball's position to move directly toward it without repeating forward movement.","The action ""go forward"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","a wall 6 steps forward
-a wall 3 steps left
-a yellow ball 1 step right and 2 steps forward
-a yellow key 1 step right",0,False
-73,turn left,turn left,Align with the yellow ball to move directly toward its position without circling or repeating unnecessary actions.,"ACTION: turn left
-PLAN: Align with the yellow ball to move directly toward its position without circling or repeating unnecessary actions.",,"a wall 3 steps forward
-a wall 1 step left",0,False
-74,turn left,turn left,Align with the yellow ball's position to move directly toward it without circling or repeating unnecessary actions.,"ACTION: turn left
-PLAN: Align with the yellow ball's position to move directly toward it without circling or repeating unnecessary actions.",,"a wall 1 step forward
+19,turn right,turn right,Align directly with yellow ball to enable toggle and place key next to it without repeating previous cycles,"ACTION: turn right
+PLAN: Align directly with yellow ball to enable toggle and place key next to it without repeating previous cycles","The recent observations form a repeating cycle of 4 states. Recent actions: go forward, go forward, turn left, turn right, go forward, go forward, turn left, turn right. Do not repeat this action sequence.","a wall 1 step forward
 a wall 3 steps right
 a yellow key 1 step left",0,False
-75,turn left,turn left,Align with the yellow ball to move directly toward it without circling or repeating unnecessary actions.,"ACTION: turn left
-PLAN: Align with the yellow ball to move directly toward it without circling or repeating unnecessary actions.",,"a wall 1 step right
+20,go forward,go forward,Move closer to yellow ball to position key next to it directly,"ACTION: go forward
+PLAN: Move closer to yellow ball to position key next to it directly",,"a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+21,go forward,go forward,Approach the yellow ball to place the yellow key next to it,"ACTION: go forward
+PLAN: Approach the yellow ball to place the yellow key next to it",,"a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+22,toggle,toggle,Interact with the yellow key to check if it can be moved or if it is already in the correct position next to the yellow ball,"ACTION: toggle  
+PLAN: Interact with the yellow key to check if it can be moved or if it is already in the correct position next to the yellow ball","The action ""go forward"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+23,turn left,turn left,Align toward the yellow ball to reduce distance and prepare for a direct approach to place the key next to it,"ACTION: turn left  
+PLAN: Align toward the yellow ball to reduce distance and prepare for a direct approach to place the key next to it",The observation has remained unchanged for 3 consecutive actions. Try a different action or subgoal.,"a wall 1 step right
 a yellow ball 2 steps left and 1 step forward
 a yellow key 1 step forward",0,False
-76,go forward,go forward,Move directly toward the yellow ball to reduce distance and align with its position without unnecessary turns or repetition.,"ACTION: go forward
-PLAN: Move directly toward the yellow ball to reduce distance and align with its position without unnecessary turns or repetition.","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step right
+24,go forward,go forward,Move closer to the yellow ball to position the key next to it,"ACTION: go forward
+PLAN: Move closer to the yellow ball to position the key next to it",,"a wall 1 step right
 a yellow ball 2 steps left and 1 step forward
 a yellow key 1 step forward",0,False
-77,turn left,turn left,Align with the yellow ball's position to move directly toward it without obstacles or repeated movements.,"ACTION: turn left
-PLAN: Align with the yellow ball's position to move directly toward it without obstacles or repeated movements.",,"a wall 6 steps forward
+25,go forward,go forward,Move forward to align with the yellow ball and position the yellow key next to it,"ACTION: go forward
+PLAN: Move forward to align with the yellow ball and position the yellow key next to it",,"a wall 1 step right
+a yellow ball 2 steps left and 1 step forward
+a yellow key 1 step forward",0,False
+26,turn left,turn left,Align with the yellow ball to position the yellow key next to it by adjusting orientation before moving forward,"ACTION: turn left  
+PLAN: Align with the yellow ball to position the yellow key next to it by adjusting orientation before moving forward","The action ""go forward"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","a wall 6 steps forward
 a wall 3 steps left
 a yellow ball 1 step right and 2 steps forward
 a yellow key 1 step right",0,False
-78,turn left,turn left,Align with the yellow ball to move directly toward it without obstacles or repeated movements.,"ACTION: turn left
-PLAN: Align with the yellow ball to move directly toward it without obstacles or repeated movements.",,"a wall 3 steps forward
-a wall 1 step left",0,False
-79,turn left,turn left,Align with yellow ball to move directly toward it without obstacles or repeated movements.,"ACTION: turn left
-PLAN: Align with yellow ball to move directly toward it without obstacles or repeated movements.",,"a wall 1 step forward
-a wall 3 steps right
-a yellow key 1 step left",0,False
-80,turn left,turn left,Move to align with yellow ball to place key next to it without obstacles or repeated movements.,"ACTION: turn left
-PLAN: Move to align with yellow ball to place key next to it without obstacles or repeated movements.",,"a wall 1 step right
+27,turn right,turn right,Move to align with the yellow ball to place the yellow key next to it,"ACTION: turn right
+PLAN: Move to align with the yellow ball to place the yellow key next to it",,"a wall 1 step right
 a yellow ball 2 steps left and 1 step forward
 a yellow key 1 step forward",0,False
-81,go forward,go forward,Move forward to reduce distance between yellow key and yellow ball while maintaining alignment with their positions,"ACTION: go forward  
-PLAN: Move forward to reduce distance between yellow key and yellow ball while maintaining alignment with their positions","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step right
+28,go forward,go forward,Move closer to the yellow ball to position the yellow key next to it,"ACTION: go forward
+PLAN: Move closer to the yellow ball to position the yellow key next to it",,"a wall 1 step right
 a yellow ball 2 steps left and 1 step forward
 a yellow key 1 step forward",0,False
-82,go forward,go forward,Move forward to bring the yellow key closer to the yellow ball's position,"ACTION: go forward
-PLAN: Move forward to bring the yellow key closer to the yellow ball's position",,"a wall 1 step right
+29,go forward,go forward,Move forward to reduce distance between agent and yellow key to position it next to the yellow ball,"ACTION: go forward
+PLAN: Move forward to reduce distance between agent and yellow key to position it next to the yellow ball",,"a wall 1 step right
 a yellow ball 2 steps left and 1 step forward
 a yellow key 1 step forward",0,False
-83,turn left,turn left,Realign direction to face the yellow ball’s current position and move forward toward it,"ACTION: turn left  
-PLAN: Realign direction to face the yellow ball’s current position and move forward toward it","The action ""go forward"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","a wall 6 steps forward
+30,turn left,turn left,Align with the yellow ball to position the key next to it by adjusting direction and moving forward precisely,"ACTION: turn left  
+PLAN: Align with the yellow ball to position the key next to it by adjusting direction and moving forward precisely","The action ""go forward"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","a wall 6 steps forward
 a wall 3 steps left
 a yellow ball 1 step right and 2 steps forward
 a yellow key 1 step right",0,False
-84,turn left,turn left,Align with yellow ball to move directly toward its position and reach it,"ACTION: turn left
-PLAN: Align with yellow ball to move directly toward its position and reach it",,"a wall 3 steps forward
-a wall 1 step left",0,False
-85,turn left,turn left,Align with yellow ball to move directly toward its position and reach it,"ACTION: turn left
-PLAN: Align with yellow ball to move directly toward its position and reach it",,"a wall 1 step forward
-a wall 3 steps right
-a yellow key 1 step left",0,False
-86,turn left,turn left,Align with yellow ball to move directly toward its position and reach it,"ACTION: turn left
-PLAN: Align with yellow ball to move directly toward its position and reach it",,"a wall 1 step right
-a yellow ball 2 steps left and 1 step forward
-a yellow key 1 step forward",0,False
-87,go forward,go forward,Move directly toward the yellow ball's position to reduce distance and align for pickup or placement next to it,"ACTION: go forward
-PLAN: Move directly toward the yellow ball's position to reduce distance and align for pickup or placement next to it","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step right
-a yellow ball 2 steps left and 1 step forward
-a yellow key 1 step forward",0,False
-88,turn left,turn left,Align with the yellow ball to prepare for direct movement and placement of the yellow key next to it,"ACTION: turn left
-PLAN: Align with the yellow ball to prepare for direct movement and placement of the yellow key next to it",,"a wall 6 steps forward
+31,toggle,toggle,"Interact with the yellow key to place it next to the yellow ball, which is currently adjacent to the key in the observation.","ACTION: toggle
+PLAN: Interact with the yellow key to place it next to the yellow ball, which is currently adjacent to the key in the observation.","The recent observations form a repeating cycle of 4 states. Recent actions: turn left, go forward, go forward, turn left, turn right, go forward, go forward, turn left. Do not repeat this action sequence.","a wall 6 steps forward
 a wall 3 steps left
 a yellow ball 1 step right and 2 steps forward
 a yellow key 1 step right",0,False
-89,turn left,turn left,Adjust orientation to face the yellow ball's position and move directly toward it for final placement,"ACTION: turn left
-PLAN: Adjust orientation to face the yellow ball's position and move directly toward it for final placement",,"a wall 3 steps forward
-a wall 1 step left",0,False
-90,turn left,turn left,Align with yellow ball to move directly toward it for final placement,"ACTION: turn left
-PLAN: Align with yellow ball to move directly toward it for final placement",,"a wall 1 step forward
-a wall 3 steps right
-a yellow key 1 step left",0,False
-91,turn left,turn left,Align with yellow ball to move directly toward it for final placement,"ACTION: turn left
-PLAN: Align with yellow ball to move directly toward it for final placement",,"a wall 1 step right
-a yellow ball 2 steps left and 1 step forward
-a yellow key 1 step forward",0,False
-92,go forward,go forward,Move directly toward the yellow ball to position the yellow key next to it without circling or repeating ineffective turns.,"ACTION: go forward
-PLAN: Move directly toward the yellow ball to position the yellow key next to it without circling or repeating ineffective turns.","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step right
-a yellow ball 2 steps left and 1 step forward
-a yellow key 1 step forward",0,False
-93,turn left,turn left,Align with the yellow ball to place the yellow key next to it without further circling or repeating ineffective movements.,"ACTION: turn left
-PLAN: Align with the yellow ball to place the yellow key next to it without further circling or repeating ineffective movements.",,"a wall 6 steps forward
+32,toggle,toggle,Place the yellow key next to the yellow ball by interacting with the key in front of the agent.,"ACTION: toggle
+PLAN: Place the yellow key next to the yellow ball by interacting with the key in front of the agent.",,"a wall 6 steps forward
 a wall 3 steps left
 a yellow ball 1 step right and 2 steps forward
 a yellow key 1 step right",0,False
-94,turn left,turn left,Adjust orientation to face the yellow ball directly and move forward to place the key next to it.,"ACTION: turn left
-PLAN: Adjust orientation to face the yellow ball directly and move forward to place the key next to it.",,"a wall 3 steps forward
+33,turn left,turn left,"Reorient to face the yellow ball and key directly, then proceed to move forward to align with them.","ACTION: turn left  
+PLAN: Reorient to face the yellow ball and key directly, then proceed to move forward to align with them.","The action ""toggle"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","a wall 3 steps forward
 a wall 1 step left",0,False
-95,turn left,turn left,Align with yellow ball to proceed directly and place key next to it without obstruction.,"ACTION: turn left
-PLAN: Align with yellow ball to proceed directly and place key next to it without obstruction.",,"a wall 1 step forward
+34,turn left,turn left,Align directly with the yellow ball and key to proceed forward and place the key next to the ball.,"ACTION: turn left
+PLAN: Align directly with the yellow ball and key to proceed forward and place the key next to the ball.",,"a wall 1 step forward
 a wall 3 steps right
 a yellow key 1 step left",0,False
-96,turn left,turn left,Move to align with yellow ball to place key next to it without obstruction.,"ACTION: turn left
-PLAN: Move to align with yellow ball to place key next to it without obstruction.",,"a wall 1 step right
+35,go forward,go forward,Move closer to the yellow ball and key to position the key next to the ball.,"ACTION: go forward
+PLAN: Move closer to the yellow ball and key to position the key next to the ball.",,"a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+36,turn left,turn left,Align with the yellow ball to place the key next to it,"ACTION: turn left
+PLAN: Align with the yellow ball to place the key next to it",,"a wall 1 step right
 a yellow ball 2 steps left and 1 step forward
 a yellow key 1 step forward",0,False
-97,go forward,go forward,"Move forward to reduce distance between yellow key and yellow ball, positioning key next to the ball without obstruction.","ACTION: go forward
-PLAN: Move forward to reduce distance between yellow key and yellow ball, positioning key next to the ball without obstruction.","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step right
-a yellow ball 2 steps left and 1 step forward
-a yellow key 1 step forward",0,False
-98,go forward,go forward,Move forward to place the yellow key next to the yellow ball without obstruction.,"ACTION: go forward
-PLAN: Move forward to place the yellow key next to the yellow ball without obstruction.",,"a wall 1 step right
-a yellow ball 2 steps left and 1 step forward
-a yellow key 1 step forward",0,False
-99,turn left,turn left,Realign direction to face the yellow ball’s position and move forward to place the key beside it without obstruction.,"ACTION: turn left  
-PLAN: Realign direction to face the yellow ball’s position and move forward to place the key beside it without obstruction.","The action ""go forward"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","a wall 6 steps forward
+37,turn left,turn left,Position self to be adjacent to the yellow ball so the yellow key can be placed next to it,"ACTION: turn left
+PLAN: Position self to be adjacent to the yellow ball so the yellow key can be placed next to it",,"a wall 6 steps forward
 a wall 3 steps left
 a yellow ball 1 step right and 2 steps forward
 a yellow key 1 step right",0,False
-100,turn left,turn left,Align with yellow ball to move forward and place yellow key beside it without obstruction.,"ACTION: turn left
-PLAN: Align with yellow ball to move forward and place yellow key beside it without obstruction.",,"a wall 3 steps forward
+38,turn left,turn left,Align with yellow ball to place yellow key next to it,"ACTION: turn left
+PLAN: Align with yellow ball to place yellow key next to it",,"a wall 3 steps forward
 a wall 1 step left",0,False
-101,turn left,turn left,Align with yellow ball to position yellow key beside it without obstruction.,"ACTION: turn left
-PLAN: Align with yellow ball to position yellow key beside it without obstruction.",,"a wall 1 step forward
+39,turn left,turn left,Position self to face yellow ball and key for direct placement next to yellow ball,"ACTION: turn left
+PLAN: Position self to face yellow ball and key for direct placement next to yellow ball",,"a wall 1 step forward
 a wall 3 steps right
 a yellow key 1 step left",0,False
-102,turn left,turn left,Align with yellow ball to place yellow key beside it without obstruction.,"ACTION: turn left
-PLAN: Align with yellow ball to place yellow key beside it without obstruction.",,"a wall 1 step right
+40,go forward,go forward,Move closer to the yellow ball and key to position them adjacent to each other without repeating ineffective turns,"ACTION: go forward  
+PLAN: Move closer to the yellow ball and key to position them adjacent to each other without repeating ineffective turns","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+41,turn left,turn left,Align with yellow ball to place yellow key next to it by moving directly toward the target position,"ACTION: turn left
+PLAN: Align with yellow ball to place yellow key next to it by moving directly toward the target position",,"a wall 1 step right
 a yellow ball 2 steps left and 1 step forward
 a yellow key 1 step forward",0,False
-103,go forward,go forward,Move closer to the yellow ball to position the yellow key beside it without obstruction.,"ACTION: go forward
-PLAN: Move closer to the yellow ball to position the yellow key beside it without obstruction.","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step right
-a yellow ball 2 steps left and 1 step forward
-a yellow key 1 step forward",0,False
-104,turn left,turn left,Align with the yellow ball to place the yellow key beside it without barriers or walls.,"ACTION: turn left
-PLAN: Align with the yellow ball to place the yellow key beside it without barriers or walls.",,"a wall 6 steps forward
+42,turn left,turn left,Position self directly adjacent to yellow ball to place yellow key next to it,"ACTION: turn left
+PLAN: Position self directly adjacent to yellow ball to place yellow key next to it",,"a wall 6 steps forward
 a wall 3 steps left
 a yellow ball 1 step right and 2 steps forward
 a yellow key 1 step right",0,False
-105,turn left,turn left,Align with yellow ball to place yellow key beside it without obstacles or walls.,"ACTION: turn left
-PLAN: Align with yellow ball to place yellow key beside it without obstacles or walls.",,"a wall 3 steps forward
+43,turn left,turn left,Align with yellow ball to place yellow key next to it,"ACTION: turn left
+PLAN: Align with yellow ball to place yellow key next to it",,"a wall 3 steps forward
 a wall 1 step left",0,False
-106,turn left,turn left,Align with yellow ball to place yellow key beside it without obstacles or walls.,"ACTION: turn left
-PLAN: Align with yellow ball to place yellow key beside it without obstacles or walls.",,"a wall 1 step forward
+44,turn left,turn left,Move to align with yellow ball to place yellow key next to it,"ACTION: turn left
+PLAN: Move to align with yellow ball to place yellow key next to it",,"a wall 1 step forward
 a wall 3 steps right
 a yellow key 1 step left",0,False
-107,turn left,turn left,Move to align with yellow ball to place yellow key beside it without hitting walls or obstacles.,"ACTION: turn left
-PLAN: Move to align with yellow ball to place yellow key beside it without hitting walls or obstacles.",,"a wall 1 step right
+45,go forward,go forward,Move forward to reduce distance between agent and yellow ball to place key next to it,"ACTION: go forward  
+PLAN: Move forward to reduce distance between agent and yellow ball to place key next to it","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+46,turn left,turn left,Align orientation to face yellow ball located 1 step right and 2 steps forward,"ACTION: turn left
+PLAN: Align orientation to face yellow ball located 1 step right and 2 steps forward",,"a wall 1 step right
 a yellow ball 2 steps left and 1 step forward
 a yellow key 1 step forward",0,False
-108,go forward,go forward,Move forward to reduce distance between yellow key and yellow ball without hitting walls or obstacles.,"ACTION: go forward
-PLAN: Move forward to reduce distance between yellow key and yellow ball without hitting walls or obstacles.","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step right
-a yellow ball 2 steps left and 1 step forward
-a yellow key 1 step forward",0,False
-109,go forward,go forward,"Move forward to align with the yellow ball and yellow key, reducing distance between them without hitting walls.","ACTION: go forward
-PLAN: Move forward to align with the yellow ball and yellow key, reducing distance between them without hitting walls.",,"a wall 1 step right
-a yellow ball 2 steps left and 1 step forward
-a yellow key 1 step forward",0,False
-110,turn left,turn left,Realign direction to face the yellow ball's position and reduce distance without repeating forward movement that fails to progress.,"ACTION: turn left
-PLAN: Realign direction to face the yellow ball's position and reduce distance without repeating forward movement that fails to progress.","The action ""go forward"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","a wall 6 steps forward
+47,turn left,turn left,Face the yellow ball directly to prepare for closing the distance and placing the key next to it,"ACTION: turn left
+PLAN: Face the yellow ball directly to prepare for closing the distance and placing the key next to it",,"a wall 6 steps forward
 a wall 3 steps left
 a yellow ball 1 step right and 2 steps forward
 a yellow key 1 step right",0,False
-111,turn left,turn left,Reorient to face yellow ball's position and move forward to reduce distance without hitting walls or repeating futile steps.,"ACTION: turn left
-PLAN: Reorient to face yellow ball's position and move forward to reduce distance without hitting walls or repeating futile steps.",,"a wall 3 steps forward
+48,turn left,turn left,Align orientation to face the yellow ball directly for closing the distance and placing the key next to it,"ACTION: turn left
+PLAN: Align orientation to face the yellow ball directly for closing the distance and placing the key next to it",,"a wall 3 steps forward
 a wall 1 step left",0,False
-112,turn left,turn left,Align with yellow ball's position to move directly toward it without obstruction or repetition.,"ACTION: turn left
-PLAN: Align with yellow ball's position to move directly toward it without obstruction or repetition.",,"a wall 1 step forward
+49,turn left,turn left,Align direction to face the yellow ball and reduce distance for precise placement of the yellow key next to it,"ACTION: turn left
+PLAN: Align direction to face the yellow ball and reduce distance for precise placement of the yellow key next to it",,"a wall 1 step forward
 a wall 3 steps right
 a yellow key 1 step left",0,False
-113,turn left,turn left,Align with yellow ball's position to move directly toward it without obstruction or repetition.,"ACTION: turn left
-PLAN: Align with yellow ball's position to move directly toward it without obstruction or repetition.",,"a wall 1 step right
+50,go forward,go forward,Move forward to reduce distance between agent and yellow ball and key for precise positioning next to the yellow ball,"ACTION: go forward
+PLAN: Move forward to reduce distance between agent and yellow ball and key for precise positioning next to the yellow ball","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+51,turn left,turn left,Align direction to face yellow ball located 2 steps left and 1 step forward,"ACTION: turn left
+PLAN: Align direction to face yellow ball located 2 steps left and 1 step forward",,"a wall 1 step right
 a yellow ball 2 steps left and 1 step forward
 a yellow key 1 step forward",0,False
-114,go forward,go forward,"Move closer to the yellow ball by advancing in the current direction without turning, as it is directly adjacent and aligned with the ball's position.","ACTION: go forward
-PLAN: Move closer to the yellow ball by advancing in the current direction without turning, as it is directly adjacent and aligned with the ball's position.","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step right
-a yellow ball 2 steps left and 1 step forward
-a yellow key 1 step forward",0,False
-115,go forward,go forward,Move forward to align with the yellow ball and reduce distance between the key and the ball,"ACTION: go forward
-PLAN: Move forward to align with the yellow ball and reduce distance between the key and the ball",,"a wall 1 step right
-a yellow ball 2 steps left and 1 step forward
-a yellow key 1 step forward",0,False
-116,turn left,turn left,Realign direction to face the yellow ball's position and reduce distance by adjusting orientation before moving forward,"ACTION: turn left
-PLAN: Realign direction to face the yellow ball's position and reduce distance by adjusting orientation before moving forward","The action ""go forward"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","a wall 6 steps forward
+52,turn left,turn left,Position self to face yellow ball located 2 steps left and 1 step forward,"ACTION: turn left
+PLAN: Position self to face yellow ball located 2 steps left and 1 step forward",,"a wall 6 steps forward
 a wall 3 steps left
 a yellow ball 1 step right and 2 steps forward
 a yellow key 1 step right",0,False
-117,turn left,turn left,Realign to face yellow ball's position and move forward to reduce distance to it,"ACTION: turn left
-PLAN: Realign to face yellow ball's position and move forward to reduce distance to it",,"a wall 3 steps forward
+53,turn left,turn left,Align orientation to face yellow ball located 1 step right and 2 steps forward,"ACTION: turn left
+PLAN: Align orientation to face yellow ball located 1 step right and 2 steps forward",,"a wall 3 steps forward
 a wall 1 step left",0,False
-118,turn left,turn left,Realign to face yellow ball's position and move forward to reduce distance to it,"ACTION: turn left
-PLAN: Realign to face yellow ball's position and move forward to reduce distance to it",,"a wall 1 step forward
+54,turn left,turn left,Align facing the yellow ball located 1 step right and 2 steps forward,"ACTION: turn left
+PLAN: Align facing the yellow ball located 1 step right and 2 steps forward",,"a wall 1 step forward
 a wall 3 steps right
 a yellow key 1 step left",0,False
-119,turn left,turn left,Align with yellow ball's position to move directly toward it and reduce distance efficiently,"ACTION: turn left
-PLAN: Align with yellow ball's position to move directly toward it and reduce distance efficiently",,"a wall 1 step right
+55,go forward,go forward,Move closer to the yellow ball by advancing one step forward to reduce distance and align with its position,"ACTION: go forward
+PLAN: Move closer to the yellow ball by advancing one step forward to reduce distance and align with its position","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+56,turn left,turn left,Align direction to face yellow ball positioned 2 steps left and 1 step forward,"ACTION: turn left
+PLAN: Align direction to face yellow ball positioned 2 steps left and 1 step forward",,"a wall 1 step right
 a yellow ball 2 steps left and 1 step forward
 a yellow key 1 step forward",0,False
-120,go forward,go forward,Move closer to the yellow ball by advancing forward one step to reduce distance and align with its position,"ACTION: go forward
-PLAN: Move closer to the yellow ball by advancing forward one step to reduce distance and align with its position","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step right
-a yellow ball 2 steps left and 1 step forward
-a yellow key 1 step forward",0,False
-121,go forward,go forward,Advance forward to reduce distance between yellow key and yellow ball,"ACTION: go forward
-PLAN: Advance forward to reduce distance between yellow key and yellow ball",,"a wall 1 step right
-a yellow ball 2 steps left and 1 step forward
-a yellow key 1 step forward",0,False
-122,turn left,turn left,Align with the yellow ball's position to directly approach and place the key next to it,"ACTION: turn left
-PLAN: Align with the yellow ball's position to directly approach and place the key next to it","The action ""go forward"" has repeatedly left the observation unchanged for 2 steps. Do not repeat this action in the current state.","a wall 6 steps forward
+57,turn left,turn left,Position self to face yellow ball located 2 steps left and 1 step forward,"ACTION: turn left
+PLAN: Position self to face yellow ball located 2 steps left and 1 step forward",,"a wall 6 steps forward
 a wall 3 steps left
 a yellow ball 1 step right and 2 steps forward
 a yellow key 1 step right",0,False
-123,turn left,turn left,Align with yellow ball to move directly toward its position and place key next to it,"ACTION: turn left
-PLAN: Align with yellow ball to move directly toward its position and place key next to it",,"a wall 3 steps forward
+58,turn left,turn left,Align orientation to face yellow ball located 1 step right and 2 steps forward,"ACTION: turn left
+PLAN: Align orientation to face yellow ball located 1 step right and 2 steps forward",,"a wall 3 steps forward
 a wall 1 step left",0,False
-124,turn left,turn left,Align with yellow ball to move directly toward its position and place key next to it,"ACTION: turn left
-PLAN: Align with yellow ball to move directly toward its position and place key next to it",,"a wall 1 step forward
+59,turn left,turn left,Align facing direction to approach yellow ball located 1 step right and 2 steps forward,"ACTION: turn left
+PLAN: Align facing direction to approach yellow ball located 1 step right and 2 steps forward",,"a wall 1 step forward
 a wall 3 steps right
 a yellow key 1 step left",0,False
-125,turn left,turn left,Align with yellow ball to move directly toward its position and place key next to it,"ACTION: turn left
-PLAN: Align with yellow ball to move directly toward its position and place key next to it",,"a wall 1 step right
+60,go forward,go forward,Move closer to the yellow ball by advancing forward and adjust direction only if directly adjacent to it,"ACTION: go forward
+PLAN: Move closer to the yellow ball by advancing forward and adjust direction only if directly adjacent to it","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+61,turn left,turn left,Align facing direction toward yellow ball located 2 steps left and 1 step forward,"ACTION: turn left
+PLAN: Align facing direction toward yellow ball located 2 steps left and 1 step forward",,"a wall 1 step right
 a yellow ball 2 steps left and 1 step forward
 a yellow key 1 step forward",0,False
-126,go forward,go forward,"Move forward to reduce distance between yellow key and yellow ball, aligning with their positions for final placement","ACTION: go forward
-PLAN: Move forward to reduce distance between yellow key and yellow ball, aligning with their positions for final placement","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step right
+62,turn left,turn left,Move to face the yellow ball located 2 steps left and 1 step forward to prepare for alignment and interaction,"ACTION: turn left
+PLAN: Move to face the yellow ball located 2 steps left and 1 step forward to prepare for alignment and interaction",,"a wall 6 steps forward
+a wall 3 steps left
+a yellow ball 1 step right and 2 steps forward
+a yellow key 1 step right",0,False
+63,turn left,turn left,Align facing the yellow ball to enable proximity and potential interaction with the key and ball,"ACTION: turn left
+PLAN: Align facing the yellow ball to enable proximity and potential interaction with the key and ball",,"a wall 3 steps forward
+a wall 1 step left",0,False
+64,turn left,turn left,Align orientation to face the yellow ball and key for direct interaction and positioning,"ACTION: turn left
+PLAN: Align orientation to face the yellow ball and key for direct interaction and positioning",,"a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+65,go forward,go forward,"Move closer to the yellow ball and key by advancing forward instead of turning, to reduce distance and align for direct interaction.","ACTION: go forward
+PLAN: Move closer to the yellow ball and key by advancing forward instead of turning, to reduce distance and align for direct interaction.","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+66,turn left,turn left,Align facing direction toward yellow ball and key to enable direct interaction when adjacent.,"ACTION: turn left
+PLAN: Align facing direction toward yellow ball and key to enable direct interaction when adjacent.",,"a wall 1 step right
 a yellow ball 2 steps left and 1 step forward
 a yellow key 1 step forward",0,False
-127,go forward,go forward,"Move forward to place the yellow key next to the yellow ball, as they are currently 1 step apart.","ACTION: go forward
-PLAN: Move forward to place the yellow key next to the yellow ball, as they are currently 1 step apart.",,"a wall 1 step right
+67,turn left,turn left,Align facing direction to face the yellow ball and key for direct interaction when adjacent.,"ACTION: turn left
+PLAN: Align facing direction to face the yellow ball and key for direct interaction when adjacent.",,"a wall 6 steps forward
+a wall 3 steps left
+a yellow ball 1 step right and 2 steps forward
+a yellow key 1 step right",0,False
+68,turn left,turn left,Align direction to face yellow ball and key for proximity and interaction,"ACTION: turn left
+PLAN: Align direction to face yellow ball and key for proximity and interaction",,"a wall 3 steps forward
+a wall 1 step left",0,False
+69,turn left,turn left,Align with yellow ball and key to enable proximity and interaction for final placement,"ACTION: turn left
+PLAN: Align with yellow ball and key to enable proximity and interaction for final placement",,"a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+70,go forward,go forward,Move closer to the yellow ball and key to enable direct interaction and placement next to the yellow ball,"ACTION: go forward
+PLAN: Move closer to the yellow ball and key to enable direct interaction and placement next to the yellow ball","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+71,turn left,turn left,Align facing direction toward yellow ball to enable forward movement and placement next to it,"ACTION: turn left
+PLAN: Align facing direction toward yellow ball to enable forward movement and placement next to it",,"a wall 1 step right
 a yellow ball 2 steps left and 1 step forward
-a yellow key 1 step forward",0,True
+a yellow key 1 step forward",0,False
+72,turn left,turn left,Align with yellow ball to enable direct forward movement and placement next to it,"ACTION: turn left
+PLAN: Align with yellow ball to enable direct forward movement and placement next to it",,"a wall 6 steps forward
+a wall 3 steps left
+a yellow ball 1 step right and 2 steps forward
+a yellow key 1 step right",0,False
+73,turn left,turn left,Align direction to face yellow ball for precise forward movement and placement next to it,"ACTION: turn left
+PLAN: Align direction to face yellow ball for precise forward movement and placement next to it",,"a wall 3 steps forward
+a wall 1 step left",0,False
+74,turn left,turn left,Align orientation to face yellow ball for precise forward movement and placement next to it,"ACTION: turn left
+PLAN: Align orientation to face yellow ball for precise forward movement and placement next to it",,"a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+75,go forward,go forward,Move closer to the yellow ball by advancing forward and adjust direction only when directly adjacent to it,"ACTION: go forward
+PLAN: Move closer to the yellow ball by advancing forward and adjust direction only when directly adjacent to it","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+76,turn left,turn left,Align direction to face yellow ball located 2 steps left and 1 step forward,"ACTION: turn left
+PLAN: Align direction to face yellow ball located 2 steps left and 1 step forward",,"a wall 1 step right
+a yellow ball 2 steps left and 1 step forward
+a yellow key 1 step forward",0,False
+77,turn left,turn left,Position self to face yellow ball located 2 steps left and 1 step forward,"ACTION: turn left
+PLAN: Position self to face yellow ball located 2 steps left and 1 step forward",,"a wall 6 steps forward
+a wall 3 steps left
+a yellow ball 1 step right and 2 steps forward
+a yellow key 1 step right",0,False
+78,turn left,turn left,Align orientation to face yellow ball located 1 step right and 2 steps forward,"ACTION: turn left
+PLAN: Align orientation to face yellow ball located 1 step right and 2 steps forward",,"a wall 3 steps forward
+a wall 1 step left",0,False
+79,turn left,turn left,Align facing direction to approach yellow ball located 1 step right and 2 steps forward,"ACTION: turn left
+PLAN: Align facing direction to approach yellow ball located 1 step right and 2 steps forward",,"a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+80,go forward,go forward,Move closer to yellow ball by advancing forward and adjusting direction when directly adjacent to it,"ACTION: go forward
+PLAN: Move closer to yellow ball by advancing forward and adjusting direction when directly adjacent to it","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+81,turn left,turn left,Align direction to face yellow ball located 2 steps left and 1 step forward,"ACTION: turn left
+PLAN: Align direction to face yellow ball located 2 steps left and 1 step forward",,"a wall 1 step right
+a yellow ball 2 steps left and 1 step forward
+a yellow key 1 step forward",0,False
+82,turn left,turn left,Position self to face yellow ball located 2 steps left and 1 step forward,"ACTION: turn left
+PLAN: Position self to face yellow ball located 2 steps left and 1 step forward",,"a wall 6 steps forward
+a wall 3 steps left
+a yellow ball 1 step right and 2 steps forward
+a yellow key 1 step right",0,False
+83,turn left,turn left,Align orientation to face yellow ball located 1 step right and 2 steps forward,"ACTION: turn left
+PLAN: Align orientation to face yellow ball located 1 step right and 2 steps forward",,"a wall 3 steps forward
+a wall 1 step left",0,False
+84,turn left,turn left,Align facing direction to approach yellow ball located 1 step right and 2 steps forward,"ACTION: turn left
+PLAN: Align facing direction to approach yellow ball located 1 step right and 2 steps forward",,"a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+85,go forward,go forward,Move closer to the yellow ball by advancing in the current direction and adjust orientation only if directly adjacent to it,"ACTION: go forward
+PLAN: Move closer to the yellow ball by advancing in the current direction and adjust orientation only if directly adjacent to it","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+86,turn left,turn left,Align facing direction toward yellow ball located 2 steps left and 1 step forward,"ACTION: turn left
+PLAN: Align facing direction toward yellow ball located 2 steps left and 1 step forward",,"a wall 1 step right
+a yellow ball 2 steps left and 1 step forward
+a yellow key 1 step forward",0,False
+87,turn left,turn left,Position self to face yellow ball directly adjacent for pickup and placement next to it,"ACTION: turn left
+PLAN: Position self to face yellow ball directly adjacent for pickup and placement next to it",,"a wall 6 steps forward
+a wall 3 steps left
+a yellow ball 1 step right and 2 steps forward
+a yellow key 1 step right",0,False
+88,turn left,turn left,Align orientation to face yellow ball directly for proximity and potential interaction,"ACTION: turn left
+PLAN: Align orientation to face yellow ball directly for proximity and potential interaction",,"a wall 3 steps forward
+a wall 1 step left",0,False
+89,turn left,turn left,Align facing direction to approach yellow ball from the side and reduce distance for potential interaction,"ACTION: turn left
+PLAN: Align facing direction to approach yellow ball from the side and reduce distance for potential interaction",,"a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+90,go forward,go forward,Move closer to the yellow ball by advancing forward and adjust direction only if directly adjacent to it,"ACTION: go forward
+PLAN: Move closer to the yellow ball by advancing forward and adjust direction only if directly adjacent to it","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+91,turn left,turn left,Align orientation to face the yellow ball directly ahead for precise movement and interaction,"ACTION: turn left
+PLAN: Align orientation to face the yellow ball directly ahead for precise movement and interaction",,"a wall 1 step right
+a yellow ball 2 steps left and 1 step forward
+a yellow key 1 step forward",0,False
+92,turn left,turn left,Align facing direction to face yellow ball directly ahead for precise navigation and interaction,"ACTION: turn left
+PLAN: Align facing direction to face yellow ball directly ahead for precise navigation and interaction",,"a wall 6 steps forward
+a wall 3 steps left
+a yellow ball 1 step right and 2 steps forward
+a yellow key 1 step right",0,False
+93,turn left,turn left,Align orientation to face yellow ball directly ahead for precise navigation and interaction,"ACTION: turn left
+PLAN: Align orientation to face yellow ball directly ahead for precise navigation and interaction",,"a wall 3 steps forward
+a wall 1 step left",0,False
+94,turn left,turn left,Align facing direction to face yellow ball located 2 steps left and 1 step forward,"ACTION: turn left
+PLAN: Align facing direction to face yellow ball located 2 steps left and 1 step forward",,"a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+95,go forward,go forward,"Move closer to the yellow ball by advancing one step toward its position, then adjust direction if needed to reach it.","ACTION: go forward
+PLAN: Move closer to the yellow ball by advancing one step toward its position, then adjust direction if needed to reach it.","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+96,turn left,turn left,Align facing direction toward yellow ball's position to enable direct movement and eventual placement next to it.,"ACTION: turn left
+PLAN: Align facing direction toward yellow ball's position to enable direct movement and eventual placement next to it.",,"a wall 1 step right
+a yellow ball 2 steps left and 1 step forward
+a yellow key 1 step forward",0,False
+97,turn left,turn left,Align with yellow ball to enable direct movement and placement of the yellow key next to it.,"ACTION: turn left
+PLAN: Align with yellow ball to enable direct movement and placement of the yellow key next to it.",,"a wall 6 steps forward
+a wall 3 steps left
+a yellow ball 1 step right and 2 steps forward
+a yellow key 1 step right",0,False
+98,turn left,turn left,Align facing the yellow ball to proceed with placing the key next to it,"ACTION: turn left
+PLAN: Align facing the yellow ball to proceed with placing the key next to it",,"a wall 3 steps forward
+a wall 1 step left",0,False
+99,turn left,turn left,Align facing the yellow ball to place the yellow key next to it,"ACTION: turn left
+PLAN: Align facing the yellow ball to place the yellow key next to it",,"a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+100,go forward,go forward,Move closer to the yellow ball to position the yellow key next to it,"ACTION: go forward  
+PLAN: Move closer to the yellow ball to position the yellow key next to it","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+101,turn left,turn left,Align direction to face the yellow ball located 2 steps left and 1 step forward,"ACTION: turn left
+PLAN: Align direction to face the yellow ball located 2 steps left and 1 step forward",,"a wall 1 step right
+a yellow ball 2 steps left and 1 step forward
+a yellow key 1 step forward",0,False
+102,turn left,turn left,Position self to face yellow ball directly adjacent for pickup and placement next to it,"ACTION: turn left
+PLAN: Position self to face yellow ball directly adjacent for pickup and placement next to it",,"a wall 6 steps forward
+a wall 3 steps left
+a yellow ball 1 step right and 2 steps forward
+a yellow key 1 step right",0,False
+103,turn left,turn left,Align orientation to face yellow ball directly adjacent for pickup and placement next to it,"ACTION: turn left
+PLAN: Align orientation to face yellow ball directly adjacent for pickup and placement next to it",,"a wall 3 steps forward
+a wall 1 step left",0,False
+104,turn left,turn left,Align facing the yellow ball to position the key next to it for final placement,"ACTION: turn left
+PLAN: Align facing the yellow ball to position the key next to it for final placement",,"a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+105,go forward,go forward,Move closer to the yellow ball to position the yellow key next to it without repeating ineffective turns,"ACTION: go forward
+PLAN: Move closer to the yellow ball to position the yellow key next to it without repeating ineffective turns","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+106,turn left,turn left,Align with the yellow ball to place the yellow key next to it while avoiding walls,"ACTION: turn left
+PLAN: Align with the yellow ball to place the yellow key next to it while avoiding walls",,"a wall 1 step right
+a yellow ball 2 steps left and 1 step forward
+a yellow key 1 step forward",0,False
+107,turn left,turn left,Position self to face yellow ball and move forward to place key next to it,"ACTION: turn left
+PLAN: Position self to face yellow ball and move forward to place key next to it",,"a wall 6 steps forward
+a wall 3 steps left
+a yellow ball 1 step right and 2 steps forward
+a yellow key 1 step right",0,False
+108,turn left,turn left,Align direction to face yellow ball and move forward to place key next to it,"ACTION: turn left
+PLAN: Align direction to face yellow ball and move forward to place key next to it",,"a wall 3 steps forward
+a wall 1 step left",0,False
+109,turn left,turn left,Align with yellow ball to move forward and place yellow key next to it,"ACTION: turn left
+PLAN: Align with yellow ball to move forward and place yellow key next to it",,"a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+110,go forward,go forward,Move toward the yellow ball to reduce distance and position the yellow key next to it,"ACTION: go forward
+PLAN: Move toward the yellow ball to reduce distance and position the yellow key next to it","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+111,turn left,turn left,Align orientation to face the yellow ball located 2 steps left and 1 step forward,"ACTION: turn left
+PLAN: Align orientation to face the yellow ball located 2 steps left and 1 step forward",,"a wall 1 step right
+a yellow ball 2 steps left and 1 step forward
+a yellow key 1 step forward",0,False
+112,turn left,turn left,Align facing direction toward yellow ball positioned 2 steps left and 1 step forward,"ACTION: turn left
+PLAN: Align facing direction toward yellow ball positioned 2 steps left and 1 step forward",,"a wall 6 steps forward
+a wall 3 steps left
+a yellow ball 1 step right and 2 steps forward
+a yellow key 1 step right",0,False
+113,turn left,turn left,Align facing direction to face yellow ball located 1 step right and 2 steps forward,"ACTION: turn left
+PLAN: Align facing direction to face yellow ball located 1 step right and 2 steps forward",,"a wall 3 steps forward
+a wall 1 step left",0,False
+114,turn left,turn left,Move to face the yellow ball positioned 1 step right and 2 steps forward,"ACTION: turn left
+PLAN: Move to face the yellow ball positioned 1 step right and 2 steps forward",,"a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+115,go forward,go forward,Move forward to reduce distance between agent and yellow ball positioned 1 step right and 2 steps forward,"ACTION: go forward
+PLAN: Move forward to reduce distance between agent and yellow ball positioned 1 step right and 2 steps forward","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+116,turn left,turn left,Align direction to face yellow ball located 1 step right and 2 steps forward,"ACTION: turn left
+PLAN: Align direction to face yellow ball located 1 step right and 2 steps forward",,"a wall 1 step right
+a yellow ball 2 steps left and 1 step forward
+a yellow key 1 step forward",0,False
+117,turn left,turn left,Move to face yellow ball located 2 steps left and 1 step forward to position adjacent to it,"ACTION: turn left
+PLAN: Move to face yellow ball located 2 steps left and 1 step forward to position adjacent to it",,"a wall 6 steps forward
+a wall 3 steps left
+a yellow ball 1 step right and 2 steps forward
+a yellow key 1 step right",0,False
+118,turn left,turn left,Align orientation to face yellow ball located 1 step right and 2 steps forward for proximity and interaction,"ACTION: turn left
+PLAN: Align orientation to face yellow ball located 1 step right and 2 steps forward for proximity and interaction",,"a wall 3 steps forward
+a wall 1 step left",0,False
+119,turn left,turn left,Align facing direction to approach yellow ball located 1 step right and 2 steps forward,"ACTION: turn left
+PLAN: Align facing direction to approach yellow ball located 1 step right and 2 steps forward",,"a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+120,go forward,go forward,Move closer to the yellow ball by advancing one step forward and adjust direction only if necessary to reach it directly,"ACTION: go forward
+PLAN: Move closer to the yellow ball by advancing one step forward and adjust direction only if necessary to reach it directly","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+121,turn left,turn left,Align direction to face the yellow ball located 2 steps left and 1 step forward,"ACTION: turn left
+PLAN: Align direction to face the yellow ball located 2 steps left and 1 step forward",,"a wall 1 step right
+a yellow ball 2 steps left and 1 step forward
+a yellow key 1 step forward",0,False
+122,turn left,turn left,Position self to face yellow ball located 2 steps left and 1 step forward,"ACTION: turn left
+PLAN: Position self to face yellow ball located 2 steps left and 1 step forward",,"a wall 6 steps forward
+a wall 3 steps left
+a yellow ball 1 step right and 2 steps forward
+a yellow key 1 step right",0,False
+123,turn left,turn left,Align orientation to face yellow ball located 1 step right and 2 steps forward,"ACTION: turn left
+PLAN: Align orientation to face yellow ball located 1 step right and 2 steps forward",,"a wall 3 steps forward
+a wall 1 step left",0,False
+124,turn left,turn left,Align facing direction toward yellow ball located 1 step right and 2 steps forward,"ACTION: turn left
+PLAN: Align facing direction toward yellow ball located 1 step right and 2 steps forward",,"a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+125,go forward,go forward,Move closer to the yellow ball by advancing one step forward and adjust direction if needed to align with its position,"ACTION: go forward
+PLAN: Move closer to the yellow ball by advancing one step forward and adjust direction if needed to align with its position","The action ""turn left"" was repeated 4 times, completing a full rotation without positional progress. Move toward the goal or choose a different direction instead of continuing to turn.","a wall 1 step forward
+a wall 3 steps right
+a yellow key 1 step left",0,False
+126,turn left,turn left,Align facing direction toward yellow ball's position to prepare for closer approach and potential interaction,"ACTION: turn left
+PLAN: Align facing direction toward yellow ball's position to prepare for closer approach and potential interaction",,"a wall 1 step right
+a yellow ball 2 steps left and 1 step forward
+a yellow key 1 step forward",0,False
+127,turn left,turn left,Align with yellow ball to enable direct interaction and move toward it for pickup or placement,"ACTION: turn left
+PLAN: Align with yellow ball to enable direct interaction and move toward it for pickup or placement",,"a wall 6 steps forward
+a wall 3 steps left
+a yellow ball 1 step right and 2 steps forward
+a yellow key 1 step right",0,True
